@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karel Faltus</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="script.js"></script>
+</head>
+<body>
+  
+  <header>
+    <div class="uvodni-stranka">
+      <nav id="navbar" class="menu">
+        <a href="index.html"><img src="fotky/logoKarelF.png" alt="logo"></a>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
+          </li>
+          <li class="menu__item">
+            <a href="nabidka.html" class="menu__link">Nabídka</a>
+          </li>
+          <li class="menu__item">
+            <a href="fotogalerie.html" class="menu__link">Fotogalerie</a>
+          </li>
+          <li class="menu__item ">
+            <a href="kontakt.html" class="menu__link">Kontakt</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <div onclick="openNavbar()">
+            <div class="hamburger__box">
+              <svg width="42" height="35" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF"
+                  stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="sideNavbar" class="side-navbar" style="width: 0px;">
+            <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
+            <a class="side-navbar__link hover" href="index.html">Úvodní stránka</a>
+            <a class="side-navbar__link hover" href="zkusenosti.html">Zkušenosti</a>
+            <a class="side-navbar__link hover" href="nabidka.html">Nabídka</a>
+            <a class="side-navbar__link hover" href="fotogalerie.html">Fotogalerie</a>
+            <a class="side-navbar__link hover" href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <h1>VÍTEJTE</h1>
+      <p>Vše pro Váš zážitek z letu na jednom místě!</p>
+      <button onclick="location.href='zkusenosti.html'"><span>Více informací</span></button>
+    </div>
+
+    <!--Naše služby-->
+    <section id="sluzby">
+      <div class="nazev-kategorie2">
+        <p>Moje služby</p>
+      </div>
+      <div class="sluzby-box">
+        <div class="sluzba">
+          <img src="foto/mesto2.JPG" alt="přelet nad městem">
+          <div class="overlay"></div>
+          <div class="sluzba-desc">
+            <h3>Poznávací lety</h3>
+            <hr>
+            <p>Vychutnejte si svět z jiné perspektivy</p>
+          </div>
+        </div>
+        <div class="sluzba">
+          <img src="foto/spitfire.JPG" alt="letadlo spitfire">
+          <div class="overlay"></div>
+          <div class="sluzba-desc">
+            <h3>Zakázková výroba letadel</h3>
+            <hr>
+            <p>Vyslyšíme každé Vaše přání</p>
+          </div>
+        </div>
+        <div class="sluzba">
+          <img src="foto/vyroba.JPG" alt="výroba letadla">
+          <div class="overlay"></div>
+          <div class="sluzba-desc">
+            <h3>Výroba příslušenství</h3>
+            <hr>
+            <p>Žádná část letadla pro nás není problém</p>
+          </div>
+        </div>
+        <div class="sluzba">
+          <img src="foto/slovensko.JPG" alt="přelet nad hradem">
+          <div class="overlay"></div>
+          <div class="sluzba-desc">
+            <h3>Panoramatické fotografie</h3>
+            <hr>
+            <p>Do knihy, kalendáře i na pohled!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section>
+      </div>
+      <div class="footer-row">
+        <div class="footer-left">
+          <h2>Kontakt</h2>
+          <a href="kontakt.html">Kontaktní formulář</a>
+          <p>faltuskarel@seznam.cz</p>
+        </div>
+        <div class="footer-right">
+          <h2>Sídlo</h2>
+          <p>Letiště 22</p>
+          <p>Ústí nad Orlicí</p>
+        </div>
+      </div>
+    </section>
+  </footer>
+</body>
+</html>

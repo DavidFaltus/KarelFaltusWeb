@@ -1,0 +1,30 @@
+.tabulka {
+    margin: 50px 0;
+  }
+  .tabulka h2 {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    background-color: #1B272F;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+  .tabulka table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+  }
+  .tabulka th, .tabulka td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  .tabulka th {
+    background-color: #1B272F;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  .tabulka tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }

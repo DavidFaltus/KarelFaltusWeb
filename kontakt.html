@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+    <script src="kontakt.css"></script>
+</head>
+<body>
+
+  <header>
+    <div class="pozadi__jinestranky">
+      <nav id="navbar" class="menu">
+        <a href="index.html"><img src="fotky/logoKarelF.png" alt="logo"></a>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
+          </li>
+          <li class="menu__item">
+            <a href="nabidka.html" class="menu__link">Nabídka</a>
+          </li>
+          <li class="menu__item">
+            <a href="fotogalerie.html" class="menu__link">Fotogalerie</a>
+          </li>
+          <li class="menu__item ">
+            <a href="kontakt.html" class="menu__link">Kontakt</a>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <div onclick="openNavbar()">
+            <div class="hamburger__box">
+              <svg width="42" height="35" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF"
+                  stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="sideNavbar" class="side-navbar" style="width: 0px;">
+            <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
+            <a class="side-navbar__link hover" href="index.html">Úvodní stránka</a>
+            <a class="side-navbar__link hover" href="zkusenosti.html">Zkušenosti</a>
+            <a class="side-navbar__link hover" href="nabidka.html">Nabídka</a>
+            <a class="side-navbar__link hover" href="fotogalerie.html">Fotogalerie</a>
+            <a class="side-navbar__link hover" href="kontakt.html">Kontakt</a>
+          </div>
+        </div>
+      </nav>
+      <div class="nadpis__jinestranky">
+        <h1>Kontakt</h1>
+      </div>
+    </div>
+  </header>
+
+<main>
+<section id="formular">
+<form>
+  <fieldset>
+    <div class="form-group">
+      <input type="text" id="jmeno-prijmeni" placeholder="Jméno a příjmení:" name="jmeno-prijmeni">
+    </div>
+    <div class="form-group">
+      <input type="text" placeholder="Email:*" name="email" required>
+    </div>
+    <div class="form-group">
+      <input type="text" placeholder="Telefon:" name="telefon">
+    </div>
+    <div class="form-group">
+      <input id="dotaz" type="text"  placeholder="Dotaz:*" name="dotaz" required>
+    </div>
+    <div class="form-group">
+      <button id="btnOdeslat">Odeslat</button>
+    </div>
+  </form> 
+</section>
+</main>
+
+<footer>
+  <section>
+    </div>
+    <div class="footer-row">
+      <div class="footer-left">
+        <h2>Kontakt</h2>
+        <a href="kontakt.html">Kontaktní formulář</a>
+        <p>faltuskarel@seznam.cz</p>
+      </div>
+      <div class="footer-right">
+        <h2>Sídlo</h2>
+        <p>Letiště 22</p>
+        <p>Ústí nad Orlicí</p>
+      </div>
+    </div>
+  </section>
+</footer>
+</body>
+</html>

@@ -1,0 +1,787 @@
+html {
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+}
+body{
+  margin: 0;
+}
+
+.uvodni-stranka{
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(foto/hpletadlo.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+}
+.pozadi__jinestranky{
+  width: 100%;
+  min-height: 30vh;
+  background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(foto/hpletadlo2.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow-x: hidden;
+}
+.nadpis__jinestranky h1{
+  color: #ffff;
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+/*NAVIGACE*/
+  nav img{
+  width: 300px;
+  }
+
+nav{
+  z-index: 2;
+  margin: 0;
+  display: flex;
+  justify-content: space-between; 
+  top: 0; 
+  width: 100%; 
+  transition: top 0.3s;
+  text-align: center;
+  align-items: center;
+}
+nav ul{
+  margin-right: 45px;
+}
+nav li{
+  padding: 12px;
+  display: inline-block;
+  position: relative;
+  list-style: none;
+}
+nav li a{
+  text-decoration: none;
+  color:#ffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+nav li::after{
+  content: '';
+  width: 0%;   
+  height: 3px;
+  background-color: #005494;
+  display: block;
+  left: 0;
+  transition: 0.7s;
+  bottom: -1px;
+  }
+nav li:hover::after{
+  width: 100%;
+}
+
+/*HAMBURGER*/
+.hamburger{ 
+  display: none;
+}
+.side-navbar {
+  font-family: sans-serif;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: left;
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1; 
+  top: 0; 
+  right: 0;
+  background-color: #005494; 
+  overflow-x: hidden;
+  padding-top: 70px; 
+  transition: 0.5s; 
+  }
+.side-navbar__link {
+  padding: 16px 32px 16px 42px;
+  text-decoration: none;
+  font-size: 28px;
+  font-weight: 300;
+  color: #ffff;
+  display: block;
+  transition: 0.3s;
+  }
+.hover:hover {
+  color: #7db7e3;
+  padding: 16px 42px 16px 42px;
+  text-decoration: underline;
+  }
+.close-icon {
+  position: absolute;
+  top: 26px;
+  right: -10px;
+  font-size: 75px;
+  transition: 0.3s;
+  }
+.close-icon:hover{
+  color: #7db7e3;
+    }
+
+/*HERO*/
+.hero{
+  color: #ffff;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hero h1{
+  font-size: 70px;
+  margin: 20px;
+}
+.hero p{
+  font-size: 25px;
+  font-weight: 80;
+  margin: 20px;
+}
+button {
+  text-decoration: none;
+  display: inline-block;
+  color: #ffff;
+  text-align: center;
+  font-weight: bold;
+  width:200px;
+  padding: 15px 0;
+  margin: 12px 10px;
+  border-radius: 25px;
+  border: 2px solid #005494;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.3s linear;
+}
+span{
+  text-align: center;
+  text-decoration: none;
+  color: #ffff;
+}
+.hero button:hover {
+  background-color: #005494;
+}
+
+/*ZÁPATÍ*/
+
+footer{
+  color: white;
+  background: #1B272F;
+}
+footer a{
+  text-decoration: none;
+  color: white;
+}
+footer a:hover{
+  text-decoration: underline;
+}
+footer h2{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #1B272F;
+}
+.footer-row{
+  font-size: 15px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-left, .footer-right, .footer-center{
+  flex-basis: 45%;
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.footer-row h2{
+  margin: 10px 0;
+}
+.footer-row p{
+  line-height: 10px;
+}
+/*ZKUŠENOSTI*/
+.zarovnaniDoLeva-text h2, .zarovnaniDoPrava-text h2{
+  color: #005494;
+  }
+.zarovnaniDoLeva-text p, .zarovnaniDoPrava-text p{
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  }
+.zarovnaniDoLeva-image img, .zarovnaniDoPrava-image img{
+  max-width: 70%;
+  height: auto;
+  border-radius: 7px;
+  }
+      
+.zarovnaniDoLeva, .zarovnaniDoPrava {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.zarovnaniDoLeva {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  flex-direction: row-reverse;
+  }
+.zarovnaniDoLeva-text{
+  flex: 1;
+  padding-right: 60px;
+  }
+.zarovnaniDoLeva-image{
+  flex: 1;
+  text-align: center;
+  width: 70%;
+  }
+.zarovnaniDoPrava {
+  flex-direction: row-reverse;
+  }
+.zarovnaniDoPrava-text {
+  flex: 1;
+  padding-left: 60px;
+  padding-right: 0;
+  }
+.zarovnaniDoPrava-image{
+  flex: 1;
+  text-align: center;
+  width: 70%;
+  }
+#o-nas{
+  width: 100%;
+  padding: 50px 0;
+}  
+#o-nas div{
+  text-align: center;
+  padding-bottom: 30px;
+}
+#o-nas p{
+  color:#005494;
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+#o-nas h2{
+  font-size: 50px;
+  margin: 20px;
+  padding-bottom: 25px;
+}
+.onas-box{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.onas-box div{
+  flex-basis: 50%;
+}
+.onas-img{
+  flex-basis: 50%;
+  margin: auto;
+}
+.onas-img img{
+  border-radius: 7px;
+  width: 100%;
+}
+.onas h2{
+  color: #005494;
+  text-align: left;
+  margin-bottom: 10px;
+}
+.onas-popis{
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.onas-popis p{
+  padding:0 20px;
+  text-align: initial;
+}
+
+/*NABÍDKA*/
+#letadlo{
+  width: 100%;
+  padding: 50px 0;
+}
+
+.letadlo h2{
+  color: #005494;
+  }
+.letadlo p{
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  }
+.letadlo-image img{
+  max-width: 70%;
+  height: auto;
+  border-radius: 7px;
+  }      
+.letadlo{
+  display: flex;
+  align-items: center;
+  margin-bottom: 50px;
+  flex-direction: row-reverse;
+  padding-top: 50px;
+}
+.letadlo-text {
+  flex: 1;
+  padding-left: 60px;
+  padding-right: 0;
+  }
+.letadlo-image{
+  flex: 1;
+  text-align: center;
+  width: 70%;
+  }
+     
+.letadlo2{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 50px;
+  padding-top: 50px;
+}
+.letadlo2 h2{
+  color: #005494;
+  }
+.letadlo2 p{
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  }
+.letadlo2-image img{
+  max-width: 70%;
+  height: auto;
+  border-radius: 7px;
+  }   
+.letadlo2-text {
+  flex: 1;
+  padding-right: 60px;
+  }
+.letadlo2-image{
+  flex: 1;
+  text-align: center;
+  width: 70%;
+  }
+
+.tabulka {
+  margin: 50px 0;
+}
+.tabulka h2 {
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #1B272F;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+.tabulka table {
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+.tabulka th, .tabulka td {
+  text-align: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+.tabulka th {
+  background-color: #1B272F;
+  color: #fff;
+  font-size: 1.2rem;
+}
+.tabulka tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.nazev-kategorie2{
+  text-align: center;
+  padding-bottom: 30px;
+}
+.nazev-kategorie2 p{
+  color:#ffff;
+  font-size: 20px;
+  font-weight: bold;
+  margin: auto;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.nazev-kategorie2 h2{
+  color: #ffff;
+  font-size: 50px;
+  margin: 20px;
+  padding-bottom: 25px;
+}
+
+#sluzby{
+  width:100%;
+  padding: 40px 0;
+  margin-bottom: 0px;
+  background-color: #1B272F;
+}
+.sluzby-box{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.sluzba{
+  color:#ffff;
+  text-align: center;
+  flex-basis: 48%;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  position: relative;
+}
+.sluzba img{
+  width: 100%;
+  border-radius: 7px;
+  position: relative;
+  display: inline-block;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.sluzba:hover .overlay {
+  opacity: 1;
+  border-radius: 7px;
+}
+.sluzba-desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #ffff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.sluzba:hover .sluzba-desc {
+  opacity: 1;
+}
+
+/*KONTAKT*/
+#formular{
+  color: #1B272F;
+  padding: 5%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+form{
+  font-family: sans-serif;
+  padding: 10px;
+}
+fieldset{
+  background-color: #1B272F;
+  border: none;
+  border-radius: 7px;
+  width: 100%; 
+  margin: auto;
+  padding: 20px;
+}
+label{
+  color: #ffff;
+  display: block;
+  margin-bottom: 10px;
+}
+input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  margin-left: 90px;
+  margin-right: 90px;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+input {
+  font-size: 20px;
+  text-align: center;
+}
+#dotaz{
+  height: 70px;
+}
+#jmeno-prijmeni{
+  margin-top: 20px;
+}
+#btnOdeslat{
+  padding-left: 10%;
+  padding-right: 10%;
+  justify-content: center;
+  background-color: white;
+  color: #1B272F;
+}
+select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 20px;
+  background-color: #f5f5f5;
+}
+option {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 5px;
+  background-color: white;
+  color: #666;
+}
+
+/*FOTOGALERIE*/
+
+.kontejner{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 8%;
+  box-sizing: border-box;
+}
+.galerie{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+.galerie img{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.lightbox-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #fff;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+      
+@media(max-width:865px){
+  .side-navbar{
+    padding-top: 125px;
+  }
+                    .side-navbar a{
+                      text-align: center;
+                      font-size: 40px;
+                      align-items: center;
+                    }
+                    .side-navbar .close-icon {
+                      font-size: 85px;
+                      width: 50px;
+                      height: 50px;
+                      padding-top: 0px;
+                      text-decoration: none;
+                      background-color: #005494;
+                      text-align: center;
+                    }
+                   
+                  .nazev-kategorie{
+                    text-align: center;
+                    padding-bottom: 20px;
+                  }
+                  .nazev-kategorie h2{
+                    font-size: 30px;
+                    margin: 20px;
+                    padding-bottom: 25px;
+                  }
+                  .onas-box{
+                    width: 80%;
+                    margin: auto;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    }
+                  
+                .hero h1{
+                  font-size: 35px;
+                }
+                .hero p{
+                  font-size: 15px;
+                }
+              
+              nav img{
+                width: 200px;
+              }
+            
+          
+            .nazev-kategorie2 h2{
+            color: #ffff;
+            font-size: 30px;
+            margin: 20px;
+            padding-bottom: 25px;
+          }
+            .sluzba-desc {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 10px;
+            color: #ffff;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+
+          /*ZÁPATÍ*/
+          .footer-row{
+          width: 90%;
+          margin: auto;
+          display: flex;
+          justify-content: space-between;
+          }
+          footer left, footer right, footer center{
+            flex-basis: 45%;
+            margin-bottom: 20px;
+          }
+          footer left h2, footer right h2, footer center h2{
+            color: #ffff;
+            font-size: 20px;
+          }
+          footer left p, .footer-right p, .footer-center p{
+            color: #ffff;
+            font-size: 15px;
+        }
+          .footer-row p{
+            line-height: 10px;
+          }
+          footer a{
+            text-decoration: none;
+            font-size: 15px;
+          }
+        
+          /*FORMULÁŘ*/
+        #formular{
+        padding: 8%;
+        justify-content: space-around;
+        margin: auto;
+        align-items: center;
+      }
+        fieldset{
+        color: #1B272F;
+        border: none;
+        border-radius: 7px;
+        width: auto; 
+        margin: auto;
+        padding: 20px;
+      }
+      input{
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+
+      /*NABÍDKA*/
+      .letadlo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+      }
+      .letadlo-image{
+        flex: 1;
+        text-align: center;
+        width: 100%;
+        }
+      .letadlo-text {
+        padding: 4%;
+        }
+      .letadlo2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+        padding-top: 50px;
+      }
+      .letadlo2-image{
+        flex: 1;
+        text-align: center;
+        width: 100%;
+        }
+      .letadlo2-text {
+        flex: 1;
+        padding: 4%;
+        }
+      
+        /*FOTOGALERIE*/
+    .galerie{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+  }
+  
+.zarovnaniDoLeva{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.zarovnaniDoLeva-image{
+  flex: 1;
+  text-align: center;
+  width: 100%;
+  }
+.zarovnaniDoLeva-text{
+  flex: 1;
+  padding: 4%;
+  }
+.zarovnaniDoPrava {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+} 
+.zarovnaniDoPrava-text {
+  flex: 1;
+  padding: 4%;
+  }
+.zarovnaniDoPrava-image{
+  flex: 1;
+  text-align: center;
+  width: 100%;
+  }
+  nav{
+    background-color: rgba(255, 255, 255, 0);
+  }
+  nav ul{
+    display: none;
+    }
+  .hamburger{
+    margin: 2.5em;
+    display: block;
+    cursor: pointer;
+    }
+}
+  
