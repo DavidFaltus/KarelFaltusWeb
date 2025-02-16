@@ -44,3 +44,31 @@ function openNavbar() {
 function closeNavbar() {
     document.getElementById("sideNavbar").style.width = "0";
   }
+  
+  document.addEventListener("DOMContentLoaded", function() {
+    // Načteme uložený jazyk z localStorage
+    const savedLanguage = localStorage.getItem('language');
+    
+    if (savedLanguage) {
+      applyLanguage(savedLanguage);
+    } else {
+      applyLanguage('cz');  // Výchozí jazyk
+    }
+  });
+
+  function switchLanguage(language) {
+    // Uložíme zvolený jazyk do localStorage
+    localStorage.setItem('language', language);
+    applyLanguage(language);
+  }
+
+  function applyLanguage(language) {
+    const currentPath = window.location.pathname;
+
+    // Přesměrování podle zvoleného jazyka
+    if (language === 'cz' && !currentPath.includes('index.html')) {
+      window.location.href = 'index.html';  // Čeština verze
+    } else if (language === 'en' && !currentPath.includes('indexEN.html')) {
+      window.location.href = 'indexEN.html';  // Anglická verze
+    }
+  }

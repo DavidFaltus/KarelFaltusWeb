@@ -50,7 +50,7 @@ nav{
   align-items: center;
 }
 nav ul{
-  margin-right: 45px;
+  margin-right: 20px;
 }
 nav li{
   padding: 12px;
@@ -77,6 +77,26 @@ nav li::after{
   }
 nav li:hover::after{
   width: 100%;
+}
+
+.language-switcher {
+  text-align: center;
+  margin-top: 7px;
+}
+
+.language-switcher a {
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.language-switcher img {
+  width: 30px;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.language-switcher img:hover {
+  transform: scale(1.1);
 }
 
 /*HAMBURGER*/
