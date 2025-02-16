@@ -27,7 +27,7 @@ body{
 }
 .nadpis__jinestranky h1{
   color: #ffff;
-  font-size: 30px;
+  font-size: 50px;
   text-align: center;
   text-transform: uppercase;
   margin-top: 30px;
@@ -61,7 +61,7 @@ nav li{
 nav li a{
   text-decoration: none;
   color:#ffff;
-  font-size: 16px;
+  font-size: 25px;
   text-transform: uppercase;
   display: inline-block;
 }
@@ -75,7 +75,7 @@ nav li::after{
   transition: 0.7s;
   bottom: -1px;
   }
-nav li:hover::after{
+.menu__item:hover::after{
   width: 100%;
 }
 
@@ -97,6 +97,10 @@ nav li:hover::after{
 
 .language-switcher img:hover {
   transform: scale(1.1);
+}
+
+.language-switcher a:hover::after{
+  width: 0%;
 }
 
 /*HAMBURGER*/
