@@ -508,18 +508,22 @@ footer h2{
 }
 
 /*KONTAKT*/
-#formular{
-  color: #1B272F;
-  padding: 5%;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  padding-left: 10%;
-  padding-right: 10%;
+#formular {
+  display: flex;
+  justify-content: center; /* Zarovná formulář na střed horizontálně */
+  align-items: center; /* (Volitelně) zarovná na střed vertikálně, pokud chcete */
+  padding: 20px;
 }
-form{
-  font-family: sans-serif;
-  padding: 10px;
+form {
+  max-width: 1050px; /* Maximální šířka formuláře */
+  width: 100%; /* Aby se formulář přizpůsobil velikosti okna */
+  margin: 0 auto; /* Zarovnání na střed */
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: #f7f7f7; /* Volitelné pozadí */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Volitelný stín */
+  border-radius: 10px; /* Kulaté rohy formuláře */
 }
 fieldset{
   background-color: #1B272F;
@@ -547,24 +551,35 @@ input{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 15px;
 }
 input {
   font-size: 20px;
   text-align: center;
 }
 #dotaz{
-  height: 70px;
+  height: 80px;
 }
+
 #jmeno-prijmeni{
   margin-top: 20px;
 }
 #btnOdeslat{
-  padding-left: 10%;
-  padding-right: 10%;
-  justify-content: center;
-  background-color: white;
-  color: #1B272F;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #005494;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 25rem;
+  font-size: 40px;
 }
+
+button#btnOdeslat:hover {
+  background-color: #0056b3; /* Změna barvy při přejetí myší */
+}
+
 select {
   width: 100%;
   padding: 10px;
@@ -614,14 +629,14 @@ option {
   z-index: 999;
 }
       
-@media(max-width:865px){
-  .side-navbar{
-    padding-top: 125px;
-  }
+@media(max-width:1170px){
                     .side-navbar a{
                       text-align: center;
                       font-size: 40px;
                       align-items: center;
+                    }
+                    .side-navbar{
+                      padding-top: 125px;
                     }
                     .side-navbar .close-icon {
                       font-size: 85px;
@@ -655,12 +670,7 @@ option {
                 }
                 .hero p{
                   font-size: 15px;
-                }
-              
-              nav img{
-                width: 200px;
-              }
-            
+                }      
           
             .nazev-kategorie2 h2{
             color: #ffff;
