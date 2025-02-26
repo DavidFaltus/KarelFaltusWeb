@@ -54,37 +54,50 @@
             <a class="side-navbar__link hover" href="nabidka.html">Nabídka</a>
             <a class="side-navbar__link hover" href="fotogalerie.html">Fotogalerie</a>
             <a class="side-navbar__link hover" href="kontakt.html">Kontakt</a>
+            <div>
+              <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
+                <img src="fotky/czech-republic-162276_1280.webp" alt="Czech Flag" width="30">
+              </a>
+              <a href="#" onclick="switchLanguage('en')"id="languageSwitch">
+                <img src="fotky/union-jack-1027898_640.webp" alt="English Flag" width="30">
+              </a>
+            </div>
           </div>
         </div>
       </nav>
       <div class="nadpis__jinestranky">
-        <h1>Kontaktní formulář</h1>
+        <h1>Kontakt</h1>
       </div>
     </div>
   </header>
 <main>
-<section id="formular">
-<form>
+<div> 
+  <h1>Kontaktní formulář</h1> 
+  <section id="formular">
+<form action="https://api.web3forms.com/submit" method="POST">
   <fieldset>
-    <div class="form-group">
+      <input type="hidden" name="access_key" value="a9633fac-5576-428c-a534-1bd779586890">
       <input type="text" id="jmeno-prijmeni" placeholder="Jméno a příjmení:" name="jmeno-prijmeni">
-    </div>
-    <div class="form-group">
       <input type="text" placeholder="Email:*" name="email" required>
-    </div>
-    <div class="form-group">
       <input type="text" placeholder="Telefon:" name="telefon">
-    </div>
-    <div class="form-group">
       <input id="dotaz" type="text"  placeholder="Dotaz:*" name="dotaz" required>
-    </div>
-    <div class="form-group">
       <button id="btnOdeslat">Odeslat</button>
-    </div>
+    </fieldset>
   </form> 
 </section>
+</div>
+  <h1>Sociální sítě</h1>
+  <div class="socky">
+    <div class="social-links">
+        <a href="https://www.facebook.com/david.faltus.5/" class="odkaz">
+            <img src="fotky/facebook.png" alt="Facebook">
+        </a>
+        <a href="https://www.instagram.com/dronem_po_svete/" class="odkaz">
+            <img src="fotky/instagram.png" alt="Dronový Instagram">
+        </a>
+    </div>
+</div>
 </main>
-
 <footer>
   <section>
     </div>

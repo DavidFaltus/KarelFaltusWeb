@@ -61,14 +61,36 @@ function closeNavbar() {
     localStorage.setItem('language', language);
     applyLanguage(language);
   }
-
+  
+  function switchLanguage(language) {
+    // Uložíme zvolený jazyk do localStorage
+    localStorage.setItem('language', language);
+    applyLanguage(language);
+  }
+  
   function applyLanguage(language) {
     const currentPath = window.location.pathname;
-
+  
+    // Získání názvu stránky bez cesty
+    let pageName = currentPath.split('/').pop();
+  
+    // Kontrola, zda uživatel není už na požadované stránce
+    if ((language === 'cz' && !pageName.includes('EN')) || 
+        (language === 'en' && pageName.includes('EN'))) {
+      // Uživatel již je na správné stránce, nedělej nic
+      window.location.reload();
+      return;
+    }
+  
     // Přesměrování podle zvoleného jazyka
-    if (language === 'cz' && !currentPath.includes('index.html')) {
-      window.location.href = 'index.html';  // Čeština verze
-    } else if (language === 'en' && !currentPath.includes('indexEN.html')) {
-      window.location.href = 'indexEN.html';  // Anglická verze
+    if (language === 'cz') {
+      // Nahrazení anglické verze (EN) českou verzí
+      const czPage = pageName.replace('EN', ''); 
+      window.location.href = czPage;
+    } else if (language === 'en') {
+      // Přidání "EN" do názvu české verze stránky pro anglickou verzi
+      const enPage = pageName.replace('.html', 'EN.html');
+      window.location.href = enPage;
     }
   }
+  

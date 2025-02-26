@@ -55,38 +55,39 @@
             <a class="side-navbar__link hover" href="nabidkaEN.html">Offer</a>
             <a class="side-navbar__link hover" href="fotogalerieEN.html">Photogalery</a>
             <a class="side-navbar__link hover" href="kontaktEN.html">Contact</a>
+            <div>
+              <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
+                <img src="fotky/czech-republic-162276_1280.webp" alt="Czech Flag" width="30">
+              </a>
+              <a href="#" onclick="switchLanguage('en')"id="languageSwitch">
+                <img src="fotky/union-jack-1027898_640.webp" alt="English Flag" width="30">
+              </a>
+            </div>
           </div>
         </div>
       </nav>
       <div class="nadpis__jinestranky">
-        <h1>Contact Form</h1>
+        <h1>Contact</h1>
       </div>
     </div>
   </header>
 
 <main>
+  <h1>Contact form</h1>
 <section id="formular">
-<form>
-  <fieldset>
-    <div class="form-group">
-      <input type="text" id="jmeno-prijmeni" placeholder="Name and Surname:" name="jmeno-prijmeni">
-    </div>
-    <div class="form-group">
-      <input type="text" placeholder="Email:*" name="email" required>
-    </div>
-    <div class="form-group">
-      <input type="text" placeholder="Phone number:" name="telefon">
-    </div>
-    <div class="form-group">
-      <input id="dotaz" type="text"  placeholder="Your question:*" name="dotaz" required>
-    </div>
-    <div class="form-group">
-      <button id="btnOdeslat">Send</button>
-    </div>
-  </form> 
+  <form action="https://api.web3forms.com/submit" method="POST">
+    <fieldset>
+        <input type="hidden" name="access_key" value="a9633fac-5576-428c-a534-1bd779586890">
+        <input type="text" id="jmeno-prijmeni" placeholder="Jméno a příjmení:" name="jmeno-prijmeni">
+        <input type="text" placeholder="Email:*" name="email" required>
+        <input type="text" placeholder="Telefon:" name="telefon">
+        <input id="dotaz" type="text"  placeholder="Dotaz:*" name="dotaz" required>
+        <button id="btnOdeslat">Odeslat</button>
+      </fieldset>
+    </form> 
 </section>
+<h1>Social networks</h1>
 </main>
-
 <footer>
   <section>
   </div>
