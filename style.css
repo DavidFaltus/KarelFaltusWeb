@@ -193,13 +193,32 @@ span{
 }
 
 /*ZÁPATÍ*/
+.navigace-sekundarni {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.navigace-sekundarni p {
+  margin: 0;
+  padding-bottom: 5px;
+}
+
+.navigace-sekundarni a {
+  color: white;
+}
+
+.navigace-sekundarni a:hover {
+  text-decoration: underline; /* Zvýraznění při hoveru */
+}
 
 footer{
   color: white;
   background: #1B272F;
 }
 footer a{
-  text-decoration: none;
   color: white;
 }
 footer a:hover{
@@ -208,7 +227,7 @@ footer a:hover{
 footer h2{
   font-size: 20px;
   font-weight: bold;
-  text-align: center;
+  text-align: left;
   background-color: #1B272F;
 }
 .footer-row{
@@ -217,12 +236,16 @@ footer h2{
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  padding-left: 15%;
 }
 .footer-left, .footer-right, .footer-center{
   flex-basis: 45%;
   padding: 10px;
   margin-bottom: 20px;
-  text-align: center;
+  text-align: left;
+}
+.footer-center{
+  padding-left: 100px;
 }
 .footer-row h2{
   margin: 10px 0;
@@ -508,31 +531,21 @@ footer h2{
 }
 
 /*KONTAKT*/
-.socky {
-  max-width: 1050px;
-  background-color: #1B272F;
-  padding: 30px;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-left: auto;
-  margin-right: auto;
-  height: 350px;
-  border-radius: 10px;
-  color: white;
-  text-align: center; 
-}
-
 .social-links {
   display: flex; 
   justify-content: space-around; 
   align-items: flex-start; 
   gap: 20px; 
 }
-
+.odkaz{
+  color: #1B272F;
+}
 .odkaz img {
-  padding-top: 10%;
+  padding-top: 5px;
   width: 50%; 
   height: auto; 
+  max-width: 40px;
+  padding-right: 10px;
 }
 
 .odkaz h3 {
@@ -745,6 +758,7 @@ option {
           margin: auto;
           display: flex;
           justify-content: space-between;
+          padding-left: 0;
           }
           footer left, footer right, footer center{
             flex-basis: 45%;
