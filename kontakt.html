@@ -74,16 +74,16 @@
 <div> 
   <h1>Kontaktní formulář</h1> 
   <section id="formular">
-<form action="https://api.web3forms.com/submit" method="POST">
-  <fieldset>
-      <input type="hidden" name="access_key" value="a9633fac-5576-428c-a534-1bd779586890">
-      <input type="text" id="jmeno-prijmeni" placeholder="Jméno a příjmení:" name="jmeno-prijmeni">
-      <input type="text" placeholder="Email:*" name="email" required>
-      <input type="text" placeholder="Telefon:" name="telefon">
-      <input id="dotaz" type="text"  placeholder="Dotaz:*" name="dotaz" required>
-      <button id="btnOdeslat">Odeslat</button>
-    </fieldset>
-  </form> 
+    <form id="myForm" action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
+      <fieldset>
+          <input type="hidden" name="access_key" value="a9633fac-5576-428c-a534-1bd779586890">
+          <input type="text" id="jmeno-prijmeni" placeholder="Jméno a příjmení:" name="jmeno-prijmeni" autocomplete="off">
+          <input type="text" placeholder="Email:*" name="email" required autocomplete="off">
+          <input type="text" placeholder="Telefon:" name="telefon" autocomplete="off">
+          <input id="dotaz" type="text" placeholder="Dotaz:*" name="dotaz" required autocomplete="off">
+          <button type="submit" id="btnOdeslat">Odeslat</button>
+      </fieldset>
+    </form>
 </section>
 </div>
 

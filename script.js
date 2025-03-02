@@ -94,3 +94,7 @@ function closeNavbar() {
     }
   }
   
+  document.getElementById('myForm').addEventListener('submit', function(e) {
+    // Obnovíme stránku okamžitě po stisknutí tlačítka odeslání
+    window.location.reload();
+  });
