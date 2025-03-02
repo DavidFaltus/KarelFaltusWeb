@@ -5,6 +5,7 @@ html {
 }
 body{
   margin: 0;
+
 }
 
 .uvodni-stranka{
@@ -233,7 +234,7 @@ footer h2{
 }
 .footer-row{
   font-size: 15px;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -250,6 +251,7 @@ footer h2{
 }
 .footer-row h2{
   margin: 10px 0;
+  width: 20%;
 }
 .footer-row p{
   line-height: 10px;
