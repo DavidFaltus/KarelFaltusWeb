@@ -5,7 +5,6 @@ html {
 }
 body{
   margin: 0;
-
 }
 
 .uvodni-stranka{
@@ -247,11 +246,11 @@ footer h2{
   text-align: left;
 }
 .footer-center{
-  padding-left: 100px;
+  padding-left: 80px;
 }
 .footer-row h2{
   margin: 10px 0;
-  width: 20%;
+  width: 100%;
 }
 .footer-row p{
   line-height: 10px;
@@ -886,7 +885,7 @@ option {
 
 @media(max-width:754px){
   .footer-row {
-    width: 90%;
+    width: 100%;
     margin: auto;
     display: block;
     padding-left: 0;
@@ -895,7 +894,7 @@ option {
   .footer-left, .footer-center, .footer-right {
     margin-bottom: 20px; /* Přidání mezery mezi jednotlivými sekcemi */
     display: inline-block;
-    width: 50%;
+    width: 80%;
   }
   .footer-center{
     padding-left: 0;
