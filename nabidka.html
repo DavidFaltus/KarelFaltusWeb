@@ -7,7 +7,8 @@
   <title>Letadla</title>
   <link href="style.css" rel="stylesheet" type="text/css">
   <script src="script.js"></script>
-  <script src="nabidka.css"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="nabidka.css">
 </head>
 <body>
 
@@ -67,40 +68,88 @@
         </div>
       </nav>
       <div class="nadpis__jinestranky">
-        <h1>Fotogalerie</h1>
+        <h1>Nabídka</h1>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="letadlo">
-      <div class="letadlo-image">
-        <img src="foto/spitfire.JPG" alt="letadlo spitfire">
+        <section class="produkt">
+          <div class="produkt-image">
+            <img src="foto/spitfire.JPG" alt="produkt spitfire">
+          </div>
+          <div class="produkt-text">
+            <h2>Spitfire</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              <p class="detailni-popis hidden">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+              <button class="produkt-btn">Více</button>
+            </p>
+          </div>
+          <button class="objednani" data-product="Spitfire">Nezávazně objednat</button>
+        </section>
+
+        <section class="produkt">
+          <div class="produkt-image">
+            <img src="foto/spitfire.JPG" alt="produkt spitfire">
+          </div>
+          <div class="produkt-text">
+            <h2>Mig 21</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              <p class="detailni-popis hidden">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+              <button class="produkt-btn">Více</button>
+            </p>
+          </div>
+          <button class="objednani" data-product="Mig 21">Nezávazně objednat</button>
+        </section>
+
+        <section class="produkt">
+          <div class="produkt-image">
+            <img src="foto/spitfire.JPG" alt="produkt spitfire">
+          </div>
+          <div class="produkt-text">
+            <h2>Vrtule</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              <p class="detailni-popis hidden">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+              <button class="produkt-btn">Více</button>
+            </p>
+          </div>
+          <button class="objednani" data-product="Vrtule">Nezávazně objednat</button>
+        </section>
+
+        <section class="produkt">
+          <div class="produkt-image">
+            <img src="foto/spitfire.JPG" alt="produkt spitfire">
+          </div>
+          <div class="produkt-text">
+            <h2>Lambada</h2>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              <p class="detailni-popis hidden">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+              </p>
+              <button class="produkt-btn">Více</button>
+            </p>
+          </div>
+          <button class="objednani" data-product="Lambada">Nezávazně objednat</button>
+        </section>
+
+        <div id="emailOverlay">
+          <form id="emailForm">
+              <label for="email">Zadejte svůj email:</label>
+              <input type="email" id="email" name="email" placeholder="Váš email" required>
+              <button type="submit">Odeslat</button>
+              <button type="button" class="close-btn">Zavřít</button>
+          </form>
       </div>
-      <div class="letadlo-text">
-        <h2>Spitfire</h2>
-        <p>Spitfire je britské stíhací letadlo z 30. let, které bylo nasazeno v druhé světové válce a hrálo klíčovou
-          roli v bitvách o Británii. Díky své rychlosti, obratnosti a schopnosti dostat se do výšky rychle se stal
-          jedním z nejúspěšnějších britských letadel války. Jeho design přinesl nové technologie, jako kovovou kostru a
-          celokovovou krytinu, což umožnilo letadlu být lehčí a rychlejší. Dnes se letadlo Spitfire stalo ikonou
-          britského letectví a je populární mezi sběrateli a milovníky letadel.</p>
-      </div>
-    </section>
-    <section class="letadlo2">
-      <div class="letadlo2-image">
-        <img src="foto/lambada2.JPG" alt="letadlo lambada">
-      </div>
-      <div class="letadlo2-text">
-        <h2>Lambada</h2>
-        <p>Letadlo Lambada je moderním ultralehkým letadlem, kterého si piloti velmi oblíbili po celém světě. Jeho
-          design je aerodynamický a využívá hlavně uhlíkové vlákno pro pevnost a lehkost. Křídla letadla jsou navržena
-          tak, aby dosáhla vynikajícího poměru výkonu a spotřeby paliva. Jednou z jeho hlavních výhod je schopnost letět
-          velké vzdálenosti s nízkou spotřebou paliva. Je snadno ovladatelné a bezpečné pro piloty všech úrovní
-          zkušeností a je vybaveno moderní avionikou, včetně GPS navigace. Lambada se používá pro sportovní a rekreační
-          létání, výcvik pilotů a letecký průzkum, a je také ideálním letadlem pro komerční aplikace díky jeho vysoké
-          efektivitě a nízké spotřebě paliva.</p>
-      </div>
-    </section>
   </main>
 
   <footer>
@@ -139,5 +188,78 @@
       <p>Karel Faltus - 2025</p>
     </div>
   </footer>
+  
 </body>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Vybereme všechny tlačítka a detailní popisy pro každý produkt
+    const buttons = document.querySelectorAll(".produkt-btn");
+    const detailniPopisy = document.querySelectorAll(".detailni-popis");
+  
+    // Přidáme událost click na všechna tlačítka
+    buttons.forEach((button, index) => {
+        button.addEventListener("click", function() {
+            // Přepínání třídy 'hidden' u detailního popisu pro každý produkt
+            const detail = detailniPopisy[index];
+            if (detail.classList.contains("hidden")) {
+                detail.classList.remove("hidden");  // Zobrazíme detailní popis
+                button.textContent = "Méně";  // Změníme text tlačítka
+            } else {
+                detail.classList.add("hidden");  // Skryjeme detailní popis
+                button.textContent = "Více";  // Změníme text tlačítka zpět
+            }
+        });
+    });
+});
+  
+
+
+      // Uložení názvu produktu do formuláře
+      let selectedProduct = '';
+
+document.querySelectorAll(".objednani").forEach(button => {
+    button.addEventListener("click", function() {
+        selectedProduct = this.getAttribute('data-product');
+        document.getElementById("emailOverlay").style.display = "block";
+    });
+});
+
+// Skrytí overlay formuláře
+document.querySelector(".close-btn").addEventListener("click", function() {
+    document.getElementById("emailOverlay").style.display = "none";
+});
+
+// Odeslání e-mailu po vyplnění formuláře
+document.getElementById("emailForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    const email = document.getElementById("email").value;
+
+    // Odeslání e-mailu pomocí API Web3Forms
+    fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            access_key: "a9633fac-5576-428c-a534-1bd779586890",  // Vlož svůj přístupový klíč
+            email: email,
+            subject: "Nová objednávka pro produkt " + selectedProduct,
+            message: `Uživatel s emailem ${email} projevil zájem o produkt ${selectedProduct}.`
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert("Email byl úspěšně odeslán!");
+            document.getElementById("emailOverlay").style.display = "none"; // Skryj overlay po úspěšném odeslání
+        } else {
+            alert("Nastala chyba při odesílání emailu.");
+        }
+    })
+    .catch(error => {
+        console.error("Chyba:", error);
+        alert("Nastala chyba při odesílání emailu.");
+    });
+});
+</script>
 </html>

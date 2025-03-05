@@ -361,72 +361,160 @@ footer h2{
 }
 
 /*NABÍDKA*/
-#letadlo{
-  width: 100%;
-  padding: 50px 0;
-}
-
-.letadlo h2{
+.produkt h2{
   color: #005494;
+  font-size: 3rem;
   }
-.letadlo p{
+.produkt p{
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 30px;
   }
-.letadlo-image img{
+.produkt-image img{
   max-width: 70%;
   height: auto;
   border-radius: 7px;
   }      
-.letadlo{
+.produkt{
   display: flex;
   align-items: center;
-  margin-bottom: 50px;
   flex-direction: row-reverse;
-  padding-top: 50px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  position: relative; /* Nastavení relativního pozicování pro rodičovský element */
 }
-.letadlo-text {
+.produkt-text {
   flex: 1;
   padding-left: 60px;
   padding-right: 0;
+  display: flex;
+  flex-direction: column; /* Položí prvky pod sebe */
+  align-items: center;    /* Zarovná prvky na střed horizontálně */
+  position: relative;
+  bottom: 30px;
   }
-.letadlo-image{
+.produkt-image{
   flex: 1;
   text-align: center;
   width: 70%;
   }
-     
-.letadlo2{
+.produkt2{
   display: flex;
   flex-direction: row;
   align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
   margin-bottom: 50px;
-  padding-top: 50px;
+  margin-top: 50px;
 }
-.letadlo2 h2{
+.produkt2 h2{
   color: #005494;
   }
-.letadlo2 p{
+.produkt2 p{
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 30px;
   }
-.letadlo2-image img{
+.produkt2-image img{
   max-width: 70%;
   height: auto;
   border-radius: 7px;
   }   
-.letadlo2-text {
+.produkt2-text {
   flex: 1;
   padding-right: 60px;
   }
-.letadlo2-image{
+.produkt2-image{
   flex: 1;
   text-align: center;
   width: 70%;
   }
 
+  .hidden {
+    display: none;
+  }
+  
+  .produkt-btn{
+    position: absolute;
+    padding-top: 15px;
+    padding: 10px 20px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    left: 80%;
+    bottom: 5%;
+    font-size: 20px;
+  }
+  .objednani{
+    background-color: #005494;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 25px;
+    bottom: 3%;
+    left: 4%;
+    position: absolute;
+  }
+  #emailOverlay {
+    display: none; /* Skryté, dokud se nezobrazí po kliknutí */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Poloprůhledná šedá barva */
+    z-index: 1000; /* Zajistí, že overlay bude nad vším ostatním */
+}
+
+/* Vystředěný formulář */
+#emailForm {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #218838;
+}
+
+.close-btn {
+    margin-top: 10px;
+    background-color: #dc3545;
+}
+
+.close-btn:hover {
+    background-color: #c82333;
+}
 .tabulka {
   margin: 50px 0;
 }
@@ -802,33 +890,33 @@ option {
       }
 
       /*NABÍDKA*/
-      .letadlo{
+      .produkt{
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 50px;
       }
-      .letadlo-image{
+      .produkt-image{
         flex: 1;
         text-align: center;
         width: 100%;
         }
-      .letadlo-text {
+      .produkt-text {
         padding: 4%;
         }
-      .letadlo2{
+      .produkt2{
         display: flex;
         flex-direction: column;
         align-items: center;
         margin-bottom: 50px;
         padding-top: 50px;
       }
-      .letadlo2-image{
+      .produkt2-image{
         flex: 1;
         text-align: center;
         width: 100%;
         }
-      .letadlo2-text {
+      .produkt2-text {
         flex: 1;
         padding: 4%;
         }
@@ -898,6 +986,9 @@ option {
   }
   .footer-center{
     padding-left: 0;
+  }
+  .produkt-btn{
+    left: 55%;
   }
 }
   
