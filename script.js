@@ -39,7 +39,12 @@ fs.readFile("formular.json", "utf8", (error, data) => {
 });
 
 function openNavbar() {
-    document.getElementById("sideNavbar").style.width = "450px";
+  if (window.innerWidth < 754) {
+    document.getElementById("sideNavbar").style.width = "100%";
+} else {
+  document.getElementById("sideNavbar").style.width = "55%";
+}
+    
   }
 function closeNavbar() {
     document.getElementById("sideNavbar").style.width = "0";
