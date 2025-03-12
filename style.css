@@ -525,22 +525,6 @@ footer h2{
       .produkt-text {
         padding: 4%;
         }
-      .produkt2{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 50px;
-        padding-top: 50px;
-      }
-      .produkt2-image{
-        flex: 1;
-        text-align: center;
-        width: 100%;
-        }
-      .produkt2-text {
-        flex: 1;
-        padding: 4%;
-        }
       
         /*FOTOGALERIE*/
     .galerie{
@@ -610,9 +594,6 @@ footer h2{
   }
   .footer-center{
     padding-left: 0;
-  }
-  .produkt-btn{
-    left: 55%;
   }
   #emailForm {
     width: 100%;

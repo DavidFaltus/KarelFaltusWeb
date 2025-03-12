@@ -7,7 +7,9 @@
   <title>Letadla</title>
   <link href="style.css" rel="stylesheet" type="text/css">
   <link href="nabidka.css" rel="stylesheet" type="text/css">
+  <link href="lightbox.css" rel="stylesheet" type="text/css">
   <script src="script.js"></script>
+  <script src="lightbox-plus-jquery.js"></script>
 </head>
 <body>
 
@@ -73,87 +75,138 @@
   </header>
 
   <main>
-        <section class="produkt">
-          <div class="produkt-image">
-            <img src="foto/fotkyweb/spitfire/fotoPromo1.JPG" alt="produkt spitfire">
-          </div>
-          <div class="produkt-text">
-            <h2>Maketa Supermarine Spitfire Mk.IX - varianta MOVIE</h2>
-            <p>
-              maketa Supermarine Spitfire Mk.IX. Verze MOVIE umožňuje návštěvníkům bezprostřední kontakt s letadlem.
-               Usednutí do kokpitu, manipulaci s ovladači a odezvou do řídících ploch, doplněné zvukovými a kouřovými efekty. 
-               Součástí dodávky je i replika uniformy RAF pro případné pořízení památečních fotografií návštevníků v dobové uniformě. 
-               Ideální pro potřeby filmu a natáčení reklamních spotů!     
-               <p class="zakladni-cena">Základní cena bez DPH: 2 873 798 Kč</p>         
-              <div class="detailni-popis hidden">
-                <p>Rozpětí 11,25 m</p>
-                <p>Délka 9,65 m</p>     
-              </div>
-              <button class="produkt-btn">Více</button>
-            </p>
-          </div>
-          <button class="objednani" data-product="Spitfire">Nezávazně objednat</button>
-        </section>
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a href="foto/fotkyweb/spitfire/fotoPromo1.JPG" data-lightbox="galerie">
+            <img id="mainImage-product1" src="foto/fotkyweb/spitfire/fotoPromo1.JPG" alt="produkt spitfire">
+          </a>
+        </div>
+        <div class="produkt-thumbnails">
+          <img class="thumbnail" src="foto/fotkyweb/spitfire/fotoPromo1.JPG" alt="vedlejší fotka 1" onclick="changeImage('foto/fotkyweb/spitfire/fotoPromo1.JPG')">
+          <img class="thumbnail" src="foto/fotkyweb/spitfire/fotoPromo1.JPG" alt="vedlejší fotka 2" onclick="changeImage('foto/fotkyweb/spitfire/fotoPromo1.JPG')">
+          <img class="thumbnail" src="foto/fotkyweb/spitfire/fotoPromo1.JPG" alt="vedlejší fotka 3" onclick="changeImage('foto/fotkyweb/spitfire/fotoPromo1.JPG')">
+        </div>
+      </div>
+      <div class="produkt-text">
+        <h2>Maketa Supermarine Spitfire Mk.IX - varianta MOVIE</h2>
+        <p>
+          maketa Supermarine Spitfire Mk.IX.Verze MOVIE umožňuje návštěvníkům bezprostřední kontakt s letadlem. 
+          Usednutí do kokpitu, manipulaci s ovladači a odezvou do řídících ploch, doplněné zvukovými a kouřovými efekty. 
+          Součástí dodávky je i replika uniformy RAF pro případné pořízení památečních fotografií návštevníků v dobové uniformě. 
+          Ideální pro potřeby filmu a natáčení reklamních spotů!
+        </p>
+        <p class="zakladni-cena"><big>Základní cena bez DPH: 2 873 798 Kč</big></p>
+        <div class="detailni-popis hidden">
+          <p>Rozpětí 11,25 m</p>
+          <p>Délka 9,65 m</p>     
+        </div> 
+        <div class="produkt-tlacitka">
+      <button class="objednani" data-product="Spitfire">Nezávazně objednat</button>
+      <button class="produkt-btn">Více</button>
+        </div>
+      </div>
+    </section>
+    
 
-        <section class="produkt">
-          <div class="produkt-image">
-            <img src="foto/fotkyweb/vrtule/sestavenaNenabarvenyKuzel.jpg" alt="produkt spitfire">
-          </div>
-          <div class="produkt-text">
-            <h2>Čtyřlistá vrtule Spitfire Mk.IX</h2>
-            <p>
-              maketa vrtulového kužele včetně nýtování a pouzdrem na upevnění čtyř vrtulových listů v kamuflážních barvách s popisky. 
-              Na přání dodáváme i verzi s podsvícením vrtulových listů.
-              <p class="zakladni-cena">Základní cena bez DPH: 94 826 Kč</p>
-              <div class="detailni-popis hidden">
-                <p>Průměr vrtule 3,27 m</p>
-              </div>
-              <button class="produkt-btn">Více</button>
-            </p>
-          </div>
-          <button class="objednani" data-product="Mig 21">Nezávazně objednat</button>
-        </section>
 
-        <section class="produkt">
-          <div class="produkt-image">
-            <img src="foto/fotkyweb/alabtros/fotoPromo.JPG" alt="produkt spitfire">
-          </div>
-          <div class="produkt-text">
-            <h2>Albatros D.5</h2>
-            <p>
-              maketa slavné německé stíhačky je určena převážně ke statickým ukázkám a marketingovým účelům. 
-              Marking letounu lze na přání změnit, včetně úpravy do všech kamuflážních verzí. 
-              Křídlo je dřevěné, trup ze sklolaminátových vláken s věrnou replikou kokpitu.
-              Ideální pro potřeby filmu a natáčení reklamních spotů!      
-              <p class="zakladni-cena">Základní cena bez DPH: 1 058 000 KČ</p>        
-              <div class="detailni-popis hidden">
-                <p>Rozpětí 9,05 m</p>
-                <p>Délka 7,33 m</p>
-              </div>
-              <button class="produkt-btn">Více</button>
-            </p>
-          </div>
-          <button class="objednani" data-product="Vrtule">Nezávazně objednat</button>
-        </section>
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a href="foto/fotkyweb/vrtule/detailShora.jpg" data-lightbox="galerie">
+            <img id="mainImage-product2" src="foto/fotkyweb/vrtule/detailShora.jpg" alt="produkt spitfire">
+          </a>
+        </div>
+        <div class="produkt-thumbnails">
+          <img class="thumbnail" src="foto/fotkyweb/vrtule/detailShora.jpg" alt="vedlejší fotka 1" onclick="changeImage('foto/fotkyweb/vrtule/detailShora.jpg')">
+          <img class="thumbnail" src="foto/fotkyweb/vrtule/detailShora.jpg" alt="vedlejší fotka 2" onclick="changeImage('foto/fotkyweb/vrtule/detailShora.jpg')">
+          <img class="thumbnail" src="foto/fotkyweb/vrtule/detailShora.jpg" alt="vedlejší fotka 3" onclick="changeImage('foto/fotkyweb/vrtule/detailShora.jpg')">
+        </div>
+      </div>
+      <div class="produkt-text">
+        <h2>Čtyřlistá vrtule Spitfire Mk.IX</h2>
+        <p>
+          maketa vrtulového kužele včetně nýtování a pouzdrem na upevnění čtyř vrtulových listů v kamuflážních barvách s popisky. 
+          Na přání dodáváme i verzi s podsvícením vrtulových listů.
+        </p>
+        <p class="zakladni-cena"><big>Základní cena bez DPH: 94 826 Kč</big></p>
+        <div class="detailni-popis hidden">
+          <p>Průměr vrtule 3,27 m</p>     
+        </div> 
+        <div class="produkt-tlacitka">
+      <button class="objednani" data-product="Spitfire">Nezávazně objednat</button>
+      <button class="produkt-btn">Více</button>
+        </div>
+      </div>
+    </section> 
+    
 
-        <section class="produkt">
-          <div class="produkt-image">
-            <img src="foto/fotkyweb/světlo vrtule (stojan)/fotoPromo.jpg" alt="produkt spitfire">
-          </div>
-          <div class="produkt-text">
-            <h2>Podsvícený vrtulový list</h2>
-            <p>
-              maketa vrtulového listu v originálním měřítku v kamuflážní barvě s popisky může být inspirací nejednoho modeláře. 
-              Listy jsou očíslované a nedají se zaměnit s listy k vrtulovému kuželi.
-              <p class="zakladni-cena">Základní cena bez DPH: 5 120 KČ (upravit)</p>
-              <div class="detailni-popis hidden">
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a href="foto/fotkyweb/alabtros/fotoTata.JPG" data-lightbox="galerie">
+            <img id="mainImage-product3" src="foto/fotkyweb/alabtros/fotoTata.JPG" alt="produkt spitfire">
+          </a>
+        </div>
+        <div class="produkt-thumbnails">
+          <img class="thumbnail" src="foto/fotkyweb/alabtros/fotoTata.JPG" alt="vedlejší fotka 1" onclick="changeImage('foto/fotkyweb/alabtros/fotoTata.JPG')">
+          <img class="thumbnail" src="foto/fotkyweb/alabtros/fotoTata.JPG" alt="vedlejší fotka 2" onclick="changeImage('foto/fotkyweb/alabtros/fotoTata.JPG')">
+          <img class="thumbnail" src="foto/fotkyweb/alabtros/fotoTata.JPG" alt="vedlejší fotka 3" onclick="changeImage('foto/fotkyweb/alabtros/fotoTata.JPG')">
+        </div>
+      </div>
+      <div class="produkt-text">
+        <h2>Albatros D.5</h2>
+        <p>
+          maketa slavné německé stíhačky je určena převážně ke statickým ukázkám a marketingovým účelům. 
+          Marking letounu lze na přání změnit, včetně úpravy do všech kamuflážních verzí. 
+          Křídlo je dřevěné, trup ze sklolaminátových vláken s věrnou replikou kokpitu.
+          Ideální pro potřeby filmu a natáčení reklamních spotů!  
+        </p>
+        <p class="zakladni-cena"><big>Základní cena bez DPH: 1 058 000 KČ</big></p>
+        <div class="detailni-popis hidden">
+          <p>Rozpětí 9,05 m</p>
+          <p>Délka 7,33 m</p>    
+        </div> 
+        <div class="produkt-tlacitka">
+      <button class="objednani" data-product="Spitfire">Nezávazně objednat</button>
+      <button class="produkt-btn">Více</button>
+        </div>
+      </div>
+    </section> 
 
-              </div>
-              <button class="produkt-btn">Více</button>
-            </p>
-          </div>
-          <button class="objednani" data-product="Lambada">Nezávazně objednat</button>
-        </section>
+
+
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a href="foto/fotkyweb/světlo vrtule (stojan)/fotoPromo.jpg" data-lightbox="galerie">
+            <img id="mainImage-product4" src="foto/fotkyweb/světlo vrtule (stojan)/fotoPromo.jpg" alt="produkt spitfire">
+          </a>
+        </div>
+        <div class="produkt-thumbnails">
+          <img class="thumbnail" src="foto/fotkyweb/světlo vrtule (stojan)/fotoPromo.jpg" alt="vedlejší fotka 1" onclick="changeImage('foto/fotkyweb/světlo vrtule (stojan)/fotoPromo.jpg')">
+          <img class="thumbnail" src="foto/fotkyweb/světlo vrtule (stojan)/fotoPromo.jpg" alt="vedlejší fotka 2" onclick="changeImage('foto/fotkyweb/světlo vrtule (stojan)/fotoPromo.jpg')">
+          <img class="thumbnail" src="foto/fotkyweb/světlo vrtule (stojan)/fotoPromo.jpg" alt="vedlejší fotka 3" onclick="changeImage('foto/fotkyweb/světlo vrtule (stojan)/fotoPromo.jpg')">
+        </div>
+      </div>
+      <div class="produkt-text">
+        <h2>Podsvícený vrtulový list</h2>
+        <p>
+          maketa vrtulového listu v originálním měřítku v kamuflážní barvě s popisky může být inspirací nejednoho modeláře. 
+          Listy jsou očíslované a nedají se zaměnit s listy k vrtulovému kuželi.
+        </p>
+        <p class="zakladni-cena"><big>Základní cena bez DPH: 5 120 KČ (upravit)</big></p>
+        <div class="detailni-popis hidden">
+          <p>Rozpětí 9,05 m</p>
+          <p>Délka 7,33 m</p>    
+        </div> 
+        <div class="produkt-tlacitka">
+      <button class="objednani" data-product="Spitfire">Nezávazně objednat</button>
+      <button class="produkt-btn">Více</button>
+        </div>
+      </div>
+    </section> 
+
 
         <div id="emailOverlay">
           <form id="emailForm">

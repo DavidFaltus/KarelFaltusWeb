@@ -103,3 +103,13 @@ function closeNavbar() {
     // Obnovíme stránku okamžitě po stisknutí tlačítka odeslání
     window.location.reload();
   });
+
+  function changeImage(imageSrc, productId) {
+    // Najdeme hlavní obrázek pro daný produkt pomocí jeho ID
+    const mainImage = document.getElementById('mainImage-' + productId);
+    if (mainImage) {
+      mainImage.src = imageSrc;
+    }
+  }
+  
+  
