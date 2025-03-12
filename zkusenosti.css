@@ -102,3 +102,17 @@
     text-align: center;
     width: 70%;
     }
+
+    .zarovnaniDoLeva-text h2, .zarovnaniDoPrava-text h2{
+      color: #005494;
+      }
+    .zarovnaniDoLeva-text p, .zarovnaniDoPrava-text p{
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 30px;
+      }
+    .zarovnaniDoLeva-image img, .zarovnaniDoPrava-image img{
+      max-width: 70%;
+      height: auto;
+      border-radius: 7px;
+      }
