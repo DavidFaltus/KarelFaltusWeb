@@ -111,5 +111,6 @@ function closeNavbar() {
       mainImage.src = imageSrc;
     }
   }
+
   
   
