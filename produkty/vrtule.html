@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="kontakt.css" rel="stylesheet" type="text/css">
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karel Faltus</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="script.js"></script>
 </head>
 <body>
+  
   <header>
-    <div class="pozadi__jinestranky">
+    <div class="uvodni-stranka">
       <nav id="navbar" class="menu">
         <a href="index.html"><img src="fotky/logoKarelF.png" alt="logo"></a>
         <ul class="menu__list">
@@ -30,14 +31,14 @@
           <li>
             <div class="language-switcher">
               <a href="#" onclick="switchLanguage('cz')">
-                <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
+                <img src="fotky/cz.jpg" alt="CzechFlag" width="30">
               </a>
               <a href="#" onclick="switchLanguage('en')">
-                <img src="fotky/gb.png" alt="English Flag" width="30">
+                <img src="fotky/gb.png" alt="EnglishFlag" width="30">
               </a>
-            </div> 
+            </div>  
           </li>
-        </ul> 
+        </ul>
         <div class="hamburger">
           <div onclick="openNavbar()">
             <div class="hamburger__box">
@@ -65,64 +66,48 @@
           </div>
         </div>
       </nav>
-      <div class="nadpis__jinestranky">
-        <h1>Kontakt</h1>
-      </div>
     </div>
   </header>
-<main>
-<div> 
-  <h1>Kontaktní formulář</h1> 
-  <section id="formular">
-    <form id="myForm" action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
-      <fieldset>
-          <input type="hidden" name="access_key" value="a9633fac-5576-428c-a534-1bd779586890">
-          <input type="text" id="jmeno-prijmeni" placeholder="Jméno a příjmení:" name="jmeno-prijmeni" autocomplete="off">
-          <input type="text" placeholder="Email:*" name="email" required autocomplete="off">
-          <input type="text" placeholder="Telefon:" name="telefon" autocomplete="off">
-          <input id="dotaz" type="text" placeholder="Dotaz:*" name="dotaz" required autocomplete="off">
-          <button type="submit" id="btnOdeslat">Odeslat</button>
-      </fieldset>
-    </form>
-</section>
-</div>
 
-</main>
-<footer>
-  <section>
-    </div>
-    <div class="footer-row">
-      <div class="footer-left">
-        <h2>Jak mě kontaktovat ?</h2>
-        <a href="kontakt.html">Kontaktní formulář</a>
-        <p>KarelFaltusObjednavky@gmail.com</p>
+  <main>
+
+  </main>
+
+  <footer>
+    <section>
       </div>
-      <div class="footer-center">
-        <h2>Kde sídlíme ?</h2>
-        <p>Řetůvka</p>
-        <p>Česká Republika</p>
-      </div>
-      <div class="footer-right">
-        <h2>Sociální sítě</h2>
-        <a href="" class="odkaz">
-          <img src="fotky/instagram.png" alt="Facebook">
-      </a>
-        <a href="" class="odkaz">
-          <img src="fotky/facebook.png" alt="Instagram">
+      <div class="footer-row">
+        <div class="footer-left">
+          <h2>Jak mě kontaktovat ?</h2>
+          <a href="kontakt.html">Kontaktní formulář</a>
+          <p>KarelFaltusObjednavky@gmail.com</p>
+        </div>
+        <div class="footer-center">
+          <h2>Kde sídlíme ?</h2>
+          <p>Řetůvka</p>
+          <p>Česká Republika</p>
+        </div>
+        <div class="footer-right">
+          <h2>Sociální sítě</h2>
+          <a href="" class="odkaz">
+            <img src="fotky/instagram.png" alt="Facebook">
         </a>
+          <a href="" class="odkaz">
+            <img src="fotky/facebook.png" alt="Instagram">
+          </a>
+        </div>
       </div>
+    </section>
+    <div class="navigace-sekundarni">
+      <p>
+        <a href="index.html">ÚVODNÍ STRÁNKA  |  </a>
+        <a href="zkusenosti.html">ZKUŠENOSTI  |  </a>
+        <a href="nabidka.html">NABÍDKA  |  </a>
+        <a href="fotogalerie.html">FOTOGALERIE  |  </a>
+        <a href="kontakt.html">KONTAKT</a>
+      </p>
+      <p>Karel Faltus - 2025</p>
     </div>
-  </section>
-  <div class="navigace-sekundarni">
-    <p>
-      <a href="index.html">ÚVODNÍ STRÁNKA  |  </a>
-      <a href="zkusenosti.html">ZKUŠENOSTI  |  </a>
-      <a href="nabidka.html">NABÍDKA  |  </a>
-      <a href="fotogalerie.html">FOTOGALERIE  |  </a>
-      <a href="kontakt.html">KONTAKT</a>
-    </p>
-    <p>Karel Faltus - 2025</p>
-  </div>
-</footer>
+  </footer>
 </body>
 </html>

@@ -221,6 +221,7 @@ span{
 
 .navigace-sekundarni a {
   color: white;
+  text-decoration: none;
 }
 
 .navigace-sekundarni a:hover {
@@ -250,6 +251,7 @@ footer h2{
   display: flex;
   justify-content: space-between;
   padding-left: 15%;
+  padding-top: 50px;
 }
 .footer-left, .footer-right, .footer-center{
   flex-basis: 45%;
@@ -268,44 +270,53 @@ footer h2{
   line-height: 10px;
 }
       
-.zarovnaniDoLeva, .zarovnaniDoPrava {
+.zarovnaniDoLeva,
+.zarovnaniDoPrava {
+  width: 85%;
+  margin: 50px auto;       /* 50px odsazení shora i zdola, zarovnání na střed */
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 50px;
+  align-items: flex-start;
 }
+
+/* Obrázek vlevo / vpravo dle row-reverse nebo row */
 .zarovnaniDoLeva {
-  padding-top: 20px;
-  padding-bottom: 20px;
   flex-direction: row-reverse;
-  }
-.zarovnaniDoLeva-text{
-  flex: 1;
-  padding-right: 60px;
-  }
-.zarovnaniDoLeva-image{
-  flex: 1;
-  text-align: center;
-  width: 70%;
-  }
+}
 .zarovnaniDoPrava {
   flex-direction: row-reverse;
-  }
+}
+
+/* Text v blocích, zarovnání do bloku */
+.zarovnaniDoLeva-text,
 .zarovnaniDoPrava-text {
   flex: 1;
-  padding-left: 60px;
-  padding-right: 0;
-  }
-.zarovnaniDoPrava-image{
+  text-align: justify;
+  padding: 0 60px;
+}
+
+/* Část pro obrázek – zarovnáme na střed */
+.zarovnaniDoLeva-image,
+.zarovnaniDoPrava-image {
   flex: 1;
   text-align: center;
-  width: 70%;
-  }
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
+/* Samotné obrázky, vycentrované uvnitř rodiče */
+.zarovnaniDoLeva-image img,
+.zarovnaniDoPrava-image img {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+  border-radius: 7px; /* Pokud chcete zaoblené okraje */
+}
 
 .nazev-kategorie2{
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
+  padding-top: 60px;
 }
 .nazev-kategorie2 p{
   color:#ffff;
@@ -323,34 +334,35 @@ footer h2{
   padding-bottom: 25px;
 }
 
-#sluzby{
-  width:100%;
-  padding: 40px 0;
-  margin-bottom: 0px;
+#sluzby {
+  width: 100%;
+  margin-bottom: 0;
   background-color: #1B272F;
 }
-.sluzby-box{
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+
+.sluzby-box {
+  display: grid;
+  grid-template-columns: repeat(2, 30%);
+  gap: 60px;
+  justify-content: center;
 }
-.sluzba{
-  color:#ffff;
+
+.sluzba {
+  position: relative;
+  color: #1B272F;
   text-align: center;
-  flex-basis: 48%;
-  border-radius: 7px;
-  margin-bottom: 20px;
   font-size: 25px;
-  position: relative;
-}
-.sluzba img{
-  width: 100%;
   border-radius: 7px;
-  position: relative;
-  display: inline-block;
 }
+
+.sluzba img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -360,32 +372,29 @@ footer h2{
   background-color: rgba(0,0,0,0.6);
   opacity: 0;
   transition: opacity 0.3s ease;
-}
-.sluzba:hover .overlay {
-  opacity: 1;
   border-radius: 7px;
 }
+
+.sluzba:hover .overlay {
+  opacity: 1;
+}
+
 .sluzba-desc {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: #ffff;
+  color: white;
   opacity: 0;
   transition: opacity 0.3s ease;
+  font-size: 25px;
 }
+
 .sluzba:hover .sluzba-desc {
   opacity: 1;
 }
 
-/*---ODKAZY ZÁPATÍ---*/
-.social-links {
-  display: flex; 
-  justify-content: space-around; 
-  align-items: flex-start; 
-  gap: 20px; 
-}
 .odkaz{
   color: #1B272F;
   right: 0;
@@ -408,11 +417,11 @@ footer h2{
   /***** ZÁKLADNÍ NASTAVENÍ PRODUKTŮ *****/
 .produkt h2 {
   color: #005494;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .produkt p {
-  font-size: 30px;
+  font-size: 20px;
   line-height: 1.5;
   margin-bottom: 30px;
 }
@@ -464,25 +473,6 @@ footer h2{
   border-radius: 7px;
 }
 
-/* Miniatury */
-.produkt-thumbnails {
-  display: flex;
-  flex-direction: row; /* Všechny miniatury vedle sebe */
-  gap: 10px;
-  justify-content: center;
-}
-.thumbnail {
-  width: 120px;
-  height: 90px;
-  object-fit: cover;
-  cursor: pointer;
-  border: 2px solid transparent;
-  transition: border 0.3s;
-}
-.thumbnail:hover {
-  border: 2px solid #000;
-}
-
 /***** TEXTOVÁ ČÁST PRODUKTU *****/
 .produkt-text {
   flex: 1;
@@ -532,12 +522,6 @@ footer h2{
 /* Základní cena */
 .zakladni-cena {
   font-size: 50px;
-}
-
-/***** SKRYTÍ ŠIPEK V LIGHTBOXU *****/
-.lb-prev,
-.lb-next {
-  display: none !important;
 }
 
 /***** OVERLAY A FORMULÁŘ PRO OBJEDNÁVKU *****/
@@ -792,23 +776,6 @@ button[type="submit"]:hover {
                       background-color: #005494;
                       text-align: center;
                     }
-                   
-                  .nazev-kategorie{
-                    text-align: center;
-                    padding-bottom: 20px;
-                  }
-                  .nazev-kategorie h2{
-                    font-size: 30px;
-                    margin: 20px;
-                    padding-bottom: 25px;
-                  }
-                  .onas-box{
-                    width: 80%;
-                    margin: auto;
-                    text-align: center;
-                    display: flex;
-                    flex-direction: column;
-                    }
                   
                 .hero h1{
                   font-size: 75px;
@@ -952,10 +919,6 @@ button[type="submit"]:hover {
   .produkt p {
     font-size: 1.4rem;
   }
-  .thumbnail {
-    width: 130px;
-    height: auto;
-  }
 }
 
 /* -- 2. JEŠTĚ MENŠÍ OBRAZOVKY < 600px -- */
@@ -965,9 +928,6 @@ button[type="submit"]:hover {
   }
   .produkt p {
     font-size: 1.2rem;
-  }
-  .thumbnail {
-    width: 110px;
   }
   .produkt-tlacitka {
     display: flex;
@@ -995,12 +955,22 @@ button[type="submit"]:hover {
   .produkt p {
     font-size: 1rem;
   }
-  .thumbnail {
-    width: 90px;
-  }
 }
 
 @media(max-width:756px){
+    /* Vše se složí do jednoho sloupce */
+    .sluzby-box {
+      grid-template-columns: 1fr;
+      width: 80%;
+      margin: 0 auto;
+    }
+    .sluzba {
+      width: 100%;
+    }
+    .sluzba img {
+      width: 100%;
+      height: auto;
+    }
   .footer-row {
     width: 100%;
     margin: auto;
@@ -1020,7 +990,7 @@ button[type="submit"]:hover {
     width: 100%;
   }
   .sluzba-desc{
-    font-size: 15px;
+    font-size: 25px;
   }
   fieldset{
     background-color: #1B272F;
