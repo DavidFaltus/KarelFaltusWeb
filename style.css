@@ -35,6 +35,68 @@ body{
 
 
 /*---NAVIGACE---*/
+.menu__item.dropdown {
+  position: relative;
+}
+
+.menu__item.dropdown .dropbtn {
+  cursor: pointer;
+}
+
+.menu__item.dropdown .dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0,0,0,0.0);
+  width: 250px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 999;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__item.dropdown .dropdown-content li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu__item.dropdown .dropdown-content a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  text-align: left;
+  margin: 0;
+}
+
+.menu__item.dropdown .dropdown-content a::after {
+  content: '';
+  width: 0;
+  height: 3px;
+  background-color: #005494;
+  display: block;
+  left: 0;
+  transition: 0.7s;
+  bottom: -1px;
+}
+
+.menu__item.dropdown .dropdown-content a:hover::after {
+  width: 100%;
+}
+
+.menu__item.dropdown:hover .dropdown-content {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 
   nav img{
@@ -290,7 +352,7 @@ footer h2{
 .zarovnaniDoLeva-text,
 .zarovnaniDoPrava-text {
   flex: 1;
-  text-align: justify;
+  text-align: center;
   padding: 0 60px;
 }
 
@@ -436,7 +498,6 @@ footer h2{
   flex-direction: row;  /* Vše se řadí pod sebe */
   align-items: flex-start;     /* Zarovnání na střed */
   justify-content: space-between;
-  border: 1px solid black;
   border-radius: 10px;
   margin: 0 auto;       /* Sloučeno margin-top, margin-bottom a margin */
   margin-top: 50px;
@@ -483,7 +544,7 @@ footer h2{
   padding-right: 0;
   padding-bottom: 0;
   height: 100%;
-  padding-left: 15px;
+  padding-left: 45px;
 }
 
 /***** TLAČÍTKA *****/
@@ -493,6 +554,11 @@ footer h2{
   width: 100%;
   margin-top: 20px;
   margin-bottom: 0;
+}
+
+.produkt-tlacitka a{
+  color: white;
+  text-decoration: none;
 }
 
 /* Tlačítko objednání */

@@ -8,8 +8,8 @@
   <link href="style.css" rel="stylesheet" type="text/css">
   <link href="nabidka.css" rel="stylesheet" type="text/css">
   <link href="lightbox.css" rel="stylesheet" type="text/css">
-  <script src="script.js"></script>
-  <script src="lightbox-plus-jquery.js"></script>
+  <script src="script.js" defer></script>
+  <script src="lightbox-plus-jquery.js" defer></script>
 </head>
 <body>
 
@@ -21,13 +21,19 @@
           <li class="menu__item">
             <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
           </li>
-          <li class="menu__item">
-            <a href="nabidka.html" class="menu__link">Nabídka</a>
-          </li>
+          <li class="menu__item dropdown">
+            <a href="#" class="menu__link dropbtn">Nabídka</a>
+            <ul class="dropdown-content">
+              <li><a href="spitfire.html">Spitfire</a></li>
+              <li><a href="albatros.html">Albatros</a></li>
+              <li><a href="vrtule.html">Vrtule</a></li>
+              <li><a href="vrtulovyList.html">Vrtulový list</a></li>
+            </ul>
+          </li>      
           <li class="menu__item">
             <a href="fotogalerie.html" class="menu__link">Fotogalerie</a>
           </li>
-          <li class="menu__item ">
+          <li class="menu__item">
             <a href="kontakt.html" class="menu__link">Kontakt</a>
           </li>
           <li>
@@ -38,15 +44,14 @@
               <a href="#" onclick="switchLanguage('en')">
                 <img src="fotky/gb.png" alt="English Flag" width="30">
               </a>
-            </div> 
+            </div>
           </li>
-        </ul> 
+        </ul>
         <div class="hamburger">
           <div onclick="openNavbar()">
             <div class="hamburger__box">
               <svg width="42" height="35" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF"
-                  stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF" stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
             </div>
           </div>
@@ -61,7 +66,7 @@
               <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
                 <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
               </a>
-              <a href="#" onclick="switchLanguage('en')"id="languageSwitch">
+              <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
                 <img src="fotky/gb.png" alt="English Flag" width="30">
               </a>
             </div>
@@ -73,160 +78,92 @@
       </div>
     </div>
   </header>
-
-  <main>
-
-
-<!-- SPITFIRE -->
-<section class="produkt">
-  <div class="produkt-content">
-    <div class="produkt-image">
-      <a id="mainImageLink-product1" href="foto/fotkyweb/spitfire/RESIZED/1.jpg" data-lightbox="product1">
-        <img id="mainImage-product1" src="foto/fotkyweb/spitfire/RESIZED/1.jpg" alt="produkt spitfire">
-      </a>
-      
-    </div>
-
-    <div class="thumbnail-carousel">
-      <span class="carousel-arrow arrow-prev" onclick="prevThumbnail('product1')">&#10094;</span>
-      <div class="thumbnail-wrapper" id="thumbnailWrapper-product1"></div>
-      <span class="carousel-arrow arrow-next" onclick="nextThumbnail('product1')">&#10095;</span>
-    </div>
-  </div>
-
-  <div class="produkt-text">
-    <div class="popis-produktu">
-      <h2>Maketa Supermarine Spitfire Mk.IX</h2>
-      <p>Produkt umožňuje návštěvníkům bezprostřední kontakt s letadlem. 
-        Usednutí do kokpitu, manipulaci s ovladači a odezvou do řídících ploch, doplněné zvukovými a kouřovými efekty. 
-        Součástí dodávky je i replika uniformy RAF pro případné pořízení památečních fotografií návštevníků v dobové uniformě. 
-        Ideální pro potřeby filmu a natáčení reklamních spotů!</p>
-      <p class="zakladni-cena"><big>Základní cena bez DPH: 2 873 798 Kč</big></p>
-      <div class="detailni-popis hidden">
-        <p>Rozpětí 11,25 m</p>
-        <p>Délka 9,65 m</p>
-      </div>
-    </div>
-    <div class="produkt-tlacitka">
-      <button class="objednani" data-product="Spitfire">Nezávazně objednat</button>
-      <button class="produkt-btn">Více</button>
-    </div>
-  </div>
-</section>
-
-
-<!-- VRTULE -->
-<section class="produkt">
-  <div class="produkt-content">
-    <div class="produkt-image">
-      <a id="mainImageLink-product2" href="foto/fotkyweb/vrtule/RESIZED/1.jpg" data-lightbox="product2">
-        <img id="mainImage-product2" src="foto/fotkyweb/vrtule/RESIZED/1.jpg" alt="produkt vrtule">
-      </a>
-      
-    </div>
-
-    <div class="thumbnail-carousel">
-      <span class="carousel-arrow arrow-prev" onclick="prevThumbnail('product2')">&#10094;</span>
-      <div class="thumbnail-wrapper" id="thumbnailWrapper-product2"></div>
-      <span class="carousel-arrow arrow-next" onclick="nextThumbnail('product2')">&#10095;</span>
-    </div>
-  </div>
-
-  <div class="produkt-text">
-    <div class="popis-produktu">
-      <h2>Čtyřlistá vrtule Spitfire Mk.IX</h2>
-      <p>Maketa vrtulového kužele včetně nýtování a pouzdrem na upevnění čtyř vrtulových listů v kamuflážních barvách s popisky. 
-        Na přání dodáváme i verzi s podsvícením vrtulových listů.</p>
-      <p class="zakladni-cena"><big>Základní cena bez DPH: 76 020 Kč</big></p>
-      <div class="detailni-popis hidden">
-        <p>Průměr vrtule 3,27 m</p>
-      </div>
-    </div>
-    <div class="produkt-tlacitka">
-      <button class="objednani" data-product="Spitfire">Nezávazně objednat</button>
-      <button class="produkt-btn">Více</button>
-    </div>
-  </div>
-</section>
-
-
-<!-- ALBATROS -->
-<section class="produkt">
-  <div class="produkt-content">
-    <div class="produkt-image">
-      <a id="mainImageLink-product3" href="foto/fotkyweb/alabtros/RESIZED/1.jpg" data-lightbox="product3">
-        <img id="mainImage-product3" src="foto/fotkyweb/alabtros/RESIZED/1.jpg" alt="produkt albatros">
-      </a>
-      
-    </div>
-
-    <div class="thumbnail-carousel">
-      <span class="carousel-arrow arrow-prev" onclick="prevThumbnail('product3')">&#10094;</span>
-      <div class="thumbnail-wrapper" id="thumbnailWrapper-product3"></div>
-      <span class="carousel-arrow arrow-next" onclick="nextThumbnail('product3')">&#10095;</span>
-    </div>
-  </div>
-
-  <div class="produkt-text">
-    <div class="popis-produktu">
-      <h2>Albatros D.5</h2>
-      <p>Maketa slavné německé stíhačky je určena převážně ke statickým ukázkám a marketingovým účelům. 
-        Marking letounu lze na přání změnit, včetně úpravy do všech kamuflážních verzí. Křídlo je dřevěné, 
-        trup ze sklolaminátových vláken s věrnou replikou kokpitu. 
-        Ideální pro potřeby filmu a natáčení reklamních spotů!</p>
-      <p class="zakladni-cena"><big>Základní cena bez DPH: 1 058 000 KČ</big></p>
-      <div class="detailni-popis hidden">
-        <p>Rozpětí 9,05 m</p>
-        <p>Délka 7,33 m</p>
-      </div>
-    </div>
-    <div class="produkt-tlacitka">
-      <button class="objednani" data-product="Spitfire">Nezávazně objednat</button>
-      <button class="produkt-btn">Více</button>
-    </div>
-  </div>
-</section>
-
-
-<!-- PODSVÍCENÝ VRTULOVÝ LIST -->
-<section class="produkt">
-  <div class="produkt-content">
-    <div class="produkt-image">
-      <a id="mainImageLink-product4" href="foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg" data-lightbox="product4">
-        <img id="mainImage-product4" src="foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg" alt="produkt vrtulový list">
-      </a>
-      
-    </div>
-
-    <div class="thumbnail-carousel">
-      <span class="carousel-arrow arrow-prev" onclick="prevThumbnail('product4')">&#10094;</span>
-      <div class="thumbnail-wrapper" id="thumbnailWrapper-product4"></div>
-      <span class="carousel-arrow arrow-next" onclick="nextThumbnail('product4')">&#10095;</span>
-    </div>
-  </div>
-
-  <div class="produkt-text">
-    <div class="popis-produktu">
-      <h2>Podsvícený vrtulový list</h2>
-      <p>maketa vrtulového listu v originálním měřítku v kamuflážní barvě s popisky může být inspirací nejednoho modeláře. 
-        Listy jsou očíslované a nedají se zaměnit s listy k vrtulovému kuželi.</p>
-      <p class="zakladni-cena">
-        <big>Základní cena bez DPH: 18 400 KČ</big>
-      </p>
-      <div class="detailni-popis hidden">
-        <p>Rozpětí 9,05 m</p>
-        <p>Délka 7,33 m</p>
-      </div>
-    </div>
-    <div class="produkt-tlacitka">
-      <button class="objednani" data-product="Spitfire">Nezávazně objednat</button>
-      <button class="produkt-btn">Více</button>
-    </div>
-  </div>
-</section>
-
   
-    <!-- FORMULÁŘ A OVERLAY -->
+  <main>
+    <!-- SPITFIRE -->
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a id="mainImageLink-product1" href="foto/fotkyweb/spitfire/RESIZED/1.jpg" data-lightbox="product1">
+            <img id="mainImage-product1" src="foto/fotkyweb/spitfire/RESIZED/1.jpg" alt="produkt spitfire">
+          </a>
+        </div>
+      </div>
+      <div class="produkt-text">
+        <div class="popis-produktu">
+          <h2>Maketa Supermarine Spitfire Mk.IX</h2>
+          <p>Produkt umožňuje návštěvníkům bezprostřední kontakt s letadlem. Usednutí do kokpitu, manipulaci s ovladači a odezvou do řídících ploch, doplněné zvukovými a kouřovými efekty. Součástí dodávky je i replika uniformy RAF pro případné pořízení památečních fotografií návštevníků v dobové uniformě. Ideální pro potřeby filmu a natáčení reklamních spotů!</p>
+          <p class="zakladni-cena"><big>Základní cena bez DPH: 2 873 798 Kč</big></p>
+        </div>
+        <div class="produkt-tlacitka">
+          <button class="objednani" data-product="Spitfire"><a href="spitfire.html">Přejít na produkt</a></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- VRTULE -->
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a id="mainImageLink-product2" href="foto/fotkyweb/vrtule/RESIZED/1.jpg" data-lightbox="product2">
+            <img id="mainImage-product2" src="foto/fotkyweb/vrtule/RESIZED/1.jpg" alt="produkt vrtule">
+          </a>
+        </div>
+      </div>
+      <div class="produkt-text">
+        <div class="popis-produktu">
+          <h2>Čtyřlistá vrtule Spitfire Mk.IX</h2>
+          <p>Maketa vrtulového kužele včetně nýtování a pouzdrem na upevnění čtyř vrtulových listů v kamuflážních barvách s popisky. Na přání dodáváme i verzi s podsvícením vrtulových listů.</p>
+          <p class="zakladni-cena"><big>Základní cena bez DPH: 76 020 Kč</big></p>
+        </div>
+        <div class="produkt-tlacitka">
+          <button class="objednani" data-product="Spitfire"><a href="vrtule.html">Přejít na produkt</a></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALBATROS -->
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a id="mainImageLink-product3" href="foto/fotkyweb/alabtros/RESIZED/1.jpg" data-lightbox="product3">
+            <img id="mainImage-product3" src="foto/fotkyweb/alabtros/RESIZED/1.jpg" alt="produkt albatros">
+          </a>
+        </div>
+      </div>
+      <div class="produkt-text">
+        <div class="popis-produktu">
+          <h2>Albatros D.5</h2>
+          <p>Maketa slavné německé stíhačky je určena převážně ke statickým ukázkám a marketingovým účelům. Marking letounu lze na přání změnit, včetně úpravy do všech kamuflážních verzí. Křídlo je dřevěné, trup ze sklolaminátových vláken s věrnou replikou kokpitu. Ideální pro potřeby filmu a natáčení reklamních spotů!</p>
+          <p class="zakladni-cena"><big>Základní cena bez DPH: 1 058 000 KČ</big></p>
+        </div>
+        <div class="produkt-tlacitka">
+          <button class="objednani" data-product="Spitfire"><a href="albatros.html">Přejít na produkt</a></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PODSVÍCENÝ VRTULOVÝ LIST -->
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a id="mainImageLink-product4" href="foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg" data-lightbox="product4">
+            <img id="mainImage-product4" src="foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg" alt="produkt vrtulový list">
+          </a>
+        </div>
+      </div>
+      <div class="produkt-text">
+        <div class="popis-produktu">
+          <h2>Podsvícený vrtulový list</h2>
+          <p>Maketa vrtulového listu v originálním měřítku v kamuflážní barvě s popisky může být inspirací nejednoho modeláře. Listy jsou očíslované a nedají se zaměnit s listy k vrtulovému kuželi.</p>
+          <p class="zakladni-cena"><big>Základní cena bez DPH: 18 400 KČ</big></p>
+        </div>
+        <div class="produkt-tlacitka">
+          <button class="objednani" data-product="Spitfire"><a href="vrtulovyList.html">Přejít na produkt</a></button>
+        </div>
+      </div>
+    </section>
+
     <div id="emailOverlay">
       <form id="emailForm">
         <p>Objednávkový formulář</p>
@@ -262,7 +199,7 @@
           <h2>Sociální sítě</h2>
           <a href="" class="odkaz">
             <img src="fotky/instagram.png" alt="Facebook">
-        </a>
+          </a>
           <a href="" class="odkaz">
             <img src="fotky/facebook.png" alt="Instagram">
           </a>
@@ -282,193 +219,4 @@
   </footer>
   
 </body>
-<script>
-const productImages = {
-  product1: [
-    "foto/fotkyweb/spitfire/RESIZED/1.jpg",
-    "foto/fotkyweb/spitfire/RESIZED/2.jpg",
-    "foto/fotkyweb/spitfire/RESIZED/3.jpg",
-    "foto/fotkyweb/spitfire/RESIZED/4.jpg",
-    "foto/fotkyweb/spitfire/RESIZED/5.jpg",
-    "foto/fotkyweb/spitfire/RESIZED/6.jpg",
-    "foto/fotkyweb/spitfire/RESIZED/7.jpg",
-    "foto/fotkyweb/spitfire/RESIZED/8.jpg",
-    "foto/fotkyweb/spitfire/RESIZED/9.jpg",
-    "foto/fotkyweb/spitfire/RESIZED/10.jpg",
-    "foto/fotkyweb/spitfire/RESIZED/11.jpg",
-    "foto/fotkyweb/spitfire/RESIZED/12.jpg",
-    "foto/fotkyweb/spitfire/RESIZED/13.jpg"
-  ],
-  product2: [
-    "foto/fotkyweb/vrtule/RESIZED/1.jpg",
-    "foto/fotkyweb/vrtule/RESIZED/2.jpg",
-    "foto/fotkyweb/vrtule/RESIZED/3.jpg",
-    "foto/fotkyweb/vrtule/RESIZED/4.jpg",
-    "foto/fotkyweb/vrtule/RESIZED/5.jpg",
-    "foto/fotkyweb/vrtule/RESIZED/6.jpg",
-    "foto/fotkyweb/vrtule/RESIZED/7.jpg",
-    "foto/fotkyweb/vrtule/RESIZED/8.jpg"
-  ],
-  product3: [
-    "foto/fotkyweb/alabtros/RESIZED/1.jpg",
-    "foto/fotkyweb/alabtros/RESIZED/2.jpg",
-    "foto/fotkyweb/alabtros/RESIZED/3.jpg",
-    "foto/fotkyweb/alabtros/RESIZED/4.jpg",
-    "foto/fotkyweb/alabtros/RESIZED/5.jpg",
-    "foto/fotkyweb/alabtros/RESIZED/6.jpg",
-    "foto/fotkyweb/alabtros/RESIZED/7.jpg",
-    "foto/fotkyweb/alabtros/RESIZED/8.jpg",
-    "foto/fotkyweb/alabtros/RESIZED/9.jpg",
-    "foto/fotkyweb/alabtros/RESIZED/10.jpg",
-    "foto/fotkyweb/alabtros/RESIZED/11.jpg",
-    "foto/fotkyweb/alabtros/RESIZED/12.jpg",
-    "foto/fotkyweb/alabtros/RESIZED/13.jpg"
-  ],
-  product4: [
-    "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg",
-    "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/2.jpg",
-    "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/3.jpg",
-    "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/4.jpg",
-    "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/5.jpg",
-    "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/6.jpg",
-    "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/7.jpg",
-    "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/8.jpg",
-    "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/9.jpg"
-  ]
-};
-
-let currentIndex = {
-  product1: 0,
-  product2: 0,
-  product3: 0,
-  product4: 0
-};
-
-const visibleCount = 5;
-
-function createThumbnail(src, productId) {
-  const img = document.createElement("img");
-  img.src = src;
-  img.classList.add("thumbnail");
-  img.addEventListener("click", () => {
-    changeImage(src, productId);
-  });
-  return img;
-}
-
-function renderThumbnails(productId) {
-  const wrapper = document.getElementById(`thumbnailWrapper-${productId}`);
-  const images = productImages[productId];
-  wrapper.innerHTML = "";
-  let start = currentIndex[productId];
-  for (let i = 0; i < visibleCount; i++) {
-    let idx = (start + i) % images.length;
-    if (idx < 0) idx = images.length + idx;
-    wrapper.appendChild(createThumbnail(images[idx], productId));
-  }
-}
-
-function moveThumbnail(productId, offset) {
-  const length = productImages[productId].length;
-  currentIndex[productId] = (currentIndex[productId] + offset + length) % length;
-  renderThumbnails(productId);
-}
-
-function nextThumbnail(productId) {
-  moveThumbnail(productId, 1);
-}
-
-function prevThumbnail(productId) {
-  moveThumbnail(productId, -1);
-}
-
-function changeImage(newSrc, productId) {
-  const mainImage = document.getElementById(`mainImage-${productId}`);
-  const mainLink = document.getElementById(`mainImageLink-${productId}`);
-  if (mainImage) mainImage.src = newSrc;
-  if (mainLink) mainLink.href = newSrc;
-}
-
-let selectedProduct = "";
-
-window.addEventListener("DOMContentLoaded", () => {
-  Object.keys(productImages).forEach(productId => {
-    currentIndex[productId] = 0;
-    renderThumbnails(productId);
-  });
-
-  const buttons = document.querySelectorAll(".produkt-btn");
-  const detailniPopisy = document.querySelectorAll(".detailni-popis");
-  buttons.forEach((button, index) => {
-    button.addEventListener("click", () => {
-      const detail = detailniPopisy[index];
-      if (detail.classList.contains("hidden")) {
-        detail.classList.remove("hidden");
-        button.textContent = "Méně";
-      } else {
-        detail.classList.add("hidden");
-        button.textContent = "Více";
-      }
-    });
-  });
-
-  document.querySelectorAll(".objednani").forEach(button => {
-    button.addEventListener("click", () => {
-      selectedProduct = button.getAttribute("data-product");
-      document.getElementById("emailOverlay").style.display = "block";
-    });
-  });
-
-  document.querySelector(".close-btn").addEventListener("click", () => {
-    document.getElementById("emailOverlay").style.display = "none";
-  });
-
-  document.getElementById("emailForm").addEventListener("submit", event => {
-    event.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const phone = document.getElementById("phone").value;
-    const address = document.getElementById("adress").value;
-    const notes = document.getElementById("text").value;
-    fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        access_key: "a9633fac-5576-428c-a534-1bd779586890",
-        name,
-        email,
-        phone,
-        address,
-        notes,
-        subject: "Nová objednávka pro produkt " + selectedProduct,
-        message: `
-          Jméno: ${name}
-          Email: ${email}
-          Telefon: ${phone}
-          Adresa: ${address}
-          Poznámky: ${notes}
-          Produkt: ${selectedProduct}
-        `
-      })
-    })
-    .then(r => r.json())
-    .then(data => {
-      if (data.success) {
-        document.getElementById("successMessage").style.display = "block";
-        document.getElementById("emailForm").reset();
-        setTimeout(() => {
-          document.getElementById("emailOverlay").style.display = "none";
-          document.getElementById("successMessage").style.display = "none";
-        }, 2000);
-      } else {
-        alert("Nastala chyba při odesílání emailu.");
-      }
-    })
-    .catch(error => {
-      console.error("Chyba:", error);
-      alert("Nastala chyba při odesílání emailu.");
-    });
-  });
-});
-</script>
 </html>

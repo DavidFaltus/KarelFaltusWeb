@@ -21,13 +21,19 @@
           <li class="menu__item">
             <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
           </li>
-          <li class="menu__item">
-            <a href="nabidka.html" class="menu__link">Nabídka</a>
-          </li>
+          <li class="menu__item dropdown">
+            <a href="#" class="menu__link dropbtn">Nabídka</a>
+            <ul class="dropdown-content">
+              <li><a href="spitfire.html">Spitfire</a></li>
+              <li><a href="albatros.html">Albatros</a></li>
+              <li><a href="vrtule.html">Vrtule</a></li>
+              <li><a href="vrtulovyList.html">Vrtulový list</a></li>
+            </ul>
+          </li>      
           <li class="menu__item">
             <a href="fotogalerie.html" class="menu__link">Fotogalerie</a>
           </li>
-          <li class="menu__item ">
+          <li class="menu__item">
             <a href="kontakt.html" class="menu__link">Kontakt</a>
           </li>
           <li>
@@ -38,15 +44,14 @@
               <a href="#" onclick="switchLanguage('en')">
                 <img src="fotky/gb.png" alt="English Flag" width="30">
               </a>
-            </div> 
+            </div>
           </li>
-        </ul> 
+        </ul>
         <div class="hamburger">
           <div onclick="openNavbar()">
             <div class="hamburger__box">
               <svg width="42" height="35" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF"
-                  stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF" stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
             </div>
           </div>
@@ -61,7 +66,7 @@
               <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
                 <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
               </a>
-              <a href="#" onclick="switchLanguage('en')"id="languageSwitch">
+              <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
                 <img src="fotky/gb.png" alt="English Flag" width="30">
               </a>
             </div>
@@ -69,7 +74,7 @@
         </div>
       </nav>
       <div class="nadpis__jinestranky">
-        <h1>Fotogalerie</h1>
+        <h1>Nabídka</h1>
       </div>
     </div>
   </header>

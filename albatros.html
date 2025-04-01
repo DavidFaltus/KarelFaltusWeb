@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="cs">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karel Faltus</title>
+  <title>Letadla</title>
   <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="nabidka.css" rel="stylesheet" type="text/css">
+  <link href="lightbox.css" rel="stylesheet" type="text/css">
   <script src="script.js"></script>
+  <script src="lightbox-plus-jquery.js"></script>
 </head>
 <body>
-  
+
   <header>
-    <div class="uvodni-stranka">
+    <div class="pozadi__jinestranky">
       <nav id="navbar" class="menu">
         <a href="index.html"><img src="fotky/logoKarelF.png" alt="logo"></a>
         <ul class="menu__list">
@@ -27,30 +29,29 @@
               <li><a href="vrtule.html">Vrtule</a></li>
               <li><a href="vrtulovyList.html">Vrtulový list</a></li>
             </ul>
-          </li> 
+          </li>      
           <li class="menu__item">
             <a href="fotogalerie.html" class="menu__link">Fotogalerie</a>
           </li>
-          <li class="menu__item ">
+          <li class="menu__item">
             <a href="kontakt.html" class="menu__link">Kontakt</a>
           </li>
           <li>
             <div class="language-switcher">
               <a href="#" onclick="switchLanguage('cz')">
-                <img src="fotky/cz.jpg" alt="CzechFlag" width="30">
+                <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
               </a>
               <a href="#" onclick="switchLanguage('en')">
-                <img src="fotky/gb.png" alt="EnglishFlag" width="30">
+                <img src="fotky/gb.png" alt="English Flag" width="30">
               </a>
-            </div>  
+            </div>
           </li>
         </ul>
         <div class="hamburger">
           <div onclick="openNavbar()">
             <div class="hamburger__box">
               <svg width="42" height="35" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF"
-                  stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF" stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
             </div>
           </div>
@@ -65,67 +66,69 @@
               <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
                 <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
               </a>
-              <a href="#" onclick="switchLanguage('en')"id="languageSwitch">
+              <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
                 <img src="fotky/gb.png" alt="English Flag" width="30">
               </a>
             </div>
           </div>
         </div>
       </nav>
+      <div class="nadpis__jinestranky">
+        <h1>Nabídka</h1>
+      </div>
     </div>
   </header>
+  
 
   <main>
-    <div class="hero">
-      <h1>VÍTEJTE</h1>
-      <p>Makety letadel a další příslušenství</p>
-    </div>
 
-    <!--Naše služby-->
-    <section id="sluzby">
-      <div class="nazev-kategorie2">
-        <p>Co vyrábíme ?</p>
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a id="mainImageLink-product3" href="foto/fotkyweb/alabtros/RESIZED/1.jpg" data-lightbox="product3">
+            <img id="mainImage-product3" src="foto/fotkyweb/alabtros/RESIZED/1.jpg" alt="produkt albatros">
+          </a>
+        </div>
+        <div class="thumbnail-carousel">
+          <span class="carousel-arrow arrow-prev" onclick="prevThumbnail('product3')">&#10094;</span>
+          <div class="thumbnail-wrapper" id="thumbnailWrapper-product3"></div>
+          <span class="carousel-arrow arrow-next" onclick="nextThumbnail('product3')">&#10095;</span>
+        </div>
       </div>
-      <div class="sluzby-box">
-        <div class="sluzba">
-          <img src="foto/fotkyweb/vrtule/RESIZED/5.jpg" alt="vrtule spitfire">
-          <div class="overlay"></div>
-          <div class="sluzba-desc">
-            <h3>Vrtule</h3>
-            <hr>
-            <p>Krásná designová maketa</p>
+      <div class="produkt-text">
+        <div class="popis-produktu">
+          <h2>Albatros D.5</h2>
+          <p>Maketa slavné německé stíhačky je určena převážně ke statickým ukázkám a marketingovým účelům. Marking letounu lze na přání změnit, včetně úpravy do všech kamuflážních verzí. Křídlo je dřevěné, trup ze sklolaminátových vláken s věrnou replikou kokpitu. Ideální pro potřeby filmu a natáčení reklamních spotů!</p>
+          <p class="zakladni-cena"><big>Základní cena bez DPH: 1 058 000 KČ</big></p>
+          <div class="detailni-popis hidden">
+            <p>Rozpětí 9,05 m</p>
+            <p>Délka 7,33 m</p>
           </div>
         </div>
-        <div class="sluzba">
-          <img src="foto/fotkyweb/spitfire/RESIZED/10.jpg" alt="letadlo spitfire">
-          <div class="overlay"></div>
-          <div class="sluzba-desc">
-            <h3>Legendární Spitfire</h3>
-            <hr>
-            <p>Věrná maketa tohoto velikána</p>
-          </div>
-        </div>
-        <div class="sluzba">
-          <img src="foto/fotkyweb/alabtros/RESIZED/11.jpg" alt="albatros">
-          <div class="overlay"></div>
-          <div class="sluzba-desc">
-            <h3>Albatros</h3>
-            <hr>
-            <p>Maketa tohoto neuvěřitelného stroje</p>
-          </div>
-        </div>
-        <div class="sluzba">
-          <img src="foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg" alt="přelet nad hradem">
-          <div class="overlay"></div>
-          <div class="sluzba-desc">
-            <h3>Podsvícený vrtulový list</h3>
-            <hr>
-            <p>Designový list který funguje zároveň jako lampa</p>
-          </div>
+        <div class="produkt-tlacitka">
+          <button class="objednani" data-product="Spitfire">Nezávazně objednat</button>
+          <button class="produkt-btn">Více</button>
         </div>
       </div>
     </section>
-  </main>
+  
+    <!-- FORMULÁŘ A OVERLAY -->
+    <div id="emailOverlay">
+      <form id="emailForm">
+        <p>Objednávkový formulář</p>
+        <input type="text" id="name" name="name" placeholder="Vaše jméno:*" required>
+        <input type="email" id="email" name="email" placeholder="Váš email:*" required>
+        <input type="phone" name="phone" id="phone" placeholder="Telefoní číslo:*" required>
+        <input type="text" name="adress" id="adress" placeholder="Dodací adresa:*" required>
+        <input type="text" id="text" name="text" placeholder="Poznámky:">
+        <button type="submit">Odeslat</button>
+        <button type="button" class="close-btn">Zavřít</button>
+      </form>
+      <div id="successMessage" style="display: none;">
+        <p>Vaše objednávka byla úspěšně odeslána!</p>
+      </div>
+    </div>
+  </main> 
 
   <footer>
     <section>
@@ -163,5 +166,9 @@
       <p>Karel Faltus - 2025</p>
     </div>
   </footer>
+  
 </body>
+<script>
+
+</script>
 </html>

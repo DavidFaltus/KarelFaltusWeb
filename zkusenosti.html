@@ -14,18 +14,24 @@
   <header>
     <div class="pozadi__jinestranky">
       <nav id="navbar" class="menu">
-        <a href="index.html" id="logo"><img src="fotky/logoKarelF.png" alt="logo"></a>
+        <a href="index.html"><img src="fotky/logoKarelF.png" alt="logo"></a>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
           </li>
-          <li class="menu__item">
-            <a href="nabidka.html" class="menu__link">Nabídka</a>
-          </li>
+          <li class="menu__item dropdown">
+            <a href="#" class="menu__link dropbtn">Nabídka</a>
+            <ul class="dropdown-content">
+              <li><a href="spitfire.html">Spitfire</a></li>
+              <li><a href="albatros.html">Albatros</a></li>
+              <li><a href="vrtule.html">Vrtule</a></li>
+              <li><a href="vrtulovyList.html">Vrtulový list</a></li>
+            </ul>
+          </li>      
           <li class="menu__item">
             <a href="fotogalerie.html" class="menu__link">Fotogalerie</a>
           </li>
-          <li class="menu__item ">
+          <li class="menu__item">
             <a href="kontakt.html" class="menu__link">Kontakt</a>
           </li>
           <li>
@@ -36,15 +42,14 @@
               <a href="#" onclick="switchLanguage('en')">
                 <img src="fotky/gb.png" alt="English Flag" width="30">
               </a>
-            </div> 
+            </div>
           </li>
-        </ul> 
+        </ul>
         <div class="hamburger">
           <div onclick="openNavbar()">
             <div class="hamburger__box">
               <svg width="42" height="35" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF"
-                  stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF" stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
             </div>
           </div>
@@ -59,7 +64,7 @@
               <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
                 <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
               </a>
-              <a href="#" onclick="switchLanguage('en')"id="languageSwitch">
+              <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
                 <img src="fotky/gb.png" alt="English Flag" width="30">
               </a>
             </div>
@@ -67,57 +72,59 @@
         </div>
       </nav>
       <div class="nadpis__jinestranky">
-        <h1>Zkušenosti</h1>
+        <h1>Nabídka</h1>
       </div>
     </div>
   </header>
 
-<main>
-    <!-- První oddíl -->
-     <!--
-    https://www.flying-revue.cz/maketa-spitfire
-    https://ct24.ceskatelevize.cz/clanek/regiony/ve-stojcine-staveji-legendarniho-plivace-ohne-spitfire-288604
-    -->
-    <section class="zarovnaniDoLeva">
-      <div class="zarovnaniDoLeva-text">
-        <h2>Zrealizované projekty</h2>
-        <div>
-<p>Během své praxe jsem se podílel na řadě zajímavých projektů v oblasti výroby, vývoje i filmové tvorby. Mezi mé zrealizované projekty patří:</p>
-<p>-Výroba laminátových dílů pro firmu UrbanAir – konkrétně pro letouny Lambáda a Samba.</p>
-<p>-Vývojové práce na letadle Phoenix – spolupráce na konstrukci a technických řešeních.</p>
-<p>-Výroba trupů letadel Albatros D5 a D3 pro film Rudý Baron – výroba přesných replik pro filmovou produkci.</p>
-<p>-Výroba lyží na letadlo s příďovým podvozkem – návrh a realizace speciálního vybavení pro provoz v zimních podmínkách.</p>
-<p>-Výroba makety letadla Spitfire v měřítku 1:1 – pro účely prezentace a výstav Czech Spitfire Klubu.</p>
-<p>-Výroba modelů a forem pro letadlo Eagle – podíl na přípravě forem a prototypů pro nový typ letadla.</p>
+<main>  
+      <!-- Sekce projektů -->
+      <section id="projekty" class="zarovnaniDoLeva">
+        <div class="zarovnaniDoLeva-text">
+          <h1>Zrealizované projekty</h1>
+          <p>
+            Během své praxe jsem se podílel na řadě zajímavých projektů v oblasti 
+            výroby, vývoje i filmové tvorby. Mezi mé zrealizované projekty patří:
+          </p>
+    
+          <!-- Vlastní galerie projektů -->
+          <div class="project-grid">
+            <div class="project-item">
+              <img src="foto/fotkyweb/vrtule/RESIZED/1.jpg" alt="UrbanAir - Lambáda a Samba">
+              <p>Výroba laminátových dílů pro firmu UrbanAir – konkrétně pro letouny Lambáda a Samba.</p>
+            </div>
+    
+            <div class="project-item">
+              <img src="foto/fotkyweb/vrtule/RESIZED/1.jpg" alt="Phoenix">
+              <p>Vývojové práce na letadle Phoenix – spolupráce na konstrukci a technických řešeních.</p>
+            </div>
+    
+            <div class="project-item">
+              <img src="foto/fotkyweb/vrtule/RESIZED/1.jpg" alt="Albatros D5 a D3">
+              <p>Výroba trupů letadel Albatros D5 a D3 pro film Rudý Baron – výroba přesných replik pro filmovou produkci.</p>
+            </div>
+    
+            <div class="project-item">
+              <img src="foto/fotkyweb/vrtule/RESIZED/1.jpg" alt="Lyže na letadlo">
+              <p>Výroba lyží na letadlo s příďovým podvozkem – návrh a realizace speciálního vybavení pro provoz v zimních podmínkách.</p>
+            </div>
+    
+            <div class="project-item">
+              <img src="foto/fotkyweb/vrtule/RESIZED/1.jpg" alt="Maketa Spitfire">
+              <p>Výroba makety letadla Spitfire v měřítku 1:1 – pro účely prezentace a výstav Czech Spitfire Klubu.</p>
+            </div>
+    
+            <div class="project-item">
+              <img src="foto/fotkyweb/vrtule/RESIZED/1.jpg" alt="Eagle">
+              <p>Výroba modelů a forem pro letadlo Eagle – podíl na přípravě forem a prototypů pro nový typ letadla.</p>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="zarovnaniDoLeva-image">
-        <img src="foto/fotkyweb/galerie/4.jpg" alt="letadlo lambada">
-      </div>
-    </section>
+      </section>
+    </body>
+    </html>
+    
 
-    <!-- Druhý oddíl -->
-    <section class="zarovnaniDoPrava">
-      <p>popisky</p>
-      <div class="zarovnaniDoPrava-image">
-        <img src="foto/fotkyweb/galerie/3.jpg" alt="fotografie z letadla">
-      </div>
-      <p>popisky</p>
-      <div class="zarovnaniDoPrava-image">
-        <img src="foto/fotkyweb/galerie/3.jpg" alt="fotografie z letadla">
-      </div>
-    </section>
-
-    <!-- Třetí oddíl -->
-    <section class="zarovnaniDoLeva">
-      <div class="zarovnaniDoLeva-text">
-        <h2>Výzkum</h2>
-        <p></p>
-      </div>
-      <div class="zarovnaniDoLeva-image">
-        <img src="foto/hpletadlo.jpg" alt="práce na letadle">
-      </div>
-    </section>
 </main>
 
 <footer>
