@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letadla</title>
+  <title>Spitfire | Karel Faltus</title>
   <link href="style.css" rel="stylesheet" type="text/css">
   <link href="nabidka.css" rel="stylesheet" type="text/css">
   <link href="lightbox.css" rel="stylesheet" type="text/css">
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
   <script src="lightbox-plus-jquery.js"></script>
 </head>
 <body>
@@ -18,24 +18,18 @@
       <nav id="navbar" class="menu">
         <a href="index.html"><img src="fotky/logoKarelF.png" alt="logo"></a>
         <ul class="menu__list">
-          <li class="menu__item">
-            <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
-          </li>
+          <li class="menu__item"><a href="zkusenosti.html" class="menu__link">Zkušenosti</a></li>
+          <li class="menu__item"><a href="fotogalerie.html" class="menu__link">Fotogalerie</a></li>
           <li class="menu__item dropdown">
-            <a href="#" class="menu__link dropbtn">Nabídka</a>
+            <a href="nabidka.html" class="menu__link dropbtn">Nabídka</a>
             <ul class="dropdown-content">
               <li><a href="spitfire.html">Spitfire</a></li>
               <li><a href="albatros.html">Albatros</a></li>
               <li><a href="vrtule.html">Vrtule</a></li>
               <li><a href="vrtulovyList.html">Vrtulový list</a></li>
             </ul>
-          </li>      
-          <li class="menu__item">
-            <a href="fotogalerie.html" class="menu__link">Fotogalerie</a>
           </li>
-          <li class="menu__item">
-            <a href="kontakt.html" class="menu__link">Kontakt</a>
-          </li>
+          <li class="menu__item"><a href="kontakt.html" class="menu__link">Kontakt</a></li>
           <li>
             <div class="language-switcher">
               <a href="#" onclick="switchLanguage('cz')">
@@ -55,7 +49,7 @@
               </svg>
             </div>
           </div>
-          <div id="sideNavbar" class="side-navbar" style="width: 0px;">
+          <div id="sideNavbar" class="side-navbar" style="width: 0;">
             <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
             <a class="side-navbar__link hover" href="index.html">Úvodní stránka</a>
             <a class="side-navbar__link hover" href="zkusenosti.html">Zkušenosti</a>
@@ -74,52 +68,48 @@
         </div>
       </nav>
       <div class="nadpis__jinestranky">
-        <h1>Nabídka</h1>
+        <h1>Fotogalerie</h1>
       </div>
     </div>
   </header>
-  
 
   <main>
 
-<!-- SPITFIRE -->
-<section class="produkt">
-  <div class="produkt-content">
-    <div class="produkt-image">
-      <a id="mainImageLink-product1" href="foto/fotkyweb/spitfire/RESIZED/1.jpg" data-lightbox="product1">
-        <img id="mainImage-product1" src="foto/fotkyweb/spitfire/RESIZED/1.jpg" alt="produkt spitfire">
-      </a>
-      
-    </div>
-
-    <div class="thumbnail-carousel">
-      <span class="carousel-arrow arrow-prev" onclick="prevThumbnail('product1')">&#10094;</span>
-      <div class="thumbnail-wrapper" id="thumbnailWrapper-product1"></div>
-      <span class="carousel-arrow arrow-next" onclick="nextThumbnail('product1')">&#10095;</span>
-    </div>
-  </div>
-
-  <div class="produkt-text">
-    <div class="popis-produktu">
-      <h2>Maketa Supermarine Spitfire Mk.IX</h2>
-      <p>Produkt umožňuje návštěvníkům bezprostřední kontakt s letadlem. 
-        Usednutí do kokpitu, manipulaci s ovladači a odezvou do řídících ploch, doplněné zvukovými a kouřovými efekty. 
-        Součástí dodávky je i replika uniformy RAF pro případné pořízení památečních fotografií návštevníků v dobové uniformě. 
-        Ideální pro potřeby filmu a natáčení reklamních spotů!</p>
-      <p class="zakladni-cena"><big>Základní cena bez DPH: 2 873 798 Kč</big></p>
-      <div class="detailni-popis hidden">
-        <p>Rozpětí 11,25 m</p>
-        <p>Délka 9,65 m</p>
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a id="mainImageLink-product1" href="foto/fotkyweb/spitfire/RESIZED/1.jpg" data-lightbox="product1">
+            <img id="mainImage-product1" src="foto/fotkyweb/spitfire/RESIZED/1.jpg" alt="produkt spitfire">
+          </a>
+        </div>
+        <div class="thumbnail-carousel">
+          <span class="carousel-arrow arrow-prev" onclick="prevThumbnail('product1')">&#10094;</span>
+          <div class="thumbnail-wrapper" id="thumbnailWrapper-product1"></div>
+          <span class="carousel-arrow arrow-next" onclick="nextThumbnail('product1')">&#10095;</span>
+        </div>
       </div>
-    </div>
-    <div class="produkt-tlacitka">
-      <button class="objednani" data-product="Spitfire">Nezávazně objednat</button>
-      <button class="produkt-btn">Více</button>
-    </div>
-  </div>
-</section>
-  
-    <!-- FORMULÁŘ A OVERLAY -->
+      <div class="produkt-text">
+        <div class="popis-produktu">
+          <div class="produkt-nazev-verze">
+            <h2>Maketa Supermarine Spitfire Mk.IX</h2>
+          </div>
+          <select id="variantSelect" class="select-verze" name="verzeSpitfire">
+            <option value="KIT">KIT</option>
+            <option value="STATIC">STATIC</option>
+            <option value="MOVIE">MOVIE</option>
+            <option value="PANORAMA">PANORAMA</option>
+          </select>
+          <p id="variantDescription"></p>
+          <p>Rozpětí 11,25 m</p>
+          <p>Délka 9,65 m</p>
+          <p id="variantPrice" class="zakladni-cena"></p>
+        </div>
+        <div class="produkt-tlacitka">
+          <button class="objednani" data-product="Spitfire">Objednat</button>
+        </div>
+      </div>
+    </section>
+
     <div id="emailOverlay">
       <form id="emailForm">
         <p>Objednávkový formulář</p>
@@ -131,15 +121,18 @@
         <button type="submit">Odeslat</button>
         <button type="button" class="close-btn">Zavřít</button>
       </form>
-      <div id="successMessage" style="display: none;">
+    </div>
+
+    <div id="successMessage" style="display: none;">
+      <div class="content">
         <p>Vaše objednávka byla úspěšně odeslána!</p>
       </div>
     </div>
-  </main> 
+
+  </main>
 
   <footer>
     <section>
-      </div>
       <div class="footer-row">
         <div class="footer-left">
           <h2>Jak mě kontaktovat ?</h2>
@@ -155,7 +148,7 @@
           <h2>Sociální sítě</h2>
           <a href="" class="odkaz">
             <img src="fotky/instagram.png" alt="Facebook">
-        </a>
+          </a>
           <a href="" class="odkaz">
             <img src="fotky/facebook.png" alt="Instagram">
           </a>
@@ -173,9 +166,6 @@
       <p>Karel Faltus - 2025</p>
     </div>
   </footer>
-  
-</body>
-<script>
 
-</script>
+</body>
 </html>

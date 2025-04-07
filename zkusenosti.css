@@ -1,5 +1,6 @@
-   .zarovnaniDoLeva-text h1, .zarovnaniDoPrava-text h1{
+   .zarovnaniDoLeva-text h2, .zarovnaniDoPrava-text h2{
       color: #005494;
+      font-size: 45px;
       }
     .zarovnaniDoLeva-text p, .zarovnaniDoPrava-text p{
       font-size: 18px;
@@ -33,7 +34,7 @@
 }
 
 .project-item p {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   line-height: 1.4;
 }
 

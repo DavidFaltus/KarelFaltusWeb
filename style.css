@@ -69,7 +69,7 @@ body{
   display: block;
   color: #fff;
   text-decoration: none;
-  padding: 12px;
+  padding: 8px;
   text-transform: uppercase;
   transition: background-color 0.3s ease;
   text-align: left;
@@ -571,6 +571,19 @@ footer h2{
   border-radius: 5px;
   font-size: 35px;
   flex: 1;
+  width: 50%;
+}
+
+.redirect{
+  background-color: #005494;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 35px;
+  flex: 1;
+  width: 50%;
 }
 
 /* Druhé tlačítko (Více) */
@@ -629,19 +642,28 @@ footer h2{
   height: 35px;
 }
 
-/* Zpráva o úspěšném odeslání */
 #successMessage {
+  display: none;        
+  position: fixed;     
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); 
+  z-index: 2000;         
+}
+
+#successMessage .content {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 128, 0, 1);
+  background-color: rgba(0, 115, 0, 1); 
   color: white;
   padding: 20px;
   border-radius: 10px;
   font-size: 45px;
   text-align: center;
-  z-index: 2000;
 }
 
 /***** TLAČÍTKA VE FORMULÁŘI *****/
@@ -668,7 +690,7 @@ button[type="submit"]:hover {
 /* Karusel – kontejner */
 .thumbnail-carousel {
   display: flex;
-  align-items: center; /* Srovná šipky a miniatury na střed vertikálně */
+  align-items: center;
   justify-content: center;
   margin: 20px 0;
   position: relative;
@@ -817,13 +839,41 @@ button[type="submit"]:hover {
 
 
 
+/*SPITFIRE*/
+  .produkt-nazev-verze {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .select-verze, .select-vrtule, .podstava {
+    background-color: #005494;
+    color: white;
+    cursor: pointer;
+    width: 30%;
+    margin-left: auto;
+    text-align: left;
+    font-size: 20px;
+  }
+
+  .podstava{
+    width: 60%;
+  }
+
+  @media (max-width: 1780px) {
+    .select-verze, .select-vrtule{
+      width: 50%;
+    }
+  }
+
   @media (max-width: 1370px) {
     .produkt {
       width: 90%;
     }
   }
 
-@media(max-width:1170px){ 
+@media(max-width:1220px){ 
                     .side-navbar a{
                       text-align: center;
                       font-size: 40px;
@@ -913,9 +963,6 @@ button[type="submit"]:hover {
         justify-content: space-around;
         align-items: center;
       }
-
-
-      /*NABÍDKA*/
       
         /*FOTOGALERIE*/
     .galerie{
@@ -969,6 +1016,9 @@ button[type="submit"]:hover {
 
 
 @media screen and (max-width: 980px) {
+  .select-verze, .select-vrtule{
+    width: 30%;
+  }
   .produkt {
     flex-direction: column;
     align-items: center;
@@ -977,6 +1027,7 @@ button[type="submit"]:hover {
   .produkt-text {
     width: 100%;
     margin-bottom: 20px;
+    padding-left: 5px;
   }
   /* Zmenšíme text */
   .produkt h2 {
@@ -989,6 +1040,14 @@ button[type="submit"]:hover {
 
 /* -- 2. JEŠTĚ MENŠÍ OBRAZOVKY < 600px -- */
 @media screen and (max-width: 600px) {
+  .select-verze, .select-vrtule{
+    width: 50%;
+  }
+  .podstava{
+    font-size: 17px;
+    width: 100%;
+  }
+
   .produkt h2 {
     font-size: 1.6rem;
   }
@@ -1009,6 +1068,11 @@ button[type="submit"]:hover {
 
   /* Tlačítko „Nezávazně objednat“ bude druhé (pod ním) */
   .objednani {
+    font-size: 25px;
+    order: 2;
+  }
+
+  .redirect{
     order: 2;
   }
 }
