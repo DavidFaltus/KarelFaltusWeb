@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Létání</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="fotogalerie.css" rel="stylesheet" type="text/css">
-    <link href="lightbox.css" rel="stylesheet">
-    <script src="script.js"></script>
-
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Létání</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="fotogalerie.css" rel="stylesheet" type="text/css" />
+  <link href="lightbox.css" rel="stylesheet" />
+  <script src="script.js"></script>
 </head>
-<body>
 
+<body>
   <header>
     <div class="pozadi__jinestranky">
       <nav id="navbar" class="menu">
-        <a class="logo" href="index.html"><img src="fotky/logoKarelF.png" alt="logo"></a>
+        <a class="logo" href="index.html"><img src="fotky/logoKarelF.png" alt="logo" /></a>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
@@ -32,17 +32,17 @@
               <li><a href="vrtule.html">Vrtule</a></li>
               <li><a href="vrtulovyList.html">Vrtulový list</a></li>
             </ul>
-          </li>      
+          </li>
           <li class="menu__item">
             <a href="kontakt.html" class="menu__link">Kontakt</a>
           </li>
           <li>
             <div class="language-switcher">
               <a href="#" onclick="switchLanguage('cz')">
-                <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
+                <img src="fotky/cz.jpg" alt="Czech Flag" width="30" />
               </a>
               <a href="#" onclick="switchLanguage('en')">
-                <img src="fotky/gb.png" alt="English Flag" width="30">
+                <img src="fotky/gb.png" alt="English Flag" width="30" />
               </a>
             </div>
           </li>
@@ -51,11 +51,12 @@
           <div onclick="openNavbar()">
             <div class="hamburger__box">
               <svg width="42" height="35" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF" stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF"
+                  stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
             </div>
           </div>
-          <div id="sideNavbar" class="side-navbar" style="width: 0px;">
+          <div id="sideNavbar" class="side-navbar" style="width: 0px">
             <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
             <a class="side-navbar__link hover" href="index.html">Úvodní stránka</a>
             <a class="side-navbar__link hover" href="zkusenosti.html">Zkušenosti</a>
@@ -64,10 +65,10 @@
             <a class="side-navbar__link hover" href="kontakt.html">Kontakt</a>
             <div>
               <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
-                <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
+                <img src="fotky/cz.jpg" alt="Czech Flag" width="30" />
               </a>
               <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
-                <img src="fotky/gb.png" alt="English Flag" width="30">
+                <img src="fotky/gb.png" alt="English Flag" width="30" />
               </a>
             </div>
           </div>
@@ -79,64 +80,80 @@
     </div>
   </header>
 
-<main>
-  <div class="kontejner">
-    <div class="galerie">
-      <a href="foto/fotkyweb/galerie/1.jpg" data-lightbox="galerie" data-title="Letadlo Lambada"><img src="foto/fotkyweb/galerie/1.jpg" alt="Letadlo Lambada"></a>
-      <a href="foto/fotkyweb/galerie/2.jpg" data-lightbox="galerie" data-title="Litomyšl"><img src="foto/fotkyweb/galerie/2.jpg" alt="Litomyšl"></a>
-      <a href="foto/fotkyweb/galerie/3.jpg" data-lightbox="galerie" data-title="Hrad na Slovensku"><img src="foto/fotkyweb/galerie/3.jpg" alt="Hrad na Slovensku"></a>
-      <a href="foto/fotkyweb/galerie/4.JPG" data-lightbox="galerie" data-title="Model Spitfire"><img src="foto/fotkyweb/galerie/4.JPG" alt="Model Spitfire"></a>
-      <a href="foto/fotkyweb/galerie/5.JPG" data-lightbox="galerie" data-title="Výstava v obchodním domě"><img src="foto/fotkyweb/galerie/5.JPG" alt="Výstava v obchodním domě"></a>
-      <a href="foto/fotkyweb/galerie/6.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/fotkyweb/galerie/6.JPG" alt="Přelet nad řekou"></a>
-      <a href="foto/fotkyweb/galerie/7.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/fotkyweb/galerie/7.JPG" alt="Přelet nad řekou"></a>
-      <a href="foto/fotkyweb/galerie/8.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/fotkyweb/galerie/8.JPG" alt="Přelet nad řekou"></a>
-      <a href="foto/fotkyweb/galerie/9.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/fotkyweb/galerie/9.JPG" alt="Přelet nad řekou"></a>
-      <a href="foto/fotkyweb/galerie/10.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/fotkyweb/galerie/10.JPG" alt="Přelet nad řekou"></a>
-      <a href="foto/fotkyweb/galerie/11.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/fotkyweb/galerie/11.JPG" alt="Přelet nad řekou"></a>
-      <a href="foto/fotkyweb/galerie/12.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/fotkyweb/galerie/12.JPG" alt="Přelet nad řekou"></a>
-      <a href="foto/fotkyweb/galerie/13.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/fotkyweb/galerie/13.JPG" alt="Přelet nad řekou"></a>
-      <a href="foto/fotkyweb/galerie/14.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/fotkyweb/galerie/14.JPG" alt="Přelet nad řekou"></a>
-      <a href="foto/fotkyweb/galerie/15.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/fotkyweb/galerie/15.JPG" alt="Přelet nad řekou"></a>
-      <a href="foto/fotkyweb/galerie/16.jpg" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/fotkyweb/galerie/16.JPG" alt="Přelet nad řekou"></a>
-    </div>
-</div>
-<script src="lightbox-plus-jquery.js"></script>
-</main>
-<footer>
-  <section>
-    </div>
-    <div class="footer-row">
-      <div class="footer-left">
-        <h2>Jak mě kontaktovat ?</h2>
-        <a href="kontakt.html">Kontaktní formulář</a>
-        <p>KarelFaltusObjednavky@gmail.com</p>
-      </div>
-      <div class="footer-center">
-        <h2>Kde sídlíme ?</h2>
-        <p>Řetůvka</p>
-        <p>Česká Republika</p>
-      </div>
-      <div class="footer-right">
-        <h2>Sociální sítě</h2>
-        <a href="" class="odkaz">
-          <img src="fotky/instagram.png" alt="Facebook">
-      </a>
-        <a href="" class="odkaz">
-          <img src="fotky/facebook.png" alt="Instagram">
-        </a>
+  <main>
+    <div class="kontejner">
+      <div class="galerie">
+        <a href="foto/fotkyweb/galerie/1.jpg" data-lightbox="galerie" data-title="Letadlo Lambada"><img
+            src="foto/fotkyweb/galerie/1.jpg" alt="Letadlo Lambada" /></a>
+        <a href="foto/fotkyweb/galerie/2.jpg" data-lightbox="galerie" data-title="Litomyšl"><img
+            src="foto/fotkyweb/galerie/2.jpg" alt="Litomyšl" /></a>
+        <a href="foto/fotkyweb/galerie/3.jpg" data-lightbox="galerie" data-title="Hrad na Slovensku"><img
+            src="foto/fotkyweb/galerie/3.jpg" alt="Hrad na Slovensku" /></a>
+        <a href="foto/fotkyweb/galerie/4.JPG" data-lightbox="galerie" data-title="Model Spitfire"><img
+            src="foto/fotkyweb/galerie/4.JPG" alt="Model Spitfire" /></a>
+        <a href="foto/fotkyweb/galerie/5.JPG" data-lightbox="galerie" data-title="Výstava v obchodním domě"><img
+            src="foto/fotkyweb/galerie/5.JPG" alt="Výstava v obchodním domě" /></a>
+        <a href="foto/fotkyweb/galerie/6.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img
+            src="foto/fotkyweb/galerie/6.JPG" alt="Přelet nad řekou" /></a>
+        <a href="foto/fotkyweb/galerie/7.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img
+            src="foto/fotkyweb/galerie/7.JPG" alt="Přelet nad řekou" /></a>
+        <a href="foto/fotkyweb/galerie/8.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img
+            src="foto/fotkyweb/galerie/8.JPG" alt="Přelet nad řekou" /></a>
+        <a href="foto/fotkyweb/galerie/9.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img
+            src="foto/fotkyweb/galerie/9.JPG" alt="Přelet nad řekou" /></a>
+        <a href="foto/fotkyweb/galerie/10.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img
+            src="foto/fotkyweb/galerie/10.JPG" alt="Přelet nad řekou" /></a>
+        <a href="foto/fotkyweb/galerie/11.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img
+            src="foto/fotkyweb/galerie/11.JPG" alt="Přelet nad řekou" /></a>
+        <a href="foto/fotkyweb/galerie/12.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img
+            src="foto/fotkyweb/galerie/12.JPG" alt="Přelet nad řekou" /></a>
+        <a href="foto/fotkyweb/galerie/13.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img
+            src="foto/fotkyweb/galerie/13.JPG" alt="Přelet nad řekou" /></a>
+        <a href="foto/fotkyweb/galerie/14.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img
+            src="foto/fotkyweb/galerie/14.JPG" alt="Přelet nad řekou" /></a>
+        <a href="foto/fotkyweb/galerie/15.JPG" data-lightbox="galerie" data-title="Přelet nad řekou"><img
+            src="foto/fotkyweb/galerie/15.JPG" alt="Přelet nad řekou" /></a>
+        <a href="foto/fotkyweb/galerie/16.jpg" data-lightbox="galerie" data-title="Přelet nad řekou"><img
+            src="foto/fotkyweb/galerie/16.JPG" alt="Přelet nad řekou" /></a>
       </div>
     </div>
-  </section>
-  <div class="navigace-sekundarni">
-    <p>
-      <a href="index.html">ÚVODNÍ STRÁNKA  |  </a>
-      <a href="zkusenosti.html">ZKUŠENOSTI  |  </a>
-      <a href="nabidka.html">NABÍDKA  |  </a>
-      <a href="fotogalerie.html">FOTOGALERIE  |  </a>
-      <a href="kontakt.html">KONTAKT</a>
-    </p>
-    <p>Karel Faltus - 2025</p>
-  </div>
-</footer>
+    <script src="lightbox-plus-jquery.js"></script>
+  </main>
+  <footer>
+    <section>
+      <div class="footer-row">
+        <div class="footer-left">
+          <h2>Jak mě kontaktovat ?</h2>
+          <a href="kontakt.html">Kontaktní formulář</a>
+          <p>KarelFaltusObjednavky@gmail.com</p>
+        </div>
+        <div class="footer-center">
+          <h2>Kde sídlíme ?</h2>
+          <p>Řetůvka</p>
+          <p>Česká Republika</p>
+        </div>
+        <div class="footer-right">
+          <h2>Sociální sítě</h2>
+          <a href="" class="odkaz">
+            <img src="fotky/instagram.png" alt="Facebook" />
+          </a>
+          <a href="" class="odkaz">
+            <img src="fotky/facebook.png" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="navigace-sekundarni">
+      <p>
+        <a href="index.html">ÚVODNÍ STRÁNKA | </a>
+        <a href="zkusenosti.html">ZKUŠENOSTI | </a>
+        <a href="nabidka.html">NABÍDKA | </a>
+        <a href="fotogalerie.html">FOTOGALERIE | </a>
+        <a href="kontakt.html">KONTAKT</a>
+      </p>
+      <p>Karel Faltus - 2025</p>
+    </div>
+  </footer>
 </body>
+
 </html>

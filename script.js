@@ -115,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
-      // Vyčteme zvolenou verzi Spitfire, pokud je produkt Spitfire
       let spitfireText = "";
       if (selectedProduct === "Spitfire") {
         const variantEl = document.getElementById("variantSelect");
@@ -148,39 +147,34 @@ document.addEventListener("DOMContentLoaded", () => {
           `
         })
       })
-      .then(res => res.json())
-      .then(data => {
-        // Najdeme overlay a hlášku
-        const overlay = document.getElementById("emailOverlay");
-        const msg = document.getElementById("successMessage");
+        .then(res => res.json())
+        .then(data => {
+          const overlay = document.getElementById("emailOverlay");
+          const msg = document.getElementById("successMessage");
 
-        if (data.success) {
-          // Zavřeme overlay
-          if (overlay) overlay.style.display = "none";
+          if (data.success) {
+            if (overlay) overlay.style.display = "none";
 
-          // Zobrazíme hlášku o úspěchu
-          if (msg) {
-            msg.style.display = "block";
-          }
-
-          // Reset formuláře
-          form.reset();
-
-          // Po 2s schováme hlášku
-          setTimeout(() => {
             if (msg) {
-              msg.style.display = "none";
+              msg.style.display = "block";
             }
-          }, 2000);
 
-        } else {
-          alert("Nastala chyba při odesílání emailu (data.success=false).");
-        }
-      })
-      .catch(error => {
-        console.error("Chyba:", error);
-        alert("Nastala chyba při odesílání emailu (fetch error).");
-      });
+            form.reset();
+
+            setTimeout(() => {
+              if (msg) {
+                msg.style.display = "none";
+              }
+            }, 2000);
+
+          } else {
+            alert("Nastala chyba při odesílání emailu (data.success=false).");
+          }
+        })
+        .catch(error => {
+          console.error("Chyba:", error);
+          alert("Nastala chyba při odesílání emailu (fetch error).");
+        });
     });
   }
 });
@@ -265,12 +259,12 @@ const variantData = {
   PANORAMA: { desc: "maketa Supermarine Spitfire Mk.IX. v měřítku 1:1 je interaktivní exponát, kde po vhození mince či bankovky návštěvníkem do makety připojeného startovacího vozíku, začne letoun z reproduktorů umístěných v chladičích vydávat zvuky leteckého poplachu, startujícího motoru doprovázeného kouřem z výfuků a roztočením vrtule na 500 ot. /min. Chytrá volba pro moderní muzea a soukromé sběratele!", price: "Cena bez DPH: 2 510 000 Kč" }
 }
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
   const variantSelect = document.getElementById("variantSelect")
   const variantDescription = document.getElementById("variantDescription")
   const variantPrice = document.getElementById("variantPrice")
   const updateVariant = () => {
-    const {desc, price} = variantData[variantSelect.value]
+    const { desc, price } = variantData[variantSelect.value]
     variantDescription.textContent = desc
     variantPrice.textContent = price
   }
@@ -283,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.popis-produktu').forEach(desc => {
     const select = desc.querySelector('select');
     const priceEl = desc.querySelector('p.zakladni-cena');
-    const header  = desc.querySelector('h2');
+    const header = desc.querySelector('h2');
 
     function reposition() {
       if (window.innerWidth < 980) {
@@ -300,10 +294,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   document.querySelectorAll('.popis-produktu').forEach(product => {
-    const bigEl     = product.querySelector('p.zakladni-cena big');
+    const bigEl = product.querySelector('p.zakladni-cena big');
     if (!bigEl) return;
     const basePrice = parseInt(bigEl.textContent.replace(/\D/g, ''), 10);
-    const select    = product.querySelector('select');
+    const select = product.querySelector('select');
     if (!select) return;
 
     const formatter = new Intl.NumberFormat('cs-CZ');
