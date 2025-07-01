@@ -569,6 +569,7 @@ line-height: 1.4;
 
   /*---NABÍDKA---*/
   /***** ZÁKLADNÍ NASTAVENÍ PRODUKTŮ *****/
+
 .produkt h2 {
   color: #005494;
   font-size: 2rem;
@@ -950,7 +951,7 @@ button[type="submit"]:hover {
   }
 
   .podstava{
-    width: 60%;
+    width: 65%;
   }
 
   @media (max-width: 1780px) {

@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Odeslání formuláře
+  // Odeslání objednávkového formuláře (produkty)
   const form = document.getElementById("emailForm");
   if (form) {
     form.addEventListener("submit", event => {
@@ -107,11 +107,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const notes = document.getElementById("text")?.value;
 
       // Vyčteme zvolenou podstavu, pokud je produkt VrtulovyList
-      let podstavaText = "";
+      let podsviceniVrtulovyListText = "";
       if (selectedProduct === "VrtulovyList") {
         const podstavaEl = document.querySelector(".podstava");
         if (podstavaEl) {
-          podstavaText = `Zvolená podstava: ${podstavaEl.options[podstavaEl.selectedIndex].text}`;
+          podsviceniVrtulovyListText = `Zvolená podstava: ${podstavaEl.options[podstavaEl.selectedIndex].text}`;
         }
       }
 
@@ -123,50 +123,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
 
+      let podsviceniVrtule = "";
+      if (selectedProduct === "Vrtule") {
+        const podstavaEl = document.querySelector(".podstava");
+        if (podstavaEl) {
+          podsviceniVrtule = `Zvolená verze: ${podstavaEl.options[podstavaEl.selectedIndex].text}`;
+        }
+      }
+
       fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          access_key: "a9633fac-5576-428c-a534-1bd779586890", // Nahraďte vlastním klíčem, pokud se liší
+          access_key: "a9633fac-5576-428c-a534-1bd779586890", 
           name,
           email,
           phone,
           address,
           notes,
           subject: `Nová objednávka pro produkt ${selectedProduct}`,
-          message: `
-            Jméno: ${name}
-            Email: ${email}
-            Telefon: ${phone}
-            Adresa: ${address}
-            Poznámky: ${notes}
-            Produkt: ${selectedProduct}
-
-            ${podstavaText}
-            ${spitfireText}
-          `
+          message: `\nJméno: ${name}\nEmail: ${email}\nTelefon: ${phone}\nAdresa: ${address}\nPoznámky: ${notes}\nProdukt: ${selectedProduct}\n${podsviceniVrtulovyListText}\n${spitfireText}\n${podsviceniVrtule}`
         })
       })
         .then(res => res.json())
         .then(data => {
-          const overlay = document.getElementById("emailOverlay");
-          const msg = document.getElementById("successMessage");
-
           if (data.success) {
-            if (overlay) overlay.style.display = "none";
-
-            if (msg) {
-              msg.style.display = "block";
-            }
-
-            form.reset();
-
-            setTimeout(() => {
-              if (msg) {
-                msg.style.display = "none";
-              }
-            }, 2000);
-
+            confirmOrderSuccess(form);
           } else {
             alert("Nastala chyba při odesílání emailu (data.success=false).");
           }
@@ -175,6 +157,43 @@ document.addEventListener("DOMContentLoaded", () => {
           console.error("Chyba:", error);
           alert("Nastala chyba při odesílání emailu (fetch error).");
         });
+    });
+  }
+
+  // Kontaktní formulář na stránce kontakt.html
+  const contactForm = document.getElementById("myForm");
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      const name = document.getElementById("jmeno-prijmeni")?.value;
+      const email = contactForm.querySelector('input[name="Email"]')?.value;
+      const phone = contactForm.querySelector('input[name="Telefon"]')?.value;
+      const dotaz = document.getElementById("dotaz")?.value;
+      fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "a9633fac-5576-428c-a534-1bd779586890",
+          name,
+          email,
+          phone,
+          dotaz,
+          subject: "Nový kontakt z formuláře",
+          message: `Jméno: ${name}\nEmail: ${email}\nTelefon: ${phone}\nDotaz: ${dotaz}`
+        })
+      })
+        .then(res => res.json())
+        .then(data => {
+          const msg = document.getElementById("successMessage");
+          if (data.success) {
+            if (msg) msg.style.display = "block";
+            contactForm.reset();
+            setTimeout(() => { if (msg) msg.style.display = "none"; }, 2000);
+          } else {
+            alert("Nastala chyba při odesílání dotazu.");
+          }
+        })
+        .catch(() => alert("Nastala chyba při odesílání dotazu (fetch error)."));
     });
   }
 });
@@ -253,7 +272,6 @@ function applyLanguage(language) {
 }
 
 const variantData = {
-  KIT: { desc: "maketa Supermarine Spitfire Mk.IX. ve veri kit je určena zejména k marketingovým účelům jako poutač před budovou, popřípadě zavěšena u stropu haly. Marking letounu lze na přání změnit, včetně úpravy do všech kamuflážních verzí dle daného místa bojového nasazení a časového období.", price: "Cena bez DPH: 1 070 000 Kč" },
   STATIC: { desc: "maketa Supermarine Spitfire Mk.IX. je určena zejména k marketingovým účelům jako poutač před budovou, popřípadě zavěšena u stropu haly. Marking letounu lze na přání změnit, včetně úpravy do všech kamuflážních verzí dle daného místa bojového nasazení a časového období.", price: "Cena bez DPH: 1 710 000 Kč" },
   MOVIE: { desc: "maketa Supermarine Spitfire Mk.IX Verze MOVIE umožňuje návštěvníkům bezprostřední kontakt s letadlem. Usednutí do kokpitu, manipulaci s ovladači a odezvou do řídících ploch, doplněné zvukovými a kouřovými efekty. Součástí dodávky je i replika uniformy RAF pro případné pořízení památečních fotografií návštevníků v dobové uniformě. Ideální pro potřeby filmu a natáčení reklamních spotů!", price: "Cena bez DPH: 2 110 000 Kč" },
   PANORAMA: { desc: "maketa Supermarine Spitfire Mk.IX. v měřítku 1:1 je interaktivní exponát, kde po vhození mince či bankovky návštěvníkem do makety připojeného startovacího vozíku, začne letoun z reproduktorů umístěných v chladičích vydávat zvuky leteckého poplachu, startujícího motoru doprovázeného kouřem z výfuků a roztočením vrtule na 500 ot. /min. Chytrá volba pro moderní muzea a soukromé sběratele!", price: "Cena bez DPH: 2 510 000 Kč" }
@@ -313,3 +331,14 @@ document.addEventListener('DOMContentLoaded', () => {
     updatePrice();
   });
 });
+
+function confirmOrderSuccess(form, overlayId = "emailOverlay", messageId = "successMessage") {
+  const overlay = document.getElementById(overlayId);
+  const msg = document.getElementById(messageId);
+  if (overlay) overlay.style.display = "none";
+  if (msg) msg.style.display = "block";
+  if (form) form.reset();
+  setTimeout(() => {
+    if (msg) msg.style.display = "none";
+  }, 2000);
+}
