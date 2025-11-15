@@ -84,6 +84,7 @@
   <main>
     <section class="produkt">
       <div class="produkt-content">
+          <!-- TODO PŘIDAT ŠIPKY NA STRANU K OBRAZKUM PRO LEPSI PREHELDNOST -->
         <div class="produkt-image">
           <a id="mainImageLink-product4" href="foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg"
             data-lightbox="product4">
@@ -99,37 +100,22 @@
       </div>
       <div class="produkt-text">
         <div class="popis-produktu">
-          <h2>Vrtulový list letadla Spitfire</h2>
-          <p>
-            Maketa vrtulobého listu v originálním měřítku s unašečem, veškerými popisky
-            a pojízdným podstavcem na kterém jsou zobrazeny některé ze známých symbolů, 
-            které se vyskytovali i na původních letadlech.
-            
-            Součástí je i LED podsvícení, které je připevněné k listu v jeho zadní části.
-            Ovládá se pomocí ovladače, který je součástí balení.
-
-            Maketa vrtulového listu v originálním měřítku v kamuflážní barvě s
-            popisky může být inspirací nejednoho modeláře. Listy jsou
-            očíslované a nedají se zaměnit s listy k vrtulovému kuželi.
-          </p>
-          <p>Rozpětí 9,05 m</p>
-          <p>Délka 7,33 m</p>
-          <div class="konfigurace">
-            <div class="konfigurace-podstava">
-              <select class="podstava" class="podsviceniVrtulovyList">
-                <option value="0">Bez podsvícení</option>
-                <option value="6900">S RGB podsvícením</option>
-              </select>
-            </div>
+          <div class="produkt-nazev-verze">
+            <h2>Vrtulový list letadla Spitfire</h2>
           </div>
-          <p class="zakladni-cena" class="cenaVrtulovyList">
-            <big>Cena bez DPH: 18 400 KČ</big>
-          </p>
+          <select id="variantSelect" class="select-verze" name="verzeVrtulovyList">
+            <option value="BEZ_PODSVICENI">Bez podsvícení</option>
+            <option value="S_PODSVICENIM">S RGB podsvícením</option>
+          </select>
+          <p id="variantDescription"></p>
+            <p>
+                <br>Výška listu: 165 cm
+                <br>Maximální šířka základny: xxx cm
+            </p>
+          <p id="variantPrice" class="zakladni-cena"></p>
         </div>
         <div class="produkt-tlacitka">
-          <button class="objednani" data-product="VrtulovyList">
-            Objednat
-          </button>
+          <button class="objednani" data-product="VrtulovyList">Objednat</button>
         </div>
       </div>
     </section>
