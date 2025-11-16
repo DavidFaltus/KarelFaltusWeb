@@ -100,7 +100,7 @@ body{
   display: block;
   color: #fff;
   text-decoration: none;
-  padding: 8px;
+  padding: 6px;
   text-transform: uppercase;
   transition: background-color 0.3s ease;
   text-align: left;
@@ -437,10 +437,12 @@ footer h2{
 }
 
 .sluzby-box {
-  display: grid;
-  grid-template-columns: repeat(2, 30%);
-  gap: 60px;
-  justify-content: center;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 30%);
+    gap: 60px;
+    justify-content: center;
 }
 
 .sluzba {
@@ -570,6 +572,10 @@ line-height: 1.4;
   /*---NABÍDKA---*/
   /***** ZÁKLADNÍ NASTAVENÍ PRODUKTŮ *****/
 
+#variantPrice {
+    font-weight: bold;
+}
+
 .produkt h2 {
   color: #005494;
   font-size: 2rem;
@@ -619,9 +625,11 @@ line-height: 1.4;
   text-align: center;
   width: 100%;
   margin-bottom: 10px;
+  position: relative;
 }
 .produkt-image img {
   width: 100%;
+    max-height: 700px;
   max-width: 700px;
   height: auto;
   border-radius: 7px;
@@ -736,14 +744,14 @@ line-height: 1.4;
 }
 
 #successMessage {
-  display: none;        
-  position: fixed;     
+  display: none;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); 
-  z-index: 2000;         
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 2000;
 }
 
 #successMessage .content {
@@ -751,7 +759,7 @@ line-height: 1.4;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: rgba(0, 115, 0, 1); 
+  background-color: rgba(0, 115, 0, 1);
   color: white;
   padding: 20px;
   border-radius: 10px;
@@ -808,11 +816,14 @@ button[type="submit"]:hover {
 
 /* Bude vidět jen 4 miniatury */
 .thumbnail-wrapper {
-  display: flex;
-  gap: 10px;
-  overflow: hidden;     /* Skryje miniatury, které se nevejdou do šířky */
-  width: 100%;         /* Upravit dle potřeb: 4 miniatury + mezery */
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    flex: 1;
+    min-width: 0;
+    transition: transform 0.5s ease;
 }
+
 
 /* Jednotlivá miniatura */
 .thumbnail {
@@ -832,6 +843,73 @@ button[type="submit"]:hover {
 
   /*---KONTAKT---*/
 
+.modal-overlay {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    text-align: center;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.modal-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.modal-content h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.modal-content p {
+    color: #666;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-button:hover {
+    color: #333;
+}
+
+/* Animace pro zobrazení */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
   #formular {
     display: flex;
@@ -933,7 +1011,7 @@ button[type="submit"]:hover {
 
 
 /*SPITFIRE*/
-  .produkt-nazev-verze {
+  .produkt-nazev_verze {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -944,7 +1022,7 @@ button[type="submit"]:hover {
     background-color: #005494;
     color: white;
     cursor: pointer;
-    width: 30%;
+    width: 65%;
     margin-left: auto;
     text-align: left;
     font-size: 20px;
@@ -956,7 +1034,7 @@ button[type="submit"]:hover {
 
   @media (max-width: 1780px) {
     .select-verze, .select-vrtule{
-      width: 50%;
+      width: 75%;
     }
   }
 
@@ -1110,7 +1188,7 @@ button[type="submit"]:hover {
 
 @media screen and (max-width: 980px) {
   .select-verze, .select-vrtule{
-    width: 30%;
+    width: 75%;
   }
   .produkt {
     flex-direction: column;
