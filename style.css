@@ -788,6 +788,31 @@ button[type="submit"]:hover {
   background-color: #c82333;
 }
 
+/* Vlastní šipky pro Lightbox */
+.custom-lb-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: white;
+    font-size: 3rem;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.0);
+    padding: 10px;
+    border-radius: 5px;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.custom-lb-prev {
+    left: 15px;
+}
+
+.custom-lb-next {
+    right: 15px;
+}
+
+
 /* Karusel – kontejner */
 .thumbnail-carousel {
   display: flex;

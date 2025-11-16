@@ -324,3 +324,84 @@ document.addEventListener('DOMContentLoaded', () => {
         updatePrice();
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const findImageDetails = (currentSrc) => {
+        for (const productId in productImages) {
+            const images = productImages[productId];
+            const foundIndex = images.findIndex(imgSrc => currentSrc.endsWith(imgSrc));
+            if (foundIndex !== -1) {
+                return {
+                    productId: productId,
+                    images: images,
+                    currentIndex: foundIndex
+                };
+            }
+        }
+        return null;
+    };
+
+    /**
+     * Změní obrázek zobrazený v lightboxu.
+     * @param {'prev'|'next'} direction - Směr, kterým se má obrázek změnit.
+     */
+    const changeLightboxImage = (direction) => {
+        const lightboxImage = document.querySelector('.lb-image');
+        if (!lightboxImage) return;
+
+        const details = findImageDetails(lightboxImage.src);
+        if (!details) return;
+
+        const { images, currentIndex } = details;
+        let newIndex;
+
+        if (direction === 'next') {
+            newIndex = (currentIndex + 1) % images.length;
+        } else {
+            newIndex = (currentIndex - 1 + images.length) % images.length;
+        }
+
+        const newSrc = images[newIndex];
+        lightboxImage.src = newSrc;
+
+        const numberDisplay = document.querySelector('.lb-number');
+        if (numberDisplay) {
+            numberDisplay.textContent = `Image ${newIndex + 1} of ${images.length}`;
+        }
+    };
+
+    /**
+     * Přidá vlastní navigační šipky do lightboxu.
+     */
+    const addLightboxArrows = () => {
+        const lightboxContainer = document.querySelector('.lb-outerContainer');
+        if (lightboxContainer && !lightboxContainer.querySelector('.custom-lb-prev')) {
+            const prevArrow = document.createElement('span');
+            prevArrow.className = 'custom-lb-arrow custom-lb-prev';
+            prevArrow.innerHTML = '&#10094;';
+            prevArrow.addEventListener('click', (e) => {
+                e.stopPropagation();
+                changeLightboxImage('prev');
+            });
+
+            const nextArrow = document.createElement('span');
+            nextArrow.className = 'custom-lb-arrow custom-lb-next';
+            nextArrow.innerHTML = '&#10095;';
+            nextArrow.addEventListener('click', (e) => {
+                e.stopPropagation();
+                changeLightboxImage('next');
+            });
+
+            lightboxContainer.appendChild(prevArrow);
+            lightboxContainer.appendChild(nextArrow);
+        }
+    };
+
+    // Přidá posluchač kliknutí na všechny odkazy, které otevírají lightbox.
+    document.querySelectorAll('a[data-lightbox]').forEach(link => {
+        link.addEventListener('click', () => {
+            // Krátké zpoždění zajistí, že se lightbox plně načte před přidáním šipek.
+            setTimeout(addLightboxArrows, 100);
+        });
+    });
+});
