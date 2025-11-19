@@ -926,6 +926,24 @@ button[type="submit"] {
 
 /*---KONTAKT---*/
 
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .modal-overlay {
   position: fixed;
   z-index: 1000;
@@ -998,26 +1016,18 @@ button[type="submit"] {
 #formular {
   display: flex;
   justify-content: center;
-  /* Zarovná formulář na střed horizontálně */
   align-items: center;
-  /* (Volitelně) zarovná na střed vertikálně, pokud chcete */
 }
 
 form {
   max-width: 1050px;
-  /* Maximální šířka formuláře */
   width: 80%;
-  /* Aby se formulář přizpůsobil velikosti okna */
   margin: 0 auto;
-  /* Zarovnání na střed */
   margin-top: 50px;
   margin-bottom: 65px;
   background-color: black;
-  /* Volitelné pozadí */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  /* Volitelný stín */
   border-radius: 10px;
-  /* Kulaté rohy formuláře */
   margin-left: auto;
   margin-right: auto;
 }
@@ -1046,7 +1056,6 @@ form {
 
 button#btnOdeslat:hover {
   background-color: #0056b3;
-  /* Změna barvy při přejetí myší */
 }
 
 select {
@@ -1069,13 +1078,9 @@ option {
 
 h1 {
   color: black;
-  /* Barva textu hlavičky */
   text-align: center;
-  /* Zarovnání hlavičky na střed */
   background-color: inherit;
-  /* Sdílení stejného pozadí jako fieldset */
   margin: 0;
-  /* Zrušení výchozích okrajů */
   margin-top: 50px;
   font-size: 50px;
 }
@@ -1482,5 +1487,97 @@ input {
   form {
     width: 100%;
     background-color: #1B272F;
+  }
+}
+
+/*---NOVÁ SEKCE KONTAKT INFO---*/
+.kontakt-info-sekce {
+  background-color: white;
+  color: black;
+  padding: 60px 0;
+  text-align: center;
+  margin-bottom: 50px;
+  width: 100%;
+}
+
+.kontakt-info-sekce h1 {
+  color: black;
+  margin-top: 0;
+  margin-bottom: 50px;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.kontakt-info-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.kontakt-polozka {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 250px;
+}
+
+.ikona-kruh {
+  width: 100px;
+  height: 100px;
+  border: 7px solid #1B272F;
+  /* Modrá barva webu */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.kontakt-polozka:hover .ikona-kruh {
+  transform: scale(1.1);
+  background-color: rgba(0, 84, 148, 0.1);
+}
+
+.ikona-kruh svg {
+  width: 40px;
+  height: 40px;
+  fill: black;
+}
+
+.kontakt-polozka p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 5px 0;
+  color: black;
+}
+
+.kontakt-zprava {
+  margin-top: 60px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: black;
+  padding: 0 20px;
+}
+
+@media (max-width: 900px) {
+  .kontakt-info-container {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kontakt-info-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+
+  .kontakt-info-sekce h1 {
+    font-size: 2.5rem;
   }
 }

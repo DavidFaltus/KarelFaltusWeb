@@ -84,7 +84,7 @@ body.lb-disable-scrolling {
   z-index: 10;
 }
 
-.lb-container > .nav {
+.lb-container>.nav {
   left: 0;
 }
 
@@ -93,7 +93,8 @@ body.lb-disable-scrolling {
   background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
 }
 
-.lb-prev, .lb-next {
+.lb-prev,
+.lb-next {
   height: 100%;
   cursor: pointer;
   display: block;
@@ -186,7 +187,7 @@ body.lb-disable-scrolling {
   float: right;
   width: 30px;
   height: 30px;
-  background: url(../fotky/close.png) top right no-repeat;
+  background: url(fotky/close.png) top right no-repeat;
   text-align: right;
   outline: none;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
@@ -203,7 +204,8 @@ body.lb-disable-scrolling {
   opacity: 1;
 }
 
-span .lb-caption, .lb-number{
-    left: auto;
-    bottom: auto;
+span .lb-caption,
+.lb-number {
+  left: auto;
+  bottom: auto;
 }

@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="cs">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Letadla</title>
+  <title>Létání</title>
   <link href="style.css" rel="stylesheet" type="text/css">
+  <link href="fotogalerie.css" rel="stylesheet" type="text/css">
+  <link href="lightbox.css" rel="stylesheet">
   <script src="script.js"></script>
-  <link href="nabidka.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
 
   <header>
@@ -36,7 +39,7 @@
               <a href="#" onclick="switchLanguage('en')">
                 <img src="fotky/gb.png" alt="English Flag" width="30">
               </a>
-            </div>  
+            </div>
           </li>
         </ul>
         <div class="hamburger">
@@ -59,7 +62,7 @@
               <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
                 <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
               </a>
-              <a href="#" onclick="switchLanguage('en')"id="languageSwitch">
+              <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
                 <img src="fotky/gb.png" alt="English Flag" width="30">
               </a>
             </div>
@@ -67,53 +70,30 @@
         </div>
       </nav>
       <div class="nadpis__jinestranky">
-        <h1>Products</h1>
+        <h1>Gallery</h1>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="produkt">
-      <div class="produkt-image">
-        <img src="foto/spitfire.JPG" alt="produkt spitfire">
-      </div>
-      <div class="produkt-text">
-        <h2>Spitfire</h2>
-        <p>Spitfire je britské stíhací produkt z 30. let, které bylo nasazeno v druhé světové válce a hrálo klíčovou
-          roli v bitvách o Británii. Díky své rychlosti, obratnosti a schopnosti dostat se do výšky rychle se stal
-          jedním z nejúspěšnějších britských letadel války. Jeho design přinesl nové technologie, jako kovovou kostru a
-          celokovovou krytinu, což umožnilo letadlu být lehčí a rychlejší. Dnes se produkt Spitfire stalo ikonou
-          britského letectví a je populární mezi sběrateli a milovníky letadel.</p>
-      </div>
-    </section>
-    <section class="produkt2">
-      <div class="produkt2-image">
-        <img src="foto/lambada2.JPG" alt="produkt lambada">
-      </div>
-      <div class="produkt2-text">
-        <h2>Lambada</h2>
-        <p>produkt Lambada je moderním ultralehkým letadlem, kterého si piloti velmi oblíbili po celém světě. Jeho
-          design je aerodynamický a využívá hlavně uhlíkové vlákno pro pevnost a lehkost. Křídla letadla jsou navržena
-          tak, aby dosáhla vynikajícího poměru výkonu a spotřeby paliva. Jednou z jeho hlavních výhod je schopnost letět
-          velké vzdálenosti s nízkou spotřebou paliva. Je snadno ovladatelné a bezpečné pro piloty všech úrovní
-          zkušeností a je vybaveno moderní avionikou, včetně GPS navigace. Lambada se používá pro sportovní a rekreační
-          létání, výcvik pilotů a letecký průzkum, a je také ideálním letadlem pro komerční aplikace díky jeho vysoké
-          efektivitě a nízké spotřebě paliva.</p>
-      </div>
-    </section>
-    <div id="emailModal" class="modal hidden">
-      <div class="modal-content">
-        <span class="close-btn">&times;</span>
-        <h2>Zadejte svůj email</h2>
-        <form id="emailForm">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          <button type="submit">Odeslat</button>
-        </form>
+    <div class="kontejner">
+      <div class="galerie">
+        <a href="foto/lambada.JPG" data-lightbox="galerie" data-title="Letadlo Lambada"><img src="foto/lambada.JPG"
+            alt="Letadlo Lambada"></a>
+        <a href="foto/litomysl.JPG" data-lightbox="galerie" data-title="Litomyšl"><img src="foto/litomysl.JPG"
+            alt="Litomyšl"></a>
+        <a href="foto/slovensko.JPG" data-lightbox="galerie" data-title="Hrad na Slovensku"><img
+            src="foto/slovensko.JPG" alt="Hrad na Slovensku"></a>
+        <a href="foto/spitfire.JPG" data-lightbox="galerie" data-title="Model Spitfire"><img src="foto/spitfire.JPG"
+            alt="Model Spitfire"></a>
+        <a href="foto/vystava.JPG" data-lightbox="galerie" data-title="Výstava v obchodním domě"><img
+            src="foto/vystava.JPG" alt="Výstava v obchodním domě"></a>
+        <a href="foto/reka.jpg" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/reka.jpg"
+            alt="Přelet nad řekou"></a>
       </div>
     </div>
+    <script src="lightbox-plus-jquery.js"></script>
   </main>
-
   <footer>
     <section>
       </div>
@@ -132,7 +112,7 @@
           <h2>Social networks</h2>
           <a href="" class="odkaz">
             <img src="fotky/instagram.png" alt="Facebook">
-        </a>
+          </a>
           <a href="" class="odkaz">
             <img src="fotky/facebook.png" alt="Instagram">
           </a>
@@ -141,14 +121,15 @@
     </section>
     <div class="navigace-sekundarni">
       <p>
-        <a href="">HOME PAGE  |  </a>
-        <a href="">EXPERIENCE  |  </a>
-        <a href="">OFFER  |  </a>
-        <a href="">PHOTOGALERY  |  </a>
+        <a href="">HOME PAGE | </a>
+        <a href="">EXPERIENCE | </a>
+        <a href="">OFFER | </a>
+        <a href="">PHOTOGALERY | </a>
         <a href="">CONTACT</a>
       </p>
-      <p>Karel Faltus - 2025</p>
+      <p id="footerYear">Karel Faltus - <span id="yearSpan"></span></p>
     </div>
   </footer>
 </body>
+
 </html>

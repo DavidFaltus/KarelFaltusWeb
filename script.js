@@ -2,6 +2,7 @@
 let selectedProduct = "";
 const visibleCount = 7;
 
+//TODO PŘIDAT ROZLIŠOVÁNÍ PRODUKTŮ PODLE VERZÍ
 const productImages = {
     product1: [
         "foto/fotkyweb/spitfire/RESIZED/1.jpg", "foto/fotkyweb/spitfire/RESIZED/2.jpg",
@@ -132,13 +133,19 @@ function switchLanguage(language) {
 
 function applyLanguage(language) {
     const currentPath = window.location.pathname;
-    const pageName = currentPath.split("/").pop();
-    if ((language === "cz" && !pageName.includes("EN")) || (language === "en" && pageName.includes("EN"))) {
-        location.reload();
-        return;
+    let pageName = currentPath.split("/").pop();
+    if (pageName === "") pageName = "index.html";
+
+    const isCurrentlyEn = pageName.includes("EN");
+
+    if (language === "en" && !isCurrentlyEn) {
+        const newFileName = pageName.replace(".html", "EN.html");
+        location.href = "EN/" + newFileName;
     }
-    const target = language === "cz" ? pageName.replace("EN", "") : pageName.replace(".html", "EN.html");
-    location.href = target;
+    else if (language === "cz" && isCurrentlyEn) {
+        const newFileName = pageName.replace("EN.html", ".html");
+        location.href = "../" + newFileName;
+    }
 }
 
 function confirmOrderSuccess(form, overlayId = "emailOverlay", messageId = "successMessage") {
@@ -150,11 +157,42 @@ function confirmOrderSuccess(form, overlayId = "emailOverlay", messageId = "succ
     setTimeout(() => { if (msg) msg.style.display = "none"; }, 10000);
 }
 
+function updateYear() {
+    const yearSpan = document.getElementById("yearSpan");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+}
+
+document.addEventListener("DOMContentLoaded", updateYear);
+updateYear();
 // --- HLAVNÍ SPUŠTĚCÍ BLOK PO NAČTENÍ STRÁNKY ---
+
+// Inicializace
+
+document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("successMessage");
+    const closeBtn = document.getElementById("closeSuccessBtn");
+
+    function closeModal() {
+        if (modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    if (closeBtn) {
+        closeBtn.addEventListener("click", closeModal);
+    }
+
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            closeModal();
+        }
+    });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Klikací obrázky v nabídce
     if (window.location.pathname.endsWith('nabidka.html')) {
         const productImageLinks = [
             { imgId: 'mainImage-product1', url: 'spitfire.html' },
@@ -171,7 +209,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Inicializace karuselů s náhledy
     Object.keys(productImages).forEach(productId => {
         currentIndex[productId] = 0;
         renderThumbnails(productId);
