@@ -145,7 +145,7 @@ function confirmOrderSuccess(form, overlayId = "emailOverlay", messageId = "succ
     const overlay = document.getElementById(overlayId);
     const msg = document.getElementById(messageId);
     if (overlay) overlay.style.display = "none";
-    if (msg) msg.style.display = "block";
+    if (msg) msg.style.display = "flex";
     if (form) form.reset();
     setTimeout(() => { if (msg) msg.style.display = "none"; }, 10000);
 }
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }).then(res => res.json()).then(data => {
                 const msg = document.getElementById("successMessage");
                 if (data.success) {
-                    if (msg) msg.style.display = "block";
+                    if (msg) msg.style.display = "flex";
                     contactForm.reset();
                     setTimeout(() => { if (msg) msg.style.display = "none"; }, 10000);
                 } else {
