@@ -2,38 +2,183 @@
 let selectedProduct = "";
 const visibleCount = 7;
 
-//TODO PŘIDAT ROZLIŠOVÁNÍ PRODUKTŮ PODLE VERZÍ
-const productImages = {
+const baseProductImages = {
     product1: [
-        "foto/fotkyweb/spitfire/RESIZED/1.jpg", "foto/fotkyweb/spitfire/RESIZED/2.jpg",
-        "foto/fotkyweb/spitfire/RESIZED/3.jpg", "foto/fotkyweb/spitfire/RESIZED/4.jpg",
-        "foto/fotkyweb/spitfire/RESIZED/5.jpg", "foto/fotkyweb/spitfire/RESIZED/6.jpg",
-        "foto/fotkyweb/spitfire/RESIZED/7.jpg", "foto/fotkyweb/spitfire/RESIZED/8.jpg",
-        "foto/fotkyweb/spitfire/RESIZED/9.jpg", "foto/fotkyweb/spitfire/RESIZED/10.jpg",
-        "foto/fotkyweb/spitfire/RESIZED/11.jpg", "foto/fotkyweb/spitfire/RESIZED/12.jpg",
-        "foto/fotkyweb/spitfire/RESIZED/13.jpg", "foto/fotkyweb/spitfire/RESIZED/14.jpg",
-        "foto/fotkyweb/spitfire/RESIZED/15.jpg", "foto/fotkyweb/spitfire/RESIZED/16.jpg"
+        "foto/fotkyweb/spitfire/RESIZED/1.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/2.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/3.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/4.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/5.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/6.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/7.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/8.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/9.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/10.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/11.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/12.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/13.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/14.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/15.jpg",
+        "foto/fotkyweb/spitfire/RESIZED/16.jpg"
     ],
     product2: [
-        "foto/fotkyweb/vrtule/RESIZED/1.jpg", "foto/fotkyweb/vrtule/RESIZED/2.jpg",
-        "foto/fotkyweb/vrtule/RESIZED/3.jpg", "foto/fotkyweb/vrtule/RESIZED/4.jpg",
-        "foto/fotkyweb/vrtule/RESIZED/5.jpg", "foto/fotkyweb/vrtule/RESIZED/6.jpg",
-        "foto/fotkyweb/vrtule/RESIZED/7.jpg", "foto/fotkyweb/vrtule/RESIZED/8.jpg",
-        "foto/fotkyweb/vrtule/RESIZED/9.jpg", "foto/fotkyweb/vrtule/RESIZED/10.jpg"
+        "foto/fotkyweb/vrtule/RESIZED/1.jpg",
+        "foto/fotkyweb/vrtule/RESIZED/2.jpg",
+        "foto/fotkyweb/vrtule/RESIZED/3.jpg",
+        "foto/fotkyweb/vrtule/RESIZED/4.jpg",
+        "foto/fotkyweb/vrtule/RESIZED/5.jpg",
+        "foto/fotkyweb/vrtule/RESIZED/6.jpg",
+        "foto/fotkyweb/vrtule/RESIZED/7.jpg",
+        "foto/fotkyweb/vrtule/RESIZED/8.jpg",
+        "foto/fotkyweb/vrtule/RESIZED/9.jpg",
+        "foto/fotkyweb/vrtule/RESIZED/10.jpg"
     ],
     product3: [
-        "foto/fotkyweb/albatros/RESIZED/1.jpg", "foto/fotkyweb/albatros/RESIZED/2.jpg",
-        "foto/fotkyweb/albatros/RESIZED/3.jpg", "foto/fotkyweb/albatros/RESIZED/4.jpg",
-        "foto/fotkyweb/albatros/RESIZED/5.jpg", "foto/fotkyweb/albatros/RESIZED/6.jpg",
-        "foto/fotkyweb/albatros/RESIZED/7.jpg", "foto/fotkyweb/albatros/RESIZED/8.jpg",
-        "foto/fotkyweb/albatros/RESIZED/9.jpg", "foto/fotkyweb/albatros/RESIZED/10.jpg",
-        "foto/fotkyweb/albatros/RESIZED/11.jpg", "foto/fotkyweb/albatros/RESIZED/12.jpg",
+        "foto/fotkyweb/albatros/RESIZED/1.jpg",
+        "foto/fotkyweb/albatros/RESIZED/2.jpg",
+        "foto/fotkyweb/albatros/RESIZED/3.jpg",
+        "foto/fotkyweb/albatros/RESIZED/4.jpg",
+        "foto/fotkyweb/albatros/RESIZED/5.jpg",
+        "foto/fotkyweb/albatros/RESIZED/6.jpg",
+        "foto/fotkyweb/albatros/RESIZED/7.jpg",
+        "foto/fotkyweb/albatros/RESIZED/8.jpg",
+        "foto/fotkyweb/albatros/RESIZED/9.jpg",
+        "foto/fotkyweb/albatros/RESIZED/10.jpg",
+        "foto/fotkyweb/albatros/RESIZED/11.jpg",
+        "foto/fotkyweb/albatros/RESIZED/12.jpg",
         "foto/fotkyweb/albatros/RESIZED/13.jpg"
     ],
     product4: [
-        "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg", "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/2.jpg",
-        "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/3.jpg", "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/4.jpg"
+        "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg",
+        "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/2.jpg",
+        "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/3.jpg",
+        "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/4.jpg",
+        "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/5.jpg",
+        "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/6.jpg",
+        "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/7.jpg",
+        "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/8.jpg",
+        "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/9.jpg",
     ]
+};
+
+let productImages = { ...baseProductImages };
+
+// Konfigurace obrázků pro jednotlivé varianty
+const variantImages = {
+    product1: { // Spitfire
+        "STATIC": [
+            "foto/fotkyweb/spitfire/RESIZED/1.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/2.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/3.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/4.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/5.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/6.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/7.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/8.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/9.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/10.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/11.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/12.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/13.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/16.jpg"
+        ],
+        "MOVIE": [
+            "foto/fotkyweb/spitfire/RESIZED/1.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/2.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/3.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/4.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/5.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/6.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/7.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/8.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/9.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/10.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/11.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/12.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/13.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/16.jpg"
+        ],
+        "PANORAMA": [
+            "foto/fotkyweb/spitfire/RESIZED/1.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/2.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/3.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/4.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/5.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/6.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/7.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/8.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/9.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/10.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/11.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/12.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/13.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/14.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/15.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/16.jpg"
+        ]
+    },
+    product2: { // Vrtule
+        "BEZ_PODSVICENI": [
+            "foto/fotkyweb/vrtule/RESIZED/1.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/2.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/3.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/4.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/5.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/10.jpg",
+
+        ],
+        "SE_STOJANEM": [
+            "foto/fotkyweb/vrtule/RESIZED/1.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/2.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/3.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/4.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/5.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/10.jpg",
+        ],
+        "S_UCHYCENIM_NA_ZED": [
+            "foto/fotkyweb/vrtule/RESIZED/1.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/2.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/3.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/4.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/5.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/6.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/10.jpg",
+        ],
+        "S_UCHYCENIM_NA_ZED_A_PODSVICENI": [
+            "foto/fotkyweb/vrtule/RESIZED/1.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/2.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/3.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/4.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/5.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/6.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/7.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/8.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/9.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/10.jpg",
+        ]
+    },
+    product4: { // Vrtulový list
+        "BEZ_PODSVICENI": [
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/5.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/6.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/7.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/9.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/3.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/4.jpg"
+        ],
+        "S_PODSVICENIM": [
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/5.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/6.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/7.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/8.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/9.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/2.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/3.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/4.jpg"
+        ]
+    }
 };
 
 const currentIndex = { product1: 0, product2: 0, product3: 0, product4: 0 };
@@ -63,9 +208,22 @@ function updateVrtuleVariant() {
     const desc = document.getElementById("vrtuleVariantDescription");
     const price = document.getElementById("vrtuleVariantPrice");
     if (!select || !desc || !price) return;
-    const data = variantDataVrtule[select.value];
+
+    const selectedVariant = select.value;
+    const data = variantDataVrtule[selectedVariant];
     desc.textContent = data ? data.desc : "";
     price.textContent = data ? data.price : "";
+
+    // Aktualizace obrázků podle varianty
+    const productId = 'product2';
+    if (variantImages[productId] && variantImages[productId][selectedVariant] && variantImages[productId][selectedVariant].length > 0) {
+        productImages[productId] = variantImages[productId][selectedVariant];
+    } else {
+        productImages[productId] = baseProductImages[productId];
+    }
+    currentIndex[productId] = 0;
+    renderThumbnails(productId);
+    changeImage(productImages[productId][0], productId);
 }
 
 function updateVrtulovyListVariant() {
@@ -73,9 +231,22 @@ function updateVrtulovyListVariant() {
     const desc = document.getElementById("variantDescription");
     const price = document.getElementById("variantPrice");
     if (!select || !desc || !price) return;
-    const data = variantDataVrtulovyList[select.value];
+
+    const selectedVariant = select.value;
+    const data = variantDataVrtulovyList[selectedVariant];
     desc.textContent = data ? data.desc : "";
     price.textContent = data ? data.price : "";
+
+    // Aktualizace obrázků podle varianty
+    const productId = 'product4';
+    if (variantImages[productId] && variantImages[productId][selectedVariant] && variantImages[productId][selectedVariant].length > 0) {
+        productImages[productId] = variantImages[productId][selectedVariant];
+    } else {
+        productImages[productId] = baseProductImages[productId];
+    }
+    currentIndex[productId] = 0;
+    renderThumbnails(productId);
+    changeImage(productImages[productId][0], productId);
 }
 
 function createThumbnail(src, productId) {
@@ -259,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    access_key: "a9633fac-5576-428c-a534-1bd779586890", name, email, phone, address, notes,
+                    access_key: "efccdcd4-c9cc-48e0-8628-8f0e111b6dae", name, email, phone, address, notes,
                     subject: `Nová objednávka pro produkt ${selectedProduct}`,
                     message: `\nJméno: ${name}\nEmail: ${email}\nTelefon: ${phone}\nAdresa: ${address}\nPoznámky: ${notes}\nProdukt: ${selectedProduct}\n${podsviceniVrtulovyListText}\n${spitfireText}\n${podsviceniVrtule}`
                 })
@@ -282,7 +453,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
-                    access_key: "a9633fac-5576-428c-a534-1bd779586890", name, email, phone, dotaz,
+                    access_key: "efccdcd4-c9cc-48e0-8628-8f0e111b6dae", name, email, phone, dotaz,
                     subject: "Nový kontakt z formuláře",
                     message: `Jméno: ${name}\nEmail: ${email}\nTelefon: ${phone}\nDotaz: ${dotaz}`
                 })
@@ -319,9 +490,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const variantDescription = document.getElementById("variantDescription");
         const variantPrice = document.getElementById("variantPrice");
         const updateVariant = () => {
-            const { desc, price } = variantData[spitfireVariantSelect.value];
+            const selectedVariant = spitfireVariantSelect.value;
+            const { desc, price } = variantData[selectedVariant];
             variantDescription.textContent = desc;
             variantPrice.textContent = price;
+
+            // Aktualizace obrázků podle varianty
+            const productId = 'product1';
+            if (variantImages[productId] && variantImages[productId][selectedVariant] && variantImages[productId][selectedVariant].length > 0) {
+                productImages[productId] = variantImages[productId][selectedVariant];
+            } else {
+                productImages[productId] = baseProductImages[productId];
+            }
+            currentIndex[productId] = 0;
+            renderThumbnails(productId);
+            changeImage(productImages[productId][0], productId);
         };
         spitfireVariantSelect.addEventListener("change", updateVariant);
         updateVariant();
@@ -366,7 +549,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const findImageDetails = (currentSrc) => {
         for (const productId in productImages) {
             const images = productImages[productId];
-            const foundIndex = images.findIndex(imgSrc => currentSrc.endsWith(imgSrc));
+            const decodedSrc = decodeURIComponent(currentSrc);
+            const foundIndex = images.findIndex(imgSrc => decodedSrc.endsWith(imgSrc));
             if (foundIndex !== -1) {
                 return {
                     productId: productId,
@@ -411,6 +595,12 @@ document.addEventListener('DOMContentLoaded', function () {
      * Přidá vlastní navigační šipky do lightboxu.
      */
     const addLightboxArrows = () => {
+        const lightboxImage = document.querySelector('.lb-image');
+        if (!lightboxImage) return;
+
+        // Check if the current image belongs to a managed product
+        if (!findImageDetails(lightboxImage.src)) return;
+
         const lightboxContainer = document.querySelector('.lb-outerContainer');
         if (lightboxContainer && !lightboxContainer.querySelector('.custom-lb-prev')) {
             const prevArrow = document.createElement('span');
