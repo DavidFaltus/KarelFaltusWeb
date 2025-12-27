@@ -185,15 +185,15 @@ const currentIndex = { product1: 0, product2: 0, product3: 0, product4: 0 };
 
 const variantData = {
     STATIC: { desc: "Maketa Supermarine Spitfire Mk.IX. je určena zejména k marketingovým účelům jako poutač před budovou, popřípadě zavěšena u stropu haly. Marking letounu lze na přání změnit, včetně úpravy do všech kamuflážních verzí dle daného místa bojového nasazení a časového období.", price: "Cena bez DPH: 1 710 000 Kč" },
-    MOVIE: { desc: "Maketa Supermarine Spitfire Mk.IX umožňuje návštěvníkům bezprostřední kontakt s letadlem. Usednutí do kokpitu, manipulaci s ovladači a odezvou do řídících ploch. Součástí dodávky je i replika uniformy RAF pro případné pořízení památečních fotografií návštevníků v dobové uniformě. Ideální pro potřeby filmu a natáčení reklamních spotů!", price: "Cena bez DPH: 2 110 000 Kč" },
+    MOVIE: { desc: "Maketa Supermarine Spitfire Mk.IX umožňuje návštěvníkům bezprostřední kontakt s letadlem. Usednutí do kokpitu, manipulaci s ovladači a odezvou do řídících ploch. Ideální pro potřeby filmu a natáčení reklamních spotů!", price: "Cena bez DPH: 2 110 000 Kč" },
     PANORAMA: { desc: "Maketa Supermarine Spitfire Mk.IX. v měřítku 1:1 je interaktivní exponát. Letoun z reproduktorů umístěných v chladičích může vydávat zvuky leteckého poplachu nebo i startujícího motoru což je doprovázeno kouřem z výfuků a roztočením vrtule na 500 ot. /min. Letoun disponuje i osvětlením kokpitu a pozičních světel. Chytrá volba pro moderní muzea a soukromé sběratele!", price: "Cena bez DPH: 2 510 000 Kč" }
 };
 
 const variantDataVrtule = {
-    BEZ_PODSVICENI: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklolaminátu tudíž je vhodná i do exteriéru. Vrtule je vyrobena v měřítku 1:1 a je věrnou kopií originálního výrobku.", price: "Cena bez DPH: 76 020 Kč" },
-    SE_STOJANEM: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklolaminátu tudíž je vhodná i do exteriéru. Vrtule je vyrobena v měřítku 1:1 a je věrnou kopií originálního výrobku. Součástí je i stojan z dřevéného masivu, díky kterému můžete vrtuli umístit kamkoliv jen budete chtít.", price: "Cena bez DPH: 81 020 Kč" },
-    S_UCHYCENIM_NA_ZED: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklolaminátu tudíž je vhodná i do exteriéru. Vrtule je vyrobena v měřítku 1:1 a je věrnou kopií originálního výrobku. Součástí této konfiguace je i speciální přípravek pro uchycení na zeď.", price: "Cena bez DPH: 81 020 Kč" },
-    S_UCHYCENIM_NA_ZED_A_PODSVICENI: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklolaminátu tudíž je vhodná i do exteriéru. Vrtule je vyrobena v měřítku 1:1 a je věrnou kopií originálního výrobku. Jednotlivé listy jsou osvětleny LED pásky, které jsou vždy umístěny na zadní straně jednotlivých listů. Všechna světla můžete ovládat pomocí dálkového ovladače, který je součástí balení. Součástí této konfiguace je i speciální přípravek pro uchycení na zeď.", price: "Cena bez DPH: 85 500 Kč" }
+    BEZ_PODSVICENI: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklolaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku.", price: "Cena bez DPH: 76 020 Kč" },
+    SE_STOJANEM: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklolaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku. Součástí je i stojan z dřevéného masivu, díky kterému můžete vrtuli umístit kamkoliv jen budete chtít.", price: "Cena bez DPH: 81 020 Kč" },
+    S_UCHYCENIM_NA_ZED: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklolaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku. Součástí této konfiguace je i speciální přípravek pro uchycení na zeď.", price: "Cena bez DPH: 81 020 Kč" },
+    S_UCHYCENIM_NA_ZED_A_PODSVICENI: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklolaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku. Jednotlivé listy jsou osvětleny LED pásky, které jsou vždy umístěny na zadní straně jednotlivých listů. Všechna světla můžete ovládat pomocí dálkového ovladače, který je součástí balení. Součástí této konfiguace je i speciální přípravek pro uchycení na zeď.", price: "Cena bez DPH: 85 500 Kč" }
 };
 
 const variantDataVrtulovyList = {
@@ -202,7 +202,7 @@ const variantDataVrtulovyList = {
 };
 
 // --- FUNKCE ---
-
+// TODO SJEDNOTIT ZMENY CEN DO JEDNE FUNKCE PRO VSECHNY PRODUKTY
 function updateVrtuleVariant() {
     const select = document.getElementById("vrtuleVariantSelect");
     const desc = document.getElementById("vrtuleVariantDescription");
@@ -247,6 +247,31 @@ function updateVrtulovyListVariant() {
     currentIndex[productId] = 0;
     renderThumbnails(productId);
     changeImage(productImages[productId][0], productId);
+}
+
+const spitfireVariantSelect = document.getElementById("variantSelect");
+if (spitfireVariantSelect && typeof variantData !== 'undefined' && document.querySelector('body').innerHTML.includes('Maketa Supermarine Spitfire Mk.IX')) {
+    const variantDescription = document.getElementById("variantDescription");
+    const variantPrice = document.getElementById("variantPrice");
+    const updateVariant = () => {
+        const selectedVariant = spitfireVariantSelect.value;
+        const { desc, price } = variantData[selectedVariant];
+        variantDescription.textContent = desc;
+        variantPrice.textContent = price;
+
+        // Aktualizace obrázků podle varianty
+        const productId = 'product1';
+        if (variantImages[productId] && variantImages[productId][selectedVariant] && variantImages[productId][selectedVariant].length > 0) {
+            productImages[productId] = variantImages[productId][selectedVariant];
+        } else {
+            productImages[productId] = baseProductImages[productId];
+        }
+        currentIndex[productId] = 0;
+        renderThumbnails(productId);
+        changeImage(productImages[productId][0], productId);
+    };
+    spitfireVariantSelect.addEventListener("change", updateVariant);
+    updateVariant();
 }
 
 function createThumbnail(src, productId) {
@@ -483,31 +508,6 @@ document.addEventListener('DOMContentLoaded', () => {
             select.addEventListener("change", updateVrtulovyListVariant);
             updateVrtulovyListVariant();
         }
-    }
-
-    const spitfireVariantSelect = document.getElementById("variantSelect");
-    if (spitfireVariantSelect && typeof variantData !== 'undefined' && document.querySelector('body').innerHTML.includes('Maketa Supermarine Spitfire Mk.IX')) {
-        const variantDescription = document.getElementById("variantDescription");
-        const variantPrice = document.getElementById("variantPrice");
-        const updateVariant = () => {
-            const selectedVariant = spitfireVariantSelect.value;
-            const { desc, price } = variantData[selectedVariant];
-            variantDescription.textContent = desc;
-            variantPrice.textContent = price;
-
-            // Aktualizace obrázků podle varianty
-            const productId = 'product1';
-            if (variantImages[productId] && variantImages[productId][selectedVariant] && variantImages[productId][selectedVariant].length > 0) {
-                productImages[productId] = variantImages[productId][selectedVariant];
-            } else {
-                productImages[productId] = baseProductImages[productId];
-            }
-            currentIndex[productId] = 0;
-            renderThumbnails(productId);
-            changeImage(productImages[productId][0], productId);
-        };
-        spitfireVariantSelect.addEventListener("change", updateVariant);
-        updateVariant();
     }
 
     // 5. Repozicování selectu a přepočet ceny

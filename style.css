@@ -640,7 +640,8 @@ footer h2 {
 /*---NABÍDKA---*/
 /***** ZÁKLADNÍ NASTAVENÍ PRODUKTŮ *****/
 
-#variantPrice {
+#variantPrice,
+#vrtuleVariantPrice {
   font-weight: bold;
 }
 
