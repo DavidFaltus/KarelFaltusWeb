@@ -201,78 +201,38 @@ const variantDataVrtulovyList = {
     S_PODSVICENIM: { desc: "Maketa vrtulobého listu v originálním měřítku s unašečem, veškerými popisky a pojízdným podstavcem na kterém jsou zobrazeny některé ze známých symbolů, které se vyskytovali i na původních letadlech. Součástí je i LED podsvícení, které je připevněné k listu v jeho zadní části. Ovládá se pomocí ovladače, který je součástí balení.", price: "Cena bez DPH: 25 300 Kč" }
 };
 
-// --- FUNKCE ---
-// TODO SJEDNOTIT ZMENY CEN DO JEDNE FUNKCE PRO VSECHNY PRODUKTY
-function updateVrtuleVariant() {
-    const select = document.getElementById("vrtuleVariantSelect");
-    const desc = document.getElementById("vrtuleVariantDescription");
-    const price = document.getElementById("vrtuleVariantPrice");
+// Obecná funkce pro aktualizaci varianty produktu
+function updateProductVariant(productId, dataSource, selectId, descId, priceId) {
+    const select = document.getElementById(selectId);
+    const desc = document.getElementById(descId);
+    const price = document.getElementById(priceId);
+
     if (!select || !desc || !price) return;
 
     const selectedVariant = select.value;
-    const data = variantDataVrtule[selectedVariant];
+    const data = dataSource[selectedVariant];
+
+    // Aktualizace textů
     desc.textContent = data ? data.desc : "";
     price.textContent = data ? data.price : "";
 
     // Aktualizace obrázků podle varianty
-    const productId = 'product2';
     if (variantImages[productId] && variantImages[productId][selectedVariant] && variantImages[productId][selectedVariant].length > 0) {
         productImages[productId] = variantImages[productId][selectedVariant];
     } else {
         productImages[productId] = baseProductImages[productId];
     }
+
     currentIndex[productId] = 0;
     renderThumbnails(productId);
-    changeImage(productImages[productId][0], productId);
-}
-
-function updateVrtulovyListVariant() {
-    const select = document.getElementById("variantSelect");
-    const desc = document.getElementById("variantDescription");
-    const price = document.getElementById("variantPrice");
-    if (!select || !desc || !price) return;
-
-    const selectedVariant = select.value;
-    const data = variantDataVrtulovyList[selectedVariant];
-    desc.textContent = data ? data.desc : "";
-    price.textContent = data ? data.price : "";
-
-    // Aktualizace obrázků podle varianty
-    const productId = 'product4';
-    if (variantImages[productId] && variantImages[productId][selectedVariant] && variantImages[productId][selectedVariant].length > 0) {
-        productImages[productId] = variantImages[productId][selectedVariant];
-    } else {
-        productImages[productId] = baseProductImages[productId];
-    }
-    currentIndex[productId] = 0;
-    renderThumbnails(productId);
-    changeImage(productImages[productId][0], productId);
-}
-
-const spitfireVariantSelect = document.getElementById("variantSelect");
-if (spitfireVariantSelect && typeof variantData !== 'undefined' && document.querySelector('body').innerHTML.includes('Maketa Supermarine Spitfire Mk.IX')) {
-    const variantDescription = document.getElementById("variantDescription");
-    const variantPrice = document.getElementById("variantPrice");
-    const updateVariant = () => {
-        const selectedVariant = spitfireVariantSelect.value;
-        const { desc, price } = variantData[selectedVariant];
-        variantDescription.textContent = desc;
-        variantPrice.textContent = price;
-
-        // Aktualizace obrázků podle varianty
-        const productId = 'product1';
-        if (variantImages[productId] && variantImages[productId][selectedVariant] && variantImages[productId][selectedVariant].length > 0) {
-            productImages[productId] = variantImages[productId][selectedVariant];
-        } else {
-            productImages[productId] = baseProductImages[productId];
-        }
-        currentIndex[productId] = 0;
-        renderThumbnails(productId);
+    // Zkontrolujeme, zda pole obrázků není prázdné před voláním changeImage
+    if (productImages[productId] && productImages[productId].length > 0) {
         changeImage(productImages[productId][0], productId);
-    };
-    spitfireVariantSelect.addEventListener("change", updateVariant);
-    updateVariant();
+    }
 }
+
+// Původní logika pro Spitfire přesunuta do DOMContentLoaded a sjednocena pod updateProductVariant
+
 
 function createThumbnail(src, productId) {
     const img = document.createElement("img");
@@ -496,17 +456,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 4. Logika pro jednotlivé produktové stránky
+    // 4. Logika pro jednotlivé produktové stránky
+    const setupVariantHandler = (productId, data, selectId, descId, priceId) => {
+        const select = document.getElementById(selectId);
+        if (select) {
+            const handler = () => updateProductVariant(productId, data, selectId, descId, priceId);
+            select.addEventListener("change", handler);
+            handler(); // Inicializace
+        }
+    };
+
     if (document.getElementById("vrtuleVariantSelect")) {
-        const select = document.getElementById("vrtuleVariantSelect");
-        select.addEventListener("change", updateVrtuleVariant);
-        updateVrtuleVariant();
+        setupVariantHandler('product2', variantDataVrtule, 'vrtuleVariantSelect', 'vrtuleVariantDescription', 'vrtuleVariantPrice');
     }
 
-    if (document.querySelector('body').innerHTML.includes('Vrtulový list letadla Spitfire')) {
-        const select = document.getElementById("variantSelect");
-        if (select) {
-            select.addEventListener("change", updateVrtulovyListVariant);
-            updateVrtulovyListVariant();
+    if (document.getElementById("variantSelect")) {
+        const bodyHtml = document.body.innerHTML;
+        if (bodyHtml.includes('Maketa Supermarine Spitfire Mk.IX')) {
+            setupVariantHandler('product1', variantData, 'variantSelect', 'variantDescription', 'variantPrice');
+        } else if (bodyHtml.includes('Vrtulový list letadla Spitfire')) {
+            setupVariantHandler('product4', variantDataVrtulovyList, 'variantSelect', 'variantDescription', 'variantPrice');
         }
     }
 

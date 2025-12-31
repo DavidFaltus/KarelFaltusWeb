@@ -15,7 +15,6 @@ body.lb-disable-scrolling {
 
 .lightbox {
   position: absolute;
-  left: 0;
   width: 100%;
   z-index: 10000;
   text-align: center;
@@ -30,8 +29,6 @@ body.lb-disable-scrolling {
   max-width: inherit;
   max-height: none;
   border-radius: 3px;
-
-  /* Image border */
   border: 4px solid white;
 }
 
@@ -45,9 +42,6 @@ body.lb-disable-scrolling {
   height: 250px;
   margin: 0 auto;
   border-radius: 4px;
-
-  /* Background color behind image.
-     This is visible during transitions. */
   background-color: white;
 }
 
@@ -208,4 +202,41 @@ span .lb-caption,
 .lb-number {
   left: auto;
   bottom: auto;
+}
+
+/* === Custom Overrides for Fixed Height & Centering === */
+.lb-outerContainer {
+  /* Use fit-content so the container shrinks to the image size, avoiding white bars */
+  width: fit-content !important;
+  height: auto !important;
+
+  /* Ensure centering */
+  margin: 0 auto !important;
+}
+
+.lb-image {
+  /* Fixed height as requested ~80% of screen */
+  height: 80vh !important;
+  /* Width adjusts to maintain aspect ratio */
+  width: auto !important;
+  /* Prevent horizontal overflow */
+  max-width: 90vw !important;
+  max-height: none !important;
+
+  /* Centering the image itself */
+  margin: 0 auto !important;
+  display: block !important;
+  object-fit: contain;
+}
+
+/* Fix for nav arrows when container is fit-content */
+.lb-nav {
+  pointer-events: none;
+  /* Let clicks pass through if needed, but links have pointer-events auto */
+}
+
+/* Ensure arrows are clickable */
+.lb-prev,
+.lb-next {
+  pointer-events: auto;
 }
