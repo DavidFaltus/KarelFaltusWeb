@@ -1,41 +1,57 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>O nás</title>
-  <link href="../style.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience | Aero Composites</title>
+  <link href="../style.css" rel="stylesheet" type="text/css" />
+  <link href="../zkusenosti.css" rel="stylesheet" type="text/css" />
   <script src="../script.js"></script>
 </head>
 
-<body>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G3L4G7K7Q7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
 
+  gtag('config', 'G-G3L4G7K7Q7');
+</script>
+
+<body>
   <header>
     <div class="pozadi__jinestranky">
       <nav id="navbar" class="menu">
-        <a href="indexEN.html"><img src="fotky/logoKarelF.png" alt="logo"></a>
+        <a class="logo" href="indexEN.html"><img src="../fotky/logoKarelF.png" alt="logo" /></a>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="zkusenostiEN.html" class="menu__link">Experience</a>
           </li>
           <li class="menu__item">
-            <a href="nabidkaEN.html" class="menu__link">Offer</a>
+            <a href="fotogalerieEN.html" class="menu__link">Photogallery</a>
+          </li>
+          <li class="menu__item dropdown">
+            <a href="nabidkaEN.html" class="menu__link dropbtn">Offer</a>
+            <ul class="dropdown-content">
+              <li><a href="spitfireEN.html">Spitfire</a></li>
+              <li><a href="albatrosEN.html">Albatros</a></li>
+              <li><a href="vrtuleEN.html">Propellers</a></li>
+              <li><a href="vrtulovyListEN.html">Propeller Blade</a></li>
+            </ul>
           </li>
           <li class="menu__item">
-            <a href="fotogalerieEN.html" class="menu__link">Photogalery</a>
-          </li>
-          <li class="menu__item ">
             <a href="kontaktEN.html" class="menu__link">Contact</a>
           </li>
           <li>
             <div class="language-switcher">
               <a href="#" onclick="switchLanguage('cz')">
-                <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
+                <img src="../fotky/cz.jpg" alt="Czech Flag" width="30" />
               </a>
               <a href="#" onclick="switchLanguage('en')">
-                <img src="fotky/gb.png" alt="English Flag" width="30">
+                <img src="../fotky/gb.png" alt="English Flag" width="30" />
               </a>
             </div>
           </li>
@@ -49,19 +65,19 @@
               </svg>
             </div>
           </div>
-          <div id="sideNavbar" class="side-navbar" style="width: 0px;">
+          <div id="sideNavbar" class="side-navbar" style="width: 0px">
             <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
-            <a class="side-navbar__link hover" href="indexEN.html">Home page</a>
+            <a class="side-navbar__link hover" href="indexEN.html">Home Page</a>
             <a class="side-navbar__link hover" href="zkusenostiEN.html">Experience</a>
             <a class="side-navbar__link hover" href="nabidkaEN.html">Offer</a>
-            <a class="side-navbar__link hover" href="fotogalerieEN.html">Photogalery</a>
+            <a class="side-navbar__link hover" href="fotogalerieEN.html">Photogallery</a>
             <a class="side-navbar__link hover" href="kontaktEN.html">Contact</a>
             <div>
               <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
-                <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
+                <img src="../fotky/cz.jpg" alt="Czech Flag" width="30" />
               </a>
               <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
-                <img src="fotky/gb.png" alt="English Flag" width="30">
+                <img src="../fotky/gb.png" alt="English Flag" width="30" />
               </a>
             </div>
           </div>
@@ -72,90 +88,145 @@
       </div>
     </div>
   </header>
-
-  <main>
-
-    <!-- První oddíl -->
+  <!--TODO ADD MORE PHOTOS TO EACH PROJECT-->
+  <main id="mainZkusenosti">
+    <!-- Projects Section -->
+    <section id="projekty" class="zarovnaniDoLeva">
+      <div class="zarovnaniDoLeva-text">
+        <h2>Realized Projects</h2>
+        <h3>
+          During my practice, I have participated in a number of interesting projects in
+          the fields of manufacturing, development, and film production. My realized
+          projects include:
+        </h3>
+      </div>
+    </section>
+    <!-- Spitfire Replica -->
     <section class="zarovnaniDoLeva">
       <div class="zarovnaniDoLeva-text">
-        <h2>History</h2>
-        <p>Pokračujeme v tradiční výrobě letadel ve Východních Čechách, kterou v roce 1935 odstartovali pánové Ing. P.
-          Beneš a Ing. J. Mráz svou továrnou na letadla, později zestátněnou a od roku 1955 známou pod názvem Orličan
-          národní podnik. V devadesátých letech minulého století, po rozpadu národního podniku Orličan, se z jeho
-          letecké divize, za spolupráce se slavným německým výrobcem letadel firmou Schempp-Hirth Flugzeugbau GmbH,
-          zrodila společnost Schempp-Hirth výroba letadel spol. s r.o. a navázala tak bez přerušení na výrobní program
-          celokompozitových větroňů, který je aktuální do dnešních dnů.</p>
+        <h2>Spitfire Replica</h2>
+        <p>
+          Production of a 1:1 scale Spitfire aircraft mockup for presentation purposes
+          of the
+          <a href="https://www.czechspitfireclub.cz/">Czech Spitfire Club</a>.
+        </p>
+        <p>
+          Two articles were published about this project, both on
+          <a
+            href="https://ct24.ceskatelevize.cz/clanek/regiony/ve-stojcine-staveji-legendarniho-plivace-ohne-spitfire-288604">ČT24</a>
+          and
+          <a href="https://www.flying-revue.cz/maketa-spitfire">Flying revue</a>.
+        </p>
       </div>
       <div class="zarovnaniDoLeva-image">
-        <img src="foto/lambada.JPG" alt="letadlo lambada">
+        <!--TODO REMOVE WATERMARK FROM PHOTO-->
+        <img src="../foto/fotkyweb/spitfire/RESIZED/1.jpg" alt="Spitfire Mockup" />
       </div>
     </section>
 
-    <!-- Druhý oddíl -->
+    <!-- Eagle -->
     <section class="zarovnaniDoPrava">
       <div class="zarovnaniDoPrava-image">
-        <img src="foto/palubka.JPG" alt="fotografie z letadla">
+        <img src="../foto/fotkyweb/galerie/14.jpg" alt="Eagle" />
       </div>
       <div class="zarovnaniDoPrava-text">
-        <h2>Technology</h2>
-        <p>Bezpečnost našich letadel je pro nás na prvním místě. K dodržení vysoké úrovně bezpečnosti přispíváme moderní
-          technologií, jako je například robotický digitální rentgen, který umožňuje nedestruktivní kontrolu výroby
-          letadel. Zaměřujeme se také na správné svařování a věnujeme se certifikovanému TIG svařování. Provádíme výrobu
-          forem, lakování a laminaci, abychom zaručili kvalitu a bezpečnost našich letadel. Výsledkem těchto procesů
-          jsou spolehlivá a bezpečná letadla, která splňují všechny potřebné bezpečnostní standardy.</p>
+        <h2>Eagle</h2>
+        <p>Production of models and molds for the Eagle aircraft.</p>
       </div>
     </section>
 
-    <!-- Třetí oddíl -->
+    <!-- Lambáda and Samba -->
     <section class="zarovnaniDoLeva">
       <div class="zarovnaniDoLeva-text">
-        <h2>Know-how</h2>
-        <p>Při výrobě letadel provádíme statické strukturální analýzy, které nám umožňují určit, zda jsou jednotlivé
-          díly letadla dostatečně pevné a odolné vůči zátěži. Důležitou součástí je také multi-body simulace, která nám
-          umožňuje ověřit správnost pohybu letadla. Provádíme i dynamické analýzy a optimalizaci, které nám umožňují
-          maximalizovat výkon a zároveň minimalizovat hmotnost letadla. Dalšími důležitými metodami jsou CFD a termální
-          analýzy, elektromagnetismus, příprava modelu, post-processing a konzultace. Věnujeme se také pasivní
-          bezpečnosti a zákaznickému přizpůsobení letadel, aby každý náš zákazník dostal produkt přesně podle svých
-          potřeb a požadavků.</p>
+        <h2>Lambada and Samba</h2>
+        <p>
+          Production of laminate parts for the company
+          <a href="https://en.wikipedia.org/wiki/Urban_Air">UrbanAir</a>
+          for Lambada and Samba aircraft.
+        </p>
       </div>
       <div class="zarovnaniDoLeva-image">
-        <img src="foto/hpletadlo.jpg" alt="práce na letadle">
+        <img src="../foto/lambada.jpg" alt="UrbanAir - Lambada and Samba" />
       </div>
     </section>
+
+    <!-- Phoenix -->
+    <section class="zarovnaniDoPrava">
+      <div class="zarovnaniDoPrava-image">
+        <img src="../foto/phoenix.jpg" alt="Phoenix" />
+      </div>
+      <div class="zarovnaniDoPrava-text">
+        <h2>Phoenix</h2>
+        <p>
+          Development work on the Phoenix aircraft. Cooperation on design and
+          technical solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Red Baron -->
+    <section class="zarovnaniDoLeva">
+      <div class="zarovnaniDoLeva-text">
+        <h2>Red Baron</h2>
+        <p>
+          Production of Albatros D5 and D3 aircraft fuselages for the film
+          <a href="https://www.csfd.cz/film/196821-rudy-baron/prehled/">Red Baron</a>. Production of exact replicas for
+          film production.
+        </p>
+      </div>
+      <div class="zarovnaniDoLeva-image">
+        <img src="../foto/rudyBaron.JPG" alt="Albatros D5 and D3" />
+      </div>
+    </section>
+
+    <!-- Aircraft Skis -->
+    <section class="zarovnaniDoPrava">
+      <div class="zarovnaniDoPrava-image">
+        <img src="../foto/lyže.JPG" alt="Aircraft Skis" />
+      </div>
+      <div class="zarovnaniDoPrava-text">
+        <h2>Aircraft Skis</h2>
+        <p>
+          Production of skis for an aircraft with nose landing gear. Design and realization
+          of special equipment.
+        </p>
+      </div>
+    </section>
+
+
   </main>
 
   <footer>
     <section>
-      </div>
       <div class="footer-row">
         <div class="footer-left">
-          <h2>How to contact me ?</h2>
-          <a href="kontakt.html">Contact form</a>
-          <p>KarelFaltusObjednavky@gmail.com</p>
+          <h2>How to contact me?</h2>
+          <a href="kontaktEN.html">Contact form</a>
+          <p>aerocomposites@seznam.cz</p>
         </div>
         <div class="footer-center">
-          <h2>Where are we based ?</h2>
+          <h2>Where are we based?</h2>
           <p>Řetůvka</p>
           <p>Czech Republic</p>
         </div>
         <div class="footer-right">
           <h2>Social networks</h2>
-          <a href="" class="odkaz">
-            <img src="fotky/instagram.png" alt="Facebook">
+          <a href="https://www.facebook.com/karel.faltus.31" class="odkaz">
+            <img src="../fotky/facebook.png" alt="Facebook" />
           </a>
-          <a href="" class="odkaz">
-            <img src="fotky/facebook.png" alt="Instagram">
+          <a href="https://www.instagram.com/aerocompositescz/" class="odkaz">
+            <img src="../fotky/instagram.png" alt="Instagram" />
           </a>
         </div>
       </div>
     </section>
     <div class="navigace-sekundarni">
       <p>
-        <a href="">HOME PAGE | </a>
-        <a href="">EXPERIENCE | </a>
-        <a href="">OFFER | </a>
-        <a href="">PHOTOGALERY | </a>
-        <a href="">CONTACT</a>
+        <a href="indexEN.html">HOME PAGE | </a>
+        <a href="zkusenostiEN.html">EXPERIENCE | </a>
+        <a href="nabidkaEN.html">OFFER | </a>
+        <a href="fotogalerieEN.html">PHOTOGALLERY | </a>
+        <a href="kontaktEN.html">CONTACT</a>
       </p>
       <p id="footerYear">Karel Faltus - <span id="yearSpan"></span></p>
     </div>

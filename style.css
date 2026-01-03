@@ -92,7 +92,7 @@ body {
   top: 100%;
   left: 0;
   background-color: rgba(0, 0, 0, 0.0);
-  width: 250px;
+  width: 255px;
   visibility: hidden;
   opacity: 0;
   transform: translateY(-10px);

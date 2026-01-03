@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Létání</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <link href="fotogalerie.css" rel="stylesheet" type="text/css">
-  <link href="lightbox.css" rel="stylesheet">
-  <script src="script.js"></script>
+  <link href="../style.css" rel="stylesheet" type="text/css">
+  <link href="../fotogalerie.css" rel="stylesheet" type="text/css">
+  <link href="../lightbox.css" rel="stylesheet">
+  <script src="../script.js"></script>
 </head>
 
 <body>
@@ -17,27 +17,33 @@
   <header>
     <div class="pozadi__jinestranky">
       <nav id="navbar" class="menu">
-        <a href="indexEN.html"><img src="fotky/logoKarelF.png" alt="logo"></a>
+        <a class="logo" href="indexEN.html"><img src="../fotky/logoKarelF.png" alt="logo" /></a>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="zkusenostiEN.html" class="menu__link">Experience</a>
           </li>
           <li class="menu__item">
-            <a href="nabidkaEN.html" class="menu__link">Offer</a>
+            <a href="fotogalerieEN.html" class="menu__link">Photogallery</a>
+          </li>
+          <li class="menu__item dropdown">
+            <a href="nabidkaEN.html" class="menu__link dropbtn">Offer</a>
+            <ul class="dropdown-content">
+              <li><a href="spitfireEN.html">Spitfire</a></li>
+              <li><a href="albatrosEN.html">Albatros</a></li>
+              <li><a href="vrtuleEN.html">Propeller</a></li>
+              <li><a href="vrtulovyListEN.html">Propeller Blade</a></li>
+            </ul>
           </li>
           <li class="menu__item">
-            <a href="fotogalerieEN.html" class="menu__link">Photogalery</a>
-          </li>
-          <li class="menu__item ">
             <a href="kontaktEN.html" class="menu__link">Contact</a>
           </li>
           <li>
             <div class="language-switcher">
               <a href="#" onclick="switchLanguage('cz')">
-                <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
+                <img src="../fotky/cz.jpg" alt="Czech Flag" width="30" />
               </a>
               <a href="#" onclick="switchLanguage('en')">
-                <img src="fotky/gb.png" alt="English Flag" width="30">
+                <img src="../fotky/gb.png" alt="English Flag" width="30" />
               </a>
             </div>
           </li>
@@ -47,23 +53,24 @@
             <div class="hamburger__box">
               <svg width="42" height="35" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF"
-                  stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+                  stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round">
+                </path>
               </svg>
             </div>
           </div>
-          <div id="sideNavbar" class="side-navbar" style="width: 0px;">
+          <div id="sideNavbar" class="side-navbar" style="width: 0px">
             <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
             <a class="side-navbar__link hover" href="indexEN.html">Home page</a>
             <a class="side-navbar__link hover" href="zkusenostiEN.html">Experience</a>
             <a class="side-navbar__link hover" href="nabidkaEN.html">Offer</a>
-            <a class="side-navbar__link hover" href="fotogalerieEN.html">Photogalery</a>
+            <a class="side-navbar__link hover" href="fotogalerieEN.html">Photogallery</a>
             <a class="side-navbar__link hover" href="kontaktEN.html">Contact</a>
             <div>
               <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
-                <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
+                <img src="../fotky/cz.jpg" alt="Czech Flag" width="30" />
               </a>
               <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
-                <img src="fotky/gb.png" alt="English Flag" width="30">
+                <img src="../fotky/gb.png" alt="English Flag" width="30" />
               </a>
             </div>
           </div>
@@ -78,30 +85,50 @@
   <main>
     <div class="kontejner">
       <div class="galerie">
-        <a href="foto/lambada.JPG" data-lightbox="galerie" data-title="Letadlo Lambada"><img src="foto/lambada.JPG"
-            alt="Letadlo Lambada"></a>
-        <a href="foto/litomysl.JPG" data-lightbox="galerie" data-title="Litomyšl"><img src="foto/litomysl.JPG"
-            alt="Litomyšl"></a>
-        <a href="foto/slovensko.JPG" data-lightbox="galerie" data-title="Hrad na Slovensku"><img
-            src="foto/slovensko.JPG" alt="Hrad na Slovensku"></a>
-        <a href="foto/spitfire.JPG" data-lightbox="galerie" data-title="Model Spitfire"><img src="foto/spitfire.JPG"
-            alt="Model Spitfire"></a>
-        <a href="foto/vystava.JPG" data-lightbox="galerie" data-title="Výstava v obchodním domě"><img
-            src="foto/vystava.JPG" alt="Výstava v obchodním domě"></a>
-        <a href="foto/reka.jpg" data-lightbox="galerie" data-title="Přelet nad řekou"><img src="foto/reka.jpg"
-            alt="Přelet nad řekou"></a>
+        <a href="../foto/fotkyweb/galerie/1.jpg" data-lightbox="galerie" data-title="Lambada Aircraft"><img
+            src="../foto/fotkyweb/galerie/1.jpg" alt="Lambada Aircraft" /></a>
+        <a href="../foto/fotkyweb/galerie/2.jpg" data-lightbox="galerie" data-title="Litomyšl"><img
+            src="../foto/fotkyweb/galerie/2.jpg" alt="Litomyšl" /></a>
+        <a href="../foto/fotkyweb/galerie/3.jpg" data-lightbox="galerie" data-title="Castle in Slovakia"><img
+            src="../foto/fotkyweb/galerie/3.jpg" alt="Castle in Slovakia" /></a>
+        <a href="../foto/fotkyweb/galerie/4.JPG" data-lightbox="galerie" data-title="Spitfire Model"><img
+            src="../foto/fotkyweb/galerie/4.JPG" alt="Spitfire Model" /></a>
+        <a href="../foto/fotkyweb/galerie/5.JPG" data-lightbox="galerie"
+          data-title="Exhibition in a department store"><img src="../foto/fotkyweb/galerie/5.JPG"
+            alt="Exhibition in a department store" /></a>
+        <a href="../foto/fotkyweb/galerie/6.JPG" data-lightbox="galerie" data-title="Flight over the river"><img
+            src="../foto/fotkyweb/galerie/6.JPG" alt="Flight over the river" /></a>
+        <a href="../foto/fotkyweb/galerie/7.JPG" data-lightbox="galerie" data-title="Flight over the river"><img
+            src="../foto/fotkyweb/galerie/7.JPG" alt="Flight over the river" /></a>
+        <a href="../foto/fotkyweb/galerie/8.JPG" data-lightbox="galerie" data-title="Flight over the river"><img
+            src="../foto/fotkyweb/galerie/8.JPG" alt="Flight over the river" /></a>
+        <a href="../foto/fotkyweb/galerie/9.JPG" data-lightbox="galerie" data-title="Flight over the river"><img
+            src="../foto/fotkyweb/galerie/9.JPG" alt="Flight over the river" /></a>
+        <a href="../foto/fotkyweb/galerie/11.JPG" data-lightbox="galerie" data-title="Flight over the river"><img
+            src="../foto/fotkyweb/galerie/11.JPG" alt="Flight over the river" /></a>
+        <a href="../foto/fotkyweb/galerie/13.JPG" data-lightbox="galerie" data-title="Flight over the river"><img
+            src="../foto/fotkyweb/galerie/13.JPG" alt="Flight over the river" /></a>
+        <a href="../foto/fotkyweb/galerie/14.JPG" data-lightbox="galerie" data-title="Flight over the river"><img
+            src="../foto/fotkyweb/galerie/14.JPG" alt="Flight over the river" /></a>
+        <a href="../foto/fotkyweb/galerie/15.JPG" data-lightbox="galerie" data-title="Flight over the river"><img
+            src="../foto/fotkyweb/galerie/15.JPG" alt="Flight over the river" /></a>
+        <a href="../foto/fotkyweb/galerie/16.JPG" data-lightbox="galerie" data-title="Flight over the river"><img
+            src="../foto/fotkyweb/galerie/16.JPG" alt="Flight over the river" /></a>
+        <a href="../foto/fotkyweb/galerie/17.JPG" data-lightbox="galerie" data-title="Flight over the river"><img
+            src="../foto/fotkyweb/galerie/17.JPG" alt="Flight over the river" /></a>
+        <a href="../foto/fotkyweb/galerie/18.JPG" data-lightbox="galerie" data-title="Flight over the river"><img
+            src="../foto/fotkyweb/galerie/18.JPG" alt="Flight over the river" /></a>
       </div>
     </div>
-    <script src="lightbox-plus-jquery.js"></script>
+    <script src="../lightbox-plus-jquery.js"></script>
   </main>
   <footer>
     <section>
-      </div>
       <div class="footer-row">
         <div class="footer-left">
           <h2>How to contact me ?</h2>
-          <a href="kontakt.html">Contact form</a>
-          <p>KarelFaltusObjednavky@gmail.com</p>
+          <a href="kontaktEN.html">Contact form</a>
+          <p>aerocomposites@seznam.cz</p>
         </div>
         <div class="footer-center">
           <h2>Where are we based ?</h2>
@@ -110,22 +137,22 @@
         </div>
         <div class="footer-right">
           <h2>Social networks</h2>
-          <a href="" class="odkaz">
-            <img src="fotky/instagram.png" alt="Facebook">
+          <a href="https://www.facebook.com/karel.faltus.31" class="odkaz">
+            <img src="../fotky/facebook.png" alt="Facebook" />
           </a>
-          <a href="" class="odkaz">
-            <img src="fotky/facebook.png" alt="Instagram">
+          <a href="https://www.instagram.com/aerocompositescz/" class="odkaz">
+            <img src="../fotky/instagram.png" alt="Instagram" />
           </a>
         </div>
       </div>
     </section>
     <div class="navigace-sekundarni">
       <p>
-        <a href="">HOME PAGE | </a>
-        <a href="">EXPERIENCE | </a>
-        <a href="">OFFER | </a>
-        <a href="">PHOTOGALERY | </a>
-        <a href="">CONTACT</a>
+        <a href="indexEN.html">HOME PAGE | </a>
+        <a href="zkusenostiEN.html">EXPERIENCE | </a>
+        <a href="nabidkaEN.html">OFFER | </a>
+        <a href="fotogalerieEN.html">PHOTOGALERY | </a>
+        <a href="kontaktEN.html">CONTACT</a>
       </p>
       <p id="footerYear">Karel Faltus - <span id="yearSpan"></span></p>
     </div>

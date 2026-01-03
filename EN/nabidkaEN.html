@@ -1,154 +1,239 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nabídka | Karel Faltus</title>
+  <title>Offer | Aero Composites</title>
   <link href="../style.css" rel="stylesheet" type="text/css" />
-
   <link href="../lightbox.css" rel="stylesheet" type="text/css" />
-  <script src="../script.js"></script>
-  <script src="../lightbox-plus-jquery.js"></script>
+  <script src="../script.js" defer></script>
+  <script src="../lightbox-plus-jquery.js" defer></script>
 </head>
 
-<a href="indexEN.html"><img src="fotky/logoKarelF.png" alt="logo"></a>
-<ul class="menu__list">
-  <li class="menu__item">
-    <a href="zkusenostiEN.html" class="menu__link">Experience</a>
-  </li>
-  <li class="menu__item">
-    <a href="nabidkaEN.html" class="menu__link">Offer</a>
-  </li>
-  <li class="menu__item">
-    <a href="fotogalerieEN.html" class="menu__link">Photogalery</a>
-  </li>
-  <li class="menu__item ">
-    <a href="kontaktEN.html" class="menu__link">Contact</a>
-  </li>
-  <li>
-    <div class="language-switcher">
-      <a href="#" onclick="switchLanguage('cz')">
-        <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
-      </a>
-      <a href="#" onclick="switchLanguage('en')">
-        <img src="fotky/gb.png" alt="English Flag" width="30">
-      </a>
-    </div>
-  </li>
-</ul>
-<div class="hamburger">
-  <div onclick="openNavbar()">
-    <div class="hamburger__box">
-      <svg width="42" height="35" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF"
-          stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    </div>
-  </div>
-  <div id="sideNavbar" class="side-navbar" style="width: 0px;">
-    <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
-    <a class="side-navbar__link hover" href="indexEN.html">Home page</a>
-    <a class="side-navbar__link hover" href="zkusenostiEN.html">Experience</a>
-    <a class="side-navbar__link hover" href="nabidkaEN.html">Offer</a>
-    <a class="side-navbar__link hover" href="fotogalerieEN.html">Photogalery</a>
-    <a class="side-navbar__link hover" href="kontaktEN.html">Contact</a>
-    <div>
-      <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
-        <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
-      </a>
-      <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
-        <img src="fotky/gb.png" alt="English Flag" width="30">
-      </a>
-    </div>
-  </div>
-</div>
-</nav>
-<div class="nadpis__jinestranky">
-  <h1>Products</h1>
-</div>
-</div>
-</header>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G3L4G7K7Q7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
 
-<main>
-  <section class="produkt">
-    <div class="produkt-image">
-      <img src="foto/spitfire.JPG" alt="produkt spitfire">
-    </div>
-    <div class="produkt-text">
-      <h2>Spitfire</h2>
-      <p>Spitfire je britské stíhací produkt z 30. let, které bylo nasazeno v druhé světové válce a hrálo klíčovou
-        roli v bitvách o Británii. Díky své rychlosti, obratnosti a schopnosti dostat se do výšky rychle se stal
-        jedním z nejúspěšnějších britských letadel války. Jeho design přinesl nové technologie, jako kovovou kostru a
-        celokovovou krytinu, což umožnilo letadlu být lehčí a rychlejší. Dnes se produkt Spitfire stalo ikonou
-        britského letectví a je populární mezi sběrateli a milovníky letadel.</p>
-    </div>
-  </section>
-  <section class="produkt2">
-    <div class="produkt2-image">
-      <img src="foto/lambada2.JPG" alt="produkt lambada">
-    </div>
-    <div class="produkt2-text">
-      <h2>Lambada</h2>
-      <p>produkt Lambada je moderním ultralehkým letadlem, kterého si piloti velmi oblíbili po celém světě. Jeho
-        design je aerodynamický a využívá hlavně uhlíkové vlákno pro pevnost a lehkost. Křídla letadla jsou navržena
-        tak, aby dosáhla vynikajícího poměru výkonu a spotřeby paliva. Jednou z jeho hlavních výhod je schopnost letět
-        velké vzdálenosti s nízkou spotřebou paliva. Je snadno ovladatelné a bezpečné pro piloty všech úrovní
-        zkušeností a je vybaveno moderní avionikou, včetně GPS navigace. Lambada se používá pro sportovní a rekreační
-        létání, výcvik pilotů a letecký průzkum, a je také ideálním letadlem pro komerční aplikace díky jeho vysoké
-        efektivitě a nízké spotřebě paliva.</p>
-    </div>
-  </section>
-  <div id="emailModal" class="modal hidden">
-    <div class="modal-content">
-      <span class="close-btn">&times;</span>
-      <h2>Zadejte svůj email</h2>
-      <form id="emailForm">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-        <button type="submit">Odeslat</button>
-      </form>
-    </div>
-  </div>
-</main>
+  gtag('config', 'G-G3L4G7K7Q7');
+</script>
 
-<footer>
-  <section>
+<body>
+  <header>
+    <div class="pozadi__jinestranky">
+      <nav id="navbar" class="menu">
+        <a class="logo" href="indexEN.html"><img src="../fotky/logoKarelF.png" alt="logo" /></a>
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a href="zkusenostiEN.html" class="menu__link">Experience</a>
+          </li>
+          <li class="menu__item">
+            <a href="fotogalerieEN.html" class="menu__link">Photogallery</a>
+          </li>
+          <li class="menu__item dropdown">
+            <a href="nabidkaEN.html" class="menu__link dropbtn">Offer</a>
+            <ul class="dropdown-content">
+              <li><a href="spitfireEN.html">Spitfire</a></li>
+              <li><a href="albatrosEN.html">Albatros</a></li>
+              <li><a href="vrtuleEN.html">Propellers</a></li>
+              <li><a href="vrtulovyListEN.html">Propeller Blade</a></li>
+            </ul>
+          </li>
+          <li class="menu__item">
+            <a href="kontaktEN.html" class="menu__link">Contact</a>
+          </li>
+          <li>
+            <div class="language-switcher">
+              <a href="#" onclick="switchLanguage('cz')">
+                <img src="../fotky/cz.jpg" alt="Czech Flag" width="30" />
+              </a>
+              <a href="#" onclick="switchLanguage('en')">
+                <img src="../fotky/gb.png" alt="English Flag" width="30" />
+              </a>
+            </div>
+          </li>
+        </ul>
+        <div class="hamburger">
+          <div onclick="openNavbar()">
+            <div class="hamburger__box">
+              <svg width="42" height="35" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF"
+                  stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+          <div id="sideNavbar" class="side-navbar" style="width: 0px">
+            <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
+            <a class="side-navbar__link hover" href="indexEN.html">Home Page</a>
+            <a class="side-navbar__link hover" href="zkusenostiEN.html">Experience</a>
+            <a class="side-navbar__link hover" href="nabidkaEN.html">Offer</a>
+            <a class="side-navbar__link hover" href="fotogalerieEN.html">Photogallery</a>
+            <a class="side-navbar__link hover" href="kontaktEN.html">Contact</a>
+            <div>
+              <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
+                <img src="../fotky/cz.jpg" alt="Czech Flag" width="30" />
+              </a>
+              <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
+                <img src="../fotky/gb.png" alt="English Flag" width="30" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="nadpis__jinestranky">
+        <h1>Offer</h1>
+      </div>
     </div>
-    <div class="footer-row">
-      <div class="footer-left">
-        <h2>How to contact me ?</h2>
-        <a href="kontakt.html">Contact form</a>
-        <p>KarelFaltusObjednavky@gmail.com</p>
+  </header>
+  <main>
+    <!-- SPITFIRE -->
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a id="mainImageLink-product1">
+            <img id="mainImage-product1" src="../foto/fotkyweb/spitfire/RESIZED/1.jpg" alt="product spitfire" />
+          </a>
+        </div>
       </div>
-      <div class="footer-center">
-        <h2>Where are we based ?</h2>
-        <p>Řetůvka</p>
-        <p>Czech Republic</p>
+      <div class="produkt-text">
+        <div class="popis-produktu">
+          <h2>Supermarine Spitfire Mk.IX Mockup</h2>
+          <p>
+            The product allows visitors immediate contact with the aircraft.
+            Sitting in the cockpit, manipulating controls with response to control
+            surfaces, accompanied by sound and smoke effects. The delivery also includes
+            a replica RAF uniform for taking souvenir photos of visitors in period uniform.
+            Ideal for film needs and shooting commercials!
+          </p>
+        </div>
+        <div class="produkt-tlacitka">
+          <button class="redirect">
+            <a href="spitfireEN.html">Go to product</a>
+          </button>
+        </div>
       </div>
-      <div class="footer-right">
-        <h2>Social networks</h2>
-        <a href="" class="odkaz">
-          <img src="fotky/instagram.png" alt="Facebook">
-        </a>
-        <a href="" class="odkaz">
-          <img src="fotky/facebook.png" alt="Instagram">
-        </a>
+    </section>
+
+    <!-- PROPELLERS -->
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a id="mainImageLink-product2">
+            <img id="mainImage-product2" src="../foto/fotkyweb/vrtule/RESIZED/1.jpg" alt="product propeller" />
+          </a>
+        </div>
       </div>
+      <div class="produkt-text">
+        <div class="popis-produktu">
+          <h2>Spitfire Mk.IX Four-Blade Propeller</h2>
+          <p>
+            Mockup of a propeller spinner including riveting and a housing for attaching
+            four propeller blades in camouflage colors with markings. On request,
+            we also supply a version with backlit propeller blades.
+          </p>
+        </div>
+        <div class="produkt-tlacitka">
+          <button class="redirect">
+            <a href="vrtuleEN.html">Go to product</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- BACKLIT PROPELLER BLADE -->
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a id="mainImageLink-product4">
+            <img id="mainImage-product4" src="../foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg"
+              alt="product propeller blade" />
+          </a>
+          </a>
+        </div>
+      </div>
+      <div class="produkt-text">
+        <div class="popis-produktu">
+          <h2>Backlit Propeller Blade</h2>
+          <p>
+            Mockup of a propeller blade in original scale in camouflage color with
+            markings can be an inspiration for many a modeler. The blades are
+            numbered and cannot be confused with blades for the propeller spinner.
+          </p>
+        </div>
+        <div class="produkt-tlacitka">
+          <button class="redirect">
+            <a href="vrtulovyListEN.html">Go to product</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ALBATROS -->
+    <section class="produkt">
+      <div class="produkt-content">
+        <div class="produkt-image">
+          <a id="mainImageLink-product3">
+            <img id="mainImage-product3" src="../foto/fotkyweb/albatros/RESIZED/1.jpg" alt="product albatros" />
+          </a>
+        </div>
+      </div>
+      <div class="produkt-text">
+        <div class="popis-produktu">
+          <h2>Albatros D.5</h2>
+          <p>
+            Mockup of the famous German fighter is intended mainly for static
+            displays and marketing purposes. The aircraft markings can be changed on request,
+            including modification to all camouflage versions. The wing is
+            wooden, the fuselage of fiberglass fibers with a faithful replica of the
+            cockpit. Ideal for film needs and shooting commercials!
+          </p>
+        </div>
+        <div class="produkt-tlacitka">
+          <button class="redirect">
+            <a href="albatrosEN.html">Go to product</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <section>
+      <div class="footer-row">
+        <div class="footer-left">
+          <h2>How to contact me?</h2>
+          <a href="kontaktEN.html">Contact form</a>
+          <p>aerocomposites@seznam.cz</p>
+        </div>
+        <div class="footer-center">
+        </div>
+        <div class="footer-right">
+          <h2>Social networks</h2>
+          <a href="https://www.facebook.com/karel.faltus.31" class="odkaz">
+            <img src="../fotky/facebook.png" alt="Instagram" />
+          </a>
+          <a href="https://www.instagram.com/aerocompositescz/" class="odkaz">
+            <img src="../fotky/instagram.png" alt="Instagram" />
+          </a>
+        </div>
+      </div>
+    </section>
+    <div class="navigace-sekundarni">
+      <p>
+        <a href="indexEN.html">HOME PAGE | </a>
+        <a href="zkusenostiEN.html">EXPERIENCE | </a>
+        <a href="nabidkaEN.html">OFFER | </a>
+        <a href="fotogalerieEN.html">PHOTOGALLERY | </a>
+        <a href="kontaktEN.html">CONTACT</a>
+      </p>
+      <p id="footerYear">Karel Faltus - <span id="yearSpan"></span></p>
     </div>
-  </section>
-  <div class="navigace-sekundarni">
-    <p>
-      <a href="">HOME PAGE | </a>
-      <a href="">EXPERIENCE | </a>
-      <a href="">OFFER | </a>
-      <a href="">PHOTOGALERY | </a>
-      <a href="">CONTACT</a>
-    </p>
-    <p id="footerYear">Karel Faltus - <span id="yearSpan"></span></p>
-  </div>
-</footer>
+  </footer>
 </body>
 
 </html>

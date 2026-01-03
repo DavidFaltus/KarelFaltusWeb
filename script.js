@@ -201,6 +201,25 @@ const variantDataVrtulovyList = {
     S_PODSVICENIM: { desc: "Maketa vrtulobého listu v originálním měřítku s unašečem, veškerými popisky a pojízdným podstavcem na kterém jsou zobrazeny některé ze známých symbolů, které se vyskytovali i na původních letadlech. Součástí je i LED podsvícení, které je připevněné k listu v jeho zadní části. Ovládá se pomocí ovladače, který je součástí balení.", price: "Cena bez DPH: 25 300 Kč" }
 };
 
+// English Translations
+const variantDataEn = {
+    STATIC: { desc: "Mockup Supermarine Spitfire Mk.IX is intended mainly for marketing purposes as an eye-catcher in front of a building, or suspended from a hall ceiling. The aircraft markings can be changed on request, including modification to all camouflage versions according to the given place of combat deployment and time period.", price: "Price without VAT: 1 710 000 CZK" },
+    MOVIE: { desc: "Mockup Supermarine Spitfire Mk.IX allows visitors immediate contact with the aircraft. Sitting in the cockpit, manipulating controls with response to control surfaces. Ideal for film needs and shooting commercials!", price: "Price without VAT: 2 110 000 CZK" },
+    PANORAMA: { desc: "Mockup Supermarine Spitfire Mk.IX in 1:1 scale is an interactive exhibit. The aircraft can emit air raid or starting engine sounds from speakers in radiators, accompanied by smoke from exhausts and propeller spinning at 500 rpm. The aircraft also features cockpit lighting and position lights. A smart choice for modern museums and private collectors!", price: "Price without VAT: 2 510 000 CZK" }
+};
+
+const variantDataVrtuleEn = {
+    BEZ_PODSVICENI: { desc: "The propeller mockup is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail.", price: "Price without VAT: 76 020 CZK" },
+    SE_STOJANEM: { desc: "The propeller mockup is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail. Includes a solid wood stand, allowing you to place the propeller anywhere you want.", price: "Price without VAT: 81 020 CZK" },
+    S_UCHYCENIM_NA_ZED: { desc: "The propeller mockup is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail. This configuration includes a special wall mount fixture.", price: "Price without VAT: 81 020 CZK" },
+    S_UCHYCENIM_NA_ZED_A_PODSVICENI: { desc: "The propeller mockup is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail. Individual blades are illuminated by LED strips placed on the back of each blade. All lights can be controlled via the included remote control. This configuration includes a special wall mount fixture.", price: "Price without VAT: 85 500 CZK" }
+};
+
+const variantDataVrtulovyListEn = {
+    BEZ_PODSVICENI: { desc: "Propeller blade mockup in original scale with spinner, all markings, and a movable base featuring some of the famous symbols found on original aircraft.", price: "Price without VAT: 18 400 CZK" },
+    S_PODSVICENIM: { desc: "Propeller blade mockup in original scale with spinner, all markings, and a movable base featuring some of the famous symbols found on original aircraft. Includes LED backlighting attached to the rear of the blade. Controlled via the included remote.", price: "Price without VAT: 25 300 CZK" }
+};
+
 // Obecná funkce pro aktualizaci varianty produktu
 function updateProductVariant(productId, dataSource, selectId, descId, priceId) {
     const select = document.getElementById(selectId);
@@ -227,7 +246,12 @@ function updateProductVariant(productId, dataSource, selectId, descId, priceId) 
     renderThumbnails(productId);
     // Zkontrolujeme, zda pole obrázků není prázdné před voláním changeImage
     if (productImages[productId] && productImages[productId].length > 0) {
-        changeImage(productImages[productId][0], productId);
+        let imgSrc = productImages[productId][0];
+        // Fix for EN pages path
+        if (window.location.pathname.includes('/EN/') && !imgSrc.startsWith('../') && !imgSrc.startsWith('http') && !imgSrc.startsWith('/')) {
+            imgSrc = '../' + imgSrc;
+        }
+        changeImage(imgSrc, productId);
     }
 }
 
@@ -249,7 +273,12 @@ function renderThumbnails(productId) {
     wrapper.innerHTML = "";
     for (let i = 0; i < visibleCount; i++) {
         const idx = (currentIndex[productId] + i) % images.length;
-        wrapper.appendChild(createThumbnail(images[idx], productId));
+        let imgSrc = images[idx];
+        // Fix for EN pages path
+        if (window.location.pathname.includes('/EN/') && !imgSrc.startsWith('../') && !imgSrc.startsWith('http') && !imgSrc.startsWith('/')) {
+            imgSrc = '../' + imgSrc;
+        }
+        wrapper.appendChild(createThumbnail(imgSrc, productId));
     }
 }
 
@@ -466,16 +495,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    const isEn = window.location.pathname.includes('/EN/');
+
     if (document.getElementById("vrtuleVariantSelect")) {
-        setupVariantHandler('product2', variantDataVrtule, 'vrtuleVariantSelect', 'vrtuleVariantDescription', 'vrtuleVariantPrice');
+        const data = isEn ? variantDataVrtuleEn : variantDataVrtule;
+        setupVariantHandler('product2', data, 'vrtuleVariantSelect', 'vrtuleVariantDescription', 'vrtuleVariantPrice');
     }
 
     if (document.getElementById("variantSelect")) {
         const bodyHtml = document.body.innerHTML;
-        if (bodyHtml.includes('Maketa Supermarine Spitfire Mk.IX')) {
-            setupVariantHandler('product1', variantData, 'variantSelect', 'variantDescription', 'variantPrice');
-        } else if (bodyHtml.includes('Vrtulový list letadla Spitfire')) {
-            setupVariantHandler('product4', variantDataVrtulovyList, 'variantSelect', 'variantDescription', 'variantPrice');
+        if (bodyHtml.includes('Maketa Supermarine Spitfire Mk.IX') || bodyHtml.includes('Mockup Supermarine Spitfire Mk.IX')) {
+            const data = isEn ? variantDataEn : variantData;
+            setupVariantHandler('product1', data, 'variantSelect', 'variantDescription', 'variantPrice');
+        } else if (bodyHtml.includes('Vrtulový list letadla Spitfire') || bodyHtml.includes('Propeller Blade Spitfire')) {
+            const data = isEn ? variantDataVrtulovyListEn : variantDataVrtulovyList;
+            setupVariantHandler('product4', data, 'variantSelect', 'variantDescription', 'variantPrice');
         }
     }
 

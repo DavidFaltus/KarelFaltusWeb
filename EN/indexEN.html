@@ -1,41 +1,56 @@
 <!DOCTYPE html>
-<html lang="cs">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Karel Faltus</title>
-  <link href="style.css" rel="stylesheet" type="text/css">
-  <script src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Page | Aero Composites</title>
+  <link href="../style.css" rel="stylesheet" type="text/css" />
+  <script src="../script.js"></script>
 </head>
 
-<body>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G3L4G7K7Q7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
 
+  gtag('config', 'G-G3L4G7K7Q7');
+</script>
+
+<body>
   <header>
     <div class="uvodni-stranka">
       <nav id="navbar" class="menu">
-        <a href="indexEN.html"><img src="fotky/logoKarelF.png" alt="logo"></a>
+        <a class="logo" href="indexEN.html"><img src="../fotky/logoKarelF.png" alt="logo" /></a>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="zkusenostiEN.html" class="menu__link">Experience</a>
           </li>
           <li class="menu__item">
-            <a href="nabidkaEN.html" class="menu__link">Offer</a>
+            <a href="fotogalerieEN.html" class="menu__link">Photogallery</a>
+          </li>
+          <li class="menu__item dropdown">
+            <a href="nabidkaEN.html" class="menu__link dropbtn">Offer</a>
+            <ul class="dropdown-content">
+              <li><a href="spitfireEN.html">Spitfire</a></li>
+              <li><a href="albatrosEN.html">Albatros</a></li>
+              <li><a href="vrtuleEN.html">Propellers</a></li>
+              <li><a href="vrtulovyListEN.html">Propeller Blade</a></li>
+            </ul>
           </li>
           <li class="menu__item">
-            <a href="fotogalerieEN.html" class="menu__link">Photogalery</a>
-          </li>
-          <li class="menu__item ">
             <a href="kontaktEN.html" class="menu__link">Contact</a>
           </li>
           <li>
             <div class="language-switcher">
               <a href="#" onclick="switchLanguage('cz')">
-                <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
+                <img src="../fotky/cz.jpg" alt="CzechFlag" width="30" />
               </a>
               <a href="#" onclick="switchLanguage('en')">
-                <img src="fotky/gb.png" alt="English Flag" width="30">
+                <img src="../fotky/gb.png" alt="EnglishFlag" width="30" />
               </a>
             </div>
           </li>
@@ -49,19 +64,19 @@
               </svg>
             </div>
           </div>
-          <div id="sideNavbar" class="side-navbar" style="width: 0px;">
+          <div id="sideNavbar" class="side-navbar" style="width: 0px">
             <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
-            <a class="side-navbar__link hover" href="indexEN.html">Home page</a>
+            <a class="side-navbar__link hover" href="indexEN.html">Home Page</a>
             <a class="side-navbar__link hover" href="zkusenostiEN.html">Experience</a>
             <a class="side-navbar__link hover" href="nabidkaEN.html">Offer</a>
-            <a class="side-navbar__link hover" href="fotogalerieEN.html">Photogalery</a>
+            <a class="side-navbar__link hover" href="fotogalerieEN.html">Photogallery</a>
             <a class="side-navbar__link hover" href="kontaktEN.html">Contact</a>
             <div>
               <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
-                <img src="fotky/cz.jpg" alt="Czech Flag" width="30">
+                <img src="../fotky/cz.jpg" alt="Czech Flag" width="30" />
               </a>
               <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
-                <img src="fotky/gb.png" alt="English Flag" width="30">
+                <img src="../fotky/gb.png" alt="English Flag" width="30" />
               </a>
             </div>
           </div>
@@ -73,50 +88,67 @@
   <main>
     <div class="hero">
       <h1>WELCOME</h1>
-      <p>Everything for your plane Experience at one place</p>
+      <p>Aircraft mockups and other accessories</p>
     </div>
 
-    <!--Naše služby-->
+    <!--Our Services-->
     <section id="sluzby">
       <div class="nazev-kategorie2">
-        <p>What do i offer?</p>
+        <p>What do we produce?</p>
       </div>
+
       <div class="sluzby-box">
+
+        <!-- PROPELLERS -->
         <div class="sluzba">
-          <img src="foto/mesto2.JPG" alt="přelet nad městem">
-          <div class="overlay"></div>
-          <div class="sluzba-desc">
-            <h3>Meeting flights</h3>
-            <hr>
-            <p>Enjoy the world from different perspective</p>
-          </div>
+          <a href="vrtuleEN.html">
+            <img src="../foto/fotkyweb/vrtule/RESIZED/9.jpg" alt="spitfire propeller" />
+            <div class="overlay"></div>
+            <div class="sluzba-desc">
+              <h3>Propellers</h3>
+              <hr />
+              <p>Beautiful design mockup</p>
+            </div>
+          </a>
         </div>
+
+        <!-- SPITFIRE -->
         <div class="sluzba">
-          <img src="foto/spitfire.JPG" alt="letadlo spitfire">
-          <div class="overlay"></div>
-          <div class="sluzba-desc">
-            <h3>Custom plane workds</h3>
-            <hr>
-            <p>We can fullfill your every wish</p>
-          </div>
+          <a href="spitfireEN.html">
+            <img src="../foto/fotkyweb/spitfire/RESIZED/1.jpg" alt="spitfire aircraft" />
+            <div class="overlay"></div>
+            <div class="sluzba-desc">
+              <h3>Legendary Spitfire</h3>
+              <hr />
+              <p>Faithful mockup of this giant</p>
+            </div>
+          </a>
         </div>
+
+        <!-- ALBATROS -->
         <div class="sluzba">
-          <img src="foto/vyroba.JPG" alt="výroba letadla">
-          <div class="overlay"></div>
-          <div class="sluzba-desc">
-            <h3>Accessory production</h3>
-            <hr>
-            <p>No part of problem is a problem for us</p>
-          </div>
+          <a href="albatrosEN.html">
+            <img src="../foto/fotkyweb/albatros/RESIZED/1.jpg" alt="albatros" />
+            <div class="overlay"></div>
+            <div class="sluzba-desc">
+              <h3>Albatros</h3>
+              <hr />
+              <p>Mockup of this incredible machine</p>
+            </div>
+          </a>
         </div>
+
+        <!-- PROPELLER BLADE -->
         <div class="sluzba">
-          <img src="foto/slovensko.JPG" alt="přelet nad hradem">
-          <div class="overlay"></div>
-          <div class="sluzba-desc">
-            <h3>Panoramatic photos</h3>
-            <hr>
-            <p>To your book, calendar or painting</p>
-          </div>
+          <a href="vrtulovyListEN.html">
+            <img src="../foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg" alt="propeller blade" />
+            <div class="overlay"></div>
+            <div class="sluzba-desc">
+              <h3>Backlit Propeller Blade</h3>
+              <hr />
+              <p>Design blade that also doubles as a lamp</p>
+            </div>
+          </a>
         </div>
       </div>
     </section>
@@ -124,36 +156,35 @@
 
   <footer>
     <section>
-      </div>
       <div class="footer-row">
         <div class="footer-left">
-          <h2>How to contact me ?</h2>
-          <a href="kontakt.html">Contact form</a>
-          <p>KarelFaltusObjednavky@gmail.com</p>
+          <h2>How to contact me?</h2>
+          <a href="kontaktEN.html">Contact form</a>
+          <p>aerocomposites@seznam.cz</p>
         </div>
         <div class="footer-center">
-          <h2>Where are we based ?</h2>
+          <h2>Where are we based?</h2>
           <p>Řetůvka</p>
           <p>Czech Republic</p>
         </div>
         <div class="footer-right">
           <h2>Social networks</h2>
-          <a href="" class="odkaz">
-            <img src="fotky/instagram.png" alt="Facebook">
+          <a href="https://www.facebook.com/karel.faltus.31" class="odkaz">
+            <img src="../fotky/facebook.png" alt="Instagram" />
           </a>
-          <a href="" class="odkaz">
-            <img src="fotky/facebook.png" alt="Instagram">
+          <a href="https://www.instagram.com/aerocompositescz/" class="odkaz">
+            <img src="../fotky/instagram.png" alt="Instagram" />
           </a>
         </div>
       </div>
     </section>
     <div class="navigace-sekundarni">
       <p>
-        <a href="">HOME PAGE | </a>
-        <a href="">EXPERIENCE | </a>
-        <a href="">OFFER | </a>
-        <a href="">PHOTOGALERY | </a>
-        <a href="">CONTACT</a>
+        <a href="indexEN.html">HOME PAGE | </a>
+        <a href="zkusenostiEN.html">EXPERIENCE | </a>
+        <a href="nabidkaEN.html">OFFER | </a>
+        <a href="fotogalerieEN.html">PHOTOGALLERY | </a>
+        <a href="kontaktEN.html">CONTACT</a>
       </p>
       <p id="footerYear">Karel Faltus - <span id="yearSpan"></span></p>
     </div>
