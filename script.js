@@ -585,7 +585,13 @@ document.addEventListener('DOMContentLoaded', function () {
             newIndex = (currentIndex - 1 + images.length) % images.length;
         }
 
-        const newSrc = images[newIndex];
+        let newSrc = images[newIndex];
+
+        // Fix for EN pages path
+        if (window.location.pathname.includes('/EN/') && !newSrc.startsWith('../') && !newSrc.startsWith('http') && !newSrc.startsWith('/')) {
+            newSrc = '../' + newSrc;
+        }
+
         lightboxImage.src = newSrc;
 
         const numberDisplay = document.querySelector('.lb-number');
