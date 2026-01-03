@@ -754,6 +754,7 @@ footer h2 {
   font-size: 35px;
   flex: 1;
   width: 50%;
+  text-align: center;
 }
 
 .produkt-btn {

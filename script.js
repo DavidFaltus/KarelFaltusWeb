@@ -83,7 +83,7 @@ const variantImages = {
             "foto/fotkyweb/spitfire/RESIZED/16.jpg"
         ],
         "MOVIE": [
-            "foto/fotkyweb/spitfire/RESIZED/1.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/16.jpg",
             "foto/fotkyweb/spitfire/RESIZED/2.jpg",
             "foto/fotkyweb/spitfire/RESIZED/3.jpg",
             "foto/fotkyweb/spitfire/RESIZED/4.jpg",
@@ -96,10 +96,10 @@ const variantImages = {
             "foto/fotkyweb/spitfire/RESIZED/11.jpg",
             "foto/fotkyweb/spitfire/RESIZED/12.jpg",
             "foto/fotkyweb/spitfire/RESIZED/13.jpg",
-            "foto/fotkyweb/spitfire/RESIZED/16.jpg"
+            "foto/fotkyweb/spitfire/RESIZED/1.jpg"
         ],
         "PANORAMA": [
-            "foto/fotkyweb/spitfire/RESIZED/1.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/14.jpg",
             "foto/fotkyweb/spitfire/RESIZED/2.jpg",
             "foto/fotkyweb/spitfire/RESIZED/3.jpg",
             "foto/fotkyweb/spitfire/RESIZED/4.jpg",
@@ -112,9 +112,10 @@ const variantImages = {
             "foto/fotkyweb/spitfire/RESIZED/11.jpg",
             "foto/fotkyweb/spitfire/RESIZED/12.jpg",
             "foto/fotkyweb/spitfire/RESIZED/13.jpg",
-            "foto/fotkyweb/spitfire/RESIZED/14.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/1.jpg",
             "foto/fotkyweb/spitfire/RESIZED/15.jpg",
-            "foto/fotkyweb/spitfire/RESIZED/16.jpg"
+            "foto/fotkyweb/spitfire/RESIZED/16.jpg",
+            "foto/fotkyweb/spitfire/RESIZED/14.jpg"
         ]
     },
     product2: { // Vrtule
@@ -125,27 +126,32 @@ const variantImages = {
             "foto/fotkyweb/vrtule/RESIZED/4.jpg",
             "foto/fotkyweb/vrtule/RESIZED/5.jpg",
             "foto/fotkyweb/vrtule/RESIZED/10.jpg",
-
+            "foto/fotkyweb/vrtule/RESIZED/13.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/14.jpg"
         ],
         "SE_STOJANEM": [
-            "foto/fotkyweb/vrtule/RESIZED/1.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/11.jpg",
             "foto/fotkyweb/vrtule/RESIZED/2.jpg",
             "foto/fotkyweb/vrtule/RESIZED/3.jpg",
             "foto/fotkyweb/vrtule/RESIZED/4.jpg",
             "foto/fotkyweb/vrtule/RESIZED/5.jpg",
             "foto/fotkyweb/vrtule/RESIZED/10.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/13.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/14.jpg"
         ],
         "S_UCHYCENIM_NA_ZED": [
-            "foto/fotkyweb/vrtule/RESIZED/1.jpg",
             "foto/fotkyweb/vrtule/RESIZED/2.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/1.jpg",
             "foto/fotkyweb/vrtule/RESIZED/3.jpg",
             "foto/fotkyweb/vrtule/RESIZED/4.jpg",
             "foto/fotkyweb/vrtule/RESIZED/5.jpg",
             "foto/fotkyweb/vrtule/RESIZED/6.jpg",
             "foto/fotkyweb/vrtule/RESIZED/10.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/13.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/14.jpg"
         ],
         "S_UCHYCENIM_NA_ZED_A_PODSVICENI": [
-            "foto/fotkyweb/vrtule/RESIZED/1.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/9.jpg",
             "foto/fotkyweb/vrtule/RESIZED/2.jpg",
             "foto/fotkyweb/vrtule/RESIZED/3.jpg",
             "foto/fotkyweb/vrtule/RESIZED/4.jpg",
@@ -153,25 +159,27 @@ const variantImages = {
             "foto/fotkyweb/vrtule/RESIZED/6.jpg",
             "foto/fotkyweb/vrtule/RESIZED/7.jpg",
             "foto/fotkyweb/vrtule/RESIZED/8.jpg",
-            "foto/fotkyweb/vrtule/RESIZED/9.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/1.jpg",
             "foto/fotkyweb/vrtule/RESIZED/10.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/13.jpg",
+            "foto/fotkyweb/vrtule/RESIZED/14.jpg"
         ]
     },
     product4: { // Vrtulový list
         "BEZ_PODSVICENI": [
-            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/5.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/6.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/7.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/9.jpg",
-            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/5.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/3.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/4.jpg"
         ],
         "S_PODSVICENIM": [
-            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/5.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/8.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/6.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/7.jpg",
-            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/8.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/5.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/9.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/1.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/RESIZED/2.jpg",
@@ -184,40 +192,40 @@ const variantImages = {
 const currentIndex = { product1: 0, product2: 0, product3: 0, product4: 0 };
 
 const variantData = {
-    STATIC: { desc: "Maketa Supermarine Spitfire Mk.IX. je určena zejména k marketingovým účelům jako poutač před budovou, popřípadě zavěšena u stropu haly. Marking letounu lze na přání změnit, včetně úpravy do všech kamuflážních verzí dle daného místa bojového nasazení a časového období.", price: "Cena bez DPH: 1 710 000 Kč" },
-    MOVIE: { desc: "Maketa Supermarine Spitfire Mk.IX umožňuje návštěvníkům bezprostřední kontakt s letadlem. Usednutí do kokpitu, manipulaci s ovladači a odezvou do řídících ploch. Ideální pro potřeby filmu a natáčení reklamních spotů!", price: "Cena bez DPH: 2 110 000 Kč" },
-    PANORAMA: { desc: "Maketa Supermarine Spitfire Mk.IX. v měřítku 1:1 je interaktivní exponát. Letoun z reproduktorů umístěných v chladičích může vydávat zvuky leteckého poplachu nebo i startujícího motoru což je doprovázeno kouřem z výfuků a roztočením vrtule na 500 ot. /min. Letoun disponuje i osvětlením kokpitu a pozičních světel. Chytrá volba pro moderní muzea a soukromé sběratele!", price: "Cena bez DPH: 2 510 000 Kč" }
+    STATIC: { desc: "Maketa Supermarine Spitfire Mk.IX. v měřítku 1:1 je určena zejména k marketingovým účelům jako poutač před budovou, popřípadě zavěšena u stropu haly. Kamufláž letounu lze na přání změnit, včetně úpravy do všech kamuflážních verzí dle daného místa bojového nasazení a časového období.", price: "1 710 000 Kč bez DPH" },
+    MOVIE: { desc: "Maketa Supermarine Spitfire Mk.IX v měřítku 1:1 umožňuje návštěvníkům bezprostřední kontakt s letadlem. Usednutí do kokpitu, manipulaci s ovladači a odezvou do řídících ploch. Ideální pro potřeby filmu a natáčení reklamních spotů!", price: "2 110 000 Kč bez DPH" },
+    PANORAMA: { desc: "Maketa Supermarine Spitfire Mk.IX. v měřítku 1:1 je interaktivní exponát. Letoun z reproduktorů umístěných v chladičích může vydávat zvuky leteckého poplachu nebo i startujícího motoru což je doprovázeno kouřem z výfuků a roztočením vrtule na 500 ot. /min. Letoun disponuje i osvětlením kokpitu a pozičních světel. Chytrá volba pro moderní muzea a soukromé sběratele!", price: "2 510 000 Kč bez DPH" }
 };
 
 const variantDataVrtule = {
-    BEZ_PODSVICENI: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklolaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku.", price: "Cena bez DPH: 76 020 Kč" },
-    SE_STOJANEM: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklolaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku. Součástí je i stojan z dřevéného masivu, díky kterému můžete vrtuli umístit kamkoliv jen budete chtít.", price: "Cena bez DPH: 81 020 Kč" },
-    S_UCHYCENIM_NA_ZED: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklolaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku. Součástí této konfiguace je i speciální přípravek pro uchycení na zeď.", price: "Cena bez DPH: 81 020 Kč" },
-    S_UCHYCENIM_NA_ZED_A_PODSVICENI: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklolaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku. Jednotlivé listy jsou osvětleny LED pásky, které jsou vždy umístěny na zadní straně jednotlivých listů. Všechna světla můžete ovládat pomocí dálkového ovladače, který je součástí balení. Součástí této konfiguace je i speciální přípravek pro uchycení na zeď.", price: "Cena bez DPH: 85 500 Kč" }
+    BEZ_PODSVICENI: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze skkolaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku.", price: "76 020 Kč bez DPH" },
+    SE_STOJANEM: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze skkolaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku. Součástí je i stojan z dřevényho masivu, díky kterému můžete vrtuli umístit kamkoliv jen budete chtít.", price: "81 020 Kč bez DPH" },
+    S_UCHYCENIM_NA_ZED: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklokaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku. Součástí této konfiguace je i speciální přípravek pro uchycení na zeď.", price: "81 020 Kč bez DPH" },
+    S_UCHYCENIM_NA_ZED_A_PODSVICENI: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklokaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku. Jednotlivé listy jsou osvětleny LED pásky, které jsou vždy umístěny na zadní straně jednotlivých listů. Všechna světla můžete ovládat pomocí dálkového ovladače, který je součástí balení. Součástí této konfiguace je i speciální přípravek pro uchycení na zeď.", price: "85 500 Kč bez DPH" }
 };
 
 const variantDataVrtulovyList = {
-    BEZ_PODSVICENI: { desc: "Maketa vrtulobého listu v originálním měřítku s unašečem, veškerými popisky a pojízdným podstavcem na kterém jsou zobrazeny některé ze známých symbolů, které se vyskytovali i na původních letadlech.", price: "Cena bez DPH: 18 400 Kč" },
-    S_PODSVICENIM: { desc: "Maketa vrtulobého listu v originálním měřítku s unašečem, veškerými popisky a pojízdným podstavcem na kterém jsou zobrazeny některé ze známých symbolů, které se vyskytovali i na původních letadlech. Součástí je i LED podsvícení, které je připevněné k listu v jeho zadní části. Ovládá se pomocí ovladače, který je součástí balení.", price: "Cena bez DPH: 25 300 Kč" }
+    BEZ_PODSVICENI: { desc: "Maketa vrtulobého listu v originálním měřítku s unašečem, veškerými popisky a pojízdným podstavcem na kterém jsou zobrazeny některé ze známých symbolů, které se vyskytovali i na původních letadlech.", price: "18 400 Kč bez DPH" },
+    S_PODSVICENIM: { desc: "Maketa vrtulobého listu v originálním měřítku s unašečem, veškerými popisky a pojízdným podstavcem na kterém jsou zobrazeny některé ze známých symbolů, které se vyskytovali i na původních letadlech. Součástí je i LED podsvícení, které je připevněné k listu v jeho zadní části. Ovládá se pomocí ovladače, který je součástí balení.", price: "25 300 Kč bez DPH" }
 };
 
 // English Translations
 const variantDataEn = {
-    STATIC: { desc: "Mockup Supermarine Spitfire Mk.IX is intended mainly for marketing purposes as an eye-catcher in front of a building, or suspended from a hall ceiling. The aircraft markings can be changed on request, including modification to all camouflage versions according to the given place of combat deployment and time period.", price: "Price without VAT: 1 710 000 CZK" },
-    MOVIE: { desc: "Mockup Supermarine Spitfire Mk.IX allows visitors immediate contact with the aircraft. Sitting in the cockpit, manipulating controls with response to control surfaces. Ideal for film needs and shooting commercials!", price: "Price without VAT: 2 110 000 CZK" },
-    PANORAMA: { desc: "Mockup Supermarine Spitfire Mk.IX in 1:1 scale is an interactive exhibit. The aircraft can emit air raid or starting engine sounds from speakers in radiators, accompanied by smoke from exhausts and propeller spinning at 500 rpm. The aircraft also features cockpit lighting and position lights. A smart choice for modern museums and private collectors!", price: "Price without VAT: 2 510 000 CZK" }
+    STATIC: { desc: "Replica of Supermarine Spitfire Mk.IX is intended mainly for marketing purposes as an eye-catcher in front of a building, or suspended from a hall ceiling. The aircraft markings can be changed on request, including modification to all camouflage versions according to the given place of combat deployment and time period.", price: "70 800 Euro without VAT" },
+    MOVIE: { desc: "Replica of Supermarine Spitfire Mk.IX allows visitors immediate contact with the aircraft. Sitting in the cockpit, manipulating controls with response to control surfaces. Ideal for film needs and shooting commercials!", price: "87 500 Euro without VAT" },
+    PANORAMA: { desc: "Replica of Supermarine Spitfire Mk.IX in 1:1 scale is an interactive exhibit. The aircraft can emit air raid or starting engine sounds from speakers in radiators, accompanied by smoke from exhausts and propeller spinning at 500 rpm. The aircraft also features cockpit lighting and position lights. A smart choice for modern museums and private collectors!", price: "104 000 Euro without VAT" }
 };
 
 const variantDataVrtuleEn = {
-    BEZ_PODSVICENI: { desc: "The propeller mockup is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail.", price: "Price without VAT: 76 020 CZK" },
-    SE_STOJANEM: { desc: "The propeller mockup is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail. Includes a solid wood stand, allowing you to place the propeller anywhere you want.", price: "Price without VAT: 81 020 CZK" },
-    S_UCHYCENIM_NA_ZED: { desc: "The propeller mockup is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail. This configuration includes a special wall mount fixture.", price: "Price without VAT: 81 020 CZK" },
-    S_UCHYCENIM_NA_ZED_A_PODSVICENI: { desc: "The propeller mockup is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail. Individual blades are illuminated by LED strips placed on the back of each blade. All lights can be controlled via the included remote control. This configuration includes a special wall mount fixture.", price: "Price without VAT: 85 500 CZK" }
+    BEZ_PODSVICENI: { desc: "The propeller replica is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail.", price: "3 150 Euro without VAT" },
+    SE_STOJANEM: { desc: "The propeller replica is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail. Includes a solid wood stand, allowing you to place the propeller anywhere you want.", price: "3 375 Euro without VAT" },
+    S_UCHYCENIM_NA_ZED: { desc: "The propeller replica is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail. This configuration includes a special wall mount fixture.", price: "3 375 Euro without VAT" },
+    S_UCHYCENIM_NA_ZED_A_PODSVICENI: { desc: "The propeller replica is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail. Individual blades are illuminated by LED strips placed on the back of each blade. All lights can be controlled via the included remote control. This configuration includes a special wall mount fixture.", price: "3 550 Euro without VAT" }
 };
 
 const variantDataVrtulovyListEn = {
-    BEZ_PODSVICENI: { desc: "Propeller blade mockup in original scale with spinner, all markings, and a movable base featuring some of the famous symbols found on original aircraft.", price: "Price without VAT: 18 400 CZK" },
-    S_PODSVICENIM: { desc: "Propeller blade mockup in original scale with spinner, all markings, and a movable base featuring some of the famous symbols found on original aircraft. Includes LED backlighting attached to the rear of the blade. Controlled via the included remote.", price: "Price without VAT: 25 300 CZK" }
+    BEZ_PODSVICENI: { desc: "Propeller blade replica in original scale with spinner, all markings, and a movable base featuring some of the famous symbols found on original aircraft.", price: "775 Euro without VAT" },
+    S_PODSVICENIM: { desc: "Propeller blade replica in original scale with spinner, all markings, and a movable base featuring some of the famous symbols found on original aircraft. Includes LED backlighting attached to the rear of the blade. Controlled via the included remote.", price: "1 050 Euro without VAT" }
 };
 
 // Obecná funkce pro aktualizaci varianty produktu
@@ -351,10 +359,8 @@ function updateYear() {
 
 document.addEventListener("DOMContentLoaded", updateYear);
 updateYear();
+
 // --- HLAVNÍ SPUŠTĚCÍ BLOK PO NAČTENÍ STRÁNKY ---
-
-// Inicializace
-
 document.addEventListener("DOMContentLoaded", function () {
     const modal = document.getElementById("successMessage");
     const closeBtn = document.getElementById("closeSuccessBtn");
