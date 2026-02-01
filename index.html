@@ -23,7 +23,7 @@
   <header>
     <div class="uvodni-stranka">
       <nav id="navbar" class="menu">
-        <a class="logo" href="index.html"><img src="fotky/logoKarelF.png" alt="logo" /></a>
+        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png" alt="logo" /></a>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
@@ -46,10 +46,10 @@
           <li>
             <div class="language-switcher">
               <a href="#" onclick="switchLanguage('cz')">
-                <img src="fotky/cz.jpg" alt="CzechFlag" width="30" />
+                <img src="foto\ikony/cz.jpg" alt="CzechFlag" width="30" />
               </a>
               <a href="#" onclick="switchLanguage('en')">
-                <img src="fotky/gb.png" alt="EnglishFlag" width="30" />
+                <img src="foto\ikony/gb.png" alt="EnglishFlag" width="30" />
               </a>
             </div>
           </li>
@@ -72,15 +72,21 @@
             <a class="side-navbar__link hover" href="kontakt.html">Kontakt</a>
             <div>
               <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
-                <img src="fotky/cz.jpg" alt="Czech Flag" width="30" />
+                <img src="foto\ikony/cz.jpg" alt="Czech Flag" width="30" />
               </a>
               <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
-                <img src="fotky/gb.png" alt="English Flag" width="30" />
+                <img src="foto\ikony/gb.png" alt="English Flag" width="30" />
               </a>
             </div>
           </div>
         </div>
       </nav>
+      <div class="scroll-down-arrow" onclick="document.querySelector('.o-mne').scrollIntoView({behavior: 'smooth'})">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
+        </svg>
+      </div>
     </div>
   </header>
 
@@ -89,6 +95,25 @@
       <h1>VÍTEJTE</h1>
       <p>Makety letadel a další příslušenství</p>
     </div>
+
+    <!-- O NÁS -->
+    <section class="o-mne">
+      <div class="o-mne-container">
+        <div class="o-mne-image">
+          <img src="foto/ikony/logoKarelF.png" alt="Aero Composites Logo" />
+        </div>
+        <div class="o-mne-text">
+          <h2>O nás</h2>
+          <p>
+            Vítejte ve světě <strong>Aero Composites</strong>. Jsme rodinná firma s hlubokou vášní pro letectví
+            a precizní řemeslnou práci. Pod vedením Karla Faltuse se specializujeme na výrobu věrných maket,
+            vrtulí a leteckých doplňků, které v sobě snoubí historii s moderními technologiemi.
+            Každý náš výrobek je originál, do kterého vkládáme naše dlouholeté zkušenosti a smysl pro detail.
+          </p>
+          <a href="zkusenosti.html" class="cta-button">Více o našich zkušenostech</a>
+        </div>
+      </div>
+    </section>
 
     <!--Naše služby-->
     <section id="sluzby">
@@ -151,6 +176,63 @@
         </div>
       </div>
     </section>
+
+    <!-- VYHODY / CO ZISKATE -->
+    <section class="benefity">
+      <div class="benefity-header">
+        <h2>Co získáváte nákupem u nás?</h2>
+        <div class="separator"></div>
+      </div>
+
+      <div class="benefity-grid">
+        <!-- Benefit 1 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="3" width="15" height="13" stroke="#005494" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" stroke="#005494" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="5.5" cy="18.5" r="2.5" stroke="#005494" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="18.5" cy="18.5" r="2.5" stroke="#005494" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Doprava zdarma</h3>
+          <p>U objednávek zajišťujeme bezpečnou dopravu do 500 km od našeho sídla až k vám domů zcela zdarma.</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                stroke="#005494" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Montáž na místě</h3>
+          <p>Nabízíme možnost odborné instalace a montáže zakoupených doplňků přímo na vašem místě, abyste měli vše bez
+            starostí.</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div class="benefit-card">
+          <div class="benefit-icon">
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" stroke="#005494" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <polyline points="22 4 12 14.01 9 11.01" stroke="#005494" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <h3>Garance kvality</h3>
+          <p>Ručíme za precizní zpracování každého detailu. Naše výrobky jsou tvořeny s důrazem na životnost a
+            autentičnost.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer>
@@ -165,7 +247,7 @@
           <h2>Partner</h2>
           <a href="https://www.facebook.com/pterodactyl.cz" class="odkaz" target="_blank"
             style="display: flex; align-items: center; gap: 10px; color: white; text-decoration: none;">
-            <img src="fotky/facebook.png" alt="Pterodactyl Facebook"
+            <img src="foto\ikony/facebook.png" alt="Pterodactyl Facebook"
               style="width: 30px; height: 30px; margin: 0; padding: 0;">
             <span>Pterodactyl.cz</span>
           </a>
@@ -173,10 +255,10 @@
         <div class="footer-right">
           <h2>Sociální sítě</h2>
           <a href="https://www.facebook.com/karel.faltus.31" class="odkaz">
-            <img src="fotky/facebook.png" alt="Instagram" />
+            <img src="foto\ikony/facebook.png" alt="Instagram" />
           </a>
           <a href="https://www.instagram.com/aerocompositescz/" class="odkaz">
-            <img src="fotky/instagram.png" alt="Instagram" />
+            <img src="foto\ikony/instagram.png" alt="Instagram" />
           </a>
         </div>
       </div>
@@ -187,9 +269,10 @@
         <a href="zkusenosti.html">ZKUŠENOSTI | </a>
         <a href="nabidka.html">NABÍDKA | </a>
         <a href="fotogalerie.html">FOTOGALERIE | </a>
-        <a href="kontakt.html">KONTAKT</a>
+        <a href="kontakt.html">KONTAKT | </a>
+        <a href="obchodni-podminky.html">OBCHODNÍ PODMÍNKY</a>
       </p>
-      <p>Karel Faltus - 2025</p>
+      <p>Karel Faltus - <span id="yearSpan"></span></p>
     </div>
   </footer>
 </body>

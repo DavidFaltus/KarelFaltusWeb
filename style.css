@@ -1,4 +1,4 @@
-html {
+﻿html {
   height: 100%;
   width: 100%;
   font-family: sans-serif;
@@ -64,6 +64,31 @@ body {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  border-radius: 4px;
+  transition: transform 0.3s ease;
+}
+
+.galerie a {
+  display: block;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.galerie a:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.gallery-caption {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+  font-weight: 500;
 }
 
 .lightbox-close {
@@ -124,7 +149,7 @@ body {
   content: '';
   width: 0;
   height: 3px;
-  background-color: #005494;
+  background-color: #1E88E5;
   display: block;
   left: 0;
   transition: 0.7s;
@@ -151,7 +176,8 @@ nav {
   z-index: 2;
   margin: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
+  position: relative;
   top: 0;
   width: 100%;
   transition: top 0.3s;
@@ -183,7 +209,7 @@ nav li::after {
   content: '';
   width: 0%;
   height: 3px;
-  background-color: #005494;
+  background-color: #1E88E5;
   display: block;
   left: 0;
   transition: 0.7s;
@@ -222,7 +248,15 @@ nav li::after {
 /*---HAMBURGER---*/
 
 .logo {
-  max-height: 100px;
+  position: absolute;
+  top: 0;
+  left: 20px;
+  z-index: 10;
+}
+
+.logo img {
+  max-width: 250px;
+  height: auto;
 }
 
 .hamburger {
@@ -240,7 +274,7 @@ nav li::after {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: #005494;
+  background-color: #1E88E5;
   overflow-x: hidden;
   padding-top: 70px;
   transition: 0.5s;
@@ -283,13 +317,13 @@ nav li::after {
   text-align: center;
   width: 100%;
   position: absolute;
-  top: 50%;
+  top: 35%;
   transform: translateY(-50%);
 }
 
 .hero h1 {
   color: white;
-  font-size: 90px;
+  font-size: 60px;
   margin: 20px;
 }
 
@@ -309,7 +343,7 @@ button {
   padding: 15px 0;
   margin: 12px 10px;
   border-radius: 25px;
-  border: 2px solid #005494;
+  border: 2px solid #1E88E5;
   background: transparent;
   position: relative;
   cursor: pointer;
@@ -324,7 +358,7 @@ span {
 }
 
 .hero button:hover {
-  background-color: #005494;
+  background-color: #1E88E5;
 }
 
 
@@ -492,7 +526,7 @@ footer h2 {
 
 .sluzba {
   position: relative;
-  color: #1B272F;
+  color: #1E88E5;
   text-align: center;
   font-size: 25px;
   border-radius: 7px;
@@ -559,7 +593,7 @@ footer h2 {
 
 .zarovnaniDoLeva-text h2,
 .zarovnaniDoPrava-text h2 {
-  color: #005494;
+  color: #1E88E5;
   font-size: 45px;
 }
 
@@ -569,11 +603,12 @@ footer h2 {
   line-height: 1.6;
   margin-bottom: 30px;
   color: #333;
+  text-align: justify;
 }
 
 .zarovnaniDoLeva-text a,
 .zarovnaniDoPrava-text a {
-  color: #005494;
+  color: #1E88E5;
   display: inline-block;
   margin-top: 10px;
   text-decoration: none;
@@ -584,7 +619,7 @@ footer h2 {
 .zarovnaniDoPrava-text a:hover {
   transform: scale(1.05);
   text-decoration: underline;
-  text-decoration-color: #005494;
+  text-decoration-color: #1E88E5;
 }
 
 .zarovnaniDoLeva-image img,
@@ -647,7 +682,7 @@ footer h2 {
 }
 
 .produkt h2 {
-  color: #005494;
+  color: #1E88E5;
   font-size: 2rem;
 }
 
@@ -655,6 +690,7 @@ footer h2 {
   font-size: 20px;
   line-height: 1.5;
   margin-bottom: 30px;
+  text-align: justify;
 }
 
 .hidden {
@@ -710,7 +746,7 @@ footer h2 {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: stretch;
   padding-left: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -721,10 +757,8 @@ footer h2 {
 /***** TLAČÍTKA *****/
 .produkt-tlacitka {
   display: flex;
-  justify-content: space-between;
   width: 100%;
-  margin-top: 20px;
-  margin-bottom: 0;
+  align-self: center;
 }
 
 .produkt-tlacitka a {
@@ -733,19 +767,19 @@ footer h2 {
 }
 
 .objednani {
-  background-color: #005494;
+  background-color: #1E88E5;
   color: white;
-  padding: 10px 20px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
   font-size: 35px;
   flex: 1;
-  width: 50%;
+  width: 100%;
+  margin: 0;
 }
 
 .redirect {
-  background-color: #005494;
+  background-color: #1E88E5;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -771,6 +805,23 @@ footer h2 {
 /* Základní cena */
 .zakladni-cena {
   font-size: 50px;
+  margin-bottom: 5px !important;
+}
+
+#variantStock,
+#vrtuleVariantStock {
+  color: #28a745;
+  font-weight: bold;
+  font-size: 22px;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+}
+
+#variantStock::before,
+#vrtuleVariantStock::before {
+  margin-right: 10px;
+  font-size: 18px;
 }
 
 /***** OVERLAY A FORMULÁŘ PRO OBJEDNÁVKU *****/
@@ -1041,7 +1092,7 @@ form {
 #btnOdeslat {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #005494;
+  background-color: #1E88E5;
   color: white;
   border: none;
   border-radius: 5px;
@@ -1084,7 +1135,7 @@ h1 {
 }
 
 fieldset {
-  background-color: #1B272F;
+  background-color: #1E88E5;
   border: none;
   border-radius: 7px;
   width: 100%;
@@ -1125,7 +1176,7 @@ input {
 .select-verze,
 .select-vrtule,
 .podstava {
-  background-color: #005494;
+  background-color: #1E88E5;
   color: white;
   cursor: pointer;
   width: 65%;
@@ -1170,7 +1221,7 @@ input {
     height: 50px;
     padding-top: 0px;
     text-decoration: none;
-    background-color: #005494;
+    background-color: #1E88E5;
     text-align: center;
   }
 
@@ -1373,21 +1424,17 @@ input {
   .produkt-tlacitka {
     display: flex;
     flex-direction: column;
-    /* Skládá tlačítka pod sebe */
     align-items: center;
-    gap: 10px;
-    /* Mezera mezi tlačítky */
   }
 
-  /* Tlačítko „Více“ bude první (nahoře) */
   .produkt-btn {
     order: 1;
   }
 
-  /* Tlačítko „Nezávazně objednat“ bude druhé (pod ním) */
   .objednani {
     font-size: 25px;
     order: 2;
+    width: 100%;
   }
 
   .redirect {
@@ -1454,7 +1501,7 @@ input {
   }
 
   fieldset {
-    background-color: #1B272F;
+    background-color: #1E88E5;
     border: none;
     border-radius: 7px;
     width: 90%;
@@ -1484,7 +1531,7 @@ input {
 
   form {
     width: 100%;
-    background-color: #1B272F;
+    background-color: #1E88E5;
   }
 }
 
@@ -1525,7 +1572,7 @@ input {
 .ikona-kruh {
   width: 100px;
   height: 100px;
-  border: 7px solid #1B272F;
+  border: 7px solid #1E88E5;
   /* Modrá barva webu */
   border-radius: 50%;
   display: flex;
@@ -1594,7 +1641,7 @@ input {
 .tech-specs-title {
   text-align: center;
   font-size: 2rem;
-  color: #1B272F;
+  color: #1E88E5;
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1696,7 +1743,7 @@ input {
 .exp-arrow {
   cursor: pointer;
   font-size: 40px;
-  color: #005494;
+  color: #1E88E5;
   padding: 0 15px;
   user-select: none;
   transition: transform 0.2s, color 0.2s;
@@ -1765,7 +1812,7 @@ input {
 
 .kontakt-nadpis {
   font-size: 2.5rem;
-  color: #1B272F;
+  color: #1E88E5;
   margin-bottom: 30px;
   text-transform: uppercase;
   font-weight: bold;
@@ -1787,7 +1834,7 @@ input {
 .ikona-wrapper {
   width: 60px;
   height: 60px;
-  background-color: #1B272F;
+  background-color: #1E88E5;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1804,7 +1851,7 @@ input {
 
 .text-info h3 {
   margin: 0 0 5px 0;
-  color: #005494;
+  color: #1E88E5;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -1836,5 +1883,235 @@ input {
   .kontakt-nadpis {
     text-align: center;
     font-size: 2rem;
+  }
+}
+
+/* --- NOVÉ SEKCE INDEX (O NÁS, BENEFITY) --- */
+
+/* O NÁS */
+.o-mne {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #1B272F;
+  /* Changed from #f9f9f9 to match other sections */
+  display: flex;
+  justify-content: center;
+}
+
+.o-mne-container {
+  max-width: 1400px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60px;
+  margin: 0 auto;
+}
+
+.o-mne-image {
+  flex: 1;
+  text-align: center;
+}
+
+.o-mne-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+}
+
+.o-mne-text {
+  flex: 1;
+  color: #fff;
+  /* Changed from #333 to white for dark background */
+}
+
+.o-mne-text h2 {
+  color: #fff;
+  /* Changed from #1E88E5 to white for better contrast on dark bg */
+  font-size: 3rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.o-mne-text p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: transparent;
+  color: #fff;
+  /* Changed from #1E88E5 to white */
+  border: 2px solid #fff;
+  /* Changed from #1E88E5 to white */
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+}
+
+.cta-button:hover {
+  background-color: #fff;
+  color: #1E88E5;
+  /* Inverse colors on hover */
+}
+
+
+/* BENEFITY */
+/* BENEFITY */
+.benefity {
+  width: 100%;
+  padding: 80px 0;
+  background-color: #1B272F;
+}
+
+.benefity-header {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 0 20px;
+}
+
+.benefity-header h2 {
+  color: #fff;
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.benefity-header .separator {
+  width: 100px;
+  height: 4px;
+  background-color: #1E88E5;
+  margin: 0 auto;
+}
+
+.benefity-grid {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.benefit-card {
+  background-color: transparent;
+  padding: 40px 30px;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.benefit-icon {
+  margin-bottom: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  border: 2px solid #1E88E5;
+  border-radius: 50%;
+}
+
+.benefit-icon svg {
+  width: 50px;
+  height: 50px;
+}
+
+/* Force SVG stroke color to white/light for visibility on dark background */
+.benefit-icon svg path,
+.benefit-icon svg rect,
+.benefit-icon svg circle,
+.benefit-icon svg polygon,
+.benefit-icon svg polyline {
+  stroke: #fff !important;
+}
+
+.benefit-card h3 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.benefit-card p {
+  color: #ccc;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* RESPONZIVITA NOVE SEKCE */
+@media (max-width: 980px) {
+  .o-mne-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .o-mne-text p {
+    text-align: center;
+  }
+
+  .benefity-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .benefity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .o-mne-text h2,
+  .benefity-header h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Scroll Down Arrow */
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  animation: bounce 2s infinite;
+  z-index: 10;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+.scroll-down-arrow:hover {
+  opacity: 1;
+}
+
+@keyframes bounce {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-10px);
+  }
+
+  60% {
+    transform: translateY(-5px);
   }
 }

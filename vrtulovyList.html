@@ -27,7 +27,7 @@
   <header>
     <div class="pozadi__jinestranky">
       <nav id="navbar" class="menu">
-        <a class="logo" href="index.html"><img src="fotky/logoKarelF.png" alt="logo" /></a>
+        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png" alt="logo" /></a>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
@@ -50,10 +50,10 @@
           <li>
             <div class="language-switcher">
               <a href="#" onclick="switchLanguage('cz')">
-                <img src="fotky/cz.jpg" alt="Czech Flag" width="30" />
+                <img src="foto/ikony/cz.jpg" alt="Czech Flag" width="30" />
               </a>
               <a href="#" onclick="switchLanguage('en')">
-                <img src="fotky/gb.png" alt="English Flag" width="30" />
+                <img src="foto/ikony/gb.png" alt="English Flag" width="30" />
               </a>
             </div>
           </li>
@@ -76,10 +76,10 @@
             <a class="side-navbar__link hover" href="kontakt.html">Kontakt</a>
             <div>
               <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
-                <img src="fotky/cz.jpg" alt="Czech Flag" width="30" />
+                <img src="foto/ikony/cz.jpg" alt="Czech Flag" width="30" />
               </a>
               <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
-                <img src="fotky/gb.png" alt="English Flag" width="30" />
+                <img src="foto/ikony/gb.png" alt="English Flag" width="30" />
               </a>
             </div>
           </div>
@@ -95,10 +95,8 @@
     <section class="produkt">
       <div class="produkt-content">
         <div class="produkt-image">
-          <a id="mainImageLink-product4" href="foto/fotkyweb/světlo vrtule (stojan)/RESIZED/9.jpg"
-            data-lightbox="product4">
-            <img id="mainImage-product4" src="foto/fotkyweb/světlo vrtule (stojan)/RESIZED/9.jpg"
-              alt="produkt vrtulový list" />
+          <a id="mainImageLink-product4" href="foto/fotkyweb/světlo vrtule (stojan)/9.jpg" data-lightbox="product4">
+            <img id="mainImage-product4" src="foto/fotkyweb/světlo vrtule (stojan)/9.jpg" alt="produkt vrtulový list" />
           </a>
         </div>
         <div class="thumbnail-carousel">
@@ -118,6 +116,8 @@
           </select>
           <p id="variantDescription"></p>
           <p id="variantPrice" class="zakladni-cena"></p>
+          <p id="variantStock">Skladem 5 ks</p>
+
         </div>
         <div class="produkt-tlacitka">
           <button class="objednani" data-product="VrtulovyList">Objednat</button>
@@ -130,12 +130,11 @@
         <h2 class="tech-specs-title">Technické Detaily</h2>
         <div class="tech-specs-content">
           <div class="tech-drawing-wrapper">
-            <a href="foto/fotkyweb/spitfire/technical_drawing.png" data-lightbox="tech-drawing"
+            <a href="foto/fotkyweb/světlo vrtule (stojan)/drawing.jpg" data-lightbox="tech-drawing"
               data-title="Technický nákres Spitfire Mk.IX">
-              <img src="foto/fotkyweb/spitfire/technical_drawing.png" alt="Technický nákres Spitfire"
+              <img src="foto/fotkyweb/světlo vrtule (stojan)/drawing.jpg" alt="Technický nákres Spitfire"
                 class="tech-drawing-img">
             </a>
-            <p class="tech-drawing-caption">Klikněte pro zvětšení nákresu</p>
           </div>
           <div class="tech-table-wrapper">
             <table class="tech-specs-table">
@@ -173,7 +172,7 @@
     <div id="successMessage" class="modal-overlay" style="display: none;">
       <div class="modal-content">
         <span class="close-modal" id="closeSuccessBtn">&times;</span>
-        <img src="foto/fotkyweb/světlo%20vrtule%20(stojan)/RESIZED/9.jpg" alt="VrtulovyList" class="modal-image">
+        <img src="foto/fotkyweb/světlo%20vrtule%20(stojan)/9.jpg" alt="VrtulovyList" class="modal-image">
         <h2>Děkujeme!</h2>
         <p>Vaše objednávka byla úspěšně odeslán. Brzy se Vám ozveme.</p>
         <p>Veškeré další informace vám zašleme obratem na vámi zadaný email</p>
@@ -194,7 +193,7 @@
           <h2>Partner</h2>
           <a href="https://www.facebook.com/pterodactyl.cz" class="odkaz" target="_blank"
             style="display: flex; align-items: center; gap: 10px; color: white; text-decoration: none;">
-            <img src="fotky/facebook.png" alt="Pterodactyl Facebook"
+            <img src="foto/ikony/facebook.png" alt="Pterodactyl Facebook"
               style="width: 30px; height: 30px; margin: 0; padding: 0;">
             <span>Pterodactyl.cz</span>
           </a>
@@ -202,10 +201,10 @@
         <div class="footer-right">
           <h2>Sociální sítě</h2>
           <a href="https://www.facebook.com/karel.faltus.31" class="odkaz">
-            <img src="fotky/facebook.png" alt="Instagram" />
+            <img src="foto/ikony/facebook.png" alt="Instagram" />
           </a>
           <a href="https://www.instagram.com/aerocompositescz/" class="odkaz">
-            <img src="fotky/instagram.png" alt="Instagram" />
+            <img src="foto/ikony/instagram.png" alt="Instagram" />
           </a>
         </div>
       </div>
@@ -216,7 +215,8 @@
         <a href="zkusenosti.html">ZKUŠENOSTI | </a>
         <a href="nabidka.html">NABÍDKA | </a>
         <a href="fotogalerie.html">FOTOGALERIE | </a>
-        <a href="kontakt.html">KONTAKT</a>
+        <a href="kontakt.html">KONTAKT | </a>
+        <a href="obchodni-podminky.html">OBCHODNÍ PODMÍNKY</a>
       </p>
       <p id="footerYear">Karel Faltus - <span id="yearSpan"></span></p>
     </div>

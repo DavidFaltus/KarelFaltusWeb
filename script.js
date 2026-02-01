@@ -47,7 +47,8 @@ const baseProductImages = {
         "foto/fotkyweb/albatros/11.jpg",
         "foto/fotkyweb/albatros/12.jpg",
         "foto/fotkyweb/albatros/13.jpg",
-        "foto/fotkyweb/albatros/14.jpg"
+        "foto/fotkyweb/albatros/14.jpg",
+        "foto/fotkyweb/albatros/15.jpg"
     ],
     product4: [
         "foto/fotkyweb/světlo vrtule (stojan)/1.jpg",
@@ -57,8 +58,7 @@ const baseProductImages = {
         "foto/fotkyweb/světlo vrtule (stojan)/5.jpg",
         "foto/fotkyweb/světlo vrtule (stojan)/6.jpg",
         "foto/fotkyweb/světlo vrtule (stojan)/7.jpg",
-        "foto/fotkyweb/světlo vrtule (stojan)/8.jpg",
-        "foto/fotkyweb/světlo vrtule (stojan)/9.jpg",
+        "foto/fotkyweb/světlo vrtule (stojan)/8.jpg"
     ]
 };
 
@@ -172,23 +172,25 @@ const variantImages = {
     product4: { // Vrtulový list
         "BEZ_PODSVICENI": [
             "foto/fotkyweb/světlo vrtule (stojan)/1.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/3.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/4.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/6.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/7.jpg",
-            "foto/fotkyweb/světlo vrtule (stojan)/9.jpg",
-            "foto/fotkyweb/světlo vrtule (stojan)/5.jpg",
-            "foto/fotkyweb/světlo vrtule (stojan)/3.jpg",
-            "foto/fotkyweb/světlo vrtule (stojan)/4.jpg"
+            "foto/fotkyweb/světlo vrtule (stojan)/8.jpg"
         ],
         "S_PODSVICENIM": [
-            "foto/fotkyweb/světlo vrtule (stojan)/8.jpg",
-            "foto/fotkyweb/světlo vrtule (stojan)/6.jpg",
-            "foto/fotkyweb/světlo vrtule (stojan)/7.jpg",
-            "foto/fotkyweb/světlo vrtule (stojan)/5.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/9.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/1.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/2.jpg",
             "foto/fotkyweb/světlo vrtule (stojan)/3.jpg",
-            "foto/fotkyweb/světlo vrtule (stojan)/4.jpg"
+            "foto/fotkyweb/světlo vrtule (stojan)/4.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/5.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/6.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/7.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/8.jpg",
+            "foto/fotkyweb/světlo vrtule (stojan)/10.jpg"
+
+
         ]
     }
 };
@@ -214,9 +216,9 @@ const variantDataVrtulovyList = {
 
 // English Translations
 const variantDataEn = {
-    STATIC: { desc: "Replica of Supermarine Spitfire Mk.IX is intended mainly for marketing purposes as an eye-catcher in front of a building, or suspended from a hall ceiling. The aircraft markings can be changed on request, including modification to all camouflage versions according to the given place of combat deployment and time period.", price: "Base price: 85 700 Euro" },
-    MOVIE: { desc: "Replica of Supermarine Spitfire Mk.IX allows visitors immediate contact with the aircraft. Sitting in the cockpit, manipulating controls with response to control surfaces. Ideal for film needs and shooting commercials!", price: "Base price: 106 000 Euro" },
-    PANORAMA: { desc: "Replica of Supermarine Spitfire Mk.IX in 1:1 scale is an interactive exhibit. The aircraft can emit air raid or starting engine sounds from speakers in radiators, accompanied by smoke from exhausts and propeller spinning at 500 rpm. The aircraft also features cockpit lighting and position lights. A smart choice for modern museums and private collectors!", price: "Base price: 125 900 Euro" }
+    STATIC: { desc: "Full-size model of Supermarine Spitfire Mk.IX is intended mainly for marketing purposes as an eye-catcher in front of a building, or suspended from a hall ceiling. The aircraft markings can be changed on request, including modification to all camouflage versions according to the given place of combat deployment and time period.", price: "Base price: 85 700 Euro" },
+    MOVIE: { desc: "Full-size model of Supermarine Spitfire Mk.IX allows visitors immediate contact with the aircraft. Sitting in the cockpit, manipulating controls with response to control surfaces. Ideal for film needs and shooting commercials!", price: "Base price: 106 000 Euro" },
+    PANORAMA: { desc: "Full-size model of Supermarine Spitfire Mk.IX in 1:1 scale is an interactive exhibit. The aircraft can emit air raid or starting engine sounds from speakers in radiators, accompanied by smoke from exhausts and propeller spinning at 500 rpm. The aircraft also features cockpit lighting and position lights. A smart choice for modern museums and private collectors!", price: "Base price: 125 900 Euro" }
 };
 
 const variantDataVrtuleEn = {
@@ -251,6 +253,11 @@ function updateProductVariant(productId, dataSource, selectId, descId, priceId) 
         productImages[productId] = variantImages[productId][selectedVariant];
     } else {
         productImages[productId] = baseProductImages[productId];
+    }
+
+    // Aktualizace skryté galerie pro Lightbox
+    if (typeof setupLightboxGallery === 'function') {
+        setupLightboxGallery(productId, productImages[productId]);
     }
 
     currentIndex[productId] = 0;
@@ -308,6 +315,9 @@ function changeImage(newSrc, productId) {
     const link = document.getElementById(`mainImageLink-${productId}`);
     if (img) {
         img.src = newSrc;
+    }
+    if (link) {
+        link.href = newSrc;
     }
 }
 
@@ -522,22 +532,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // 5. Repozicování selectu a přepočet ceny
-    document.querySelectorAll('.popis-produktu').forEach(desc => {
-        const select = desc.querySelector('select');
-        const priceEl = desc.querySelector('p.zakladni-cena');
-        const header = desc.querySelector('h2');
-        if (!select || !priceEl || !header) return;
 
-        function reposition() {
-            if (window.innerWidth < 980) {
-                desc.insertBefore(select, priceEl.nextSibling);
-            } else {
-                desc.insertBefore(select, header.nextSibling);
-            }
-        }
-        window.addEventListener('resize', reposition);
-        reposition();
-    });
 
     document.querySelectorAll('.popis-produktu').forEach(product => {
         const bigEl = product.querySelector('p.zakladni-cena big');
@@ -556,125 +551,75 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const findImageDetails = (currentSrc) => {
-        for (const productId in productImages) {
-            const images = productImages[productId];
-            const decodedSrc = decodeURIComponent(currentSrc);
-            const foundIndex = images.findIndex(imgSrc => decodedSrc.endsWith(imgSrc));
-            if (foundIndex !== -1) {
-                return {
-                    productId: productId,
-                    images: images,
-                    currentIndex: foundIndex
-                };
-            }
-        }
-        return null;
-    };
+// --- LIGHTBOX A GALERIE ---
 
-    /**
-     * Změní obrázek zobrazený v lightboxu.
-     * @param {'prev'|'next'} direction - Směr, kterým se má obrázek změnit.
-     */
-    const changeLightboxImage = (direction) => {
-        const lightboxImage = document.querySelector('.lb-image');
-        if (!lightboxImage) return;
+/**
+ * Vytvoří nebo aktualizuje skrytou galerii odkazů pro Lightbox.
+ */
+function setupLightboxGallery(groupId, images) {
+    let galleryContainer = document.getElementById(`lightbox-gallery-${groupId}`);
+    if (!galleryContainer) {
+        galleryContainer = document.createElement('div');
+        galleryContainer.id = `lightbox-gallery-${groupId}`;
+        galleryContainer.style.display = 'none';
+        document.body.appendChild(galleryContainer);
+    }
 
-        const details = findImageDetails(lightboxImage.src);
-        if (!details) return;
+    galleryContainer.innerHTML = ''; // Vyčistit staré odkazy
 
-        const { images, currentIndex } = details;
-        let newIndex;
+    images.forEach((src, index) => {
+        const link = document.createElement('a');
 
-        // Helper to find next/prev image index skipping videos
-        const findNextImageIndex = (startIdx, dir) => {
-            let idx = startIdx;
-            let count = 0;
-            const len = images.length;
-
-            do {
-                if (dir === 'next') idx = (idx + 1) % len;
-                else idx = (idx - 1 + len) % len;
-                count++;
-            } while (isVideo(images[idx]) && count < len);
-
-            // If all are videos, return original (or handle error)
-            if (isVideo(images[idx])) return startIdx;
-            return idx;
-        };
-
-        newIndex = findNextImageIndex(currentIndex, direction);
-
-        // If we didn't move (e.g. all other items are videos), just return
-        if (newIndex === currentIndex) return;
-
-        let newSrc = images[newIndex];
-
-        // Fix for EN pages path
-        if (window.location.pathname.includes('/EN/') && !newSrc.startsWith('../') && !newSrc.startsWith('http') && !newSrc.startsWith('/')) {
-            newSrc = '../' + newSrc;
+        // Fix cesty pro EN verze
+        let finalSrc = src;
+        if (window.location.pathname.includes('/EN/') && !src.startsWith('../') && !src.startsWith('http') && !src.startsWith('/')) {
+            finalSrc = '../' + src;
         }
 
-        lightboxImage.src = newSrc;
-
-        const numberDisplay = document.querySelector('.lb-number');
-        if (numberDisplay) {
-            numberDisplay.textContent = `Image ${newIndex + 1} of ${images.length}`;
-        }
-    };
-
-    /**
-     * Přidá vlastní navigační šipky do lightboxu.
-     */
-    const addLightboxArrows = () => {
-        const lightboxImage = document.querySelector('.lb-image');
-        if (!lightboxImage) return;
-
-        // Check if the current image belongs to a managed product
-        if (!findImageDetails(lightboxImage.src)) return;
-
-        const lightboxContainer = document.querySelector('.lb-outerContainer');
-        if (lightboxContainer && !lightboxContainer.querySelector('.custom-lb-prev')) {
-            const prevArrow = document.createElement('span');
-            prevArrow.className = 'custom-lb-arrow custom-lb-prev';
-            prevArrow.innerHTML = '&#10094;';
-            prevArrow.addEventListener('click', (e) => {
-                e.stopPropagation();
-                changeLightboxImage('prev');
-            });
-
-            const nextArrow = document.createElement('span');
-            nextArrow.className = 'custom-lb-arrow custom-lb-next';
-            nextArrow.innerHTML = '&#10095;';
-            nextArrow.addEventListener('click', (e) => {
-                e.stopPropagation();
-                changeLightboxImage('next');
-            });
-
-            lightboxContainer.appendChild(prevArrow);
-            lightboxContainer.appendChild(nextArrow);
-        }
-    };
-
-    // Přidá posluchač kliknutí na všechny odkazy, které otevírají lightbox.
-    document.querySelectorAll('a[data-lightbox]').forEach(link => {
-        link.addEventListener('click', () => {
-            // Krátké zpoždění zajistí, že se lightbox plně načte před přidáním šipek.
-            setTimeout(addLightboxArrows, 100);
-        });
+        link.href = finalSrc;
+        link.setAttribute('data-lightbox', groupId);
+        link.setAttribute('data-title', '');
+        link.setAttribute('data-index', index);
+        galleryContainer.appendChild(link);
     });
-});
+}
 
-// --- GALERIE ZKUŠENOSTÍ (CAROUSEL) ---
+/**
+ * Otevře Lightbox na konkrétním obrázku ze skryté galerie.
+ */
+function openLightboxGallery(groupId, index) {
+    const galleryContainer = document.getElementById(`lightbox-gallery-${groupId}`);
+    if (galleryContainer) {
+        const links = galleryContainer.querySelectorAll('a');
+        if (index >= 0 && index < links.length) {
+            links[index].click();
+        }
+    }
+}
+
+// Inicializace galerií produktů
+function initProductGalleries() {
+    Object.keys(productImages).forEach(productId => {
+        setupLightboxGallery(productId, productImages[productId]);
+    });
+}
+
+// Inicializace galerií zkušeností
+function initExperienceGalleries() {
+    Object.keys(experienceImages).forEach(expId => {
+        setupLightboxGallery(expId, experienceImages[expId]);
+    });
+}
+
+// --- GALERIE ZKUŠENOSTÍ DATOVÁ STRUKTURA ---
 const experienceImages = {
     spitfire: [
-        "foto/maketa spitfire/1.JPG",
+        "foto/maketa spitfire/1.jpg",
         "foto/maketa spitfire/2.JPG",
         "foto/maketa spitfire/3.JPG"
     ],
     baron: [
-        "foto/rudy baron/1.JPG",
+        "foto/rudy baron/1.jpg",
         "foto/rudy baron/2.JPG",
         "foto/rudy baron/3.JPG"
     ],
@@ -718,7 +663,12 @@ function changeExpImage(expId, offset) {
     const count = experienceImages[expId].length;
     expCurrentIndex[expId] = (expCurrentIndex[expId] + offset + count) % count;
 
-    const newSrc = experienceImages[expId][expCurrentIndex[expId]];
+    let newSrc = experienceImages[expId][expCurrentIndex[expId]];
+
+    // Fix pro EN
+    if (window.location.pathname.includes('/EN/') && !newSrc.startsWith('../') && !newSrc.startsWith('http')) {
+        newSrc = '../' + newSrc;
+    }
 
     const imgElement = document.getElementById(`img-${expId}`);
     const linkElement = document.getElementById(`link-${expId}`);
@@ -736,3 +686,53 @@ function changeExpImage(expId, offset) {
         linkElement.href = newSrc;
     }
 }
+
+// --- HLAVNÍ INITIALIZACE GALERIÍ PO NAČTENÍ DOM ---
+document.addEventListener('DOMContentLoaded', () => {
+
+    // 1. Inicializace skrytých galerií
+    initProductGalleries();
+    initExperienceGalleries();
+
+    // 2. Navázání kliknutí na hlavní obrázky produktů (přesměrování na Lightbox)
+    Object.keys(productImages).forEach(productId => {
+        const mainLink = document.getElementById(`mainImageLink-${productId}`);
+        if (mainLink) {
+            mainLink.removeAttribute('data-lightbox'); // Stop native single open
+
+            mainLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                const imgElement = document.getElementById(`mainImage-${productId}`);
+                if (!imgElement) return;
+
+                const currentImgSrc = imgElement.getAttribute('src');
+                let foundIndex = -1;
+                const images = productImages[productId];
+
+                // Hledáme index aktuálního obrázku
+                for (let i = 0; i < images.length; i++) {
+                    if (decodeURIComponent(currentImgSrc).endsWith(images[i])) {
+                        foundIndex = i;
+                        break;
+                    }
+                }
+                if (foundIndex === -1) foundIndex = 0;
+
+                openLightboxGallery(productId, foundIndex);
+            });
+        }
+    });
+
+    // 3. Navázání kliknutí na obrázky zkušeností
+    Object.keys(experienceImages).forEach(expId => {
+        const link = document.getElementById(`link-${expId}`);
+        if (link) {
+            link.removeAttribute('data-lightbox'); // Stop native single open
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const currentIndex = expCurrentIndex[expId];
+                openLightboxGallery(expId, currentIndex);
+            });
+        }
+    });
+});
