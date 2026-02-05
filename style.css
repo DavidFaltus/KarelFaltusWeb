@@ -727,18 +727,64 @@ footer h2 {
 }
 
 .produkt-image {
+  flex: 1;
   text-align: center;
-  width: 100%;
-  margin-bottom: 10px;
   position: relative;
+  /* For absolute positioning of arrows */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 
+/* Fixed height for main image, variable width */
 .produkt-image img {
-  width: 100%;
-  max-height: 700px;
-  max-width: 700px;
-  height: auto;
+  height: 500px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
   border-radius: 7px;
+}
+
+/* Main Image Navigation Arrows */
+/* Main Image Navigation Arrows */
+/* Main Image Navigation Arrows */
+.main-image-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 10px 15px;
+  font-size: 24px;
+  user-select: none;
+  z-index: 10;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  /* Keep flex for centering content if needed, though exp-arrow didn't explicitly have it, it helps */
+  justify-content: center;
+  align-items: center;
+}
+
+.produkt-image:hover .main-image-nav {
+  opacity: 1;
+  /* Show on hover */
+}
+
+.main-image-nav:hover {
+  background-color: rgba(0, 0, 0, 0.65);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.main-image-nav.prev {
+  left: 10px;
+}
+
+.main-image-nav.next {
+  right: 10px;
 }
 
 /***** TEXTOVÁ ČÁST PRODUKTU *****/
@@ -1751,7 +1797,7 @@ input {
 }
 
 .exp-arrow:hover {
-  color: #003d6b;
+  /* color: #003d6b; */
   transform: scale(1.2);
 }
 
@@ -1869,6 +1915,19 @@ input {
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-height: 650px) {
+  .hero {
+    top: 50%;
+  }
+}
+
+@media (max-width: 1450px) {
+  .nadpis__jinestranky {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2114,4 +2173,75 @@ input {
   60% {
     transform: translateY(-5px);
   }
+}
+
+/* --- CAROUSEL ANIMATIONS & ARROWS --- */
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.exp-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 10px 15px;
+  font-size: 24px;
+  user-select: none;
+  z-index: 10;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.exp-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.65);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.exp-arrow.prev {
+  left: 10px;
+}
+
+.exp-arrow.next {
+  right: 10px;
+}
+
+/* Image Transition Class */
+/* Image Transition Class */
+.carousel-image-anim {
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.carousel-image-anim.hidden {
+  opacity: 0;
+  transform: scale(0.98);
+}
+
+
+/* Scroll Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }

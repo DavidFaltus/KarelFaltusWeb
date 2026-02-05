@@ -9,6 +9,7 @@
   <link href="style.css" rel="stylesheet" type="text/css" />
   <link href="zkusenosti.css" rel="stylesheet" type="text/css" />
   <link href="lightbox.css" rel="stylesheet" />
+  <link rel="icon" type="image/jpg" href="foto/ikony/favicon.jpg">
   <script src="script.js"></script>
   <script src="lightbox-plus-jquery.js"></script>
 </head>
@@ -90,6 +91,8 @@
       </div>
     </div>
   </header>
+
+  <!--TODO OPRAVIT FOTKY U ZKUŠENOSTÍ NĚKTERÉ SE NENAČÍTAJÍ-->
   <main id="mainZkusenosti">
     <!-- Sekce projektů -->
     <section id="projekty" class="zarovnaniDoLeva">
@@ -122,7 +125,7 @@
       <div class="zarovnaniDoLeva-image carousel-wrapper">
         <div class="exp-arrow prev" onclick="changeExpImage('spitfire', -1)">&#10094;</div>
         <a href="foto/maketa spitfire/1.jpg" data-lightbox="spitfire" data-title="Maketa Spitfire" id="link-spitfire">
-          <img src="foto/maketa spitfire/1.jpg" alt="Maketa Spitfire" id="img-spitfire" />
+          <img src="foto/maketa spitfire/1.jpg" alt="Maketa Spitfire" id="img-spitfire" class="carousel-image-anim" />
         </a>
         <div class="exp-arrow next" onclick="changeExpImage('spitfire', 1)">&#10095;</div>
       </div>
@@ -133,7 +136,7 @@
       <div class="zarovnaniDoPrava-image carousel-wrapper">
         <div class="exp-arrow prev" onclick="changeExpImage('eagle', -1)">&#10094;</div>
         <a href="foto/eagle/1.jpg" data-lightbox="eagle" data-title="Eagle" id="link-eagle">
-          <img src="foto/eagle/1.jpg" alt="Eagle" id="img-eagle" />
+          <img src="foto/eagle/1.jpg" alt="Eagle" id="img-eagle" class="carousel-image-anim" />
         </a>
         <div class="exp-arrow next" onclick="changeExpImage('eagle', 1)">&#10095;</div>
       </div>
@@ -160,7 +163,8 @@
         <div class="exp-arrow prev" onclick="changeExpImage('lambada', -1)">&#10094;</div>
         <a href="foto/lambada a samba/1.jpg" data-lightbox="lambada" data-title="UrbanAir - Lambáda a Samba"
           id="link-lambada">
-          <img src="foto/lambada a samba/1.jpg" alt="UrbanAir - Lambáda a Samba" id="img-lambada" />
+          <img src="foto/lambada a samba/1.jpg" alt="UrbanAir - Lambáda a Samba" id="img-lambada"
+            class="carousel-image-anim" />
         </a>
         <div class="exp-arrow next" onclick="changeExpImage('lambada', 1)">&#10095;</div>
       </div>
@@ -171,7 +175,7 @@
       <div class="zarovnaniDoPrava-image carousel-wrapper">
         <div class="exp-arrow prev" onclick="changeExpImage('phoenix', -1)">&#10094;</div>
         <a href="foto/phoenix/1.jpg" data-lightbox="phoenix" data-title="Phoenix" id="link-phoenix">
-          <img src="foto/phoenix/1.jpg" alt="Phoenix" id="img-phoenix" />
+          <img src="foto/phoenix/1.jpg" alt="Phoenix" id="img-phoenix" class="carousel-image-anim" />
         </a>
         <div class="exp-arrow next" onclick="changeExpImage('phoenix', 1)">&#10095;</div>
       </div>
@@ -199,7 +203,7 @@
         <div class="exp-arrow prev" onclick="changeExpImage('baron', -1)">&#10094;</div>
         <a href="foto/rudy baron/1.jpg" data-lightbox="baron" data-title="Albatros D5 a D3 - Rudý Baron"
           id="link-baron">
-          <img src="foto/rudy baron/1.jpg" alt="Albatros D5 a D3" id="img-baron" />
+          <img src="foto/rudy baron/1.jpg" alt="Albatros D5 a D3" id="img-baron" class="carousel-image-anim" />
         </a>
         <div class="exp-arrow next" onclick="changeExpImage('baron', 1)">&#10095;</div>
       </div>
@@ -210,7 +214,7 @@
       <div class="zarovnaniDoPrava-image carousel-wrapper">
         <div class="exp-arrow prev" onclick="changeExpImage('lyze', -1)">&#10094;</div>
         <a href="foto/lyze/1.jpg" data-lightbox="lyze" data-title="Lyže na letadlo" id="link-lyze">
-          <img src="foto/lyze/1.jpg" alt="Lyže na letadlo" id="img-lyze" />
+          <img src="foto/lyze/1.jpg" alt="Lyže na letadlo" id="img-lyze" class="carousel-image-anim" />
         </a>
         <div class="exp-arrow next" onclick="changeExpImage('lyze', 1)">&#10095;</div>
       </div>
@@ -223,6 +227,7 @@
       </div>
     </section>
 
+    <!-- Spolupráce na výrobě umělecké instalace -->
     <section class="zarovnaniDoLeva">
       <div class="zarovnaniDoLeva-text">
         <h2>Spolupráce na výrobě umělecké instalace</h2>
@@ -236,12 +241,11 @@
       <div class="zarovnaniDoLeva-image carousel-wrapper">
         <div class="exp-arrow prev" onclick="changeExpImage('motyl', -1)">&#10094;</div>
         <a href="foto/motyl/1.jpg" data-lightbox="motyl" data-title="Spitfire" id="link-motyl">
-          <img src="foto/motyl/1.jpg" alt="Spitfire" id="img-motyl" />
+          <img src="foto/motyl/1.jpg" alt="Spitfire" id="img-motyl" class="carousel-image-anim" />
         </a>
         <div class="exp-arrow next" onclick="changeExpImage('motyl', 1)">&#10095;</div>
       </div>
     </section>
-    <!-- Výroba dílů na uměleckou instalaci -->
   </main>
 
   <footer>

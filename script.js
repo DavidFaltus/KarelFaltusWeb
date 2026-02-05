@@ -47,8 +47,7 @@ const baseProductImages = {
         "foto/fotkyweb/albatros/11.jpg",
         "foto/fotkyweb/albatros/12.jpg",
         "foto/fotkyweb/albatros/13.jpg",
-        "foto/fotkyweb/albatros/14.jpg",
-        "foto/fotkyweb/albatros/15.jpg"
+        "foto/fotkyweb/albatros/14.jpg"
     ],
     product4: [
         "foto/fotkyweb/světlo vrtule (stojan)/1.jpg",
@@ -116,9 +115,7 @@ const variantImages = {
             "foto/fotkyweb/spitfire/1.jpg",
             "foto/fotkyweb/spitfire/15.jpg",
             "foto/fotkyweb/spitfire/16.jpg",
-            "foto/fotkyweb/spitfire/14.jpg",
-            "foto/fotkyweb/spitfire/18.mp4",
-            "foto/fotkyweb/spitfire/IMG_7386.mp4"
+            "foto/fotkyweb/spitfire/14.jpg"
         ]
     },
     product2: { // Vrtule
@@ -131,28 +128,6 @@ const variantImages = {
             "foto/fotkyweb/vrtule/10.jpg",
             "foto/fotkyweb/vrtule/13.jpg",
             "foto/fotkyweb/vrtule/14.jpg"
-        ],
-        "SE_STOJANEM": [
-            "foto/fotkyweb/vrtule/11.jpg",
-            "foto/fotkyweb/vrtule/2.jpg",
-            "foto/fotkyweb/vrtule/3.jpg",
-            "foto/fotkyweb/vrtule/4.jpg",
-            "foto/fotkyweb/vrtule/5.jpg",
-            "foto/fotkyweb/vrtule/10.jpg",
-            "foto/fotkyweb/vrtule/13.jpg",
-            "foto/fotkyweb/vrtule/14.jpg"
-        ],
-        "S_UCHYCENIM_NA_ZED": [
-            "foto/fotkyweb/vrtule/2.jpg",
-            "foto/fotkyweb/vrtule/1.jpg",
-            "foto/fotkyweb/vrtule/3.jpg",
-            "foto/fotkyweb/vrtule/4.jpg",
-            "foto/fotkyweb/vrtule/5.jpg",
-            "foto/fotkyweb/vrtule/6.jpg",
-            "foto/fotkyweb/vrtule/10.jpg",
-            "foto/fotkyweb/vrtule/13.jpg",
-            "foto/fotkyweb/vrtule/14.jpg",
-            "foto/fotkyweb/vrtule/15.jpg"
         ],
         "S_UCHYCENIM_NA_ZED_A_PODSVICENI": [
             "foto/fotkyweb/vrtule/9.jpg",
@@ -195,7 +170,10 @@ const variantImages = {
     }
 };
 
+// Stores the starting index of the *visible* window of thumbnails
 const currentIndex = { product1: 0, product2: 0, product3: 0, product4: 0 };
+// Stores the index of the *currently selected/active* image
+const selectedImageIndex = { product1: 0, product2: 0, product3: 0, product4: 0 };
 const variantData = {
     STATIC: { desc: "Maketa Supermarine Spitfire Mk.IX. v měřítku 1:1 je určena zejména k marketingovým účelům jako poutač před budovou, popřípadě zavěšena u stropu haly. Kamufláž letounu lze na přání změnit, včetně úpravy do všech kamuflážních verzí dle daného místa bojového nasazení a časového období.", price: "Základní cena: 2 070 000 Kč" },
     MOVIE: { desc: "Maketa Supermarine Spitfire Mk.IX v měřítku 1:1 umožňuje návštěvníkům bezprostřední kontakt s letadlem. Usednutí do kokpitu, manipulaci s ovladači a odezvou do řídících ploch. Ideální pro potřeby filmu a natáčení reklamních spotů!", price: "Základní cena: 2 560 000 Kč" },
@@ -260,27 +238,36 @@ function updateProductVariant(productId, dataSource, selectId, descId, priceId) 
         setupLightboxGallery(productId, productImages[productId]);
     }
 
+    // Reset indices
     currentIndex[productId] = 0;
-    renderThumbnails(productId);
-    // Zkontrolujeme, zda pole obrázků není prázdné před voláním changeImage
-    if (productImages[productId] && productImages[productId].length > 0) {
-        let imgSrc = productImages[productId][0];
-        // Fix for EN pages path
-        if (window.location.pathname.includes('/EN/') && !imgSrc.startsWith('../') && !imgSrc.startsWith('http') && !imgSrc.startsWith('/')) {
-            imgSrc = '../' + imgSrc;
-        }
-        changeImage(imgSrc, productId);
+    selectedImageIndex[productId] = 0;
+
+    // Aktualizace skryté galerie pro Lightbox
+    if (typeof setupLightboxGallery === 'function') {
+        setupLightboxGallery(productId, productImages[productId]);
     }
+
+    renderThumbnails(productId);
+    updateProductView(productId);
 }
 
 // Původní logika pro Spitfire přesunuta do DOMContentLoaded a sjednocena pod updateProductVariant
 
 
-function createThumbnail(src, productId) {
+function createThumbnail(src, productId, index) {
     const img = document.createElement("img");
     img.src = src;
     img.classList.add("thumbnail");
-    img.addEventListener("click", () => changeImage(src, productId));
+
+    if (index === selectedImageIndex[productId]) {
+        img.classList.add('active');
+        img.style.transform = "scale(1.1)";
+    }
+
+    img.addEventListener("click", () => {
+        selectedImageIndex[productId] = index;
+        updateProductView(productId);
+    });
     return img;
 }
 
@@ -289,14 +276,19 @@ function renderThumbnails(productId) {
     const images = productImages[productId];
     if (!wrapper || !images) return;
     wrapper.innerHTML = "";
+
     for (let i = 0; i < visibleCount; i++) {
-        const idx = (currentIndex[productId] + i) % images.length;
-        let imgSrc = images[idx];
+        // Calculate which image index to show in this slot
+        const imageIndex = (currentIndex[productId] + i) % images.length;
+        let imgSrc = images[imageIndex];
+
         // Fix for EN pages path
         if (window.location.pathname.includes('/EN/') && !imgSrc.startsWith('../') && !imgSrc.startsWith('http') && !imgSrc.startsWith('/')) {
             imgSrc = '../' + imgSrc;
         }
-        wrapper.appendChild(createThumbnail(imgSrc, productId));
+
+        // Pass the actual absolute index to createThumbnail
+        wrapper.appendChild(createThumbnail(imgSrc, productId, imageIndex));
     }
 }
 
@@ -310,16 +302,89 @@ function moveThumbnail(productId, offset) {
 function nextThumbnail(productId) { moveThumbnail(productId, 1); }
 function prevThumbnail(productId) { moveThumbnail(productId, -1); }
 
-function changeImage(newSrc, productId) {
+// Central function to update the view based on state
+function updateProductView(productId) {
+    const images = productImages[productId];
+    if (!images || images.length === 0) return;
+
+    const idx = selectedImageIndex[productId];
+    let newSrc = images[idx];
+
+    // Fix for EN pages path
+    if (window.location.pathname.includes('/EN/') && !newSrc.startsWith('../') && !newSrc.startsWith('http') && !newSrc.startsWith('/')) {
+        newSrc = '../' + newSrc;
+    }
+
+    // 1. Update Main Image
     const img = document.getElementById(`mainImage-${productId}`);
     const link = document.getElementById(`mainImageLink-${productId}`);
     if (img) {
+        img.classList.remove('carousel-image-anim');
         img.src = newSrc;
     }
     if (link) {
         link.href = newSrc;
     }
+
+    // 2. Sync Carousel Window
+    // User Request: "uprav selekci aktuální fotky v karuselu tím že aktuální fotka bude zobrazená jako první v karuselu"
+    // Goal: Set currentIndex so that idx is the FIRST visible item.
+
+    // Simple direct assignment
+    currentIndex[productId] = idx;
+
+    // 3. Re-render thumbnails to show active state and potential window shift
+    renderThumbnails(productId);
 }
+
+// Deprecated changeImage but keeping name if called elsewhere (it's not, mostly)
+function changeImage(newSrc, productId) {
+    // This was the old logic. Redirect to updateProductView if possible 
+    // or just leave empty/log warning.
+    // Actually, createThumbnail used to call this. Now it calls updateProductView.
+}
+
+// Funkce pro navigaci v hlavní fotce
+function injectMainImageArrows(productId) {
+    const wrapper = document.querySelector(`#mainImageLink-${productId}`)?.parentElement;
+    if (!wrapper || wrapper.querySelector('.main-image-nav')) return;
+
+    // Create Prev Arrow
+    const prevArrow = document.createElement('div');
+    prevArrow.className = 'main-image-nav prev';
+    prevArrow.innerHTML = '&#10094;';
+    prevArrow.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        prevMainImage(productId);
+    };
+
+    // Create Next Arrow
+    const nextArrow = document.createElement('div');
+    nextArrow.className = 'main-image-nav next';
+    nextArrow.innerHTML = '&#10095;';
+    nextArrow.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        nextMainImage(productId);
+    };
+
+    wrapper.appendChild(prevArrow);
+    wrapper.appendChild(nextArrow);
+}
+
+function moveMainImage(productId, offset) {
+    const length = productImages[productId]?.length;
+    if (!length) return;
+
+    // Update selected index
+    selectedImageIndex[productId] = (selectedImageIndex[productId] + offset + length) % length;
+
+    updateProductView(productId);
+}
+
+function nextMainImage(productId) { moveMainImage(productId, 1); }
+function prevMainImage(productId) { moveMainImage(productId, -1); }
 
 function openNavbar() {
     const nav = document.getElementById("sideNavbar");
@@ -531,6 +596,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // Initialize Arrows for all potential products if they exist on page
+    ['product1', 'product2', 'product3', 'product4'].forEach(pid => {
+        if (document.getElementById(`mainImage-${pid}`)) {
+            injectMainImageArrows(pid);
+        }
+    });
+
     // 5. Repozicování selectu a přepočet ceny
 
 
@@ -549,6 +621,31 @@ document.addEventListener('DOMContentLoaded', () => {
         select.addEventListener('change', updatePrice);
         updatePrice();
     });
+
+    // --- GLOBAL SCROLL ANIMATION ---
+    function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        for (var i = 0; i < reveals.length; i++) {
+            var windowHeight = window.innerHeight;
+            var elementTop = reveals[i].getBoundingClientRect().top;
+            var elementVisible = 100;
+            if (elementTop < windowHeight - elementVisible) {
+                reveals[i].classList.add("active");
+            }
+        }
+    }
+
+    // Apply reveal class to content elements, avoiding section backgrounds
+    const elementsToAnimate = document.querySelectorAll(
+        ".o-mne-container, .sluzby-box, .benefity-grid, .produkt-content, .produkt-text, .zarovnaniDoLeva-text, .zarovnaniDoLeva-image, .zarovnaniDoPrava-text, .zarovnaniDoPrava-image, .tech-specs-container"
+    );
+    elementsToAnimate.forEach(el => {
+        el.classList.add("reveal");
+    });
+
+    window.addEventListener("scroll", reveal);
+    // Trigger once to show elements already in view
+    setTimeout(reveal, 100);
 });
 
 // --- LIGHTBOX A GALERIE ---
@@ -612,16 +709,17 @@ function initExperienceGalleries() {
 }
 
 // --- GALERIE ZKUŠENOSTÍ DATOVÁ STRUKTURA ---
+// --- GALERIE ZKUŠENOSTÍ DATOVÁ STRUKTURA ---
 const experienceImages = {
     spitfire: [
         "foto/maketa spitfire/1.jpg",
-        "foto/maketa spitfire/2.JPG",
-        "foto/maketa spitfire/3.JPG"
+        "foto/maketa spitfire/2.jpg",
+        "foto/maketa spitfire/3.jpg"
     ],
     baron: [
         "foto/rudy baron/1.jpg",
-        "foto/rudy baron/2.JPG",
-        "foto/rudy baron/3.JPG"
+        "foto/rudy baron/2.jpg",
+        "foto/rudy baron/3.jpg"
     ],
     eagle: [
         "foto/eagle/1.jpg",
@@ -638,12 +736,12 @@ const experienceImages = {
 
     phoenix: [
         "foto/phoenix/1.jpg",
-        "foto/phoenix/2.JPG"
+        "foto/phoenix/2.jpg"
     ],
 
     lyze: [
         "foto/lyze/1.jpg",
-        "foto/lyze/2.JPG",
+        "foto/lyze/2.jpg",
         "foto/lyze/3.jpg"
     ],
 
@@ -674,11 +772,22 @@ function changeExpImage(expId, offset) {
     const linkElement = document.getElementById(`link-${expId}`);
 
     if (imgElement) {
-        // Simple fade effect
-        imgElement.style.opacity = 0;
+        // Ensure animation class is present
+        if (!imgElement.classList.contains('carousel-image-anim')) {
+            imgElement.classList.add('carousel-image-anim');
+        }
+
+        // Start fade out
+        imgElement.classList.add('hidden');
+
+        // Wait for fade out (200ms matches CSS transition)
         setTimeout(() => {
             imgElement.src = newSrc;
-            imgElement.style.opacity = 1;
+            // Short delay to allow src change to register before fading back in
+            // Using onload can be safer for network, but fixed timeout feels smoother locally
+            setTimeout(() => {
+                imgElement.classList.remove('hidden');
+            }, 50);
         }, 200);
     }
 
