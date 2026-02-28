@@ -1,0 +1,24 @@
+{
+    "name": "Aero Composites",
+    "short_name": "AeroComposites",
+    "icons": [
+        {
+            "src": "foto/ikony/favicon.jpg",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "foto/ikony/logoKarelF.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "foto/ikony/logoKarelF.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "display": "standalone"
+}

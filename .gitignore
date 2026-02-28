@@ -1,0 +1,16 @@
+.idea/
+.vscode/
+
+# Ignorovat všechny podadresáře (složky) v adresáři foto
+foto/*/
+
+# Výjimka: složka ikony musí zůstat
+!foto/ikony/
+
+# Výjimka (pro jistotu): zachovat tyto dvě důležité fotky
+!foto/hpletadlo.jpg
+!foto/hpletadlo2.jpg
+
+# Běžné dočasné a nepotřebné soubory systému
+.DS_Store
+Thumbs.db
