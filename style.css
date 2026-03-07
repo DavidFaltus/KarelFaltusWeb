@@ -11,7 +11,7 @@ body {
 .uvodni-stranka {
   width: 100%;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(foto/hpletadlo.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(foto/hpletadlo.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -21,7 +21,7 @@ body {
 .pozadi__jinestranky {
   width: 100%;
   min-height: 285px;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(foto/hpletadlo2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url(foto/hpletadlo2.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -624,8 +624,10 @@ footer h2 {
 
 .zarovnaniDoLeva-image img,
 .zarovnaniDoPrava-image img {
-  max-width: 70%;
-  height: auto;
+  height: 400px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
   border-radius: 7px;
 }
 
@@ -2178,7 +2180,27 @@ input {
 /* --- CAROUSEL ANIMATIONS & ARROWS --- */
 .carousel-wrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-wrapper a {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  border-radius: 7px;
+  max-width: 70%;
+}
+
+.carousel-wrapper a img {
+  height: 400px;
+  width: auto;
+  max-width: 100% !important;
+  object-fit: contain;
+  border-radius: 7px;
 }
 
 .exp-arrow {
@@ -2209,29 +2231,67 @@ input {
   right: 10px;
 }
 
-/* Image Transition Class */
-/* Image Transition Class */
-.carousel-image-anim {
-  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
-  animation: fadeIn 0.2s ease-in-out;
-}
-
-@keyframes fadeIn {
-  from {
+/* Slider Animations */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
     opacity: 0;
-    transform: scale(0.95);
   }
 
-  to {
+  100% {
+    transform: translateX(0);
     opacity: 1;
-    transform: scale(1);
   }
 }
 
-.carousel-image-anim.hidden {
-  opacity: 0;
-  transform: scale(0.98);
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.carousel-clone-image {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  z-index: 5;
+  pointer-events: none;
+}
+
+/* Deleted old fadeIn animation block */
 
 
 /* Scroll Animation */
@@ -2286,3 +2346,204 @@ input {
   margin-bottom: 5px;
   font-size: 18px;
 }
+
+/* --- PREMIUM FORMS UPGRADE (OVERRIDES ORIGINAL) --- */
+
+/* KOLEKCE: KONTAKTNÍ FORMULÁŘ (.formular) */
+#formular {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 40px 20px !important;
+  box-sizing: border-box !important;
+}
+
+#formular form {
+  width: 100% !important;
+  max-width: 700px !important;
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
+  padding: 40px !important;
+  margin: 0 auto !important;
+  box-sizing: border-box !important;
+}
+
+#formular fieldset {
+  background: transparent !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: none !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 20px !important;
+}
+
+/* KOLEKCE: OBJEDNÁVKOVÝ (OVERLAY) FORMULÁŘ */
+#emailOverlay {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  backdrop-filter: blur(8px) !important;
+}
+
+#emailForm {
+  background: #ffffff !important;
+  border-radius: 16px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+  padding: 40px !important;
+  border: none !important;
+  width: 90% !important;
+  max-width: 550px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+}
+
+#emailForm p {
+  color: #1E88E5 !important;
+  font-size: 2rem !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  margin-bottom: 25px !important;
+  border-bottom: 2px solid #f1f5f9 !important;
+  padding-bottom: 15px !important;
+  width: 100% !important;
+}
+
+/* SPOLEČNÉ INPUTY (OBĚ FORMULÁŘE) */
+#formular input,
+#emailForm input {
+  width: 100% !important;
+  box-sizing: border-box !important;
+  padding: 16px 20px !important;
+  font-size: 16px !important;
+  border: 2px solid #e2e8f0 !important;
+  border-radius: 8px !important;
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+  margin: 0 !important;
+  text-align: left !important;
+  transition: all 0.3s ease !important;
+  font-family: inherit !important;
+}
+
+#formular #dotaz {
+  height: 140px !important;
+  /* if this was input type=text instead of textarea, it still obeys height */
+}
+
+#formular input:focus,
+#emailForm input:focus {
+  outline: none !important;
+  border-color: #1E88E5 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 0 0 4px rgba(30, 136, 229, 0.15) !important;
+}
+
+#formular input::placeholder,
+#emailForm input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* TLAČÍTKA */
+#formular button#btnOdeslat,
+#emailForm button[type="submit"] {
+  width: 100% !important;
+  margin: 15px 0 0 0 !important;
+  padding: 16px 20px !important;
+  font-size: 1.1rem !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  background: linear-gradient(135deg, #1E88E5 0%, #005cb2 100%) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3) !important;
+}
+
+#formular button#btnOdeslat:hover,
+#emailForm button[type="submit"]:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(30, 136, 229, 0.4) !important;
+  background: linear-gradient(135deg, #2196F3 0%, #006bce 100%) !important;
+}
+
+#emailForm button.close-btn {
+  width: 100% !important;
+  margin: 10px 0 0 0 !important;
+  padding: 14px 20px !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  background: transparent !important;
+  color: #64748b !important;
+  border: 2px solid #cbd5e1 !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+#emailForm button.close-btn:hover {
+  background: #f1f5f9 !important;
+  color: #1e293b !important;
+  border-color: #94a3b8 !important;
+}
+
+/* RESPONSIVE UPRAVY PRO MOBIL */
+@media (max-width: 768px) {
+  #formular form {
+    padding: 30px 20px !important;
+  }
+
+  #emailForm {
+    padding: 30px 20px !important;
+  }
+}
+
+/* --- GLOBAL BUTTON ANIMATIONS --- */
+/* Transitions without gradient bug */
+.objednani,
+.redirect,
+.produkt-btn {
+  transition: transform 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.hero button,
+.cta-button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.3s ease, color 0.3s ease !important;
+}
+
+/* Primární modrá tlačítka */
+.objednani,
+.redirect,
+.produkt-btn {
+  background: linear-gradient(135deg, #1E88E5 0%, #005cb2 100%) !important;
+  box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+.objednani:hover,
+.redirect:hover,
+.produkt-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(30, 136, 229, 0.4) !important;
+  background: linear-gradient(135deg, #2196F3 0%, #006bce 100%) !important;
+}
+
+/* Ostatní tlačítka s průhledným pozadím */
+.hero button,
+.cta-button {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+}
+
+.hero button:hover,
+.cta-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3) !important;
+}
+
+/* --- KONEC PREMIUM FORMS UPGRADE --- */

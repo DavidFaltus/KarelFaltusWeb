@@ -31,7 +31,9 @@ const baseProductImages = {
         "foto/fotkyweb/vrtule/7.jpg",
         "foto/fotkyweb/vrtule/8.jpg",
         "foto/fotkyweb/vrtule/9.jpg",
-        "foto/fotkyweb/vrtule/10.jpg"
+        "foto/fotkyweb/vrtule/10.jpg",
+        "foto/fotkyweb/vrtule/11.jpg",
+        "foto/fotkyweb/vrtule/12.jpg"
     ],
     product3: [
         "foto/fotkyweb/albatros/1.jpg",
@@ -123,25 +125,25 @@ const variantImages = {
             "foto/fotkyweb/vrtule/1.jpg",
             "foto/fotkyweb/vrtule/2.jpg",
             "foto/fotkyweb/vrtule/3.jpg",
-            "foto/fotkyweb/vrtule/4.jpg",
-            "foto/fotkyweb/vrtule/5.jpg",
-            "foto/fotkyweb/vrtule/10.jpg",
-            "foto/fotkyweb/vrtule/13.jpg",
-            "foto/fotkyweb/vrtule/14.jpg"
-        ],
-        "S_UCHYCENIM_NA_ZED_A_PODSVICENI": [
+            "foto/fotkyweb/vrtule/7.jpg",
+            "foto/fotkyweb/vrtule/8.jpg",
             "foto/fotkyweb/vrtule/9.jpg",
+            "foto/fotkyweb/vrtule/10.jpg",
+            "foto/fotkyweb/vrtule/11.jpg",
+            "foto/fotkyweb/vrtule/12.jpg"
+        ],
+        "PODSVICENI": [
+            "foto/fotkyweb/vrtule/6.jpg",
             "foto/fotkyweb/vrtule/2.jpg",
             "foto/fotkyweb/vrtule/3.jpg",
             "foto/fotkyweb/vrtule/4.jpg",
             "foto/fotkyweb/vrtule/5.jpg",
-            "foto/fotkyweb/vrtule/6.jpg",
             "foto/fotkyweb/vrtule/7.jpg",
             "foto/fotkyweb/vrtule/8.jpg",
-            "foto/fotkyweb/vrtule/1.jpg",
+            "foto/fotkyweb/vrtule/9.jpg",
             "foto/fotkyweb/vrtule/10.jpg",
-            "foto/fotkyweb/vrtule/13.jpg",
-            "foto/fotkyweb/vrtule/14.jpg"
+            "foto/fotkyweb/vrtule/11.jpg",
+            "foto/fotkyweb/vrtule/12.jpg"
         ]
     },
     product4: { // Vrtulový list
@@ -182,12 +184,12 @@ const variantData = {
 
 const variantDataVrtule = {
     BEZ_PODSVICENI: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze skkolaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku.", price: "92 000 Kč" },
-    PODSVICENI: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklokaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku. Jednotlivé listy jsou osvětleny LED pásky, které jsou vždy umístěny na zadní straně jednotlivých listů. Všechna světla můžete ovládat pomocí dálkového ovladače, který je součástí balení.", price: "104 000 Kč" }
+    PODSVICENI: { desc: "Maketa vrtule je ideální pro reklamu vaši firmy či jako dekorace ve vaší kanceláři nebo i doma. Vrtule je vyrobena ze sklokaminátu tudíž je vhodná i do exteriéru. Jedná se o věrnou repliku v měřítku 1:1, která do posledního detailu ctí podobu originálního výrobku. Jednotlivé listy jsou osvětleny LED pásky, které jsou vždy umístěny na zadní straně jednotlivých listů. Všechna světla můžete ovládat pomocí dálkového ovladače, který je součástí balení, nebo aplikace v mobilním telefonu.", price: "104 000 Kč" }
 };
 
 const variantDataVrtulovyList = {
     BEZ_PODSVICENI: { desc: "Maketa vrtulobého listu v originálním měřítku s unašečem, veškerými popisky a pojízdným podstavcem na kterém jsou zobrazeny některé ze známých symbolů, které se vyskytovali i na původních letadlech.", price: "23 000 Kč" },
-    S_PODSVICENIM: { desc: "Maketa vrtulobého listu v originálním měřítku s unašečem, veškerými popisky a pojízdným podstavcem na kterém jsou zobrazeny některé ze známých symbolů, které se vyskytovali i na původních letadlech. Součástí je i LED podsvícení, které je připevněné k listu v jeho zadní části. Ovládá se pomocí ovladače, který je součástí balení.", price: "31 000 Kč" }
+    S_PODSVICENIM: { desc: "Maketa vrtulobého listu v originálním měřítku s unašečem, veškerými popisky a pojízdným podstavcem na kterém jsou zobrazeny některé ze známých symbolů, které se vyskytovali i na původních letadlech. Součástí je i LED podsvícení, které je připevněné k listu v jeho zadní části. Ovládá se pomocí ovladače, který je součástí balení, nebo aplikace v mobilním telefonu.", price: "31 000 Kč" }
 };
 
 // English Translations
@@ -199,12 +201,12 @@ const variantDataEn = {
 
 const variantDataVrtuleEn = {
     BEZ_PODSVICENI: { desc: "The propeller replica is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail.", price: "3 850 Euro" },
-    PODSVICENI: { desc: "The propeller replica is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail. Individual blades are illuminated by LED strips placed on the back of each blade. All lights can be controlled via the included remote control.", price: "4 300 Euro" }
+    PODSVICENI: { desc: "The propeller replica is ideal for advertising your company or as a decoration in your office or home. The propeller is made of fiberglass, so it is also suitable for outdoors. It is a faithful 1:1 scale replica, honoring the original product down to the last detail. Individual blades are illuminated by LED strips placed on the back of each blade. All lights can be controlled via the included remote control or a mobile phone application.", price: "4 300 Euro" }
 };
 
 const variantDataVrtulovyListEn = {
-    BEZ_PODSVICENI: { desc: "Propeller blade replica in original scale with spinner, all markings, and a movable base featuring some of the famous symbols found on original aircraft.", price: "950 Euro" },
-    S_PODSVICENIM: { desc: "Propeller blade replica in original scale with spinner, all markings, and a movable base featuring some of the famous symbols found on original aircraft. Includes LED backlighting attached to the rear of the blade. Controlled via the included remote.", price: "1 300 Euro" }
+    BEZ_PODSVICENI: { desc: "A full-scale replica of a propeller blade with a mounting hub, all markings, and a wheeled stand displaying some of the well-known symbols that also appeared on the original aircraft.", price: "950 Euro" },
+    S_PODSVICENIM: { desc: "A full-scale replica of a propeller blade with a mounting hub, all markings, and a wheeled stand displaying some of the well-known symbols that also appeared on the original aircraft. Includes LED backlighting attached to the rear of the blade. Controlled via the included remote control or a mobile phone application.", price: "1 300 Euro" }
 };
 
 // Obecná funkce pro aktualizaci varianty produktu
@@ -272,8 +274,11 @@ function createThumbnail(src, productId, index) {
     }
 
     img.addEventListener("click", () => {
+        const oldIndex = selectedImageIndex[productId];
+        if (oldIndex === index) return;
+        const direction = index > oldIndex ? 1 : -1;
         selectedImageIndex[productId] = index;
-        updateProductView(productId);
+        updateProductView(productId, direction);
     });
     return img;
 }
@@ -310,7 +315,7 @@ function nextThumbnail(productId) { moveThumbnail(productId, 1); }
 function prevThumbnail(productId) { moveThumbnail(productId, -1); }
 
 // Central function to update the view based on state
-function updateProductView(productId) {
+function updateProductView(productId, direction = 1) {
     const images = productImages[productId];
     if (!images || images.length === 0) return;
 
@@ -322,17 +327,42 @@ function updateProductView(productId) {
         newSrc = '../' + newSrc;
     }
 
-    // 1. Update Main Image
+    // 1. Update Main Image with Slide Animation
     const img = document.getElementById(`mainImage-${productId}`);
     const link = document.getElementById(`mainImageLink-${productId}`);
-    if (img) {
-        img.classList.remove('carousel-image-anim');
-        img.src = newSrc;
+    const wrapper = img ? img.parentElement : null;
 
-        // Update SEO alt text for main image
+    if (img && wrapper) {
+        // Create an animated clone of the old image
+        const clone = img.cloneNode(true);
+        clone.id = "";
+        clone.classList.add("carousel-clone-image");
+        clone.removeAttribute("data-lightbox");
+        wrapper.appendChild(clone);
+
+        // Determine correct sliding direction
+        if (direction >= 0) {
+            clone.style.animation = "slideOutLeft 0.3s ease-in-out forwards";
+            img.style.animation = "slideInRight 0.3s ease-in-out forwards";
+        } else {
+            clone.style.animation = "slideOutRight 0.3s ease-in-out forwards";
+            img.style.animation = "slideInLeft 0.3s ease-in-out forwards";
+        }
+
+        // Apply new source immediately to main image so it slides in
+        img.src = newSrc;
         const productName = productNames[productId] || "Produkt";
         img.alt = `${productName} - detail ${idx + 1}`;
+
+        // Remove the clone after animation completes
+        setTimeout(() => {
+            if (clone.parentNode) {
+                clone.parentNode.removeChild(clone);
+            }
+            img.style.animation = ""; // reset animation property
+        }, 300);
     }
+
     if (link) {
         link.href = newSrc;
     }
@@ -391,7 +421,8 @@ function moveMainImage(productId, offset) {
     // Update selected index
     selectedImageIndex[productId] = (selectedImageIndex[productId] + offset + length) % length;
 
-    updateProductView(productId);
+    const direction = offset > 0 ? 1 : -1;
+    updateProductView(productId, direction);
 }
 
 function nextMainImage(productId) { moveMainImage(productId, 1); }
@@ -716,6 +747,16 @@ function initProductGalleries() {
 function initExperienceGalleries() {
     Object.keys(experienceImages).forEach(expId => {
         setupLightboxGallery(expId, experienceImages[expId]);
+
+        // Přednačtení (Preload) do mezipaměti proti problikávání slideru
+        experienceImages[expId].forEach(src => {
+            const tempImg = new Image();
+            let finalSrc = src;
+            if (window.location.pathname.includes('/EN/') && !src.startsWith('../') && !src.startsWith('http') && !src.startsWith('/')) {
+                finalSrc = '../' + src;
+            }
+            tempImg.src = finalSrc;
+        });
     });
 }
 
@@ -782,24 +823,34 @@ function changeExpImage(expId, offset) {
     const imgElement = document.getElementById(`img-${expId}`);
     const linkElement = document.getElementById(`link-${expId}`);
 
-    if (imgElement) {
-        // Ensure animation class is present
-        if (!imgElement.classList.contains('carousel-image-anim')) {
-            imgElement.classList.add('carousel-image-anim');
+    const wrapper = imgElement ? imgElement.parentElement : null;
+
+    if (imgElement && wrapper) {
+        // Create an animated clone of the old image
+        const clone = imgElement.cloneNode(true);
+        clone.id = "";
+        clone.classList.add("carousel-clone-image");
+        wrapper.appendChild(clone);
+
+        // Determine correct sliding direction
+        if (offset >= 0) {
+            clone.style.animation = "slideOutLeft 0.3s ease-in-out forwards";
+            imgElement.style.animation = "slideInRight 0.3s ease-in-out forwards";
+        } else {
+            clone.style.animation = "slideOutRight 0.3s ease-in-out forwards";
+            imgElement.style.animation = "slideInLeft 0.3s ease-in-out forwards";
         }
 
-        // Start fade out
-        imgElement.classList.add('hidden');
+        // Apply new source immediately to main image so it slides in
+        imgElement.src = newSrc;
 
-        // Wait for fade out (200ms matches CSS transition)
+        // Remove the clone after animation completes
         setTimeout(() => {
-            imgElement.src = newSrc;
-            // Short delay to allow src change to register before fading back in
-            // Using onload can be safer for network, but fixed timeout feels smoother locally
-            setTimeout(() => {
-                imgElement.classList.remove('hidden');
-            }, 50);
-        }, 200);
+            if (clone.parentNode) {
+                clone.parentNode.removeChild(clone);
+            }
+            imgElement.style.animation = ""; // reset animation property
+        }, 300);
     }
 
     if (linkElement) {
@@ -810,7 +861,7 @@ function changeExpImage(expId, offset) {
 // --- HLAVNÍ INITIALIZACE GALERIÍ PO NAČTENÍ DOM ---
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Inicializace skrytých galerií
+    // 1. Inicializace skrytých galerií a přednačtení paměti
     initProductGalleries();
     initExperienceGalleries();
 
