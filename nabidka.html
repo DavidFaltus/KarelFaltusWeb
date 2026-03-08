@@ -58,6 +58,26 @@
   <link rel="manifest" href="site.webmanifest">
   <script src="script.js" defer></script>
   <script src="lightbox-plus-jquery.js" defer></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Aero Composites",
+    "image": "https://www.aerocomposites.cz/foto/ikony/logoKarelF.png",
+    "url": "https://www.aerocomposites.cz/",
+    "telephone": "+420604272154",
+    "email": "aerocomposites@seznam.cz",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Řetůvka 51",
+      "addressLocality": "Řetůvka",
+      "postalCode": "56141",
+      "addressCountry": "CZ"
+    },
+    "founder": "Karel Faltus"
+  }
+  </script>
 </head>
 
 
@@ -76,8 +96,8 @@
   <header>
     <div class="pozadi__jinestranky">
       <nav id="navbar" class="menu">
-        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png"
-            alt="Logo Aero Composites Karel Faltus" / ></a>
+        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png" alt="Logo Aero Composites Karel Faltus"
+            /></a>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
@@ -136,7 +156,8 @@
         </div>
       </nav>
       <div class="nadpis__jinestranky">
-        <h1>Nabídka</h1>
+        <h1 class="sr-only">Nabídka maket letadel a leteckých doplňků Aero Composites</h1>
+        <span class="visual-h1" aria-hidden="true">Nabídka</span>
       </div>
     </div>
   </header>
@@ -146,7 +167,8 @@
       <div class="produkt-content">
         <div class="produkt-image">
           <a id="mainImageLink-product1">
-            <img id="mainImage-product1" src="foto/fotkyweb/spitfire/1.jpg" alt="Maketa letadla Spitfire Mk.IX" / loading="lazy">
+            <img id="mainImage-product1" src="foto/fotkyweb/spitfire/1.jpg" alt="Maketa letadla Spitfire Mk.IX" /
+              loading="lazy">
           </a>
         </div>
       </div>
@@ -173,7 +195,8 @@
       <div class="produkt-content">
         <div class="produkt-image">
           <a id="mainImageLink-product2">
-            <img id="mainImage-product2" src="foto/fotkyweb/vrtule/1.jpg" alt="Čtyřlistá vrtule Spitfire Mk.IX" / loading="lazy">
+            <img id="mainImage-product2" src="foto/fotkyweb/vrtule/1.jpg" alt="Čtyřlistá vrtule Spitfire Mk.IX" /
+              loading="lazy">
           </a>
         </div>
       </div>
@@ -223,8 +246,8 @@
       <div class="produkt-content">
         <div class="produkt-image">
           <a id="mainImageLink-product3">
-            <img id="mainImage-product3" src="foto/fotkyweb/albatros/1.jpg"
-              alt="Maketa stíhacího letounu Albatros D.5" / loading="lazy">
+            <img id="mainImage-product3" src="foto/fotkyweb/albatros/1.jpg" alt="Maketa stíhacího letounu Albatros D.5"
+              / loading="lazy">
           </a>
         </div>
       </div>

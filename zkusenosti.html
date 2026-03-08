@@ -59,6 +59,26 @@
   <link rel="manifest" href="site.webmanifest">
   <script src="script.js"></script>
   <script src="lightbox-plus-jquery.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Aero Composites",
+    "image": "https://www.aerocomposites.cz/foto/ikony/logoKarelF.png",
+    "url": "https://www.aerocomposites.cz/",
+    "telephone": "+420604272154",
+    "email": "aerocomposites@seznam.cz",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Řetůvka 51",
+      "addressLocality": "Řetůvka",
+      "postalCode": "56141",
+      "addressCountry": "CZ"
+    },
+    "founder": "Karel Faltus"
+  }
+  </script>
 </head>
 
 
@@ -77,8 +97,8 @@
   <header>
     <div class="pozadi__jinestranky">
       <nav id="navbar" class="menu">
-        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png"
-            alt="Logo Aero Composites Karel Faltus" / ></a>
+        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png" alt="Logo Aero Composites Karel Faltus"
+            /></a>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
@@ -137,7 +157,8 @@
         </div>
       </nav>
       <div class="nadpis__jinestranky">
-        <h1>Zkušenosti</h1>
+        <h1 class="sr-only">Zkušenosti a realizované projekty z oblasti letectví Aero Composites</h1>
+        <span class="visual-h1" aria-hidden="true">Zkušenosti</span>
       </div>
     </div>
   </header>
@@ -186,7 +207,8 @@
       <div class="zarovnaniDoPrava-image carousel-wrapper">
         <div class="exp-arrow prev" onclick="changeExpImage('eagle', -1)">&#10094;</div>
         <a href="foto/eagle/1.jpg" data-lightbox="eagle" data-title="Eagle" id="link-eagle">
-          <img src="foto/eagle/1.jpg" alt="Model letadla Eagle" id="img-eagle" class="carousel-image-anim" / loading="lazy">
+          <img src="foto/eagle/1.jpg" alt="Model letadla Eagle" id="img-eagle" class="carousel-image-anim" /
+            loading="lazy">
         </a>
         <div class="exp-arrow next" onclick="changeExpImage('eagle', 1)">&#10095;</div>
       </div>
@@ -225,7 +247,8 @@
       <div class="zarovnaniDoPrava-image carousel-wrapper">
         <div class="exp-arrow prev" onclick="changeExpImage('phoenix', -1)">&#10094;</div>
         <a href="foto/phoenix/1.jpg" data-lightbox="phoenix" data-title="Phoenix" id="link-phoenix">
-          <img src="foto/phoenix/1.jpg" alt="Vývoj letadla Phoenix" id="img-phoenix" class="carousel-image-anim" / loading="lazy">
+          <img src="foto/phoenix/1.jpg" alt="Vývoj letadla Phoenix" id="img-phoenix" class="carousel-image-anim" /
+            loading="lazy">
         </a>
         <div class="exp-arrow next" onclick="changeExpImage('phoenix', 1)">&#10095;</div>
       </div>

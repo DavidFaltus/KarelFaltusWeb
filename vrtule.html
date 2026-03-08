@@ -80,6 +80,26 @@
   <link href="lightbox.css" rel="stylesheet" type="text/css" />
   <script src="script.js"></script>
   <script src="lightbox-plus-jquery.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Aero Composites",
+    "image": "https://www.aerocomposites.cz/foto/ikony/logoKarelF.png",
+    "url": "https://www.aerocomposites.cz/",
+    "telephone": "+420604272154",
+    "email": "aerocomposites@seznam.cz",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Řetůvka 51",
+      "addressLocality": "Řetůvka",
+      "postalCode": "56141",
+      "addressCountry": "CZ"
+    },
+    "founder": "Karel Faltus"
+  }
+  </script>
 </head>
 
 
@@ -98,7 +118,7 @@
   <header>
     <div class="pozadi__jinestranky">
       <nav id="navbar" class="menu">
-        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png" alt="logo" / ></a>
+        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png" alt="logo" /></a>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
@@ -157,7 +177,8 @@
         </div>
       </nav>
       <div class="nadpis__jinestranky">
-        <h1>Vrtule</h1>
+        <h1 class="sr-only">Designová maketa letecké vrtule Spitfire v měřítku 1:1</h1>
+        <span class="visual-h1" aria-hidden="true">Vrtule</span>
       </div>
     </div>
   </header>
@@ -202,7 +223,8 @@
           <div class="tech-drawing-wrapper">
             <a href="foto/fotkyweb/vrtule/drawing.png" data-lightbox="tech-drawing"
               data-title="Technický nákres Spitfire Mk.IX">
-              <img src="foto/fotkyweb/vrtule/drawing.png" alt="Technický nákres Spitfire" class="tech-drawing-img" loading="lazy">
+              <img src="foto/fotkyweb/vrtule/drawing.png" alt="Technický nákres Spitfire" class="tech-drawing-img"
+                loading="lazy">
             </a>
           </div>
           <div class="tech-table-wrapper">

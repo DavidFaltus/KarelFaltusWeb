@@ -56,6 +56,26 @@
   <meta name="theme-color" content="#000000">
   <link rel="manifest" href="site.webmanifest">
   <script src="script.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Aero Composites",
+    "image": "https://www.aerocomposites.cz/foto/ikony/logoKarelF.png",
+    "url": "https://www.aerocomposites.cz/",
+    "telephone": "+420604272154",
+    "email": "aerocomposites@seznam.cz",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Řetůvka 51",
+      "addressLocality": "Řetůvka",
+      "postalCode": "56141",
+      "addressCountry": "CZ"
+    },
+    "founder": "Karel Faltus"
+  }
+  </script>
 </head>
 
 
@@ -74,8 +94,8 @@
   <header>
     <div class="pozadi__jinestranky">
       <nav id="navbar" class="menu">
-        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png"
-            alt="Logo Aero Composites Karel Faltus" / ></a>
+        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png" alt="Logo Aero Composites Karel Faltus"
+            /></a>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
@@ -134,7 +154,8 @@
         </div>
       </nav>
       <div class="nadpis__jinestranky">
-        <h1>Kontakt</h1>
+        <h1 class="sr-only">Kontakt na Aero Composites - výroba leteckých maket a replik</h1>
+        <span class="visual-h1" aria-hidden="true">Kontakt</span>
       </div>
     </div>
   </header>

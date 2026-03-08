@@ -28,7 +28,8 @@ body {
   overflow-x: hidden;
 }
 
-.nadpis__jinestranky h1 {
+.nadpis__jinestranky h1,
+.nadpis__jinestranky .visual-h1 {
   color: #ffff;
   font-size: 50px;
   text-align: center;
@@ -321,7 +322,8 @@ nav li::after {
   transform: translateY(-50%);
 }
 
-.hero h1 {
+.hero h1,
+.hero .visual-h1 {
   color: white;
   font-size: 60px;
   margin: 20px;
@@ -331,6 +333,22 @@ nav li::after {
   font-size: 35px;
   font-weight: 80;
   margin: 20px;
+}
+
+.sr-only {
+  position: absolute !important;
+  left: -10000px !important;
+  top: auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  white-space: nowrap !important;
+}
+
+.visual-h1 {
+  display: block;
+  font-weight: bold;
 }
 
 button {
