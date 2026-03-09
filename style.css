@@ -6,6 +6,10 @@
 
 body {
   margin: 0;
+  background-color: #f9f9f9;
+  background-image: radial-gradient(#e0e0e0 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: moveBackground 15s linear infinite;
 }
 
 .uvodni-stranka {
@@ -150,7 +154,7 @@ body {
   content: '';
   width: 0;
   height: 3px;
-  background-color: #1E88E5;
+  background-color: #005494;
   display: block;
   left: 0;
   transition: 0.7s;
@@ -210,7 +214,7 @@ nav li::after {
   content: '';
   width: 0%;
   height: 3px;
-  background-color: #1E88E5;
+  background-color: #005494;
   display: block;
   left: 0;
   transition: 0.7s;
@@ -275,7 +279,7 @@ nav li::after {
   z-index: 1;
   top: 0;
   right: 0;
-  background-color: #1E88E5;
+  background-color: #005494;
   overflow-x: hidden;
   padding-top: 70px;
   transition: 0.5s;
@@ -361,7 +365,7 @@ button {
   padding: 15px 0;
   margin: 12px 10px;
   border-radius: 25px;
-  border: 2px solid #1E88E5;
+  border: 2px solid #005494;
   background: transparent;
   position: relative;
   cursor: pointer;
@@ -376,7 +380,7 @@ span {
 }
 
 .hero button:hover {
-  background-color: #1E88E5;
+  background-color: #005494;
 }
 
 
@@ -465,10 +469,11 @@ footer h2 {
   display: flex;
   align-items: center;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   padding: 20px;
   border-radius: 15px;
-  background-color: #fdfdfd;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -512,7 +517,7 @@ footer h2 {
 }
 
 .nazev-kategorie2 p {
-  color: #ffff;
+  color: #005494;
   font-size: 45px;
   font-weight: bold;
   margin: auto;
@@ -521,7 +526,7 @@ footer h2 {
 }
 
 .nazev-kategorie2 h2 {
-  color: #ffff;
+  color: #005494;
   font-size: 50px;
   margin: 20px;
   padding-bottom: 25px;
@@ -530,21 +535,32 @@ footer h2 {
 #sluzby {
   width: 100%;
   margin-bottom: 0;
-  background-color: #1B272F;
+  padding-bottom: 80px;
+}
+
+.sluzby-container {
+  max-width: 1400px;
+  width: 90%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+  box-sizing: border-box;
 }
 
 .sluzby-box {
-  max-width: 1920px;
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 30%);
+  grid-template-columns: repeat(2, 1fr);
   gap: 60px;
   justify-content: center;
 }
 
 .sluzba {
   position: relative;
-  color: #1E88E5;
+  color: #005494;
   text-align: center;
   font-size: 25px;
   border-radius: 7px;
@@ -553,7 +569,9 @@ footer h2 {
 .sluzba img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 1;
+  /* Force square aspect ratio */
   object-fit: cover;
   border-radius: 7px;
 }
@@ -611,7 +629,7 @@ footer h2 {
 
 .zarovnaniDoLeva-text h2,
 .zarovnaniDoPrava-text h2 {
-  color: #1E88E5;
+  color: #005494;
   font-size: 45px;
 }
 
@@ -626,7 +644,7 @@ footer h2 {
 
 .zarovnaniDoLeva-text a,
 .zarovnaniDoPrava-text a {
-  color: #1E88E5;
+  color: #005494;
   display: inline-block;
   margin-top: 10px;
   text-decoration: none;
@@ -637,7 +655,7 @@ footer h2 {
 .zarovnaniDoPrava-text a:hover {
   transform: scale(1.05);
   text-decoration: underline;
-  text-decoration-color: #1E88E5;
+  text-decoration-color: #005494;
 }
 
 .zarovnaniDoLeva-image img,
@@ -657,8 +675,11 @@ footer h2 {
 }
 
 .project-item {
-  background-color: #fff;
-  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
   text-align: center;
   padding: 10px;
 }
@@ -702,7 +723,7 @@ footer h2 {
 }
 
 .produkt h2 {
-  color: #1E88E5;
+  color: #005494;
   font-size: 2rem;
 }
 
@@ -723,13 +744,17 @@ footer h2 {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
-  border-radius: 10px;
+  border-radius: 15px;
   margin: 0 auto;
   margin-top: 50px;
-  padding: 20px;
+  padding: 40px;
   position: relative;
   font-size: 35px;
   width: 70%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
 }
 
 /***** ČÁST S HLAVNÍM OBRÁZKEM A MINIATURAMI *****/
@@ -833,28 +858,47 @@ footer h2 {
 }
 
 .objednani {
-  background-color: #1E88E5;
+  background: linear-gradient(135deg, #005494, #1E88E5);
   color: white;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 35px;
+  font-weight: bold;
   flex: 1;
   width: 100%;
   margin: 0;
+  padding: 15px 0;
+  box-shadow: 0 4px 15px rgba(0, 84, 148, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.objednani:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 84, 148, 0.5);
+  background: linear-gradient(135deg, #003f72, #1565C0);
 }
 
 .redirect {
-  background-color: #1E88E5;
+  background: linear-gradient(135deg, #005494, #1E88E5);
   color: white;
   padding: 10px 20px;
   border: none;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 8px;
   font-size: 35px;
+  font-weight: bold;
   flex: 1;
   width: 50%;
   text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 84, 148, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.redirect:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 84, 148, 0.5);
+  background: linear-gradient(135deg, #003f72, #1565C0);
 }
 
 .produkt-btn {
@@ -1158,7 +1202,7 @@ form {
 #btnOdeslat {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #1E88E5;
+  background-color: #005494;
   color: white;
   border: none;
   border-radius: 5px;
@@ -1201,7 +1245,7 @@ h1 {
 }
 
 fieldset {
-  background-color: #1E88E5;
+  background-color: #005494;
   border: none;
   border-radius: 7px;
   width: 100%;
@@ -1242,7 +1286,7 @@ input {
 .select-verze,
 .select-vrtule,
 .podstava {
-  background-color: #1E88E5;
+  background-color: #005494;
   color: white;
   cursor: pointer;
   width: 65%;
@@ -1287,7 +1331,7 @@ input {
     height: 50px;
     padding-top: 0px;
     text-decoration: none;
-    background-color: #1E88E5;
+    background-color: #005494;
     text-align: center;
   }
 
@@ -1567,7 +1611,7 @@ input {
   }
 
   fieldset {
-    background-color: #1E88E5;
+    background-color: #005494;
     border: none;
     border-radius: 7px;
     width: 90%;
@@ -1597,13 +1641,14 @@ input {
 
   form {
     width: 100%;
-    background-color: #1E88E5;
+    background-color: #005494;
   }
 }
 
 /*---NOVÁ SEKCE KONTAKT INFO---*/
 .kontakt-info-sekce {
-  background-color: white;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
   color: black;
   padding: 60px 0;
   text-align: center;
@@ -1638,7 +1683,7 @@ input {
 .ikona-kruh {
   width: 100px;
   height: 100px;
-  border: 7px solid #1E88E5;
+  border: 7px solid #005494;
   /* Modrá barva webu */
   border-radius: 50%;
   display: flex;
@@ -1690,10 +1735,15 @@ input {
 
 /* --- TECHNICKÉ SPECIFIKACE (SCOPED) --- */
 .tech-specs-wrapper {
-  background-color: #f9f9f9;
-  padding: 50px 0;
-  margin-top: 40px;
-  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 50px;
+  margin: 40px auto;
+  max-width: 1400px;
+  width: 90%;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
   box-sizing: border-box;
 }
 
@@ -1707,7 +1757,7 @@ input {
 .tech-specs-title {
   text-align: center;
   font-size: 2rem;
-  color: #1E88E5;
+  color: #005494;
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1809,7 +1859,7 @@ input {
 .exp-arrow {
   cursor: pointer;
   font-size: 40px;
-  color: #1E88E5;
+  color: #005494;
   padding: 0 15px;
   user-select: none;
   transition: transform 0.2s, color 0.2s;
@@ -1854,9 +1904,16 @@ input {
 }
 
 .kontakt-udaje-sekce {
+  max-width: 1400px;
+  width: 90%;
+  margin: 40px auto 50px auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
   padding: 60px 20px;
-  background-color: #fff;
-  margin-bottom: 50px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  box-sizing: border-box;
 }
 
 .kontakt-udaje-container {
@@ -1878,7 +1935,7 @@ input {
 
 .kontakt-nadpis {
   font-size: 2.5rem;
-  color: #1E88E5;
+  color: #005494;
   margin-bottom: 30px;
   text-transform: uppercase;
   font-weight: bold;
@@ -1888,19 +1945,26 @@ input {
 .kontakt-polozka-nova {
   display: flex;
   align-items: center;
-  background-color: #f8f9fa;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  border: 1px solid #eee;
+  border: 1px solid #e0e0e0;
+}
+
+.kontakt-polozka-nova:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 84, 148, 0.1);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .ikona-wrapper {
   width: 60px;
   height: 60px;
-  background-color: #1E88E5;
+  background-color: #005494;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1917,7 +1981,7 @@ input {
 
 .text-info h3 {
   margin: 0 0 5px 0;
-  color: #1E88E5;
+  color: #005494;
   font-size: 1.2rem;
   font-weight: bold;
 }
@@ -1971,8 +2035,6 @@ input {
 .o-mne {
   width: 100%;
   padding: 80px 0;
-  background-color: #1B272F;
-  /* Changed from #f9f9f9 to match other sections */
   display: flex;
   justify-content: center;
 }
@@ -1985,6 +2047,12 @@ input {
   align-items: center;
   gap: 60px;
   margin: 0 auto;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
 }
 
 .o-mne-image {
@@ -2001,13 +2069,11 @@ input {
 
 .o-mne-text {
   flex: 1;
-  color: #fff;
-  /* Changed from #333 to white for dark background */
+  color: #333;
 }
 
 .o-mne-text h2 {
-  color: #fff;
-  /* Changed from #1E88E5 to white for better contrast on dark bg */
+  color: #005494;
   font-size: 3rem;
   margin-bottom: 20px;
   text-transform: uppercase;
@@ -2024,10 +2090,8 @@ input {
   display: inline-block;
   padding: 15px 30px;
   background-color: transparent;
-  color: #fff;
-  /* Changed from #1E88E5 to white */
-  border: 2px solid #fff;
-  /* Changed from #1E88E5 to white */
+  color: #005494;
+  border: 2px solid #005494;
   border-radius: 25px;
   text-decoration: none;
   font-weight: bold;
@@ -2037,9 +2101,8 @@ input {
 }
 
 .cta-button:hover {
-  background-color: #fff;
-  color: #1E88E5;
-  /* Inverse colors on hover */
+  background-color: #005494;
+  color: #fff;
 }
 
 
@@ -2048,7 +2111,6 @@ input {
 .benefity {
   width: 100%;
   padding: 80px 0;
-  background-color: #1B272F;
 }
 
 .benefity-header {
@@ -2058,7 +2120,7 @@ input {
 }
 
 .benefity-header h2 {
-  color: #fff;
+  color: #005494;
   font-size: 3rem;
   margin-bottom: 15px;
   text-transform: uppercase;
@@ -2067,7 +2129,7 @@ input {
 .benefity-header .separator {
   width: 100px;
   height: 4px;
-  background-color: #1E88E5;
+  background-color: #005494;
   margin: 0 auto;
 }
 
@@ -2081,17 +2143,20 @@ input {
 }
 
 .benefit-card {
-  background-color: transparent;
   padding: 40px 30px;
-  border-radius: 10px;
+  border-radius: 15px;
   text-align: center;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: 1px solid #e0e0e0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
 }
 
 .benefit-card:hover {
   transform: translateY(-10px);
-  background-color: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 8px 25px rgba(0, 84, 148, 0.15);
 }
 
 .benefit-icon {
@@ -2102,7 +2167,7 @@ input {
   width: 100px;
   height: 100px;
   background-color: transparent;
-  border: 2px solid #1E88E5;
+  border: 2px solid #005494;
   border-radius: 50%;
 }
 
@@ -2117,18 +2182,18 @@ input {
 .benefit-icon svg circle,
 .benefit-icon svg polygon,
 .benefit-icon svg polyline {
-  stroke: #fff !important;
+  stroke: #005494 !important;
 }
 
 .benefit-card h3 {
-  color: #fff;
+  color: #333;
   font-size: 1.8rem;
   margin-bottom: 15px;
   font-weight: bold;
 }
 
 .benefit-card p {
-  color: #ccc;
+  color: #555;
   font-size: 1.1rem;
   line-height: 1.5;
 }
@@ -2329,9 +2394,10 @@ input {
   margin: 25px auto;
   padding: 40px;
   border: 1px solid #e0e0e0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border-radius: 15px;
-  background-color: #fdfdfd;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
   color: #333;
   line-height: 1.6;
 }
@@ -2380,7 +2446,9 @@ input {
 #formular form {
   width: 100% !important;
   max-width: 700px !important;
-  background: #ffffff !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(5px) !important;
+  border: 1px solid #e0e0e0 !important;
   border-radius: 16px !important;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08) !important;
   padding: 40px !important;
@@ -2405,20 +2473,25 @@ input {
 }
 
 #emailForm {
-  background: #ffffff !important;
+  background: rgba(255, 255, 255, 0.7) !important;
+  backdrop-filter: blur(5px) !important;
+  border: 1px solid #e0e0e0 !important;
   border-radius: 16px !important;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
   padding: 40px !important;
-  border: none !important;
   width: 90% !important;
   max-width: 550px !important;
   display: flex !important;
   flex-direction: column !important;
   gap: 10px !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 #emailForm p {
-  color: #1E88E5 !important;
+  color: #005494 !important;
   font-size: 2rem !important;
   font-weight: 800 !important;
   text-transform: uppercase !important;
@@ -2435,14 +2508,16 @@ input {
   box-sizing: border-box !important;
   padding: 16px 20px !important;
   font-size: 16px !important;
-  border: 2px solid #e2e8f0 !important;
+  border: 1px solid #d1d5db !important;
   border-radius: 8px !important;
-  background-color: #f8fafc !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(4px) !important;
   color: #0f172a !important;
   margin: 0 !important;
   text-align: left !important;
   transition: all 0.3s ease !important;
   font-family: inherit !important;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02) !important;
 }
 
 #formular #dotaz {
@@ -2453,7 +2528,7 @@ input {
 #formular input:focus,
 #emailForm input:focus {
   outline: none !important;
-  border-color: #1E88E5 !important;
+  border-color: #005494 !important;
   background-color: #ffffff !important;
   box-shadow: 0 0 0 4px rgba(30, 136, 229, 0.15) !important;
 }
@@ -2473,7 +2548,7 @@ input {
   font-weight: 700 !important;
   text-transform: uppercase !important;
   letter-spacing: 1px !important;
-  background: linear-gradient(135deg, #1E88E5 0%, #005cb2 100%) !important;
+  background: linear-gradient(135deg, #005494 0%, #005cb2 100%) !important;
   color: #ffffff !important;
   border: none !important;
   border-radius: 8px !important;
@@ -2490,24 +2565,37 @@ input {
 }
 
 #emailForm button.close-btn {
-  width: 100% !important;
-  margin: 10px 0 0 0 !important;
-  padding: 14px 20px !important;
-  font-size: 1rem !important;
-  font-weight: 600 !important;
-  text-transform: uppercase !important;
-  background: transparent !important;
-  color: #64748b !important;
-  border: 2px solid #cbd5e1 !important;
-  border-radius: 8px !important;
+  position: absolute !important;
+  top: 15px !important;
+  right: 15px !important;
+  width: 35px !important;
+  height: 35px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 0 !important;
+  /* Hide the word Zavřít */
+  color: transparent !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+  border: 1px solid #cbd5e1 !important;
+  border-radius: 50% !important;
   cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 10 !important;
   transition: all 0.2s ease !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05) !important;
+}
+
+#emailForm button.close-btn::after {
+  content: "✖";
+  font-size: 1.2rem !important;
+  color: #64748b !important;
 }
 
 #emailForm button.close-btn:hover {
   background: #f1f5f9 !important;
-  color: #1e293b !important;
-  border-color: #94a3b8 !important;
+  transform: scale(1.1) !important;
 }
 
 /* RESPONSIVE UPRAVY PRO MOBIL */
@@ -2538,7 +2626,7 @@ input {
 .objednani,
 .redirect,
 .produkt-btn {
-  background: linear-gradient(135deg, #1E88E5 0%, #005cb2 100%) !important;
+  background: linear-gradient(135deg, #005494 0%, #005cb2 100%) !important;
   box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3) !important;
   color: #ffffff !important;
   border: none !important;
@@ -2565,3 +2653,188 @@ input {
 }
 
 /* --- KONEC PREMIUM FORMS UPGRADE --- */
+
+/* --- SPITFIRE BUILD ANIMATION --- */
+.spitfire-build-section {
+  position: relative;
+  height: 300vh;
+  /* Extra scroll space to allow transitioning */
+  background: transparent;
+  color: #333;
+}
+
+.build-sticky-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+  background: transparent;
+}
+
+@keyframes moveBackground {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 30px 30px;
+  }
+}
+
+.build-layers {
+  position: relative;
+  width: 50%;
+  height: 80vh;
+  max-width: 800px;
+}
+
+.build-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+.build-layer.layer-1 {
+  opacity: 1;
+  /* Default visible layer */
+}
+
+.build-text-container {
+  width: 40%;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+  padding-left: 50px;
+}
+
+.build-step {
+  position: relative;
+  transform: translateX(20px);
+  opacity: 0.2;
+  /* Make it partially visible before active to show structure */
+  transition: all 0.5s ease;
+  width: 100%;
+  pointer-events: none;
+}
+
+.build-step.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.build-step h3 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #005494;
+  text-transform: uppercase;
+}
+
+.build-step p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+}
+
+/* Responsivita pro menší obrazovky */
+@media screen and (max-width: 900px) {
+  .build-sticky-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 100px;
+  }
+
+  .build-layers {
+    width: 100%;
+    height: 40vh;
+  }
+
+  .build-text-container {
+    width: 100%;
+    height: 30vh;
+    padding-left: 0;
+    margin-top: 20px;
+  }
+
+  .build-step h3 {
+    font-size: 24px;
+  }
+
+  .build-step p {
+    font-size: 16px;
+  }
+}
+
+/* --- MODERN TECH GRID --- */
+.modern-tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+.tech-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+  border-radius: 12px;
+  padding: 25px 15px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 84, 148, 0.15);
+  border-color: #005494;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.tech-icon {
+  font-size: 32px;
+  margin-bottom: 12px;
+  color: #005494;
+  display: flex;
+  justify-content: center;
+}
+
+.tech-icon svg {
+  width: 40px;
+  height: 40px;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.tech-name {
+  font-size: 13px;
+  color: #777;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.tech-value {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}

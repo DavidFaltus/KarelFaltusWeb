@@ -82,7 +82,7 @@
     <script src="../script.js"></script>
     <script src="../lightbox-plus-jquery.js"></script>
 
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -218,6 +218,37 @@
             </div>
         </section>
 
+        <!-- ROZLOŽENÍ STAVBY SCROLL ANIMACE -->
+        <section class="spitfire-build-section">
+            <div class="build-sticky-container">
+                <div class="build-layers">
+                    <img src="../foto/fotkyweb/vrtule/blueprint_v4.png" class="build-layer layer-1"
+                        alt="Technical drawing of Propeller" />
+                    <img src="../foto/fotkyweb/vrtule/skeleton_v4.png" class="build-layer layer-2"
+                        alt="Raw composite propeller shape" />
+                    <img src="../foto/fotkyweb/vrtule/full_v4.png" class="build-layer layer-3"
+                        alt="Finished painted Propeller" />
+                </div>
+                <div class="build-text-container">
+                    <div class="build-step step-1 active">
+                        <h3>Step 1: Precise Draft</h3>
+                        <p>Precise computer modeling and drafts form the absolute foundation for a perfectly symmetrical
+                            shape.</p>
+                    </div>
+                    <div class="build-step step-2">
+                        <h3>Step 2: Raw Shape</h3>
+                        <p>Aerodynamic shapes are gradually hand-formed and sanded from durable composite laminate and
+                            fiberglass.</p>
+                    </div>
+                    <div class="build-step step-3">
+                        <h3>Step 3: Finished Product</h3>
+                        <p>Multiple layers of sanding, premium varnishing, and metal leading edges turn the composite
+                            into a true, functional jewel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- TECH SPECS -->
         <section class="tech-specs-wrapper">
             <div class="tech-specs-container">
@@ -231,28 +262,54 @@
                         </a>
                     </div>
                     <div class="tech-table-wrapper">
-                        <table class="tech-specs-table">
-                            <tr>
-                                <td>Diameter</td>
-                                <td>3300 mm</td>
-                            </tr>
-                            <tr>
-                                <td>Max. Blade Width</td>
-                                <td>260 mm</td>
-                            </tr>
-                            <tr>
-                                <td>Spinner Diameter</td>
-                                <td>635 mm</td>
-                            </tr>
-                            <tr>
-                                <td>Spinner Height</td>
-                                <td>660 mm</td>
-                            </tr>
-                            <tr>
-                                <td>Total Weight</td>
-                                <td>23 kg</td>
-                            </tr>
-                        </table>
+                        <div class="modern-tech-grid">
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        stroke="#005494" fill="none" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <line x1="2" y1="12" x2="22" y2="12" />
+                                    </svg></div>
+                                <div class="tech-name">Diameter</div>
+                                <div class="tech-value">3300 mm</div>
+                            </div>
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        stroke="#005494" fill="none" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M22 12H2M2 12l4-4M2 12l4 4M22 12l-4-4M22 12l-4 4" />
+                                    </svg></div>
+                                <div class="tech-name">Max. Blade Width</div>
+                                <div class="tech-value">260 mm</div>
+                            </div>
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        stroke="#005494" fill="none" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="6" />
+                                        <line x1="6" y1="12" x2="18" y2="12" />
+                                    </svg></div>
+                                <div class="tech-name">Spinner Diameter</div>
+                                <div class="tech-value">635 mm</div>
+                            </div>
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        stroke="#005494" fill="none" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 2v20M12 2l4 4M12 2L8 6M12 22l4-4M12 22l-4-4" />
+                                    </svg></div>
+                                <div class="tech-name">Spinner Height</div>
+                                <div class="tech-value">660 mm</div>
+                            </div>
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M6 10v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-9Z" />
+                                        <path d="M10 10V6a2 2 0 0 1 4 0v4" />
+                                    </svg></div>
+                                <div class="tech-name">Total Weight</div>
+                                <div class="tech-value">23 kg</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

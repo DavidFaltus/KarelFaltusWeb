@@ -82,7 +82,7 @@
     <script src="../script.js"></script>
     <script src="../lightbox-plus-jquery.js"></script>
 
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -224,6 +224,37 @@
             </div>
         </section>
 
+        <!-- ROZLOŽENÍ STAVBY SCROLL ANIMACE -->
+        <section class="spitfire-build-section">
+            <div class="build-sticky-container">
+                <div class="build-layers">
+                    <img src="../foto/fotkyweb/albatros/blueprint.png" class="build-layer layer-1"
+                        alt="Technical drawing of Albatros" />
+                    <img src="../foto/fotkyweb/albatros/skeleton.png" class="build-layer layer-2"
+                        alt="Albatros fuselage skeleton" />
+                    <img src="../foto/fotkyweb/albatros/full.png" class="build-layer layer-3"
+                        alt="Finished painted Albatros" />
+                </div>
+                <div class="build-text-container">
+                    <div class="build-step step-1 active">
+                        <h3>Step 1: Precise Draft</h3>
+                        <p>Production begins with carefully studied technical drawings ensuring perfect historical
+                            accuracy.</p>
+                    </div>
+                    <div class="build-step step-2">
+                        <h3>Step 2: Skeleton Structure</h3>
+                        <p>Hand-assembled internal structure using carefully selected materials and traditional
+                            techniques forms a robust foundation.</p>
+                    </div>
+                    <div class="build-step step-3">
+                        <h3>Step 3: Perfect Replica</h3>
+                        <p>Precise exterior plating, faithful camouflage spray, and dozens of period details bring this
+                            legendary fighter back to life.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- TECH SPECS -->
         <section class="tech-specs-wrapper">
             <div class="tech-specs-container">
@@ -237,28 +268,54 @@
                         </a>
                     </div>
                     <div class="tech-table-wrapper">
-                        <table class="tech-specs-table">
-                            <tr>
-                                <td>Wingspan</td>
-                                <td>900 cm</td>
-                            </tr>
-                            <tr>
-                                <td>Total Length</td>
-                                <td>733 cm</td>
-                            </tr>
-                            <tr>
-                                <td>Height</td>
-                                <td>270 cm</td>
-                            </tr>
-                            <tr>
-                                <td>Crew</td>
-                                <td>1 pilot</td>
-                            </tr>
-                            <tr>
-                                <td>Weight</td>
-                                <td>750 kg</td>
-                            </tr>
-                        </table>
+                        <div class="modern-tech-grid">
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        stroke="#005494" fill="none" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M22 12H2M2 12l4-4M2 12l4 4M22 12l-4-4M22 12l-4 4" />
+                                    </svg></div>
+                                <div class="tech-name">Wingspan</div>
+                                <div class="tech-value">900 cm</div>
+                            </div>
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        stroke="#005494" fill="none" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="2" y="6" width="20" height="12" rx="2" />
+                                        <path d="M6 6v4M10 6v4M14 6v4M18 6v4" />
+                                    </svg></div>
+                                <div class="tech-name">Total Length</div>
+                                <div class="tech-value">733 cm</div>
+                            </div>
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        stroke="#005494" fill="none" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 2v20M12 2l4 4M12 2L8 6M12 22l4-4M12 22l-4-4" />
+                                    </svg></div>
+                                <div class="tech-name">Height</div>
+                                <div class="tech-value">270 cm</div>
+                            </div>
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        stroke="#005494" fill="none" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                        <circle cx="12" cy="7" r="4" />
+                                    </svg></div>
+                                <div class="tech-name">Crew</div>
+                                <div class="tech-value">1 pilot</div>
+                            </div>
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M6 10v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-9Z" />
+                                        <path d="M10 10V6a2 2 0 0 1 4 0v4" />
+                                    </svg></div>
+                                <div class="tech-name">Weight</div>
+                                <div class="tech-value">750 kg</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

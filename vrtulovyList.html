@@ -118,8 +118,8 @@
   <header>
     <div class="pozadi__jinestranky">
       <nav id="navbar" class="menu">
-        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png" alt="Logo Aero Composites Karel Faltus"
-            /></a>
+        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png"
+            alt="Logo Aero Composites Karel Faltus" /></a>
         <ul class="menu__list">
           <li class="menu__item">
             <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
@@ -219,6 +219,36 @@
       </div>
     </section>
 
+    <!-- ROZLOŽENÍ STAVBY SCROLL ANIMACE -->
+    <section class="spitfire-build-section">
+      <div class="build-sticky-container">
+        <div class="build-layers">
+          <img src="foto/fotkyweb/světlo vrtule (stojan)/blueprint_v4.png" class="build-layer layer-1"
+            alt="Technický nákres listu" />
+          <img src="foto/fotkyweb/světlo vrtule (stojan)/skeleton_v4.png" class="build-layer layer-2"
+            alt="Surový laminátový list" />
+          <img src="foto/fotkyweb/světlo vrtule (stojan)/full_v4.png" class="build-layer layer-3"
+            alt="Dokončený podsvícený list" />
+        </div>
+        <div class="build-text-container">
+          <div class="build-step step-1 active">
+            <h3>Krok 1: Nákres listu</h3>
+            <p>Veškerý design začíná u návrhu ideálního zakřivení listu tak, aby esteticky působil přímo majestátně.</p>
+          </div>
+          <div class="build-step step-2">
+            <h3>Krok 2: Základní tvar</h3>
+            <p>Kompozitní laminátový list je v rané fázi vyřezán a zbroušen do dokonale hladkého, avšak zatím syrového
+              povrchu.</p>
+          </div>
+          <div class="build-step step-3">
+            <h3>Krok 3: Podsvícený originál</h3>
+            <p>Po nalakování do vysokého lesku a zasazení LED panelů do okrajů se z obyčejného listu stává designová
+              interiérová chlouba.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="tech-specs-wrapper">
       <div class="tech-specs-container">
         <h2 class="tech-specs-title">Technické Detaily</h2>
@@ -231,20 +261,32 @@
             </a>
           </div>
           <div class="tech-table-wrapper">
-            <table class="tech-specs-table">
-              <tr>
-                <td>Výška listu</td>
-                <td>1625 mm</td>
-              </tr>
-              <tr>
-                <td>Maximální šířka základny</td>
-                <td>560 mm</td>
-              </tr>
-              <tr>
-                <td>Váha</td>
-                <td>8,5 kg</td>
-              </tr>
-            </table>
+            <div class="modern-tech-grid">
+              <div class="tech-card">
+                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="#005494"
+                    fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 2v20M12 2l4 4M12 2L8 6M12 22l4-4M12 22l-4-4" />
+                  </svg></div>
+                <div class="tech-name">Výška listu</div>
+                <div class="tech-value">1625 mm</div>
+              </div>
+              <div class="tech-card">
+                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke="#005494"
+                    fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 12H2M2 12l4-4M2 12l4 4M22 12l-4-4M22 12l-4 4" />
+                  </svg></div>
+                <div class="tech-name">Maximální šířka základny</div>
+                <div class="tech-value">560 mm</div>
+              </div>
+              <div class="tech-card">
+                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M6 10v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-9Z" />
+                    <path d="M10 10V6a2 2 0 0 1 4 0v4" />
+                  </svg></div>
+                <div class="tech-name">Váha</div>
+                <div class="tech-value">8,5 kg</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

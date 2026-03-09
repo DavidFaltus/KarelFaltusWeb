@@ -81,7 +81,7 @@
     <script src="../script.js"></script>
     <script src="../lightbox-plus-jquery.js"></script>
 
-  <script type="application/ld+json">
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -116,8 +116,8 @@
     <header>
         <div class="pozadi__jinestranky">
             <nav id="navbar" class="menu">
-                <a class="logo" href="indexEN.html"><img src="../foto/ikony/logoKarelF.png" alt="Aero Composites Logo"
-                        /></a>
+                <a class="logo" href="indexEN.html"><img src="../foto/ikony/logoKarelF.png"
+                        alt="Aero Composites Logo" /></a>
                 <ul class="menu__list">
                     <li class="menu__item">
                         <a href="zkusenostiEN.html" class="menu__link">Experience</a>
@@ -224,6 +224,37 @@
             </div>
         </section>
 
+        <!-- ROZLOŽENÍ STAVBY SCROLL ANIMACE -->
+        <section class="spitfire-build-section">
+            <div class="build-sticky-container">
+                <div class="build-layers">
+                    <img src="../foto/fotkyweb/světlo vrtule (stojan)/blueprint_v4.png" class="build-layer layer-1"
+                        alt="Technical drawing of Blade" />
+                    <img src="../foto/fotkyweb/světlo vrtule (stojan)/skeleton_v4.png" class="build-layer layer-2"
+                        alt="Raw composite blade" />
+                    <img src="../foto/fotkyweb/světlo vrtule (stojan)/full_v4.png" class="build-layer layer-3"
+                        alt="Finished backlit blade" />
+                </div>
+                <div class="build-text-container">
+                    <div class="build-step step-1 active">
+                        <h3>Step 1: Precise Draft</h3>
+                        <p>Precise computer modeling and drafts form the absolute foundation for a perfectly symmetrical
+                            shape.</p>
+                    </div>
+                    <div class="build-step step-2">
+                        <h3>Step 2: Raw Shape</h3>
+                        <p>Aerodynamic shapes are gradually hand-formed and sanded from durable composite laminate and
+                            fiberglass.</p>
+                    </div>
+                    <div class="build-step step-3">
+                        <h3>Step 3: Finished Product</h3>
+                        <p>Multiple layers of sanding, premium varnishing, and metal leading edges turn the composite
+                            into a true, functional jewel.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- TECH SPECS -->
         <section class="tech-specs-wrapper">
             <div class="tech-specs-container">
@@ -238,20 +269,34 @@
                         </a>
                     </div>
                     <div class="tech-table-wrapper">
-                        <table class="tech-specs-table">
-                            <tr>
-                                <td>Blade Height</td>
-                                <td>1625 mm</td>
-                            </tr>
-                            <tr>
-                                <td>Max Base Width</td>
-                                <td>560 mm</td>
-                            </tr>
-                            <tr>
-                                <td>Weight</td>
-                                <td>8,5 kg</td>
-                            </tr>
-                        </table>
+                        <div class="modern-tech-grid">
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        stroke="#005494" fill="none" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 2v20M12 2l4 4M12 2L8 6M12 22l4-4M12 22l-4-4" />
+                                    </svg></div>
+                                <div class="tech-name">Blade Height</div>
+                                <div class="tech-value">1625 mm</div>
+                            </div>
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                        stroke="#005494" fill="none" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M22 12H2M2 12l4-4M2 12l4 4M22 12l-4-4M22 12l-4 4" />
+                                    </svg></div>
+                                <div class="tech-name">Max Base Width</div>
+                                <div class="tech-value">560 mm</div>
+                            </div>
+                            <div class="tech-card">
+                                <div class="tech-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                        <path d="M6 10v9a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-9Z" />
+                                        <path d="M10 10V6a2 2 0 0 1 4 0v4" />
+                                    </svg></div>
+                                <div class="tech-name">Weight</div>
+                                <div class="tech-value">8,5 kg</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

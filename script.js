@@ -501,7 +501,53 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
+// --- SPITFIRE SCROLL ANIMATION ---
+document.addEventListener("DOMContentLoaded", () => {
+    const buildSection = document.querySelector('.spitfire-build-section');
+    if (buildSection) {
+        window.addEventListener('scroll', () => {
+            const rect = buildSection.getBoundingClientRect();
+            // Progress from 0 to 1 based on how far we scrolled through the section
+            // Start when top hits top of viewport
+            const totalScrollDistance = rect.height - window.innerHeight;
+            const scrollProgress = -rect.top / totalScrollDistance;
+
+            const layer2 = document.querySelector('.build-layer.layer-2');
+            const layer3 = document.querySelector('.build-layer.layer-3');
+
+            const step1 = document.querySelector('.build-step.step-1');
+            const step2 = document.querySelector('.build-step.step-2');
+            const step3 = document.querySelector('.build-step.step-3');
+
+            if (!layer2 || !layer3 || !step1) return;
+
+            // Only trigger within the section bounds
+            if (scrollProgress >= -0.1 && scrollProgress <= 1.1) {
+
+                step1.classList.remove('active');
+                step2.classList.remove('active');
+                step3.classList.remove('active');
+
+                if (scrollProgress < 0.33) {
+                    layer2.style.opacity = 0;
+                    layer3.style.opacity = 0;
+                    step1.classList.add('active');
+                } else if (scrollProgress >= 0.33 && scrollProgress < 0.66) {
+                    // Fade in layer 2 based on progress
+                    const fade = (scrollProgress - 0.33) / 0.15; // fade quickly
+                    layer2.style.opacity = Math.min(1, Math.max(0, fade));
+                    layer3.style.opacity = 0;
+                    step2.classList.add('active');
+                } else if (scrollProgress >= 0.66) {
+                    const fade = (scrollProgress - 0.66) / 0.15;
+                    layer2.style.opacity = 1;
+                    layer3.style.opacity = Math.min(1, Math.max(0, fade));
+                    step3.classList.add('active');
+                }
+            }
+        });
+    }
+}); document.addEventListener('DOMContentLoaded', () => {
 
     if (window.location.pathname.endsWith('nabidka.html')) {
         const productImageLinks = [
@@ -906,4 +952,52 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+});
+
+// --- SPITFIRE SCROLL ANIMATION ---
+document.addEventListener("DOMContentLoaded", () => {
+    const buildSection = document.querySelector('.spitfire-build-section');
+    if (buildSection) {
+        window.addEventListener('scroll', () => {
+            const rect = buildSection.getBoundingClientRect();
+            // Progress from 0 to 1 based on how far we scrolled through the section
+            // Start when top hits top of viewport
+            const totalScrollDistance = rect.height - window.innerHeight;
+            const scrollProgress = -rect.top / totalScrollDistance;
+
+            const layer2 = document.querySelector('.build-layer.layer-2');
+            const layer3 = document.querySelector('.build-layer.layer-3');
+
+            const step1 = document.querySelector('.build-step.step-1');
+            const step2 = document.querySelector('.build-step.step-2');
+            const step3 = document.querySelector('.build-step.step-3');
+
+            if (!layer2 || !layer3 || !step1) return;
+
+            // Only trigger within the section bounds
+            if (scrollProgress >= -0.1 && scrollProgress <= 1.1) {
+
+                step1.classList.remove('active');
+                step2.classList.remove('active');
+                step3.classList.remove('active');
+
+                if (scrollProgress < 0.33) {
+                    layer2.style.opacity = 0;
+                    layer3.style.opacity = 0;
+                    step1.classList.add('active');
+                } else if (scrollProgress >= 0.33 && scrollProgress < 0.66) {
+                    // Fade in layer 2 based on progress
+                    const fade = (scrollProgress - 0.33) / 0.15; // fade quickly
+                    layer2.style.opacity = Math.min(1, Math.max(0, fade));
+                    layer3.style.opacity = 0;
+                    step2.classList.add('active');
+                } else if (scrollProgress >= 0.66) {
+                    const fade = (scrollProgress - 0.66) / 0.15;
+                    layer2.style.opacity = 1;
+                    layer3.style.opacity = Math.min(1, Math.max(0, fade));
+                    step3.classList.add('active');
+                }
+            }
+        });
+    }
 });
