@@ -1,4 +1,4 @@
-﻿html {
+html {
   height: 100%;
   width: 100%;
   font-family: sans-serif;
@@ -755,6 +755,7 @@ footer h2 {
   backdrop-filter: blur(5px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   border: 1px solid #e0e0e0;
+  box-sizing: border-box;
 }
 
 /***** ČÁST S HLAVNÍM OBRÁZKEM A MINIATURAMI *****/
@@ -1491,13 +1492,14 @@ input {
   .produkt {
     flex-direction: column;
     align-items: center;
+    padding: 20px;
   }
 
   .produkt-content,
   .produkt-text {
     width: 100%;
     margin-bottom: 20px;
-    padding-left: 5px;
+    padding-left: 0;
   }
 
   /* Zmenšíme text */
@@ -2770,14 +2772,34 @@ input {
     height: 30vh;
     padding-left: 0;
     margin-top: 20px;
+    position: relative; /* Ensure it contains the absolute children */
+  }
+
+  .build-step {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(20px);
+    transition: all 0.5s ease;
+  }
+
+  .build-step.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
   }
 
   .build-step h3 {
     font-size: 24px;
+    margin-bottom: 8px;
   }
 
   .build-step p {
     font-size: 16px;
+    padding: 10px;
   }
 }
 
