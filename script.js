@@ -620,8 +620,17 @@ document.addEventListener("DOMContentLoaded", () => {
                     message: `\nJméno: ${name}\nEmail: ${email}\nTelefon: ${phone}\nAdresa: ${address}\nPoznámky: ${notes}\nProdukt: ${selectedProduct}\n${podsviceniVrtulovyListText}\n${spitfireText}\n${podsviceniVrtule}`
                 })
             }).then(res => res.json()).then(data => {
-                if (data.success) confirmOrderSuccess(emailForm);
-                else alert("Nastala chyba při odesílání emailu.");
+                if (data.success) {
+                    confirmOrderSuccess(emailForm);
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'generate_lead', {
+                            'event_category': 'ecommerce',
+                            'event_label': 'Order Form',
+                            'value': 1,
+                            'product': selectedProduct
+                        });
+                    }
+                } else alert("Nastala chyba při odesílání emailu.");
             }).catch(() => alert("Nastala chyba při odesílání emailu."));
         });
     }
@@ -647,6 +656,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 if (data.success) {
                     if (msg) msg.style.display = "flex";
                     contactForm.reset();
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'generate_lead', {
+                            'event_category': 'contact',
+                            'event_label': 'Contact Form',
+                            'value': 1
+                        });
+                    }
                     setTimeout(() => { if (msg) msg.style.display = "none"; }, 10000);
                 } else {
                     alert("Nastala chyba při odesílání dotazu.");
@@ -734,6 +750,41 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", reveal);
     // Trigger once to show elements already in view
     setTimeout(reveal, 100);
+
+    // --- GOOGLE ADS TRACKING: CONTACT LINKS ---
+    document.querySelectorAll('a[href^="mailto:"], a[href^="tel:"]').forEach(link => {
+        link.addEventListener("click", function() {
+            if (typeof gtag !== 'undefined') {
+                const isPhone = this.href.startsWith("tel:");
+                gtag('event', 'contact', {
+                    'event_category': 'engagement',
+                    'event_label': isPhone ? 'Phone Click' : 'Email Click',
+                    'value': 1
+                });
+            }
+        });
+    });
+
+    // --- GOOGLE ADS TRACKING: VIEW ITEM ---
+    if (typeof gtag !== 'undefined') {
+        const path = window.location.pathname.toLowerCase();
+        let itemName = "";
+        if (path.includes("spitfire")) itemName = "Supermarine Spitfire Mk.IX";
+        else if (path.includes("albatros")) itemName = "Albatros D.III";
+        else if (path.includes("vrtule") && !path.includes("vrtulovylist")) itemName = "Vrtule";
+        else if (path.includes("vrtulovylist")) itemName = "Vrtulový list";
+
+        if (itemName !== "") {
+            gtag('event', 'view_item', {
+                'currency': 'CZK',
+                'items': [
+                    {
+                        'item_name': itemName
+                    }
+                ]
+            });
+        }
+    }
 });
 
 // --- LIGHTBOX A GALERIE ---
