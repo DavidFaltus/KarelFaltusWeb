@@ -87,7 +87,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17923747821"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'AW-17923747821');
@@ -106,249 +106,313 @@
 
 
 <body>
-  <header>
-    <div class="pozadi__jinestranky">
-      <nav id="navbar" class="menu">
-        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png"
-            alt="Logo Aero Composites Karel Faltus" /></a>
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
+  <header class="header-redesign">
+    <div class="header-container">
+      <a class="logo-new" href="index.html">
+        <img src="foto/ikony/logoKarelF_BLUE.png" alt="Logo Aero Composites Karel Faltus" />
+      </a>
+      <nav class="menu-new">
+        <ul class="menu__list-new">
+          <li class="menu__item-new">
+            <a href="zkusenosti.html" class="menu__link-new">Zkušenosti</a>
           </li>
-          <li class="menu__item">
-            <a href="fotogalerie.html" class="menu__link">Fotogalerie</a>
+          <li class="menu__item-new">
+            <a href="fotogalerie.html" class="menu__link-new active">Fotogalerie</a>
           </li>
-          <li class="menu__item dropdown">
-            <a href="nabidka.html" class="menu__link dropbtn">Nabídka</a>
-            <ul class="dropdown-content">
+          <li class="menu__item-new dropdown-new">
+            <a href="nabidka.html" class="menu__link-new dropbtn-new">Nabídka</a>
+            <ul class="dropdown-content-new">
               <li><a href="spitfire.html">Spitfire</a></li>
               <li><a href="albatros.html">Albatros</a></li>
               <li><a href="vrtule.html">Vrtule</a></li>
               <li><a href="vrtulovyList.html">Vrtulový list</a></li>
             </ul>
           </li>
-          <li class="menu__item">
-            <a href="kontakt.html" class="menu__link">Kontakt</a>
-          </li>
-          <li>
-            <div class="language-switcher">
-              <a href="#" onclick="switchLanguage('cz')">
-                <img src="foto/ikony/cz.jpg" alt="Vlajka ČR - Čeština" width="30" / loading="lazy">
-              </a>
-              <a href="#" onclick="switchLanguage('en')">
-                <img src="foto/ikony/gb.png" alt="Vlajka VB - Angličtina" width="30" / loading="lazy">
-              </a>
-            </div>
+          <li class="menu__item-new">
+            <a href="kontakt.html" class="menu__link-new">Kontakt</a>
           </li>
         </ul>
-        <div class="hamburger">
-          <div onclick="openNavbar()">
-            <div class="hamburger__box">
-              <svg width="42" height="35" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF"
-                  stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </div>
-          </div>
-          <div id="sideNavbar" class="side-navbar" style="width: 0px">
-            <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
-            <a class="side-navbar__link hover" href="index.html">Úvodní stránka</a>
-            <a class="side-navbar__link hover" href="zkusenosti.html">Zkušenosti</a>
-            <a class="side-navbar__link hover" href="nabidka.html">Nabídka</a>
-            <a class="side-navbar__link hover" href="fotogalerie.html">Fotogalerie</a>
-            <a class="side-navbar__link hover" href="kontakt.html">Kontakt</a>
-            <div>
-              <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
-                <img src="foto/ikony/cz.jpg" alt="Vlajka ČR - Čeština" width="30" / loading="lazy">
-              </a>
-              <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
-                <img src="foto/ikony/gb.png" alt="Vlajka VB - Angličtina" width="30" / loading="lazy">
-              </a>
-            </div>
-          </div>
-        </div>
       </nav>
-      <div class="nadpis__jinestranky">
-        <h1 class="sr-only">Fotogalerie maket letadel a realizací Aero Composites</h1>
-        <span class="visual-h1" aria-hidden="true">Fotogalerie</span>
+      <div class="right-elements-new">
+        <div class="language-switcher-new">
+          <a href="#" onclick="switchLanguage('cz')">
+            <img src="foto/ikony/cz.jpg" alt="CZ" width="30" loading="lazy">
+          </a>
+          <a href="#" onclick="switchLanguage('en')">
+            <img src="foto/ikony/gb.png" alt="EN" width="30" loading="lazy">
+          </a>
+        </div>
+        <div class="hamburger-new" onclick="openNavbar()">
+          <svg width="30" height="30" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#005494"
+              stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div id="sideNavbar" class="side-navbar redesign" style="width: 0px">
+      <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
+      <a class="side-navbar__link" href="index.html">Úvodní stránka</a>
+      <a class="side-navbar__link" href="zkusenosti.html">Zkušenosti</a>
+      <a class="side-navbar__link" href="nabidka.html">Nabídka</a>
+      <a class="side-navbar__link" href="fotogalerie.html">Fotogalerie</a>
+      <a class="side-navbar__link" href="kontakt.html">Kontakt</a>
+      <a class="side-navbar__link" href="partneri.html">Naši partneři</a>
+      <div class="lang-mobile">
+        <a href="#" onclick="switchLanguage('cz')"><img src="foto/ikony/cz.jpg" alt="CZ"></a>
+        <a href="#" onclick="switchLanguage('en')"><img src="foto/ikony/gb.png" alt="EN"></a>
       </div>
     </div>
   </header>
 
+  <section class="hero-redesign">
+    <div class="hero-container-redesign">
+      <h1 class="sr-only">Fotogalerie maket letadel a realizací Aero Composites</h1>
+      <span class="visual-h1-redesign" aria-hidden="true">Fotogalerie</span>
+      <p class="hero-subtitle">Objevte detailní fotografie našich hotových modelů letadel, procesů z dílny a vrtulí v
+        akci.</p>
+    </div>
+  </section>
+
   <main>
-    <div class="kontejner">
-      <div class="galerie">
-        <div class="gallery-item">
+    <div class="gallery-redesign-container">
+      <aside class="gallery-sidebar">
+        <div class="sidebar-card">
+          <h3>KATEGORIE</h3>
+          <ul class="filter-list">
+            <li class="filter-item active" data-filter="all">Vše</li>
+            <li class="filter-item" data-filter="spitfire">Spitfire</li>
+            <li class="filter-item" data-filter="lambada">Lambáda</li>
+            <li class="filter-item" data-filter="m8eagle">M-8 Eagle</li>
+            <li class="filter-item" data-filter="ostatni">Ostatní</li>
+          </ul>
+        </div>
+      </aside>
+
+      <div class="galerie-new">
+        <div class="gallery-item-new ostatni">
           <a href="foto/fotkyweb/galerie/1.jpg" data-lightbox="galerie" data-title="Létající cirkus sólo">
             <img src="foto/fotkyweb/galerie/thumbs/1.jpg" alt="Létající cirkus sólo" loading="lazy" />
           </a>
-          <p class="gallery-caption">Létající cirkus Martina Kindernaye</p>
+          <p class="gallery-caption-new">Létající cirkus Martina Kindernaye</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new ostatni">
           <a href="foto/fotkyweb/galerie/2.jpg" data-lightbox="galerie" data-title="Létající cirkus akční scéna">
             <img src="foto/fotkyweb/galerie/thumbs/2.jpg" alt="Létající cirkus akční scéna" loading="lazy" />
           </a>
-          <p class="gallery-caption">Létající cirkus Martina Kindernaye</p>
+          <p class="gallery-caption-new">Létající cirkus Martina Kindernaye</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new ostatni">
           <a href="foto/fotkyweb/galerie/3.jpg" data-lightbox="galerie" data-title="Létající cirkus letka">
             <img src="foto/fotkyweb/galerie/thumbs/3.jpg" alt="Létající cirkus letka" loading="lazy" />
           </a>
-          <p class="gallery-caption">Létající cirkus Martina Kindernaye</p>
+          <p class="gallery-caption-new">Létající cirkus Martina Kindernaye</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new spitfire">
           <a href="foto/fotkyweb/galerie/4.jpg" data-lightbox="galerie" data-title="Spitfire na Obchodním domě Máj">
             <img src="foto/fotkyweb/galerie/thumbs/4.jpg" alt="Spitfire na Obchodním domě Máj" loading="lazy" />
           </a>
-          <p class="gallery-caption">Supermarine Spitfire na Obchodním domě Máj</p>
+          <p class="gallery-caption-new">Supermarine Spitfire na Obchodním domě Máj</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new spitfire">
           <a href="foto/fotkyweb/galerie/5.jpg" data-lightbox="galerie" data-title="Spitfire na Obchodním domě Máj">
             <img src="foto/fotkyweb/galerie/thumbs/5.jpg" alt="Výstava v obchodním domě" loading="lazy" />
           </a>
-          <p class="gallery-caption">Supermarine Spitfire na Obchodním domě Máj</p>
+          <p class="gallery-caption-new">Supermarine Spitfire na Obchodním domě Máj</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new spitfire">
           <a href="foto/fotkyweb/galerie/6.jpg" data-lightbox="galerie" data-title="Spitfire na Obchodním domě Máj">
             <img src="foto/fotkyweb/galerie/thumbs/6.jpg" alt="Spitfire na Obchodním domě Máj" loading="lazy" />
           </a>
-          <p class="gallery-caption">Supermarine Spitfire na Obchodním domě Máj</p>
+          <p class="gallery-caption-new">Supermarine Spitfire na Obchodním domě Máj</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new lambada">
           <a href="foto/fotkyweb/galerie/7.jpg" data-lightbox="galerie" data-title="Lambáda při letu">
             <img src="foto/fotkyweb/galerie/thumbs/7.jpg" alt="Letoun Lambáda v letu" loading="lazy" />
           </a>
-          <p class="gallery-caption">Lambáda při letu</p>
+          <p class="gallery-caption-new">Lambáda při letu</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new lambada">
           <a href="foto/fotkyweb/galerie/8.jpg" data-lightbox="galerie" data-title="Lambáda na zemi">
             <img src="foto/fotkyweb/galerie/thumbs/8.jpg" alt="Lambáda na zemi" loading="lazy" />
           </a>
-          <p class="gallery-caption">Lambáda na zemi</p>
+          <p class="gallery-caption-new">Lambáda na zemi</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new lambada">
           <a href="foto/fotkyweb/galerie/9.jpg" data-lightbox="galerie" data-title="Křídlo Lambády v letu">
             <img src="foto/fotkyweb/galerie/thumbs/9.jpg" alt="Křídlo Lambády v letu" loading="lazy" />
           </a>
-          <p class="gallery-caption">Křídlo Lambády v letu</p>
+          <p class="gallery-caption-new">Křídlo Lambády v letu</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new spitfire">
           <a href="foto/fotkyweb/galerie/10.jpg" data-lightbox="galerie" data-title="Lambáda u věže">
             <img src="foto/fotkyweb/galerie/thumbs/10.jpg" alt="Lambáda u věže" loading="lazy" />
           </a>
-          <p class="gallery-caption">Supermarine Spitfire</p>
+          <p class="gallery-caption-new">Supermarine Spitfire na výstavě</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new spitfire">
           <a href="foto/fotkyweb/galerie/11.jpg" data-lightbox="galerie" data-title="Motor Lambády">
             <img src="foto/fotkyweb/galerie/thumbs/11.jpg" alt="Motor Lambády" loading="lazy" />
           </a>
-          <p class="gallery-caption">Supermarine Spitfire na letišti</p>
+          <p class="gallery-caption-new">Supermarine Spitfire na výstavě</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new spitfire">
           <a href="foto/fotkyweb/galerie/12.jpg" data-lightbox="galerie" data-title="Palubní deska Lambády">
             <img src="foto/fotkyweb/galerie/thumbs/12.jpg" alt="Palubní deska Lambády" loading="lazy" />
           </a>
-          <p class="gallery-caption">Supermarine Spitfire v obchodním domě</p>
+          <p class="gallery-caption-new">Supermarine Spitfire v OC Palác Pardubice</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new ostatni">
           <a href="foto/fotkyweb/galerie/16.jpg" data-lightbox="galerie" data-title="Albatros s bojovou kamufláží">
             <img src="foto/fotkyweb/galerie/thumbs/16.jpg" alt="Albatros s bojovou kamufláží" loading="lazy" />
           </a>
-          <p class="gallery-caption">Albatros D.V</p>
+          <p class="gallery-caption-new">Albatros D.V</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new ostatni">
           <a href="foto/fotkyweb/galerie/17.jpg" data-lightbox="galerie" data-title="Rudý baron">
             <img src="foto/fotkyweb/galerie/thumbs/17.jpg" alt="Rudý baron" loading="lazy" />
           </a>
-          <p class="gallery-caption">Rudý baron</p>
+          <p class="gallery-caption-new">Rudý baron</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new ostatni">
           <a href="foto/fotkyweb/galerie/18.jpg" data-lightbox="galerie" data-title="Rudý baron">
             <img src="foto/fotkyweb/galerie/thumbs/18.jpg" alt="Rudý baron" loading="lazy" />
           </a>
-          <p class="gallery-caption">Rudý baron</p>
+          <p class="gallery-caption-new">Rudý baron</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new ostatni">
           <a href="foto/fotkyweb/galerie/19.jpg" data-lightbox="galerie" data-title="Lyže na letadlo">
             <img src="foto/fotkyweb/galerie/thumbs/19.jpg" alt="Letadlo s lyžemi na sněhu" loading="lazy" />
           </a>
-          <p class="gallery-caption">Lyže na letadlo</p>
+          <p class="gallery-caption-new">Lyže na letadlo</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new ostatni">
           <a href="foto/fotkyweb/galerie/20.jpg" data-lightbox="galerie" data-title="Lyže na letadlo">
             <img src="foto/fotkyweb/galerie/thumbs/20.jpg" alt="Lyže na letadlo" loading="lazy" />
           </a>
-          <p class="gallery-caption">Skupina létajícího cirkusu</p>
+          <p class="gallery-caption-new">Létající cirkus Martina Kindernaye</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new m8eagle">
           <a href="foto/fotkyweb/galerie/21.jpg" data-lightbox="galerie" data-title="Letadlo Eagle v Ústí nad Orlicí">
             <img src="foto/fotkyweb/galerie/thumbs/21.jpg" alt="Letoun Eagle na letišti Ústí nad Orlicí"
               loading="lazy" />
           </a>
-          <p class="gallery-caption">Interiér letadla M-8 Eagle</p>
+          <p class="gallery-caption-new">Interiér letadla M-8 Eagle</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new m8eagle">
           <a href="foto/fotkyweb/galerie/22.jpg" data-lightbox="galerie" data-title="Letadlo Eagle v Ústí nad Orlicí">
             <img src="foto/fotkyweb/galerie/thumbs/22.jpg" alt="Letadlo Eagle v Ústí nad Orlicí" loading="lazy" />
           </a>
-          <p class="gallery-caption">Letadlo M-8 Eagle v Ústí nad Orlicí</p>
+          <p class="gallery-caption-new">Letadlo M-8 Eagle</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new m8eagle">
           <a href="foto/fotkyweb/galerie/23.jpg" data-lightbox="galerie" data-title="Letadlo Eagle v Americe">
             <img src="foto/fotkyweb/galerie/thumbs/23.jpg" alt="Letadlo Eagle v Americe" loading="lazy" />
           </a>
-          <p class="gallery-caption">Letadlo M-8 Eagle v Ústí nad Orlicí</p>
+          <p class="gallery-caption-new">Letadlo M-8 Eagle v Americe</p>
         </div>
-        <div class="gallery-item">
+        <div class="gallery-item-new m8eagle">
           <a href="foto/fotkyweb/galerie/24.jpg" data-lightbox="galerie" data-title="Letadlo Eagle v Ústí nad Orlicí">
             <img src="foto/fotkyweb/galerie/thumbs/24.jpg" alt="Letadlo Eagle v Ústí nad Orlicí" loading="lazy" />
           </a>
-          <p class="gallery-caption">Letadlo M-8 Eagle</p>
+          <p class="gallery-caption-new">Letadlo M-8 Eagle</p>
         </div>
       </div>
     </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterItems = document.querySelectorAll('.filter-item');
+        const galleryItems = document.querySelectorAll('.gallery-item-new');
+
+        function updateGallery(filter) {
+          galleryItems.forEach(card => {
+            const link = card.querySelector('a');
+            if (filter === 'all' || card.classList.contains(filter)) {
+              card.style.display = 'block';
+              // Důležité pro Lightbox: Skupinu "galerie" ponecháme jen viditelným prvkům
+              if (link) link.setAttribute('data-lightbox', 'galerie-filtered');
+            } else {
+              card.style.display = 'none';
+              if (link) link.setAttribute('data-lightbox', 'galerie-hidden');
+            }
+          });
+        }
+
+        filterItems.forEach(item => {
+          item.addEventListener('click', () => {
+            const filter = item.dataset.filter;
+
+            // Update active state
+            filterItems.forEach(i => i.classList.remove('active'));
+            item.classList.add('active');
+
+            updateGallery(filter);
+          });
+        });
+
+        // Inicializace s "all"
+        updateGallery('all');
+      });
+    </script>
     <script src="lightbox-plus-jquery.js"></script>
   </main>
-  <footer>
-    <section>
-      <div class="footer-row">
-        <div class="footer-left">
-          <h2>Jak mě kontaktovat ?</h2>
-          <a href="kontakt.html">Kontaktní formulář</a>
-          <p>aerocomposites@seznam.cz</p>
+  <footer class="footer-redesign">
+    <div class="footer-main">
+      <div class="footer-sitemap">
+        <div class="sitemap-column">
+          <span class="footer-logo">Aero Composites</span>
+          <p class="footer-desc">Precizní výroba leteckých maket a kompozitních dílů s důrazem na historickou věrnost a
+            kvalitu.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/karel.faltus.31" target="_blank">
+              <img src="foto/ikony/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/aerocompositescz/" target="_blank">
+              <img src="foto/ikony/instagram.png" alt="Instagram">
+            </a>
+          </div>
         </div>
-        <div class="footer-center">
-          <h2>Partner</h2>
-          <a href="https://www.facebook.com/pterodactyl.cz" class="odkaz" target="_blank"
-            style="display: flex; align-items: center; gap: 10px; color: white; text-decoration: none;">
-            <img src="foto/ikony/facebook.png" alt="Facebook Pterodactyl.cz"
-              style="width: 30px; height: 30px; margin: 0; padding: 0;" loading="lazy">
-            <span>Pterodactyl.cz</span>
-          </a>
+
+        <div class="sitemap-column">
+          <h4>Hlavní Menu</h4>
+          <ul>
+            <li><a href="index.html">Úvodní stránka</a></li>
+            <li><a href="zkusenosti.html">Zkušenosti</a></li>
+            <li><a href="nabidka.html">Nabídka produktů</a></li>
+            <li><a href="fotogalerie.html">Fotogalerie</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
         </div>
-        <div class="footer-right">
-          <h2>Sociální sítě</h2>
-          <a href="https://www.facebook.com/karel.faltus.31" class="odkaz">
-            <img src="foto/ikony/facebook.png" alt="Facebook Aero Composites" / loading="lazy">
-          </a>
-          <a href="https://www.instagram.com/aerocompositescz/" class="odkaz">
-            <img src="foto/ikony/instagram.png" alt="Instagram Aero Composites" / loading="lazy">
-          </a>
+
+        <div class="sitemap-column">
+          <h4>Naše Produkty</h4>
+          <ul>
+            <li><a href="spitfire.html">Spitfire Mk.IX</a></li>
+            <li><a href="albatros.html">Albatros D.III</a></li>
+            <li><a href="vrtule.html">Letecké vrtule</a></li>
+            <li><a href="vrtulovyList.html">Vrtulový list</a></li>
+          </ul>
+        </div>
+
+        <div class="sitemap-column">
+          <h4>Užitečné Odkazy</h4>
+          <ul>
+            <li><a href="partneri.html">Naši Partneři</a></li>
+            <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
+            <li><a href="soukromi.html">Zásady soukromí (GDPR)</a></li>
+          </ul>
         </div>
       </div>
-    </section>
-    <div class="navigace-sekundarni">
-      <p>
-        <a href="index.html">ÚVODNÍ STRÁNKA | </a>
-        <a href="zkusenosti.html">ZKUŠENOSTI | </a>
-        <a href="nabidka.html">NABÍDKA | </a>
-        <a href="fotogalerie.html">FOTOGALERIE | </a>
-        <a href="kontakt.html">KONTAKT | </a>
-        <a href="obchodni-podminky.html">OBCHODNÍ PODMÍNKY</a>
-      </p>
-      <p id="footerYear">Karel Faltus - <span id="yearSpan"></span></p>
+
+      <div class="footer-bottom-container">
+        <p class="copyright">© <span id="yearSpan"></span> Aero Composites. Všechna práva vyhrazeny.</p>
+        <span class="designer">Design by David Faltus</span>
+      </div>
     </div>
   </footer>
+
+
 </body>
 
 </html>

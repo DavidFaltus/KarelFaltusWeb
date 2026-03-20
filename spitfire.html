@@ -128,74 +128,60 @@
 
 
 <body>
-  <header>
-    <div class="pozadi__jinestranky">
-      <nav id="navbar" class="menu">
-        <a class="logo" href="index.html"><img src="foto/ikony/logoKarelF.png"
-            alt="Logo Aero Composites Karel Faltus" /></a>
-        <ul class="menu__list">
-          <li class="menu__item">
-            <a href="zkusenosti.html" class="menu__link">Zkušenosti</a>
-          </li>
-          <li class="menu__item">
-            <a href="fotogalerie.html" class="menu__link">Fotogalerie</a>
-          </li>
-          <li class="menu__item dropdown">
-            <a href="nabidka.html" class="menu__link dropbtn">Nabídka</a>
-            <ul class="dropdown-content">
+  <header class="header-redesign">
+    <div class="header-container">
+      <a class="logo-new" href="index.html">
+        <img src="foto/ikony/logoKarelF_BLUE.png" alt="Logo Aero Composites Karel Faltus" />
+      </a>
+      <nav class="menu-new">
+        <ul class="menu__list-new">
+          <li class="menu__item-new"><a href="zkusenosti.html" class="menu__link-new">Zkušenosti</a></li>
+          <li class="menu__item-new"><a href="fotogalerie.html" class="menu__link-new">Fotogalerie</a></li>
+          <li class="menu__item-new dropdown-new">
+            <a href="nabidka.html" class="menu__link-new">Nabídka</a>
+            <ul class="dropdown-content-new">
               <li><a href="spitfire.html">Spitfire</a></li>
               <li><a href="albatros.html">Albatros</a></li>
               <li><a href="vrtule.html">Vrtule</a></li>
               <li><a href="vrtulovyList.html">Vrtulový list</a></li>
             </ul>
           </li>
-          <li class="menu__item">
-            <a href="kontakt.html" class="menu__link">Kontakt</a>
-          </li>
-          <li>
-            <div class="language-switcher">
-              <a href="#" onclick="switchLanguage('cz')">
-                <img src="foto/ikony/cz.jpg" alt="Vlajka ČR - Čeština" width="30" / loading="lazy">
-              </a>
-              <a href="#" onclick="switchLanguage('en')">
-                <img src="foto/ikony/gb.png" alt="Vlajka VB - Angličtina" width="30" / loading="lazy">
-              </a>
-            </div>
-          </li>
+          <li class="menu__item-new"><a href="kontakt.html" class="menu__link-new">Kontakt</a></li>
         </ul>
-        <div class="hamburger">
-          <div onclick="openNavbar()">
-            <div class="hamburger__box">
-              <svg width="42" height="35" viewBox="0 0 38 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#FFFF"
-                  stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </div>
-          </div>
-          <div id="sideNavbar" class="side-navbar" style="width: 0px">
-            <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
-            <a class="side-navbar__link hover" href="index.html">Úvodní stránka</a>
-            <a class="side-navbar__link hover" href="zkusenosti.html">Zkušenosti</a>
-            <a class="side-navbar__link hover" href="nabidka.html">Nabídka</a>
-            <a class="side-navbar__link hover" href="fotogalerie.html">Fotogalerie</a>
-            <a class="side-navbar__link hover" href="kontakt.html">Kontakt</a>
-            <div>
-              <a href="#" onclick="switchLanguage('cz')" id="languageSwitch">
-                <img src="foto/ikony/cz.jpg" alt="Vlajka ČR - Čeština" width="30" / loading="lazy">
-              </a>
-              <a href="#" onclick="switchLanguage('en')" id="languageSwitch">
-                <img src="foto/ikony/gb.png" alt="Vlajka VB - Angličtina" width="30" / loading="lazy">
-              </a>
-            </div>
-          </div>
-        </div>
       </nav>
-      <div class="nadpis__jinestranky">
-        <h1 class="sr-only">Věrná maketa letounu Supermarine Spitfire Mk.IX v měřítku 1:1</h1>
-        <span class="visual-h1" aria-hidden="true">Supermarine Spitfire</span>
+      <div class="right-elements-new">
+        <div class="language-switcher-new">
+          <a href="#" onclick="switchLanguage('cz')"><img src="foto/ikony/cz.jpg" alt="CZ" width="30"></a>
+          <a href="#" onclick="switchLanguage('en')"><img src="foto/ikony/gb.png" alt="EN" width="30"></a>
+        </div>
+        <div class="hamburger-new" onclick="openNavbar()">
+          <svg width="30" height="30" viewBox="0 0 38 31" fill="none"><path d="M2.59375 28.2812H35.4062M2.59375 15.7812H35.4062M2.59375 3.28125H35.4062" stroke="#005494" stroke-width="4.6875" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+        </div>
+      </div>
+    </div>
+    <div id="sideNavbar" class="side-navbar redesign" style="width: 0px">
+      <a class="side-navbar__link close-icon" href="javascript:void(0)" onclick="closeNavbar()">×</a>
+      <a class="side-navbar__link" href="index.html">Úvodní stránka</a>
+      <a class="side-navbar__link" href="zkusenosti.html">Zkušenosti</a>
+      <a class="side-navbar__link" href="nabidka.html">Nabídka</a>
+      <a class="side-navbar__link" href="fotogalerie.html">Fotogalerie</a>
+      <a class="side-navbar__link" href="kontakt.html">Kontakt</a>
+      <a class="side-navbar__link" href="partneri.html">Naši partneři</a>
+      <div class="lang-mobile">
+        <a href="#" onclick="switchLanguage('cz')"><img src="foto/ikony/cz.jpg" alt="CZ"></a>
+        <a href="#" onclick="switchLanguage('en')"><img src="foto/ikony/gb.png" alt="EN"></a>
       </div>
     </div>
   </header>
+
+  <section class="hero-redesign">
+    <div class="hero-container-redesign">
+      <h1 class="sr-only">Věrná maketa letounu Supermarine Spitfire Mk.IX v měřítku 1:1</h1>
+      <span class="visual-h1-redesign" aria-hidden="true">Supermarine Spitfire</span>
+      <p class="hero-subtitle">Detailní pohled na legendární stíhací letoun druhé světové války.</p>
+    </div>
+  </section>
+
 
   <main>
     <!-- TODO PRIDAT MOZNOST PREHRAVANI VIDEI -->
@@ -349,47 +335,60 @@
     <script src="lightbox-plus-jquery.js"></script>
   </main>
 
-  <footer>
-    <section>
-      <div class="footer-row">
-        <div class="footer-left">
-          <h2>Jak mě kontaktovat ?</h2>
-          <a href="kontakt.html">Kontaktní formulář</a>
-          <p>aerocomposites@seznam.cz</p>
+  <footer class="footer-redesign">
+    <div class="footer-main">
+      <div class="footer-sitemap">
+        <div class="sitemap-column">
+          <span class="footer-logo">Aero Composites</span>
+          <p class="footer-desc">Precizní výroba leteckých maket a kompozitních dílů s důrazem na historickou věrnost a kvalitu.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/karel.faltus.31" target="_blank">
+              <img src="foto/ikony/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://www.instagram.com/aerocompositescz/" target="_blank">
+              <img src="foto/ikony/instagram.png" alt="Instagram">
+            </a>
+          </div>
         </div>
-        <div class="footer-center">
-          <h2>Partner</h2>
-          <a href="https://www.facebook.com/pterodactyl.cz" class="odkaz" target="_blank"
-            style="display: flex; align-items: center; gap: 10px; color: white; text-decoration: none;">
-            <img src="foto/ikony/facebook.png" alt="Facebook Pterodactyl.cz"
-              style="width: 30px; height: 30px; margin: 0; padding: 0;" loading="lazy">
-            <span>Pterodactyl.cz</span>
-          </a>
+
+        <div class="sitemap-column">
+          <h4>Hlavní Menu</h4>
+          <ul>
+            <li><a href="index.html">Úvodní stránka</a></li>
+            <li><a href="zkusenosti.html">Zkušenosti</a></li>
+            <li><a href="nabidka.html">Nabídka produktů</a></li>
+            <li><a href="fotogalerie.html">Fotogalerie</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
         </div>
-        <div class="footer-right">
-          <h2>Sociální sítě</h2>
-          <a href="https://www.facebook.com/karel.faltus.31" class="odkaz">
-            <img src="foto/ikony/facebook.png" alt="Facebook Aero Composites" / loading="lazy">
-          </a>
-          <a href="https://www.instagram.com/aerocompositescz/" class="odkaz">
-            <img src="foto/ikony/instagram.png" alt="Instagram Aero Composites" / loading="lazy">
-          </a>
+
+        <div class="sitemap-column">
+          <h4>Naše Produkty</h4>
+          <ul>
+            <li><a href="spitfire.html">Spitfire Mk.IX</a></li>
+            <li><a href="albatros.html">Albatros D.III</a></li>
+            <li><a href="vrtule.html">Letecké vrtule</a></li>
+            <li><a href="vrtulovyList.html">Vrtulový list</a></li>
+          </ul>
+        </div>
+
+        <div class="sitemap-column">
+          <h4>Užitečné Odkazy</h4>
+          <ul>
+            <li><a href="partneri.html">Naši Partneři</a></li>
+            <li><a href="obchodni-podminky.html">Obchodní podmínky</a></li>
+            <li><a href="soukromi.html">Zásady soukromí (GDPR)</a></li>
+          </ul>
         </div>
       </div>
-    </section>
-    <div class="navigace-sekundarni">
-      <p>
-        <a href="index.html">ÚVODNÍ STRÁNKA | </a>
-        <a href="zkusenosti.html">ZKUŠENOSTI | </a>
-        <a href="nabidka.html">NABÍDKA | </a>
-        <a href="fotogalerie.html">FOTOGALERIE | </a>
-        <a href="kontakt.html">KONTAKT | </a>
-        <a href="obchodni-podminky.html">OBCHODNÍ PODMÍNKY</a>
-      </p>
-      <p id="footerYear">Karel Faltus - <span id="yearSpan"></span></p>
 
+      <div class="footer-bottom-container">
+        <p class="copyright">© <span id="yearSpan"></span> Aero Composites. Všechna práva vyhrazeny.</p>
+        <span class="designer">Design by David Faltus</span>
+      </div>
     </div>
   </footer>
+
 </body>
 
 </html>
